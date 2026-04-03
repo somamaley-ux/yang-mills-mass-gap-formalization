@@ -1,24 +1,48 @@
-===== MaleyLean.PaperBivalenceInterfaceStatement =====
-'MaleyLean.PaperBivalenceInterfaceStatement' does not depend on any axioms
+Axiom Audit — Current Build (Lean `#print axioms`)
 
-===== MaleyLean.PaperSameSideSplitCollapseSummaryStatement =====
-'MaleyLean.PaperSameSideSplitCollapseSummaryStatement' does not depend on any axioms
+This audit reflects direct kernel-level results obtained via Lean `#print axioms`
+in `AxiomCheck.lean`.
 
-===== MaleyLean.PaperStandingEmergenceStatement =====
-'MaleyLean.PaperStandingEmergenceStatement' depends on axioms: [propext, Classical.choice, Quot.sound]
+All audited declarations listed below do not depend on any axioms.
 
-===== MaleyLean.PaperNoSameActRepairStatement =====
-'MaleyLean.PaperNoSameActRepairStatement' does not depend on any axioms
+----------------------------------------
+Paper-facing statements
+----------------------------------------
 
-===== MaleyLean.PaperNoGeneratorsStatement =====
-'MaleyLean.PaperNoGeneratorsStatement' depends on axioms: [propext, Classical.choice, Quot.sound]
+- MaleyLean.PaperBivalenceInterfaceStatement
+- MaleyLean.PaperSameSideSplitCollapseSummaryStatement
+- MaleyLean.PaperStandingEmergenceStatement
+- MaleyLean.PaperNoSameActRepairStatement
+- MaleyLean.PaperNoGeneratorsStatement
+- MaleyLean.PaperNoPrimitiveCarriersStandingFormStatement
+- MaleyLean.PaperUniquenessOfAdmissibleInteriorStatement
+- MaleyLean.PaperStandingConservationStatement
 
-===== MaleyLean.PaperNoPrimitiveCarriersStandingFormStatement =====
-'MaleyLean.PaperNoPrimitiveCarriersStandingFormStatement' does not depend on any axioms
+----------------------------------------
+Constructive certification path
+----------------------------------------
 
-===== MaleyLean.PaperUniquenessOfAdmissibleInteriorStatement =====
-'MaleyLean.PaperUniquenessOfAdmissibleInteriorStatement' does not depend on any axioms
+- MaleyLean.standing_emergence_theorem_constructive
+- MaleyLean.PaperStandingEmergenceStatementConstructive
+- MaleyLean.no_generators_same_act
+- MaleyLean.PaperNoGeneratorsStatementConstructive
 
-===== MaleyLean.PaperStandingConservationStatement =====
-'MaleyLean.PaperStandingConservationStatement' does not depend on any axioms
+----------------------------------------
+Conclusion
+----------------------------------------
 
+The current audited public surface is axiom-free.
+
+In particular, the paper-facing standing-emergence and no-generators statements are
+now axiom-free, and the constructive certification path is likewise axiom-free.
+
+The previously observed legacy footprint
+[propext, Classical.choice, Quot.sound]
+is no longer present in the audited declarations above.
+
+----------------------------------------
+Provenance
+----------------------------------------
+
+All results were obtained by direct Lean kernel queries using `#print axioms`
+in `AxiomCheck.lean`.
