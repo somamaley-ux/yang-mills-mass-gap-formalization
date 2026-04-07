@@ -1,0 +1,7 @@
+import MaleyLean.StandardModelCurrentCertifiedSurface
+
+namespace MaleyLean
+
+#print axioms PaperStandardModelCurrentCertifiedSurfaceStatement
+
+end MaleyLean

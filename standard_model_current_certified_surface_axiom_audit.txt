@@ -1,0 +1,24 @@
+Axiom Audit - Standard Model Current Certified Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `StandardModelCurrentCertifiedSurfaceAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperStandardModelCurrentCertifiedSurfaceStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current top-level certified Standard Model surface in this repo is
+axiom-free.
+
+This certifies the existence of one integrated certified surface combining:
+- the integrated L1 support stack bundle
+- the integrated umbrella verified core
+
+It remains an honest "current certified surface" rather than a claim that the
+full field-level umbrella manuscript has already been encoded.
