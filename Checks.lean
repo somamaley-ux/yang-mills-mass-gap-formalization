@@ -3,13 +3,18 @@ import Checks.Axiom.AnomalyYukawaAxiomCheck
 import Checks.Axiom.ATSAxiomCheck
 import Checks.Axiom.AxiomCheck
 import Checks.Axiom.BivalentTrajectoryAxiomCheck
+import Checks.Axiom.CanonicalGRAxiomCheck
 import Checks.Axiom.ChargedCurrentAxiomCheck
 import Checks.Axiom.ClaimModalityAxiomCheck
 import Checks.Axiom.ClosureAxiomCheck
 import Checks.Axiom.EMCouplingAxiomCheck
 import Checks.Axiom.EmpiricalCompletenessAxiomCheck
+import Checks.Axiom.EverettDecoherenceAxiomCheck
+import Checks.Axiom.EverettSelectorsAxiomCheck
+import Checks.Axiom.EverettToyModelAxiomCheck
 import Checks.Axiom.EquivalenceExhaustionAxiomCheck
 import Checks.Axiom.FCNCAxiomCheck
+import Checks.Axiom.GaugeConstraintDynamicsAxiomCheck
 import Checks.Axiom.GodelAxiomCheck
 import Checks.Axiom.GodelVerbatimRegisterAxiomCheck
 import Checks.Axiom.HyperchargeAxiomCheck
@@ -45,6 +50,7 @@ import Checks.Axiom.StandardModelL1SupportBundleAxiomCheck
 import Checks.Axiom.StandardModelStructuralAxiomCheck
 import Checks.Axiom.StandardModelSupportAxiomCheck
 import Checks.Axiom.StandardModelUmbrellaVerifiedCoreAxiomCheck
+import Checks.Axiom.SymplecticGeometryAxiomCheck
 import Checks.Axiom.TmpClaimLedgerDirectAxiomCheck
 import Checks.Axiom.UniquenessAxiomCheck
 import Checks.Axiom.UnitaryMixingAxiomCheck

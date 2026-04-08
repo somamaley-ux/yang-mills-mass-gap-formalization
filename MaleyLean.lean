@@ -83,3 +83,9 @@ import MaleyLean.Papers.StandardModel.Support.ChargedCurrent.Derived
 import MaleyLean.Papers.StandardModel.Support.ChargedCurrent.DerivedPaperStatements
 import MaleyLean.Papers.StandardModel.Support.QCDCPodd.CoreClean
 import MaleyLean.Papers.StandardModel.Support.QCDCPodd.CleanPaperStatements
+import MaleyLean.Papers.GaugeConstraintDynamics.SymplecticGeometry
+import MaleyLean.Papers.GaugeConstraintDynamics.CanonicalGR
+import MaleyLean.Papers.GaugeConstraintDynamics.EverettDecoherence
+import MaleyLean.Papers.GaugeConstraintDynamics.EverettSelectors
+import MaleyLean.Papers.GaugeConstraintDynamics.EverettToyModel
+import MaleyLean.Papers.GaugeConstraintDynamics.PaperStatements

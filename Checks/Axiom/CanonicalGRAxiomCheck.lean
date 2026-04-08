@@ -1,0 +1,14 @@
+import MaleyLean.Papers.GaugeConstraintDynamics.CanonicalGR
+
+namespace MaleyLean
+
+#print axioms canonical_gr_supports_first_class_closure
+#print axioms canonical_gr_supports_multiplier_rigidity
+#print axioms canonical_gr_supports_constraint_dynamics_core
+#print axioms canonical_gr_with_geometry_supports_stageIII
+#print axioms toy_canonical_gr_first_class
+#print axioms toy_canonical_gr_multiplier_rigidity
+#print axioms toy_canonical_gr_constraint_dynamics_core
+#print axioms toy_canonical_gr_stageIII
+
+end MaleyLean

@@ -1,0 +1,52 @@
+Axiom Audit - Gauge Constraint Dynamics Paper Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+for the paper-facing declarations in
+`MaleyLean/Papers/GaugeConstraintDynamics/PaperStatements.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperAERInvolutivityStatement
+- MaleyLean.PaperAERFrobeniusFoliationStatement
+- MaleyLean.PaperAERBasicKernelInclusionStatement
+- MaleyLean.PaperAERReverseKernelInclusionStatement
+- MaleyLean.PaperAERCharacteristicIdentificationStatement
+- MaleyLean.PaperAERCoisotropicLocalNormalFormStatement
+- MaleyLean.PaperAERConstraintGeneratorsSpanStatement
+- MaleyLean.PaperAERFirstClassClosureStatement
+- MaleyLean.PaperAERSecondClassExclusionStatement
+- MaleyLean.PaperAERMultiplierRigidityStatement
+- MaleyLean.PaperCollapseTrilemmaUnderAERStatement
+- MaleyLean.PaperEverettProbabilityTrilemmaUnderAERStatement
+- MaleyLean.PaperEverettBranchNonInvarianceStatement
+- MaleyLean.PaperInvariantMeasureInsufficiencyStatement
+- MaleyLean.PaperTerminalExhaustionOfSelectionCertifiersStatement
+- MaleyLean.PaperGaugeConstraintDynamicsVerifiedCoreStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Gauge Constraint Dynamics paper-facing surface in this repo is
+axiom-free.
+
+This certifies an explicit manuscript-facing theorem surface covering:
+
+- involutive admissible-redescription structure
+- foliation packaging
+- kernel inclusion and characteristic identification
+- coisotropic forcing
+- local generator span and weak first-class closure
+- second-class exclusion
+- multiplier-type Hamiltonian rigidity
+- collapse / Everett trilemma and selector-exhaustion packaging
+- the bundled verified structural-core theorem
+
+This audit should be read together with the support map and status note so the
+repo records both facts at once:
+
+1. the present theorem surface is axiom-free
+2. the current certification level is a paper-facing structural formalization,
+   not yet a full low-level symplectic / GR / Hilbert-space substrate

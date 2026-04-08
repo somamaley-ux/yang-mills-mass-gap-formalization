@@ -1,0 +1,192 @@
+Gauge Constraint Dynamics Support Map
+
+Date: 2026-04-09
+
+Primary statement source
+------------------------
+
+Canonical manuscript source:
+
+- [main.tex](/d:/lean/MaleyLean/papers/gauge_constraint_dynamics/main.tex)
+
+Lean support surface
+--------------------
+
+Primary Lean module:
+
+- [PaperStatements.lean](/d:/lean/MaleyLean/MaleyLean/Papers/GaugeConstraintDynamics/PaperStatements.lean)
+- [SymplecticGeometry.lean](/d:/lean/MaleyLean/MaleyLean/Papers/GaugeConstraintDynamics/SymplecticGeometry.lean)
+- [CanonicalGR.lean](/d:/lean/MaleyLean/MaleyLean/Papers/GaugeConstraintDynamics/CanonicalGR.lean)
+- [EverettDecoherence.lean](/d:/lean/MaleyLean/MaleyLean/Papers/GaugeConstraintDynamics/EverettDecoherence.lean)
+- [EverettSelectors.lean](/d:/lean/MaleyLean/MaleyLean/Papers/GaugeConstraintDynamics/EverettSelectors.lean)
+- [EverettToyModel.lean](/d:/lean/MaleyLean/MaleyLean/Papers/GaugeConstraintDynamics/EverettToyModel.lean)
+
+Audit artifacts:
+
+- [GaugeConstraintDynamicsAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/GaugeConstraintDynamicsAxiomCheck.lean)
+- [SymplecticGeometryAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/SymplecticGeometryAxiomCheck.lean)
+- [CanonicalGRAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/CanonicalGRAxiomCheck.lean)
+- [EverettDecoherenceAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/EverettDecoherenceAxiomCheck.lean)
+- [EverettSelectorsAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/EverettSelectorsAxiomCheck.lean)
+- [EverettToyModelAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/EverettToyModelAxiomCheck.lean)
+- [gauge_constraint_dynamics_axiom_audit.txt](/d:/lean/MaleyLean/reports/audits/gauge_constraint_dynamics_axiom_audit.txt)
+
+Theorem correspondence
+----------------------
+
+Stage I: intrinsic AER and involutive redescription
+
+- manuscript theorem/corollary:
+  "Involutivity" and "Frobenius foliation"
+- Lean witnesses:
+  `MaleyLean.PaperAERInvolutivityStatement`
+  `MaleyLean.PaperAERFrobeniusFoliationStatement`
+
+Stage II: Poisson descent and coisotropic forcing
+
+- manuscript lemmas/theorem:
+  "Basic kernel inclusion"
+  "Reverse kernel inclusion from AER-Sep"
+  "Characteristic identification"
+- Lean witnesses:
+  `MaleyLean.PaperAERBasicKernelInclusionStatement`
+  `MaleyLean.PaperAERReverseKernelInclusionStatement`
+  `MaleyLean.PaperAERCharacteristicIdentificationStatement`
+
+Stage III: constraint generators and first-class closure
+
+- manuscript theorem/proposition:
+  "Coisotropic local normal form (minimal statement)"
+  "Generators span admissible redescription"
+  "First-class closure (structure functions)"
+  "Second-class standing implies trivial redescription"
+- Lean witnesses:
+  `MaleyLean.PaperAERCoisotropicLocalNormalFormStatement`
+  `MaleyLean.PaperAERConstraintGeneratorsSpanStatement`
+  `MaleyLean.PaperAERFirstClassClosureStatement`
+  `MaleyLean.PaperAERSecondClassExclusionStatement`
+
+Stage IV: multiplier-type Hamiltonian rigidity
+
+- manuscript theorem:
+  "Multiplier-type Hamiltonian rigidity (local)"
+- Lean witness:
+  `MaleyLean.PaperAERMultiplierRigidityStatement`
+
+Substrate support: local symplectic/coisotropic layer
+-----------------------------------------------------
+
+- support library:
+  local presymplectic geometry packages, characteristic-identification
+  witnesses, coisotropic witnesses, local normal-form charts, and
+  nondegeneracy-based second-class exclusion
+- Lean witnesses:
+  `MaleyLean.characteristic_identification_of_witness`
+  `MaleyLean.coisotropic_surface_of_witness`
+  `MaleyLean.local_presymplectic_geometry_supports_stageII`
+  `MaleyLean.coisotropic_normal_form_supports_generator_span`
+  `MaleyLean.local_presymplectic_geometry_supports_constraint_span`
+  `MaleyLean.standing_form_nondegenerate_forces_trivial_redescription`
+  `MaleyLean.toy_stageII_geometry`
+  `MaleyLean.toy_constraint_generator_span`
+
+Substrate support: canonical-GR realization layer
+-------------------------------------------------
+
+- support library:
+  constrained Hamiltonian GR systems with explicit weak first-class and
+  multiplier-rigidity witnesses, plus bridge theorems back to the paper's
+  Stage-III/IV surfaces
+- Lean witnesses:
+  `MaleyLean.canonical_gr_supports_first_class_closure`
+  `MaleyLean.canonical_gr_supports_multiplier_rigidity`
+  `MaleyLean.canonical_gr_supports_constraint_dynamics_core`
+  `MaleyLean.canonical_gr_with_geometry_supports_stageIII`
+  `MaleyLean.toy_canonical_gr_first_class`
+  `MaleyLean.toy_canonical_gr_multiplier_rigidity`
+  `MaleyLean.toy_canonical_gr_constraint_dynamics_core`
+  `MaleyLean.toy_canonical_gr_stageIII`
+
+Application layer
+-----------------
+
+- reusable decoherence substrate:
+  pointer/coarse-graining presentations, decoherence-record extraction,
+  state-determined vs presentation-dependent record interfaces, and induced
+  Everett-branch non-invariance
+- Lean witnesses:
+  `MaleyLean.decoherence_record_noninvariant_not_state_determined`
+  `MaleyLean.decoherence_record_noninvariant_forces_branch_noninvariance`
+  `MaleyLean.pointer_weight_outcome_relevant_not_state_determined`
+
+- concrete decoherence toy model:
+  a single entangled toy state with a fine pointer presentation yielding a
+  distinct branch record and a coarse pointer presentation yielding a merged
+  record
+- Lean witnesses:
+  `MaleyLean.everett_toy_pointer_record_noninvariant`
+  `MaleyLean.everett_toy_pointer_record_not_state_determined`
+  `MaleyLean.everett_toy_decoherence_branching_noninvariant`
+  `MaleyLean.everett_toy_pointer_weight_outcome_relevant`
+  `MaleyLean.everett_toy_pointer_weight_not_state_determined`
+  `MaleyLean.everett_toy_decoherence_meta_if_not_reified`
+
+- reusable Everett substrate:
+  auxiliary branch-extraction specifications, weight rules, selector diagnosis,
+  symmetric-branch packaging, invariant-measure / selector-freeness interfaces,
+  and terminal selector-certifier exhaustion
+- Lean witnesses:
+  `MaleyLean.noninvariant_branch_extraction_not_state_determined`
+  `MaleyLean.noninvariant_branch_extraction_forces_auxiliary_dependence`
+  `MaleyLean.state_determined_weights_not_outcome_relevant`
+  `MaleyLean.outcome_relevant_weights_require_auxiliary_dependence`
+  `MaleyLean.everett_selector_diagnosis`
+  `MaleyLean.invariant_measure_on_symmetric_pair_blocks_selector_free_singling`
+  `MaleyLean.symmetric_pair_selector_requires_break_or_extra_structure`
+  `MaleyLean.everett_no_admissible_certifier_from_terminal_classes`
+
+- concrete Everett toy model:
+  a finite Bell-like state with two competing factorizations, one yielding a
+  two-branch reading and one yielding a one-branch reading
+- Lean witnesses:
+  `MaleyLean.everett_toy_branch_count_noninvariant`
+  `MaleyLean.everett_toy_branch_description_noninvariant`
+  `MaleyLean.everett_toy_branching_noninvariant`
+  `MaleyLean.everett_toy_branching_not_state_determined`
+  `MaleyLean.everett_toy_weight_rule_outcome_relevant`
+  `MaleyLean.everett_toy_weight_rule_not_state_determined`
+  `MaleyLean.everett_toy_selector_meta_if_not_reified`
+
+- manuscript theorem:
+  "Collapse Trilemma Under AER"
+- Lean witness:
+  `MaleyLean.PaperCollapseTrilemmaUnderAERStatement`
+
+- manuscript theorem/corollary family:
+  "Everett Probability Trilemma Under AER"
+  explicit branch non-invariance
+  invariant-measure insufficiency
+  terminal exhaustion of selection certifiers
+- Lean witnesses:
+  `MaleyLean.PaperEverettProbabilityTrilemmaUnderAERStatement`
+  `MaleyLean.PaperEverettBranchNonInvarianceStatement`
+  `MaleyLean.PaperInvariantMeasureInsufficiencyStatement`
+  `MaleyLean.PaperTerminalExhaustionOfSelectionCertifiersStatement`
+
+Verified core bundle
+--------------------
+
+- Lean witness:
+  `MaleyLean.PaperGaugeConstraintDynamicsVerifiedCoreStatement`
+
+Coverage note
+-------------
+
+This Lean layer certifies the manuscript's theorem-facing structural spine with
+explicit hypotheses and no hidden axioms.
+
+It does not yet claim a full internalization of:
+
+- coisotropic/symplectic geometry in low-level manifold detail
+- canonical GR as a theorem-by-theorem ADM formal library
+- Hilbert-space dynamics and branching mechanics as a low-level formal development

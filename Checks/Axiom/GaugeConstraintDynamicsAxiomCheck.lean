@@ -1,0 +1,22 @@
+import MaleyLean.Papers.GaugeConstraintDynamics.PaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperAERInvolutivityStatement
+#print axioms PaperAERFrobeniusFoliationStatement
+#print axioms PaperAERBasicKernelInclusionStatement
+#print axioms PaperAERReverseKernelInclusionStatement
+#print axioms PaperAERCharacteristicIdentificationStatement
+#print axioms PaperAERCoisotropicLocalNormalFormStatement
+#print axioms PaperAERConstraintGeneratorsSpanStatement
+#print axioms PaperAERFirstClassClosureStatement
+#print axioms PaperAERSecondClassExclusionStatement
+#print axioms PaperAERMultiplierRigidityStatement
+#print axioms PaperCollapseTrilemmaUnderAERStatement
+#print axioms PaperEverettProbabilityTrilemmaUnderAERStatement
+#print axioms PaperEverettBranchNonInvarianceStatement
+#print axioms PaperInvariantMeasureInsufficiencyStatement
+#print axioms PaperTerminalExhaustionOfSelectionCertifiersStatement
+#print axioms PaperGaugeConstraintDynamicsVerifiedCoreStatement
+
+end MaleyLean

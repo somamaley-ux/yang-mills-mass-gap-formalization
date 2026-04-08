@@ -1,0 +1,1502 @@
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,geometry,mathtools,physics}
+% --- PDF / hyperlink hygiene (kills blue boxes, enables \texorpdfstring)
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\geometry{margin=1in}
+
+\title{Admissibility and the Structural Origin of Gauge and Constraint Dynamics}
+\author{Amos Jay Maley}
+\date{\today}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{axiom}[definition]{Axiom}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+\theoremstyle{plain}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We derive a rigidity result for constrained Hamiltonian systems from an admissibility-based framework for physical observables. Starting from a standing surface, a local pseudogroup of admissible redescriptions, and minimal compatibility conditions on observable dynamics, we show that coisotropic constraint structure, characteristic redescription, local constraint generators, first-class closure, and multiplier-type Hamiltonian dynamics follow as necessary consequences rather than being posited.
+
+The derivation separates algebraic closure of observables under the Poisson bracket from geometric reduction, and identifies the conditions under which the redescription distribution coincides with the null distribution of the induced symplectic form. This yields coisotropic standing and enforces first-class constraint structure.
+
+As a downstream consequence, canonical gauge formalisms are reclassified relative to the derived admissibility structure. In particular, canonical general relativity is exhibited as a presentation-level realization of the rigidity structure, while selector-dependent structures in quantum formalisms are shown to require explicit state-level realization in order to carry standing. In this sense, familiar gauge and constraint dynamics arise as structural consequences of admissible observable dynamics rather than as independent primitive inputs.
+\end{abstract}
+
+
+
+\section*{Orientation and Claim Structure}
+
+This manuscript has two logically ordered aims.
+
+First, it derives a rigidity theorem for constrained Hamiltonian systems from the AER axioms and the additional compatibility conditions stated below. The theorem-bearing core is structural: it shows that coisotropic standing, characteristic redescription, local constraint generators, first-class closure, and multiplier-type Hamiltonian structure follow from admissibility conditions rather than being posited at the outset.
+
+Second, it uses that rigidity theorem to reclassify familiar formalisms in canonical GR and quantum foundations. These downstream sections are not separate speculative excursions and are not used in any proof of the rigidity theorem. Their role is interpretive and classificatory: once the AER structure is derived, familiar representational objects in GR and QM can be evaluated according to it.
+
+In this sense, the paper's central claim is not merely that AER reproduces known constrained-Hamiltonian structures. It is that those structures provide the criterion under which canonical GR and selector-bearing quantum formalisms are to be read as downstream bookkeeping or presentation layers relative to admissible physical content. The novelty of the result lies not in introducing new symplectic structures, but in deriving the necessity of the constrained Hamiltonian architecture from admissibility conditions rather than positing it. The derivational order is therefore:
+\[
+\text{AER rigidity} \;\Longrightarrow\; \text{classification of downstream GR/QM formalisms}.
+\]
+
+The mathematical burden of the paper lies in the rigidity derivation. The GR and QM sections state the principal interpretive payoff of that derivation.
+
+\section*{Part I: Intrinsic AER and Involutive Redescription}
+
+\section{Phase Space and Regular Stratum}
+
+Let $(S,\omega)$ be a finite-dimensional symplectic manifold.
+All results are local on a \emph{regular stratum}, meaning an open set where:
+
+\begin{enumerate}
+\item Any submanifold $\mathcal{C}\subset S$ considered below is an embedded submanifold of constant codimension.
+\item Any quotient $\pi:\mathcal{C}\to S_{\mathrm{phys}}$ considered below is a smooth submersion.
+\item Any local pseudogroup $\mathcal{G}$ acts smoothly.
+\end{enumerate}
+
+We do not assume prior constraint functions, first-class closure, or Dirac structure.
+
+\section{Intrinsic AER Structure}
+
+\subsection{Standing Surface}
+
+\begin{definition}[Standing surface]
+A standing surface is a smooth embedded submanifold
+\[
+\mathcal{C}\subset S.
+\]
+Binary standing is defined by
+\[
+\mathrm{Stand}(x)=1 \iff x\in\mathcal{C}.
+\]
+\end{definition}
+
+\subsection{Admissible Redescription}
+
+\begin{definition}[Local pseudogroup of admissible redescriptions]
+A local pseudogroup $\mathcal{G}$ on $\mathcal{C}$ is a collection of local diffeomorphisms
+closed under composition and inversion whenever defined.
+\end{definition}
+
+Define the equivalence relation:
+
+\[
+x\sim y \iff \exists g\in\mathcal{G}\ \text{such that}\ y=g(x).
+\]
+
+Assume the local quotient $S_{\mathrm{phys}}:=\mathcal{C}/\sim$ exists and is smooth on the regular stratum.
+
+Let $\pi:\mathcal{C}\to S_{\mathrm{phys}}$ denote the quotient projection.
+
+\subsection{Physical Observables}
+
+\begin{definition}[Physical observable]
+A physical observable is a smooth function $O:\mathcal{C}\to\mathbb{R}$
+that is constant along $\sim$-equivalence classes.
+Equivalently,
+\[
+O=\tilde O\circ \pi
+\]
+for some smooth $\tilde O:S_{\mathrm{phys}}\to\mathbb{R}$.
+\end{definition}
+
+\section{AER Axioms (Intrinsic Form)}
+
+\begin{axiom}[AER-1 Stability]
+Hamiltonian flow $T_t$ preserves $\mathcal{C}$ and descends to a well-defined flow on $S_{\mathrm{phys}}$.
+\end{axiom}
+
+\begin{axiom}[AER-2 Binary conserved standing]
+If $x\in\mathcal{C}$ then $T_t(x)\in\mathcal{C}$ for all $t$.
+\end{axiom}
+
+\begin{axiom}[AER-3 Internal closure]
+Any outcome-relevant quantity must be a physical observable.
+\end{axiom}
+
+\begin{axiom}[AER-4 Nontrivial admissibility]
+$\mathcal{C}\subsetneq S$ is proper.
+\end{axiom}
+
+\begin{axiom}[AER-5 Redescription closure]
+$\mathcal{G}$ is closed under composition and inversion.
+\end{axiom}
+
+\section{Redescription Distribution}
+
+\begin{definition}[Redescription distribution]
+At each $x\in\mathcal{C}$ define
+\[
+\mathcal{D}_x := \ker(d\pi_x) \subset T_x\mathcal{C}.
+\]
+\end{definition}
+
+Equivalently, $\mathcal{D}_x$ consists of tangent vectors at $x$ that lie within the $\sim$-equivalence class.
+
+\section{Involutivity of Redescription}
+
+We now derive involutivity of $\mathcal{D}$ from pseudogroup closure.
+
+\begin{lemma}[Infinitesimal generators]
+Let $\mathcal{G}$ be smooth on the regular stratum.
+For each $x\in\mathcal{C}$ and $v\in\mathcal{D}_x$,
+there exists a local one-parameter family $g_\epsilon\in\mathcal{G}$
+such that
+\[
+\frac{d}{d\epsilon}\Big|_{\epsilon=0} g_\epsilon(x) = v.
+\]
+\end{lemma}
+
+\begin{proof}
+By smoothness of the pseudogroup action,
+the tangent space to the $\sim$-equivalence class at $x$
+is spanned by derivatives of admissible local transformations.
+This is standard for smooth pseudogroup actions.
+\end{proof}
+
+\begin{theorem}[Involutivity]
+The distribution $\mathcal{D}$ is involutive:
+if $X,Y$ are smooth vector fields tangent to $\mathcal{D}$,
+then $[X,Y]$ is tangent to $\mathcal{D}$.
+\end{theorem}
+
+\begin{proof}
+Let $X$ and $Y$ be smooth vector fields whose flows lie in $\mathcal{G}$.
+Because $\mathcal{G}$ is closed under composition and inversion,
+the commutator flow
+\[
+\Phi_{-\epsilon}^Y \circ \Phi_{-\epsilon}^X \circ \Phi_\epsilon^Y \circ \Phi_\epsilon^X
+\]
+is also an admissible redescription (to first order in $\epsilon$).
+Standard Lie theory implies that the infinitesimal generator of this commutator
+is $[X,Y]$.
+Since the commutator flow remains within $\mathcal{G}$,
+its infinitesimal generator must lie in $\mathcal{D}$.
+Therefore $[X,Y]$ is tangent to $\mathcal{D}$.
+\end{proof}
+
+\begin{corollary}[Frobenius foliation]
+By Frobenius theorem,
+$\mathcal{D}$ integrates locally to a foliation of $\mathcal{C}$.
+Leaves coincide with $\sim$-equivalence classes.
+\end{corollary}
+
+\section{Summary of Stage I}
+
+From purely intrinsic AER axioms (without constraint functions),
+we have derived:
+
+\begin{enumerate}
+\item A smooth quotient projection $\pi:\mathcal{C}\to S_{\mathrm{phys}}$.
+\item A redescription distribution $\mathcal{D}=\ker(d\pi)$.
+\item Involutivity of $\mathcal{D}$ from pseudogroup closure.
+\item Local foliation of $\mathcal{C}$ by admissible redescription classes.
+\end{enumerate}
+
+No assumption of constraint generators, coisotropic structure,
+or first-class closure has been made at this stage.
+
+Subsequent stages will derive coisotropic standing and first-class structure
+from the stated symplectic compatibility conditions.
+
+
+
+\section*{Part II: Poisson Descent and Coisotropic Forcing}
+
+
+
+
+\section{Context and Standing Notation}
+
+We assume the Stage I setup:
+a symplectic manifold $(S,\omega)$, a standing surface $\mathcal{C}\subset S$,
+a smooth local pseudogroup $\mathcal{G}$ acting on $\mathcal{C}$ with quotient
+$\pi:\mathcal{C}\to S_{\mathrm{phys}}:=\mathcal{C}/\sim$ a smooth submersion on a regular stratum.
+The redescription distribution is $\mathcal{D}:=\ker(d\pi)\subset T\mathcal{C}$ and is involutive.
+
+Let $\iota:\mathcal{C}\hookrightarrow S$ be inclusion and define the pulled-back $2$-form
+\begin{equation}
+\omega_{\mathcal{C}}:=\iota^*\omega.
+\end{equation}
+Define its pointwise kernel
+\begin{equation}
+\ker(\omega_{\mathcal{C},x}) := \{v\in T_x\mathcal{C}: \omega_{\mathcal{C},x}(v,w)=0\ \forall w\in T_x\mathcal{C}\}.
+\end{equation}
+
+\section{Minimal Poisson Compatibility (AER-Obsmin)}
+
+We now add the symplectic/Poisson compatibility sufficient for the coisotropic forcing result,
+without assuming a reduced symplectic form.
+
+\begin{axiom}[AER-Obs\textsubscript{min}: descent of Poisson bracket]
+\label{ax:obsmin}
+For any two physical observables $O=\tilde O\circ \pi$ and $P=\tilde P\circ \pi$ (with $\tilde O,\tilde P\in C^\infty(S_{\mathrm{phys}})$),
+the Poisson bracket on $S$ restricts to $\mathcal{C}$ and depends only on the quotient class:
+there exists a Poisson bracket $\{\cdot,\cdot\}_{\mathrm{phys}}$ on $S_{\mathrm{phys}}$ such that
+\begin{equation}
+\{O,P\}\big|_{\mathcal{C}} = \{\tilde O,\tilde P\}_{\mathrm{phys}}\circ \pi.
+\label{eq:poisson-descent}
+\end{equation}
+\end{axiom}
+
+\begin{remark}
+AER-Obs\textsubscript{min} asserts only algebraic closure of the Poisson bracket on the class of physical observables.
+It does not assume a reduced symplectic form, nondegeneracy on the quotient, or an a priori Marsden--Weinstein reduction.
+The quotient geometry used later is derived on the regular stratum from AER-Obs\textsubscript{min} together with AER-Sep.
+\end{remark}
+
+\section{Separation and Richness of Observables (AER-Sep)}
+
+To make the identification of redescription directions with null directions of $\omega_{\mathcal{C}}$ airtight,
+we require that physical observables are sufficiently rich to detect all transverse directions to the foliation.
+
+\begin{axiom}[AER-Sep: separation and cotangent spanning]
+\label{ax:sep}
+On the regular stratum:
+\begin{enumerate}
+\item (\emph{Leaf separation}) For $x,y\in\mathcal{C}$ with $\pi(x)\neq \pi(y)$, there exists a physical observable $O$ with $O(x)\neq O(y)$.
+\item (\emph{Cotangent spanning}) For each $x\in\mathcal{C}$, the set of differentials $\{dO_x: O \text{ physical}\}$ spans the annihilator of $\mathcal{D}_x$ in $T_x^*\mathcal{C}$, i.e.
+\begin{equation}
+\mathrm{Ann}(\mathcal{D}_x):=\{\alpha\in T_x^*\mathcal{C}:\alpha(v)=0\ \forall v\in\mathcal{D}_x\}
+= \mathrm{span}\{dO_x\}.
+\end{equation}
+\end{enumerate}
+\end{axiom}
+
+\begin{remark}
+AER-Sep is a regularity condition on the quotient, not an additional dynamical postulate.
+The cotangent-spanning clause says exactly that pullbacks of smooth functions on $S_{\mathrm{phys}}$ generate the transverse cotangent directions,
+so there are no hidden quotient directions invisible to physical observables.
+Without this clause, transverse directions need not be detectable by observables and the reverse inclusion
+$\ker(\omega_{\mathcal{C},x})\subseteq\ker(d\pi_x)$ cannot be derived.
+Without leaf separation, distinct quotient classes are not functionally distinguished by observables.
+\end{remark}
+
+\section{Hamiltonian Vector Fields Restricted to \texorpdfstring{$\mathcal{C}$}{C}}
+
+For $f\in C^\infty(S)$, let $X_f$ be its Hamiltonian vector field on $S$, defined by
+\begin{equation}
+\omega(X_f,\cdot)=df(\cdot).
+\end{equation}
+
+\begin{definition}[Tangential Hamiltonian representative on $\mathcal{C}$]
+Given a function $F$ defined on a neighborhood of $\mathcal{C}$, write $F_{\mathcal{C}}:=F|_{\mathcal{C}}$.
+For a physical observable $O$ (defined on $\mathcal{C}$), choose an extension $\bar O$ to a neighborhood in $S$ and define $X_{\bar O}$ on $S$.
+Only the restriction of $\omega_{\mathcal{C}}(\cdot,\cdot)$ to tangent vectors in $T\mathcal{C}$ will appear; conclusions will be extension-independent where stated.
+\end{definition}
+
+\section{Kernel Inclusion I: \texorpdfstring{$\ker(d\pi)\subseteq\ker(\omega_{\mathcal{C}})$}{ker(dpi) subset ker(omegaC)}}
+
+\begin{lemma}[Basic kernel inclusion]
+\label{lem:incl1}
+Assume AER-Obs\textsubscript{min}. Then for all $x\in\mathcal{C}$,
+\begin{equation}
+\mathcal{D}_x=\ker(d\pi_x)\subseteq \ker(\omega_{\mathcal{C},x}).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix $x\in\mathcal{C}$ and $v\in\mathcal{D}_x$.
+Let $O$ be any physical observable on $\mathcal{C}$ and let $\bar O$ be any smooth extension to a neighborhood in $S$.
+Since $O=\tilde O\circ\pi$ and $d\pi_x(v)=0$,
+\begin{equation}
+d\bar O_x(v)=dO_x(v)=d\tilde O_{\pi(x)}(d\pi_x(v))=0.
+\label{eq:dOvanish}
+\end{equation}
+By definition of the Hamiltonian vector field,
+\begin{equation}
+\omega_x(X_{\bar O},v)=d\bar O_x(v)=0.
+\end{equation}
+Restricting to $\mathcal{C}$ gives
+\begin{equation}
+\omega_{\mathcal{C},x}(X_{\bar O}|_{T_x\mathcal{C}},v)=0.
+\label{eq:orth-to-XO}
+\end{equation}
+Thus every vertical vector $v\in\mathcal{D}_x$ is symplectically orthogonal, with respect to $\omega_{\mathcal{C}}$,
+to every tangential Hamiltonian direction generated by a physical observable.
+
+AER-Obs\textsubscript{min} asserts precisely that these physical-observable Hamiltonians define a well-posed Poisson quotient on the regular stratum.
+For such Poisson quotients of a symplectic manifold, the vertical distribution of the quotient map is necessarily isotropic for the pulled-back two-form; equivalently,
+\begin{equation}
+\mathcal{D}_x\subseteq\ker(\omega_{\mathcal{C},x}).
+\end{equation}
+This is the standard local compatibility criterion behind coisotropic reduction.\footnote{For standard expositions of this local reduction criterion, see e.g.\ Ana Cannas da Silva, \emph{Lectures on Symplectic Geometry}, and Izu Vaisman, \emph{Lectures on the Geometry of Poisson Manifolds}.}
+\end{proof}
+
+\begin{remark}
+Lemma~\ref{lem:incl1} uses only AER-Obs\textsubscript{min} to obtain the vertical-isotropic inclusion required by the reduction criterion.
+The full transverse identification is completed only after AER-Sep is added in Lemma~\ref{lem:incl2} and Theorem~\ref{thm:char}.
+\end{remark}
+
+\section{Kernel Inclusion II: \texorpdfstring{$\ker(\omega_{\mathcal{C}})\subseteq\ker(d\pi)$}{ker(omegaC) subset ker(dpi)}}
+
+\begin{lemma}[Reverse kernel inclusion from AER-Sep]
+\label{lem:incl2}
+Assume AER-Sep. Then for all $x\in\mathcal{C}$,
+\begin{equation}
+\ker(\omega_{\mathcal{C},x})\subseteq \ker(d\pi_x)=\mathcal{D}_x.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix $x\in\mathcal{C}$ and let $v\in T_x\mathcal{C}$ with $v\notin\ker(d\pi_x)$. Then $d\pi_x(v)\neq 0$, so $v$ has a nonzero component transverse to the leaf.
+
+By AER-Sep (cotangent spanning), there exists a physical observable $O$ such that
+\begin{equation}
+dO_x(v)\neq 0.
+\label{eq:sep-nonzero}
+\end{equation}
+Let $\bar O$ be an extension to $S$ and let $X_{\bar O}$ be its Hamiltonian vector field on $S$.
+Restricting to $\mathcal{C}$,
+\begin{equation}
+dO_x(v)=d\bar O_x(v)=\omega_x(X_{\bar O},v)=\omega_{\mathcal{C},x}(X_{\bar O}|_{T_x\mathcal{C}},v).
+\end{equation}
+Thus \eqref{eq:sep-nonzero} implies there exists some tangent direction (namely $X_{\bar O}$ projected to $T_x\mathcal{C}$) for which
+\begin{equation}
+\omega_{\mathcal{C},x}(\cdot,v)\neq 0,
+\end{equation}
+so $v\notin\ker(\omega_{\mathcal{C},x})$.
+Contraposition yields $\ker(\omega_{\mathcal{C},x})\subseteq\ker(d\pi_x)$.
+\end{proof}
+
+\section{Airtight Identification and Coisotropic Forcing}
+
+\begin{theorem}[Characteristic identification]
+\label{thm:char}
+Assume AER-Obs\textsubscript{min} and AER-Sep on the regular stratum. Then pointwise on $\mathcal{C}$,
+\begin{equation}
+\ker(d\pi)=\ker(\omega_{\mathcal{C}}).
+\end{equation}
+In particular, $\mathcal{C}$ is coisotropic and admissible redescription coincides with the characteristic foliation of $\omega_{\mathcal{C}}$.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:incl1}, $\ker(d\pi)\subseteq\ker(\omega_{\mathcal{C}})$.
+By Lemma~\ref{lem:incl2}, $\ker(\omega_{\mathcal{C}})\subseteq\ker(d\pi)$.
+Thus equality holds. Coisotropicity follows from the standard identity $\ker(\omega_{\mathcal{C}})=\mathcal{C}^{\perp_\omega}$, hence $\mathcal{C}^{\perp_\omega}\subset T\mathcal{C}$.
+\end{proof}
+
+\section{Role of AER-Obsmin in the Forcing Argument}
+
+\begin{proposition}[Necessity for the forcing result]
+If AER-Obs\textsubscript{min} fails, then the Poisson bracket of physical observables on $S$ does not descend to $S_{\mathrm{phys}}$.
+In that case there is no induced Poisson structure on the quotient compatible with the ambient Hamiltonian structure, and the coisotropic forcing argument cannot be run.
+\end{proposition}
+
+\begin{proof}
+If descent fails, then there exist physical observables $O,P$ with $\{O,P\}|_{\mathcal{C}}$ not constant on leaves, hence not a pullback from $S_{\mathrm{phys}}$.
+Then the would-be Poisson algebra of physical observables is not closed under Poisson bracket, so the quotient cannot inherit a Poisson structure compatible with $\omega$.
+Since the characteristic distribution is defined precisely as the kernel of $\omega_{\mathcal{C}}$ that makes such reduction possible, the forcing theorem has no target: the quotient is not a Poisson reduction of $(S,\omega)$.
+\end{proof}
+
+\begin{proposition}[AER-Obs\textsubscript{min} is algebraic, not geometric]
+AER-Obs\textsubscript{min} does not assume existence of a reduced symplectic form, nondegeneracy on the quotient, or prior coisotropic reduction.
+It assumes only algebraic descent of the bracket on observables.
+The identification $\ker(d\pi)=\ker(\omega_{\mathcal{C}})$ is derived using AER-Sep, not assumed.
+\end{proposition}
+
+\section{Summary of Stage II}
+
+From Stage I (intrinsic AER + involutive redescription) and adding:
+\begin{itemize}
+\item AER-Obs\textsubscript{min} (Poisson bracket descends),
+\item AER-Sep (observables separate and span transverse cotangents),
+\end{itemize}
+we have proven that admissible redescription necessarily coincides with the characteristic foliation of $\omega_{\mathcal{C}}$ and that $\mathcal{C}$ is necessarily coisotropic.
+
+Stage III will use this coisotropic structure to construct local constraint generators and prove first-class closure in full detail.
+
+
+
+\section*{Part III: Constraint Generators and First-Class Closure}
+
+
+
+
+\section{Context}
+
+Assume Stage I--II hypotheses and results:
+\begin{enumerate}
+\item $(S,\omega)$ symplectic; $\mathcal{C}\subset S$ standing surface.
+\item Smooth quotient $\pi:\mathcal{C}\to S_{\mathrm{phys}}$ on regular stratum; $\mathcal{D}=\ker(d\pi)$ involutive.
+\item Minimal Poisson descent and separation (AER-Obs$_{\min}$ and AER-Sep).
+\item Therefore $\mathcal{D}=\ker(\omega_{\mathcal{C}})$ and $\mathcal{C}$ is coisotropic (Stage II Theorem).
+\end{enumerate}
+
+We now construct local constraint generators and prove first-class closure.
+
+\section{Coisotropic Normal Form and Local Constraint Generators}
+
+We use a standard local normal form theorem for coisotropic submanifolds.
+We state it in the minimal form required for this paper.
+
+\begin{theorem}[Coisotropic local normal form (minimal statement)]
+\label{thm:coisotropic-normal}
+Let $(S,\omega)$ be symplectic and let $\mathcal{C}\subset S$ be a regular coisotropic submanifold of codimension $k$.
+Then for each $x\in\mathcal{C}$ there exist local Darboux coordinates
+\[
+(q^1,\dots,q^n,p_1,\dots,p_n)
+\]
+on a neighborhood $U\subset S$ of $x$ such that, on $U$,
+\begin{equation}
+\mathcal{C}\cap U = \{p_1=\cdots=p_k=0\}.
+\label{eq:C-local}
+\end{equation}
+Moreover, the characteristic distribution $\ker(\omega_{\mathcal{C}})$ is locally spanned on $\mathcal{C}\cap U$ by
+\begin{equation}
+X_{p_1},\dots,X_{p_k}.
+\label{eq:span-char}
+\end{equation}
+\end{theorem}
+
+\begin{remark}
+This is a standard consequence of the coisotropic embedding theorem / coisotropic normal form in symplectic geometry.
+The present paper uses only the existence of local defining functions and the spanning property of their Hamiltonian vector fields.
+\end{remark}
+
+\begin{definition}[Local constraint generators]
+\label{def:constraints}
+On a neighborhood $U$ as in Theorem~\ref{thm:coisotropic-normal}, define
+\begin{equation}
+\phi_a := p_a,\qquad a=1,\dots,k.
+\end{equation}
+Then $\mathcal{C}\cap U=\{\phi_1=\cdots=\phi_k=0\}$.
+\end{definition}
+
+\begin{proposition}[Generators span admissible redescription]
+\label{prop:spanD}
+On $\mathcal{C}\cap U$, the Hamiltonian vector fields $X_{\phi_a}$ span the admissible redescription distribution:
+\begin{equation}
+\mathcal{D} = \mathrm{span}\{X_{\phi_1},\dots,X_{\phi_k}\}\Big|_{\mathcal{C}\cap U}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By Stage II, $\mathcal{D}=\ker(\omega_{\mathcal{C}})$ is the characteristic distribution.
+By Theorem~\ref{thm:coisotropic-normal}, this distribution is locally spanned by $X_{p_a}=X_{\phi_a}$ on $\mathcal{C}\cap U$.
+\end{proof}
+
+\section{First-Class Closure}
+
+We now prove that the constraints close (weakly) under Poisson bracket.
+
+\begin{lemma}[Hamiltonian commutator identity]
+\label{lem:commutator}
+For any smooth functions $f,g$ on a symplectic manifold,
+\begin{equation}
+[X_f,X_g] = X_{\{f,g\}}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Standard: $X_f$ and $X_g$ are derivations of the Poisson algebra, and the commutator corresponds to the Poisson bracket.
+\end{proof}
+
+\begin{theorem}[First-class closure (structure functions)]
+\label{thm:firstclass}
+Let $\{\phi_a\}$ be local constraint generators as in Definition~\ref{def:constraints}.
+Then on $\mathcal{C}\cap U$,
+\begin{equation}
+\{\phi_a,\phi_b\}\approx \sum_{c=1}^k C_{ab}{}^{c}\,\phi_c,
+\label{eq:firstclass}
+\end{equation}
+for smooth coefficient functions $C_{ab}{}^{c}$ on $U$.
+Equivalently, $\{\phi_a,\phi_b\}$ vanishes on $\mathcal{C}$ and lies in the ideal generated by the $\phi_c$.
+\end{theorem}
+
+\begin{proof}
+By Stage I, $\mathcal{D}$ is involutive (Frobenius).
+By Proposition~\ref{prop:spanD}, $\mathcal{D}$ is spanned on $\mathcal{C}\cap U$ by $X_{\phi_a}$.
+Therefore, for each $a,b$, the Lie bracket $[X_{\phi_a},X_{\phi_b}]$ is tangent to $\mathcal{D}$ along $\mathcal{C}$.
+So there exist smooth functions $C_{ab}{}^{c}$ on $\mathcal{C}\cap U$ such that
+\begin{equation}
+[X_{\phi_a},X_{\phi_b}] = \sum_c C_{ab}{}^{c}\,X_{\phi_c}
+\qquad \text{on } \mathcal{C}\cap U.
+\label{eq:bracket-span}
+\end{equation}
+Using Lemma~\ref{lem:commutator}, the left-hand side equals $X_{\{\phi_a,\phi_b\}}$.
+Hence
+\begin{equation}
+X_{\{\phi_a,\phi_b\}} = \sum_c C_{ab}{}^{c}\,X_{\phi_c}
+\qquad \text{on } \mathcal{C}\cap U.
+\label{eq:Xeq}
+\end{equation}
+
+Now consider the function
+\begin{equation}
+\psi_{ab}:=\{\phi_a,\phi_b\}-\sum_c C_{ab}{}^{c}\,\phi_c.
+\end{equation}
+Equation \eqref{eq:Xeq} implies $X_{\psi_{ab}}=0$ along $\mathcal{C}\cap U$.
+Thus $d\psi_{ab}$ vanishes on all vectors symplectically paired with tangent vectors; in particular, $\psi_{ab}$ is locally constant along the characteristic leaves of $\mathcal{C}$.
+But $\psi_{ab}$ vanishes on $\mathcal{C}$ at the point $x$ because each $\phi_c$ vanishes there and $\{\phi_a,\phi_b\}$ vanishes on $\mathcal{C}$ by coisotropicity (equivalently, $X_{\phi_a}$ are tangent to $\mathcal{C}$).
+Therefore $\psi_{ab}$ vanishes on $\mathcal{C}\cap U$, i.e.\
+\begin{equation}
+\{\phi_a,\phi_b\}\big|_{\mathcal{C}} = 0.
+\end{equation}
+
+Finally, by regularity of $\mathcal{C}$ as a submanifold defined by $\phi_a=0$ with independent differentials, any smooth function vanishing on $\mathcal{C}\cap U$ lies in the ideal generated by $\{\phi_c\}$ locally (Hadamard's lemma in the normal directions).
+Therefore \eqref{eq:firstclass} holds with smooth coefficients $C_{ab}{}^{c}$ (extended off $\mathcal{C}$ if desired).
+\end{proof}
+
+\section{Second-Class Exclusion (Nontrivial Redescription)}
+\section{Second-Class Contrast Example: Particle on a Sphere}
+% Suggested insertion point: after second-class exclusion theorem
+
+Consider a particle constrained to the sphere
+\begin{equation}
+x^2 + y^2 + z^2 = R^2.
+\end{equation}
+The induced symplectic structure on the constraint surface is nondegenerate.
+Hence $\ker(\omega_{\mathcal{C}})=0$,
+and admissible redescription is trivial.
+This is a second-class standing surface.
+AER permits such systems but excludes nontrivial redescription here,
+illustrating the scope of the second-class exclusion theorem.
+
+% ----------------------------------------------------------------
+
+
+\begin{definition}[Second-class standing surface (local)]
+A standing surface $\mathcal{C}$ is locally \emph{symplectic} if $\omega_{\mathcal{C}}$ is nondegenerate.
+Equivalently, $\ker(\omega_{\mathcal{C}})=0$.
+\end{definition}
+
+\begin{theorem}[Second-class standing implies trivial redescription]
+\label{thm:secondclass}
+Assume Stage II: $\mathcal{D}=\ker(\omega_{\mathcal{C}})$.
+If $\omega_{\mathcal{C}}$ is nondegenerate, then $\mathcal{D}=0$ and admissible redescription is trivial (all equivalence classes are singletons).
+Conversely, any nontrivial admissible redescription ($\mathcal{D}\neq 0$) forces $\omega_{\mathcal{C}}$ to be degenerate and hence excludes locally symplectic (second-class) standing surfaces.
+\end{theorem}
+
+\begin{proof}
+If $\omega_{\mathcal{C}}$ is nondegenerate, then $\ker(\omega_{\mathcal{C}})=0$. Since $\mathcal{D}=\ker(\omega_{\mathcal{C}})$, $\mathcal{D}=0$.
+Conversely, if $\mathcal{D}\neq 0$, then $\ker(\omega_{\mathcal{C}})\neq 0$, so $\omega_{\mathcal{C}}$ is degenerate.
+\end{proof}
+
+\section{Summary of Stage III}
+
+We have proven:
+\begin{enumerate}
+\item Coisotropic normal form yields local constraint generators $\phi_a$ defining $\mathcal{C}$.
+\item Their Hamiltonian vector fields span admissible redescription directions.
+\item Involutivity forces first-class closure $\{\phi_a,\phi_b\}\approx C_{ab}{}^{c}\phi_c$.
+\item Second-class standing surfaces admit only trivial redescription.
+\end{enumerate}
+
+Stage IV will add presentation arbitrariness (AER-P) and force multiplier-type Hamiltonian dynamics.
+
+
+
+\section*{Part IV: Multiplier-Type Hamiltonian Rigidity}
+
+
+
+
+\section{Context}
+
+Assume Stage I--III results:
+\begin{enumerate}
+\item AER intrinsic structure with smooth quotient $\pi:\mathcal{C}\to S_{\mathrm{phys}}$ and involutive distribution $\mathcal{D}=\ker(d\pi)$.
+\item Minimal Poisson descent and separation give $\mathcal{D}=\ker(\omega_{\mathcal{C}})$ and coisotropic standing.
+\item Coisotropic normal form yields local constraint generators $\phi_a$ with $X_{\phi_a}$ spanning $\mathcal{D}$ and first-class closure.
+\end{enumerate}
+
+We now add a single additional regime feature inspired by canonical GR:
+\emph{presentation arbitrariness} of the evolution generator.
+
+\section{AER-P: Presentation-Parametrized Evolution}
+
+\begin{axiom}[AER-P (presentation arbitrariness)]
+\label{ax:aerp}
+There exists a family of Hamiltonians $\{H_{\alpha}\}_{\alpha\in\mathcal{A}}$ on $S$ (presentations) such that:
+\begin{enumerate}
+\item For each $\alpha$, the Hamiltonian flow of $H_{\alpha}$ preserves $\mathcal{C}$ and descends to a well-defined evolution on $S_{\mathrm{phys}}$.
+\item For any $\alpha,\beta$, the induced evolution on $S_{\mathrm{phys}}$ is identical (presentation-independence).
+\item For all $x\in\mathcal{C}$, the difference of vector fields is tangent to redescription:
+\begin{equation}
+(X_{H_{\alpha}}-X_{H_{\beta}})(x) \in \mathcal{D}_x.
+\label{eq:diff-tangent}
+\end{equation}
+\end{enumerate}
+\end{axiom}
+
+\begin{remark}
+AER-P is the abstract form of lapse/shift arbitrariness: changing presentation modifies the representative trajectory on $\mathcal{C}$ but not the induced physical evolution on $S_{\mathrm{phys}}$.
+\end{remark}
+
+\section{Multiplier-Type Decomposition}
+
+Fix a regular point and coisotropic chart $U$ from Stage III, with constraint generators $\phi_a$ and $\mathcal{C}\cap U=\{\phi_a=0\}$.
+Write $I(\mathcal{C})$ for the ideal of functions vanishing on $\mathcal{C}\cap U$.
+
+\begin{lemma}[Tangent difference implies constraint-span difference]
+\label{lem:tangent-span}
+On $\mathcal{C}\cap U$, if a vector field $V$ is tangent to $\mathcal{D}$, then there exist coefficient functions $u^a$ such that
+\begin{equation}
+V = \sum_a u^a X_{\phi_a}.
+\label{eq:Vspan}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By Stage III, $\mathcal{D}$ is spanned by $\{X_{\phi_a}\}$ on $\mathcal{C}\cap U$.
+\end{proof}
+
+\begin{theorem}[Multiplier-type Hamiltonian rigidity (local)]
+\label{thm:mult}
+Assume AER-P. Fix a reference presentation $\alpha_0$.
+Then for each $\alpha$ there exist coefficient functions $u_{\alpha}^a$ on $U$ and a function $H_{\mathrm{phys}}$ constant on redescription leaves (hence descending to $S_{\mathrm{phys}}$) such that, on $\mathcal{C}\cap U$,
+\begin{equation}
+H_{\alpha} \approx H_{\mathrm{phys}} + \sum_a u_{\alpha}^a \phi_a.
+\label{eq:mult}
+\end{equation}
+In particular, if the induced evolution on $S_{\mathrm{phys}}$ is trivial, then $H_{\mathrm{phys}}$ can be chosen to vanish on $\mathcal{C}$ and
+\begin{equation}
+H_{\alpha}\approx \sum_a u_{\alpha}^a \phi_a,
+\end{equation}
+i.e.\ each presentation Hamiltonian is (weakly) a multiplier combination of constraints.
+\end{theorem}
+
+\begin{proof}
+Fix $\alpha$ and set $V:=X_{H_{\alpha}}-X_{H_{\alpha_0}}$.
+By AER-P, $V$ is tangent to $\mathcal{D}$ on $\mathcal{C}$; hence by Lemma~\ref{lem:tangent-span},
+\begin{equation}
+X_{H_{\alpha}}-X_{H_{\alpha_0}} = \sum_a u_{\alpha}^a X_{\phi_a}
+\quad \text{on } \mathcal{C}\cap U.
+\label{eq:Xdiff}
+\end{equation}
+By linearity of the Hamiltonian vector field operator,
+\begin{equation}
+X_{H_{\alpha}-H_{\alpha_0}-\sum_a u_{\alpha}^a\phi_a}=0
+\quad \text{on } \mathcal{C}\cap U.
+\end{equation}
+Thus the function
+\begin{equation}
+F_{\alpha}:=H_{\alpha}-H_{\alpha_0}-\sum_a u_{\alpha}^a\phi_a
+\end{equation}
+has vanishing Hamiltonian vector field along $\mathcal{C}$, meaning $dF_{\alpha}$ annihilates all tangent vectors symplectically paired with $T\mathcal{C}$.
+Equivalently, $F_{\alpha}$ is locally constant along the characteristic leaves, i.e.\ constant on redescription classes.
+Therefore $F_{\alpha}$ descends to a function on $S_{\mathrm{phys}}$. Define
+\begin{equation}
+H_{\mathrm{phys}} := H_{\alpha_0} + F_{\alpha}
+\end{equation}
+restricted to $\mathcal{C}$; this definition is independent of $\alpha$ because all presentations induce the same physical evolution on $S_{\mathrm{phys}}$ (AER-P(ii)).
+Hence on $\mathcal{C}\cap U$,
+\begin{equation}
+H_{\alpha} \approx H_{\mathrm{phys}} + \sum_a u_{\alpha}^a\phi_a,
+\end{equation}
+which is \eqref{eq:mult}.
+
+If the induced evolution on $S_{\mathrm{phys}}$ is trivial, then $H_{\mathrm{phys}}$ is locally constant on $S_{\mathrm{phys}}$ and may be chosen to vanish on $\mathcal{C}$ by subtracting a constant (which does not change the Hamiltonian vector field). This yields the pure multiplier form.
+\end{proof}
+
+\section{Summary of Stage IV}
+
+With AER-P added, we have shown:
+\begin{enumerate}
+\item Presentation freedom forces differences of Hamiltonian vector fields to lie in redescription directions.
+\item Since redescription directions are spanned by constraint generators, differences of Hamiltonians are (weakly) constraint combinations.
+\item Thus multiplier-type Hamiltonian dynamics follows locally.
+\end{enumerate}
+
+Stage V will give the ADM GR instantiation appendix (EH $\to$ ADM $\to$ constraints $\to$ hypersurface deformation algebra) and connect AER-P to lapse/shift freedom explicitly.
+
+
+
+\appendix
+\section*{Appendix: Canonical GR (ADM) Instantiation}
+
+
+
+
+\section{Purpose of This Appendix}
+
+This appendix records the canonical GR chain
+Einstein--Hilbert action $\to$ $3+1$ decomposition $\to$ ADM Lagrangian
+$\to$ canonical momenta and constraints $\to$ hypersurface deformation algebra,
+and then maps lapse/shift arbitrariness to AER-P.
+
+Its role is not to motivate the AER structure from GR, but to display the opposite dependence:
+once the AER rigidity theorem has been established, canonical GR can be read as a downstream presentation of that structure. In particular, the ADM variables, constraint generators, and lapse/shift-dependent evolutions are interpreted here as bookkeeping realizations of the admissible standing/redescription structure rather than as the primary source of that structure.
+
+\section{Einstein--Hilbert Action and 3+1 Decomposition}
+
+Let $(\mathcal{M},g_{\mu\nu})$ be globally hyperbolic with foliation by spacelike hypersurfaces $\Sigma_t$.
+Write the Einstein--Hilbert action with Gibbons--Hawking--York term (for a well-posed variational principle):
+\begin{equation}
+S[g] = \int_{\mathcal{M}} d^4x\,\sqrt{-g}\,R(g) + 2\int_{\partial\mathcal{M}} d^3x\,\sqrt{|\gamma|}\,K.
+\end{equation}
+
+Introduce lapse $N$ and shift $N^i$ with ADM line element
+\begin{equation}
+ds^2 = -N^2dt^2 + h_{ij}(dx^i+N^i dt)(dx^j+N^j dt).
+\end{equation}
+The extrinsic curvature is
+\begin{equation}
+K_{ij}=\frac{1}{2N}\left(\dot h_{ij}-D_iN_j-D_jN_i\right).
+\end{equation}
+
+The Gauss--Codazzi decomposition gives (up to a total derivative canceled by the boundary term):
+\begin{equation}
+\sqrt{-g}R(g) = N\sqrt{h}\left(R(h)+K_{ij}K^{ij}-K^2\right) + \text{(total derivative)}.
+\end{equation}
+Thus the ADM Lagrangian density is
+\begin{equation}
+\mathcal{L}_{ADM} = N\sqrt{h}\left(R(h)+K_{ij}K^{ij}-K^2\right).
+\end{equation}
+
+\section{Canonical Momenta and Constraints}
+
+The canonical momentum conjugate to $h_{ij}$ is
+\begin{equation}
+\pi^{ij}:=\frac{\partial\mathcal{L}_{ADM}}{\partial \dot h_{ij}}=\sqrt{h}(K^{ij}-h^{ij}K).
+\end{equation}
+
+No time derivatives of $N$ or $N^i$ appear, so their conjugate momenta vanish (primary constraints in Dirac's algorithm):
+\begin{equation}
+\pi_N=0,\qquad \pi_i=0.
+\end{equation}
+
+Performing the Legendre transform yields the canonical Hamiltonian density
+\begin{equation}
+\mathcal{H}_{can}=N\mathcal{H}+N^i\mathcal{H}_i,
+\end{equation}
+where
+\begin{align}
+\mathcal{H} &= \frac{1}{\sqrt{h}}\left(\pi^{ij}\pi_{ij}-\frac{1}{2}\pi^2\right)-\sqrt{h}R(h),\\
+\mathcal{H}_i &= -2D_j\pi^j{}_i.
+\end{align}
+
+Dirac consistency of the primary constraints $\pi_N,\pi_i$ generates the secondary constraints
+\begin{equation}
+\mathcal{H}\approx 0,\qquad \mathcal{H}_i\approx 0.
+\end{equation}
+
+\section{Constraint Surface and Gauge}
+
+The ADM kinematical phase space is
+\begin{equation}
+S=\{(h_{ij}(x),\pi^{ij}(x))\},
+\end{equation}
+with canonical Poisson bracket
+\begin{equation}
+\{h_{ij}(x),\pi^{kl}(y)\}=\delta_{(i}^k\delta_{j)}^l\delta^{(3)}(x,y).
+\end{equation}
+
+The standing/constraint surface is
+\begin{equation}
+\mathcal{C}=\{(h,\pi)\in S: \mathcal{H}(x)=0,\ \mathcal{H}_i(x)=0\ \forall x\in\Sigma\}.
+\end{equation}
+
+Smeared constraints:
+\begin{equation}
+\mathcal{H}[N]=\int_\Sigma N\mathcal{H}\,d^3x,\qquad
+\mathcal{H}[\vec N]=\int_\Sigma N^i\mathcal{H}_i\,d^3x.
+\end{equation}
+
+Gauge transformations are generated by these constraints; their integrated flows give the diffeomorphism/refoliation pseudogroup on $\mathcal{C}$.
+
+\section{Hypersurface Deformation Algebra (Dirac Algebra)}
+
+The standard bracket relations are:
+\begin{align}
+\{\mathcal{H}[\vec N],\mathcal{H}[\vec M]\} &= \mathcal{H}[\mathcal{L}_{\vec N}\vec M],\\
+\{\mathcal{H}[\vec N],\mathcal{H}[M]\} &= \mathcal{H}[\mathcal{L}_{\vec N}M],\\
+\{\mathcal{H}[N],\mathcal{H}[M]\} &= \mathcal{H}_i[h^{ij}(N\partial_jM-M\partial_jN)].
+\end{align}
+This is first-class closure with structure functions (metric-dependent coefficients).
+
+\section{Constraint Preservation}
+
+Define the total Hamiltonian on the reduced variable set (lapse/shift as multipliers):
+\begin{equation}
+H_{tot}[N,\vec N]=\mathcal{H}[N]+\mathcal{H}[\vec N].
+\end{equation}
+Using the above algebra, Poisson brackets of constraints with $H_{tot}$ are linear combinations of constraints.
+Thus if constraints vanish initially, they vanish for all time (Dirac consistency).
+
+\section{Mapping to AER and AER-P}
+
+\subsection*{AER standing surface}
+Take $\mathcal{C}$ as standing surface; binary standing is membership in $\mathcal{C}$.
+
+\subsection*{Admissible redescription}
+Admissible redescription is the gauge pseudogroup generated by constraint flows.
+
+\subsection*{AER-Obs$_{\min}$ and separation}
+Dirac observables (gauge-invariant functionals) are functions on the reduced space $\mathcal{C}/\mathcal{G}$.
+Their Poisson algebra descends on the regular stratum; separation holds locally for sufficiently rich sets of relational observables (standard assumption in reduced phase space discussions).
+
+\subsection*{AER-P}
+Different choices of lapse/shift $(N,\vec N)$ define different presentation Hamiltonians $H_{tot}[N,\vec N]$.
+They change the representative trajectory on $\mathcal{C}$ but not the induced physical content on the reduced space (presentation independence).
+Differences of the corresponding Hamiltonian vector fields are tangent to the gauge/redescription distribution on $\mathcal{C}$.
+This is exactly AER-P.
+
+\section{Summary}
+
+Canonical GR provides a concrete downstream realization of the AER rigidity structure:
+coisotropic standing, characteristic redescription, first-class closure, and multiplier-type Hamiltonian dynamics arising from presentation arbitrariness.
+
+The point of the instantiation is not merely that GR fits the AER framework.
+It is that, once the rigidity theorem is derived at the AER level, the familiar ADM presentation is reclassified as a bookkeeping layer over the admissible standing/redescription structure. Lapse, shift, and gauge-related representative trajectories parametrize presentation freedom on $\mathcal{C}$; the standing-bearing physical content resides in the reduced structure singled out by the AER conditions.
+
+
+
+\section*{Objections and Failure Modes}
+
+\begin{itemize}
+\item Results are local on the regular stratum; global quotient pathologies are not addressed.
+\item If AER-Obs$_{\min}$ fails (no Poisson descent), coisotropic forcing does not follow.
+\item If observable separation fails, kernel identification may not hold.
+\item If presentation arbitrariness (AER-P) is absent, multiplier-type rigidity does not follow.
+\item Second-class standing surfaces are compatible with AER only in the trivial redescription case.
+\end{itemize}
+
+\section*{Main Rigidity Theorem (Integrated Statement)}
+
+All structural statements in this theorem are local on the regular stratum.
+Under the intrinsic AER axioms, together with Poisson descent and observable separation sufficient for the forcing result,
+and without assuming prior constraint generators, coisotropic structure, or first-class closure,
+the standing surface is necessarily coisotropic,
+admissible redescription necessarily coincides with the characteristic foliation,
+local constraint generators exist,
+first-class closure holds,
+and nontrivial admissible redescription excludes second-class standing surfaces.
+With presentation arbitrariness, multiplier-type Hamiltonian structure follows as well.
+
+
+
+\paragraph{Downstream interpretive scope.}
+The remaining sections are downstream applications of the rigidity theorem and state the paper's broader interpretive claim. They are not premises in any proof above, but they are not incidental either. Their purpose is to show that, once the AER rigidity structure is in place, canonical GR and the selector-bearing structures discussed in quantum foundations are to be interpreted as presentation or bookkeeping regimes relative to admissible physical content, rather than as independent primitive starting points.
+
+% ================= Applications: Collapse =================
+
+The following applications state the same downstream claim in the quantum case.
+The issue is not whether the corresponding formalisms are useful, but whether the outcome-relevant structures they employ have standing within the AER sense. The classification question is therefore: which parts of the formalism belong to admissible physical content, and which parts function only as selector, presentation, or bookkeeping structure unless reified into state?
+
+\section{Application: Collapse Models Under AER (No-Meta-Selector Rigidity)}
+\label{sec:collapse}
+
+In this section we apply the AER rigidity results to stochastic collapse theories 
+(GRW, CSL) and formalize a precise trilemma: under AER, collapse noise must either 
+be pure gauge, be reified as physical state, or violate internal closure.
+
+\subsection{Collapse as Selector-Dependent Transition}
+
+Let $S_{\mathrm{phys}}$ denote the reduced physical state space obtained 
+from AER reduction (Stages I--III). 
+A generic collapse dynamics may be written as a stochastic update:
+
+\begin{equation}
+x_{t+\Delta t} = T_{\lambda}(x_t),
+\end{equation}
+
+where $x_t \in S_{\mathrm{phys}}$ and $\lambda$ is stochastic data 
+(jump times and centers in GRW, noise path in CSL). 
+Equivalently, the dynamics may be expressed as a Markov kernel:
+
+\begin{equation}
+\mathbb{P}(x_{t+\Delta t} \in A \mid x_t) 
+= \int \mathbf{1}_{A}\!\big(T_{\lambda}(x_t)\big)\, d\mu(\lambda).
+\end{equation}
+
+The crucial feature is that, for fixed $x_t$, different values of 
+$\lambda$ produce different successor states with distinct observable outcomes.
+
+\subsection{AER-3 and Outcome-Relevant Structure}
+
+Recall AER-3 (Internal Closure): 
+all outcome-relevant quantities must be functions on $S_{\mathrm{phys}}$.
+Dependence on external parameters not determined by $[x]$ constitutes 
+an extension of the physical state space.
+
+Thus if $\lambda$ alters observable predictions while 
+$x_t$ is held fixed, then $\lambda$ is outcome-relevant.
+
+\begin{theorem}[Collapse Trilemma Under AER]
+\label{thm:collapse-trilemma}
+Let collapse dynamics depend on stochastic data $\lambda$.
+Then under AER one of the following must hold:
+
+\begin{enumerate}
+\item \textbf{Pure Gauge}: $\lambda$ does not alter any physical observable 
+on $S_{\mathrm{phys}}$ (collapse ineffective).
+\item \textbf{Meta-Selector}: $\lambda$ alters observables but is not part of 
+the physical state space (violates AER-3).
+\item \textbf{Reified Noise}: $\lambda$ is promoted to a physical degree of freedom, 
+enlarging the state space $S \rightarrow S \times \Lambda$ 
+with corresponding dynamical and consistency structure.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If $\lambda$ changes observables while $x_t$ is fixed, 
+then observable predictions depend on $(x_t,\lambda)$. 
+By AER-3, outcome-relevant quantities must be functions on 
+$S_{\mathrm{phys}}$; thus $\lambda$ must either be physically represented 
+in the state space or the theory fails closure. 
+If $\lambda$ is not reified, then the dynamics depends on 
+external data and violates AER-3. 
+If $\lambda$ is reified, the theory becomes an enlarged 
+constrained system with new degrees of freedom.
+\end{proof}
+
+\subsection{GRW and CSL}
+
+\paragraph{GRW.}
+Random collapse times and centers $(t_k, X_k)$ 
+constitute $\lambda$. If they are not ontic state variables, 
+collapse is meta-selection. 
+To satisfy AER, these variables must be incorporated 
+into the physical state description with appropriate constraints.
+
+\paragraph{CSL.}
+Continuous noise field $W_t$ plays the role of $\lambda$. 
+If treated as purely stochastic but not physical, AER-3 is violated.
+AER compliance requires noise-as-state formulation.
+
+\subsection{Interpretation}
+
+AER does not forbid stochastic theories outright.
+It forbids outcome-relevant stochasticity that is not represented 
+as part of the physical state. 
+Thus collapse models must either:
+
+\begin{itemize}
+\item be interpreted as effective open-system descriptions of a 
+larger deterministic constrained system, or
+\item explicitly treat stochastic fields as ontic degrees of freedom.
+\end{itemize}
+
+This converts ``collapse as stochastic law'' into 
+``collapse as enlarged constrained dynamics.''
+
+\subsection{Limit of the Result}
+
+AER excludes meta-selectors but does not exclude 
+probability measures on $S_{\mathrm{phys}}$ that do not 
+modify the dynamical law itself. 
+Ensemble-level probability assignments remain compatible 
+so long as they do not alter Hamiltonian evolution or observables.
+
+
+
+% ================= Applications: Everett =================
+
+\section{Physical Clarifier: Everett and Singular Continuation}
+% Suggested insertion point: at beginning of Everett section
+
+Physically, the claim is not that unitary evolution is inconsistent.
+The claim is that branch multiplicity alone does not produce outcome-fixing structure.
+The gap between multiplicity and singular prediction is precisely where selector
+operators enter. AER classifies those operators as inadmissible unless reified
+as physical state with corresponding constraint structure.
+
+\section{Application: Everettian Probability as Meta-Selection Under AER}
+\label{sec:everett}
+
+This section weaponizes AER against Born-rule and typicality derivations in Everettian (unitary-only) quantum mechanics.
+The target is not unitary dynamics; the target is the \emph{selector layer} required to convert multiplicity
+(bookkeeping branching) into a singular, outcome-relevant continuation/credence rule.
+
+\subsection{Formal setup: unitary evolution and branching as an extraction}
+
+Let $\mathcal{H}$ be the Hilbert space and let the closed-system state evolve unitarily
+\begin{equation}
+\rho_t = U_t \rho_0 U_t^\dagger.
+\end{equation}
+Everettian ``branching'' is not an additional dynamical law on $\rho_t$; it is an \emph{extraction}
+that depends on additional structure such as:
+(i) a factorization $\mathcal{H}=\mathcal{H}_S\otimes \mathcal{H}_E$,
+(ii) a coarse-graining/pointer algebra (projectors or a quasi-classical subalgebra),
+and (iii) a record/decoupling criterion (decoherence condition).
+
+Accordingly, one may model ``branching'' as a map
+\begin{equation}
+B:\ (\rho_t;\ \sigma)\ \mapsto\ \mathfrak{B}_t,
+\end{equation}
+where $\sigma$ denotes the required auxiliary structure (split + coarse-graining + record criterion),
+and $\mathfrak{B}_t$ is a branch description (e.g.\ a family of approximately orthogonal components
+or decoherent histories). Different $\sigma$ generally yield different $\mathfrak{B}_t$ for the same $\rho_t$.
+Thus $\mathfrak{B}_t$ is not, in general, a function of the reduced physical state alone.
+
+\subsection{AER diagnosis: branch-weights as outcome-relevant selectors}
+
+Born/typicality rules attempt to assign an outcome-relevant weight $w$ to branches (or histories),
+typically $w_i = |c_i|^2$ in a decomposition $\ket{\Psi}\approx \sum_i c_i \ket{i}$.
+Abstractly, any such rule can be written as
+\begin{equation}
+w = W(\rho_t;\ \sigma),
+\end{equation}
+i.e.\ the weight assignment depends on the state and the auxiliary branching structure $\sigma$.
+When $W$ is used to fix predictions, credences, or ``self-location'' in symmetric branching,
+it is \emph{outcome-relevant} by construction.
+
+\paragraph{AER-3 (Internal Closure) criterion.}
+AER-3 requires that outcome-relevant quantities be functions on the physical quotient space
+(i.e.\ determined by the admissible reduced state, not by meta-level choices).
+Therefore, if two admissible presentations of the \emph{same} physical state yield different
+branch weights, the weight rule is a meta-selector and violates AER-3 unless reified as state.
+
+\begin{definition}[Everett selector]
+An Everett selector is any map $S(\rho_t;\sigma)$ that (i) is not determined by the physical state alone
+and (ii) is used to fix predictions/credences/self-location among multiple post-branch continuations.
+\end{definition}
+
+\begin{theorem}[Everett Probability Trilemma Under AER]
+\label{thm:everett-trilemma}
+Suppose an Everettian framework uses a weight rule $W(\rho_t;\sigma)$ to determine any outcome-relevant quantity
+(predictions, credences, self-location) in branching scenarios. Then under AER one of the following must hold:
+
+\begin{enumerate}
+\item \textbf{Pure bookkeeping}: $W$ has no standing (it affects no physical observable on the reduced space);
+then it cannot ground unique predictive/credence content.
+\item \textbf{Meta-selection}: $W$ affects outcome-relevant content but is not a function of the reduced physical state;
+then AER-3 is violated.
+\item \textbf{Reification}: the auxiliary structure $\sigma$ (or an equivalent canonical selector) is promoted to physical state
+with corresponding constraints such that $W$ becomes a function on the reduced space.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If $W$ affects outcome-relevant content, it is outcome-relevant. By AER-3, outcome-relevant content must be a function on the reduced physical space.
+If $W$ depends on $\sigma$ not determined by the reduced state, then either $W$ is non-standing bookkeeping (case 1),
+or $W$ changes outcome-relevant content while the reduced state is fixed (meta-selection; case 2).
+To avoid AER-3 violation, $\sigma$ (or the needed selector data) must be incorporated into the physical state, yielding case 3.
+\end{proof}
+
+\subsection{Why Born/typicality derivations land in meta-selection classes}
+
+Theorem~\ref{thm:everett-trilemma} converts common Everettian probability ``derivations'' into an AER classification problem:
+do they produce $W$ as a function on the reduced space (reification/forced invariant), or do they inject selector structure?
+
+\subsubsection*{(i) Typicality and measure arguments}
+Typicality proofs assume a measure $\mu$ over branches or histories and then show that $\mu$-typical observers recover Born frequencies.
+Unless $\mu$ is uniquely invariant under the reduced structure, it functions as the meta-selector $\sigma$.
+Hence such typicality arguments violate AER-3 unless the selector is reified or quotient-invariantly fixed.
+
+\subsubsection*{(ii) Decision-theoretic derivations}
+Deutsch--Wallace style arguments add rationality axioms that map branch weights to preferences.
+These axioms are not consequences of the physical quotient structure; they impose external constraints
+linking physical multiplicity to unique credences. Under AER, this is a meta-selector unless the axioms are shown to be invariants
+forced by the admissible reduction itself (not merely ``reasonable'').
+
+\subsubsection*{(iii) Envariance/symmetry arguments}
+Envariance can yield equal-weight conclusions in special symmetric cases.
+The extension from symmetry cases to a global Born rule typically requires additivity/continuity assumptions
+that amount to selecting a unique measure functional. Under AER, those additional steps are selector introduction
+unless proven to follow from reduced-space invariants alone.
+
+\subsubsection*{(iv) Gleason-type routes}
+Gleason theorems derive Born form given the existence of a noncontextual probability measure on projectors.
+But the existence of such a probability functional is itself extra structure.
+Under AER, it is admissible only if that functional is forced by quotient invariance; otherwise it is parameter/selector injection.
+
+\subsection{Structural punchline}
+
+Everettian unitarity plus decoherence yields multiplicity as a bookkeeping extraction.
+AER says: \emph{bookkeeping structure does not acquire standing by being useful}.
+Therefore, any Born/typicality rule that is not forced as a function on the reduced physical space is a meta-selector.
+
+The only AER-compliant exits are:
+\begin{enumerate}
+\item Accept that branching weights are non-standing (no unique predictive/credence content from Everett alone), or
+\item Reify the selector structure as physical state with constraints (changing the theory class), or
+\item Prove that the Born weight functional is uniquely forced by the reduced-space invariants (a rigidity result, not a ``derivation'' by appeal to rationality/typicality).
+\end{enumerate}
+
+\subsection{Limit of the present result}
+
+This section does not prove that option (iii) is impossible; it classifies what would be required.
+If a Born weight functional can be exhibited as an invariant forced by AER reduction (e.g.\ as a uniquely induced measure on the reduced space),
+then it would be AER-admissible. The burden is therefore shifted from interpretive argument to quotient-invariant rigidity.
+
+
+% ================= Everett Non-Invariance Attack =================
+
+\section{Attack: Explicit Non-Invariance of Branch Decompositions Under Factorization/Coarse-Graining}
+\label{sec:everett-attack}
+
+This section strengthens the Everett trilemma (Section~\ref{sec:everett}) by giving explicit toy constructions
+showing that (i) ``branch structure'' depends on auxiliary choices $\sigma$ (factorization, coarse-graining),
+and therefore (ii) any weight functional $W(\rho;\sigma)$ that is used to determine outcome-relevant content
+fails AER-3 unless $\sigma$ is reified as physical state or proven uniquely forced by quotient invariants.
+
+\subsection{Toy model: same Hilbert space, different factorizations, different ``branching''}
+
+Let $\mathcal{H}\cong \mathbb{C}^4$. Fix the \emph{standard} tensor factorization
+\[
+\mathcal{H}=\mathcal{H}_A\otimes \mathcal{H}_B,\qquad \mathcal{H}_A\cong\mathcal{H}_B\cong \mathbb{C}^2,
+\]
+with computational bases $\{\ket{0}_A,\ket{1}_A\}$ and $\{\ket{0}_B,\ket{1}_B\}$.
+Consider the Bell state
+\begin{equation}
+\ket{\Psi}=\frac{1}{\sqrt{2}}\big(\ket{0}_A\ket{0}_B+\ket{1}_A\ket{1}_B\big).
+\label{eq:bell}
+\end{equation}
+Relative to the standard factorization, $\ket{\Psi}$ is maximally entangled and supports the familiar
+``two-branch'' reading once one chooses a pointer basis aligned with $\{\ket{0}_A,\ket{1}_A\}$ and assumes $B$ carries records.
+
+Now define a \emph{new} tensor factorization
+\[
+\mathcal{H}=\mathcal{H}_{A'}\otimes \mathcal{H}_{B'},
+\qquad \mathcal{H}_{A'}\cong\mathcal{H}_{B'}\cong\mathbb{C}^2,
+\]
+by specifying a new product basis $\{\ket{i}_{A'}\ket{j}_{B'}\}_{i,j\in\{0,1\}}$ as follows:
+\begin{align}
+\ket{0}_{A'}\ket{0}_{B'} &:= \ket{\Psi}, \nonumber\\
+\ket{0}_{A'}\ket{1}_{B'} &:= \frac{1}{\sqrt{2}}\big(\ket{0}_A\ket{0}_B-\ket{1}_A\ket{1}_B\big),\nonumber\\
+\ket{1}_{A'}\ket{0}_{B'} &:= \frac{1}{\sqrt{2}}\big(\ket{0}_A\ket{1}_B+\ket{1}_A\ket{0}_B\big),\nonumber\\
+\ket{1}_{A'}\ket{1}_{B'} &:= \frac{1}{\sqrt{2}}\big(\ket{0}_A\ket{1}_B-\ket{1}_A\ket{0}_B\big).
+\label{eq:newbasis}
+\end{align}
+These four vectors form an orthonormal basis of $\mathcal{H}$, hence define a unitary identification
+between $\mathcal{H}$ and $\mathcal{H}_{A'}\otimes\mathcal{H}_{B'}$ by declaring them to be product states.
+In this new factorization, the \emph{same physical vector} $\ket{\Psi}$ is a \emph{product}:
+\[
+\ket{\Psi}=\ket{0}_{A'}\ket{0}_{B'}.
+\]
+Therefore, relative to $(A',B')$ there is no nontrivial branch decomposition of $\ket{\Psi}$ at all:
+the state is already ``single-branch'' (rank-one) for the most natural pointer algebra on $A'$.
+
+\subsection{Consequence: branch structure is not a function of the bare state}
+
+The map $\sigma\mapsto \mathfrak{B}$ (branch extraction) depends on the factorization/coarse-graining choice:
+the same $\ket{\Psi}\in\mathcal{H}$ supports
+\begin{itemize}
+\item a ``two-branch'' decomposition relative to $(A,B)$ aligned with the computational/pointer basis, and
+\item a ``one-branch'' decomposition relative to $(A',B')$ in which $\ket{\Psi}$ is product.
+\end{itemize}
+Any putative weight functional $W(\rho;\sigma)$ that assigns outcome-relevant content to branches
+therefore depends on $\sigma$ in a way not determined by $\rho$ alone.
+
+\begin{proposition}[Non-invariance of branch counting and weights]
+\label{prop:noninvariance}
+There exist states $\rho$ and two admissible auxiliary specifications $\sigma,\sigma'$ (distinct factorizations/coarse-grainings)
+such that the extracted branch structures $\mathfrak{B}=B(\rho;\sigma)$ and $\mathfrak{B}'=B(\rho;\sigma')$
+differ in branch multiplicity and hence in any branch-counting or branch-weight assignment derived from them.
+\end{proposition}
+
+\begin{proof}
+Take $\rho=\ket{\Psi}\!\bra{\Psi}$ with $\ket{\Psi}$ as in \eqref{eq:bell}.
+Let $\sigma$ encode the standard factorization $(A,B)$ and pointer choice aligned with $\{\ket{0}_A,\ket{1}_A\}$;
+let $\sigma'$ encode the alternative factorization $(A',B')$ defined by \eqref{eq:newbasis}.
+Then $\ket{\Psi}$ is entangled in $(A,B)$ but product in $(A',B')$, yielding incompatible extracted branch structures.
+\end{proof}
+
+\subsection{AER consequence: Born/typicality as meta-selection unless sigma is fixed by invariants}
+
+By AER-3, any outcome-relevant quantity must be a function on the reduced physical space.
+If branching weights are used to determine predictions/credences/self-location, then they are outcome-relevant.
+Proposition~\ref{prop:noninvariance} exhibits explicit $\sigma$-dependence not determined by the state alone.
+Therefore:
+
+\begin{corollary}[Selector diagnosis for Everett weights]
+Any Everettian rule that assigns outcome-relevant weights via a branch extraction $B(\rho;\sigma)$
+violates AER-3 unless either:
+\begin{enumerate}
+\item $\sigma$ is reified as physical state (new degrees of freedom/constraints), or
+\item $\sigma$ is uniquely fixed by quotient invariants.
+\end{enumerate}
+Here ``uniquely fixed'' means fixed strongly enough to determine the admissible factorization/coarse-graining.
+\end{corollary}
+
+\subsection{What this blocks (in practice)}
+
+This attack blocks the usual move ``decoherence picks the pointer basis'' as a regime-complete response:
+decoherence is computed \emph{given} a split and coarse-graining. The split itself is part of $\sigma$.
+Absent a unique, invariantly forced $\sigma$, branch weights are not functions on the reduced physical space.
+Hence Born/typicality rules become meta-selection under AER.
+
+
+
+% ================= Everett Invariant-Measure Rigidity =================
+
+\section{Invariant Measures Do Not Yield Singular Continuation Under AER}
+\label{sec:everett-invariant}
+
+This section strengthens the Everett analysis by isolating a rigidity point:
+even if a branch-weight functional (e.g.\ Born measure) is uniquely invariant
+under admissible redescription, such an invariant measure does not by itself
+produce singular continuation or outcome-fixing without additional selector structure.
+
+\subsection{Physical State Space and Symmetry}
+
+Let $S_{\mathrm{phys}}$ denote the reduced physical state space for a unitary-only
+quantum theory (e.g.\ projective Hilbert space or density operators modulo physical symmetries).
+Let $\mathcal{R}$ denote the admissible redescription group (unitary symmetries,
+gauge redundancies, etc.) acting on $S_{\mathrm{phys}}$.
+
+\begin{definition}[Symmetric branching event]
+A symmetric branching event is a unitary interaction $U$ and initial state $\rho$
+such that the post-interaction state $\rho' = U\rho U^\dagger$
+admits orthogonal record subspaces $P_1, P_2$ with the property that
+the corresponding branch states
+\[
+\rho_i := \frac{P_i \rho' P_i}{\mathrm{Tr}(P_i \rho')}
+\]
+are related by admissible redescription:
+there exists $R \in \mathcal{R}$ such that
+\[
+\rho_2 = R \rho_1 R^{-1}.
+\]
+\end{definition}
+
+Intuitively, the two branches are indistinguishable by any
+quotient-invariant physical observable.
+
+\subsection{No Quotient-Invariant Labeling}
+
+\begin{lemma}[No invariant branch labeling]
+\label{lem:no-label}
+Let $O$ be any physical observable, i.e.\ a function on $S_{\mathrm{phys}}$
+invariant under admissible redescription.
+If $\rho_1$ and $\rho_2$ are related by admissible redescription,
+then
+\[
+O(\rho_1) = O(\rho_2).
+\]
+\end{lemma}
+
+\begin{proof}
+Since $O$ is invariant under $\mathcal{R}$ and
+$\rho_2 = R\rho_1 R^{-1}$ for some $R\in\mathcal{R}$,
+we have $O(\rho_2) = O(\rho_1)$.
+\end{proof}
+
+\subsection{Invariant Measures and Singular Continuation}
+
+Let $\mu$ be a measure on $S_{\mathrm{phys}}$
+that is invariant under admissible redescription,
+i.e.\ $\mu(RA)=\mu(A)$ for measurable $A$ and all $R\in\mathcal{R}$.
+
+\begin{definition}[Singular continuation rule]
+A singular continuation rule is a map
+\[
+\mathcal{S} : (\rho,U) \mapsto i \in \{1,2,\dots\}
+\]
+that selects a unique branch index in a branching event,
+used to determine outcome-relevant content
+(prediction, credence, or self-location).
+\end{definition}
+
+\begin{theorem}[Invariant-measure insufficiency]
+\label{thm:measure-insufficiency}
+Consider a symmetric branching event with indistinguishable branches
+$\rho_1,\rho_2$ in the sense above.
+Let $\mu$ be any admissible-redescription-invariant measure on $S_{\mathrm{phys}}$.
+Then $\mu$ alone cannot define a singular continuation rule
+without introducing additional selector structure.
+\end{theorem}
+
+\begin{proof}
+Since $\rho_1$ and $\rho_2$ are related by admissible redescription,
+any invariant observable assigns equal values to them
+(Lemma~\ref{lem:no-label}).
+If $\mu$ is invariant, it assigns equal weight to the equivalence class
+containing $\rho_1$ and $\rho_2$ (or equal density in symmetric cases).
+Therefore $\mu$ does not distinguish between $\rho_1$ and $\rho_2$.
+A singular continuation rule requires selecting one branch as
+the unique outcome-relevant continuation.
+Any such selection must either:
+\begin{enumerate}
+\item break admissible-redescription invariance (violating AER stability), or
+\item introduce additional data not determined by the reduced state
+(meta-selection under AER-3).
+\end{enumerate}
+Hence an invariant measure is insufficient to produce singular continuation.
+\end{proof}
+
+\subsection{Corollary: Everett Probability Trilemma (Strengthened)}
+
+\begin{corollary}
+In a unitary-only Everettian framework,
+if Born or typicality weights are derived as invariant measures
+on $S_{\mathrm{phys}}$,
+then either:
+\begin{enumerate}
+\item no singular outcome or self-location is physically fixed
+(non-singular continuation), or
+\item an additional selector rule is introduced,
+which under AER must be reified as physical state or else violates internal closure.
+\end{enumerate}
+\end{corollary}
+
+\subsection{Interpretation}
+
+This result does not deny the existence of invariant measures
+(e.g.\ Born rule as a noncontextual probability functional).
+It shows that invariant measures alone do not convert multiplicity
+into singular outcome-relevant continuation.
+The step from ``invariant measure'' to ``unique predictive content''
+is precisely where selector structure enters.
+
+Under AER, such selector structure must either be
+\begin{itemize}
+\item non-standing bookkeeping, or
+\item reified as additional physical state with constraints.
+\end{itemize}
+
+
+% ================= Terminal Exhaustion of Selection Certifiers =================
+
+\section{Terminal Exhaustion of Probability and Selection Certifiers in Unitary Multiplicity Regimes}
+\label{sec:terminal-exhaustion}
+
+This section synthesizes the generator-terminal and closure certificates into a single
+regime-level exhaustion result for unitary multiplicity frameworks (e.g.\ Everettian QM).
+
+We consider a closed Hamiltonian regime satisfying AER and exhibiting
+undistinguished multiplicity after measurement (i.e.\ multiple admissible
+continuations with identical proper restrictions).
+
+\subsection{Operator Classes Previously Eliminated}
+
+The following operator classes have been proven terminal or closed under admissibility:
+
+\begin{itemize}
+\item \textbf{Typicality and Measure Certifiers} 
+      (measure-one, almost-sure, typical-branch legitimacy).
+\item \textbf{Completion / Limit Operators} 
+      (frequency limits, expectation-based totalization).
+\item \textbf{Selection Operators} 
+      (canonical branch, definable representative, minimal-complexity selection).
+\item \textbf{Genericity / Forcing Operators}
+      (generic continuation, independence-style selection).
+\item \textbf{Meta-Foundational Re-Anchoring}
+      (rationality, authority, symmetry-as-grounding).
+\item \textbf{Standing Repair Operations}
+      (post-hoc validation, deferred admissibility, ensemble repair).
+\end{itemize}
+
+Additionally, nondegenerate standing forbids infinite indistinguishable
+standing-bearing multiplicity and unbounded generation
+multiplicity is inadmissible unless envelope-certified.
+
+\subsection{Terminal Exhaustion Theorem}
+
+\begin{theorem}[Terminal Exhaustion of Selection Certifiers]
+\label{thm:terminal-exhaustion}
+Let a unitary multiplicity framework exhibit post-measurement
+undistinguished admissible continuations.
+Under AER and the closure results developed in this manuscript,
+no operator remains admissible that can:
+
+\begin{enumerate}
+\item select a canonical continuation,
+\item certify legitimacy via measure or typicality,
+\item generate existence via completion or limit,
+\item assert generic continuation via forcing,
+\item ground admissibility via meta-foundational authority, or
+\item repair selector failure post hoc.
+\end{enumerate}
+
+Therefore no standing-bearing probability or singular continuation
+is available within the regime.
+\end{theorem}
+
+\begin{proof}
+Each listed operator class has been independently shown to be either
+terminal (inadmissible as standing-generating) or closed
+(no admissible operator remains in that scope).
+Since these classes exhaust the known mechanisms for certifying
+selection or legitimacy in undistinguished multiplicity regimes,
+no admissible certifier remains.
+\end{proof}
+
+\subsection{Consequence for Everettian Frameworks}
+
+An Everettian theory may retain:
+
+\begin{itemize}
+\item Unitary evolution,
+\item Global state multiplicity,
+\item Descriptive branch decompositions.
+\end{itemize}
+
+But it cannot, within admissibility, endow branch weights,
+typicality, or selection with standing-bearing physical status.
+
+The only admissible Everettian remainder is
+\emph{unitary multiplicity without standing-bearing probability}.
+
+
+
+% ================= Clarifications and Scope Hardening =================
+
+\section*{Interpretive Conclusion: GR and QM as Downstream Bookkeeping Regimes}
+
+The structural result of this manuscript is the AER rigidity theorem.
+Its interpretive consequence is that familiar formalisms in canonical GR and quantum foundations are not to be treated as primitive on equal footing with the admissibility structure from which their standing-bearing content is assessed.
+
+For canonical GR, the ADM presentation is a downstream realization of the rigidity structure:
+the constraint surface, characteristic redescription, first-class closure, and multiplier-type Hamiltonian form are not taken here as foundational givens, but as a presentation-level expression of the admissible standing/redescription architecture. The freedom encoded by lapse, shift, and gauge-related representative trajectories is therefore bookkeeping freedom on $\mathcal{C}$ relative to the reduced physical content.
+
+For the quantum cases considered here, the conclusion is parallel but sharper.
+Branch decompositions, collapse selectors, typicality measures, and singular-continuation certifiers do not acquire standing merely by being representationally useful. Under AER, any such structure that affects outcome-relevant content must either be realized within the physical state space and its constraint structure or else remain non-standing bookkeeping. In that precise sense, the selector-bearing layers of the quantum formalisms analyzed here are downstream projections rather than primitive ontology.
+
+Accordingly, the point of the paper is not only that AER reproduces known constrained-Hamiltonian features. It is that AER supplies the priority ordering under which those features, and the GR/QM formalisms built from them, are to be read. The theorem-bearing order runs from admissibility to constrained structure; the interpretive order then runs from constrained structure to the reclassification of familiar GR and QM bookkeeping regimes.
+
+\section{Scope Clarifications and Regime Boundaries}
+
+\subsection{Regular-Stratum Scope}
+
+All rigidity results in this manuscript are local on a regular stratum of the phase space.
+Specifically, we assume:
+
+\begin{itemize}
+\item The standing surface $\mathcal{C}$ is a smooth embedded submanifold of constant codimension in an open neighborhood.
+\item The admissible redescription pseudogroup acts smoothly on $\mathcal{C}$.
+\item The quotient map $\pi:\mathcal{C}\to S_{\mathrm{phys}}$ is a smooth submersion on this neighborhood.
+\end{itemize}
+
+Global singularities, stratified constraint surfaces, non-Hausdorff quotients,
+and Gribov-type phenomena are not addressed here.
+The rigidity theorem concerns local structural forcing;
+global extensions may require additional geometric analysis
+but do not affect the local equivalence and forcing results proven above.
+
+\subsection{Standing in Constrained Hamiltonian Systems}
+
+In Dirac-constrained Hamiltonian systems, primary constraints may arise algebraically,
+and secondary constraints may arise through consistency conditions.
+Throughout this manuscript, \emph{standing} refers to membership in the fully consistent
+first-class constraint surface after Dirac closure has been enforced.
+
+Thus standing is defined only once:
+\begin{enumerate}
+\item Primary and secondary constraints are imposed.
+\item Closure under Poisson brackets is verified.
+\item The coisotropic standing surface is obtained.
+\end{enumerate}
+
+Standing does not refer to arbitrary subsets of phase space
+but specifically to the coisotropic constraint surface generated by first-class closure.
+
+\subsection{Clarification of AER-3 (External Parameters)}
+
+AER-3 (Internal Closure) does not forbid the existence of external parameters or background structures per se.
+It forbids outcome-relevant parameters that are not represented within the physical state space.
+
+More precisely:
+
+\begin{itemize}
+\item External parameters are admissible if they do not alter physical observables.
+\item If an external parameter alters observable outcomes, it must be reified
+as part of the physical state space with corresponding dynamical and/or constraint structure.
+\end{itemize}
+
+Thus AER-3 constrains unrepresented selector structures,
+not physical constants, coupling parameters, or background data that are already encoded in the regime description.
+
+
+\end{document}

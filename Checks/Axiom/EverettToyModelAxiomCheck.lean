@@ -1,0 +1,15 @@
+import MaleyLean.Papers.GaugeConstraintDynamics.EverettToyModel
+
+namespace MaleyLean
+
+#print axioms everett_toy_branch_count_noninvariant
+#print axioms everett_toy_branch_description_noninvariant
+#print axioms everett_toy_branching_noninvariant
+#print axioms everett_toy_branching_not_state_determined
+#print axioms everett_toy_weight_rule_outcome_relevant
+#print axioms everett_toy_weight_rule_not_state_determined
+#print axioms everett_toy_selector_meta_if_not_reified
+#print axioms everett_toy_invariant_measure_on_symmetric_pair
+#print axioms everett_toy_constant_selector_free
+
+end MaleyLean

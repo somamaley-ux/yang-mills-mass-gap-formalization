@@ -1,0 +1,14 @@
+import MaleyLean.Papers.GaugeConstraintDynamics.SymplecticGeometry
+
+namespace MaleyLean
+
+#print axioms characteristic_identification_of_witness
+#print axioms coisotropic_surface_of_witness
+#print axioms local_presymplectic_geometry_supports_stageII
+#print axioms coisotropic_normal_form_supports_generator_span
+#print axioms local_presymplectic_geometry_supports_constraint_span
+#print axioms standing_form_nondegenerate_forces_trivial_redescription
+#print axioms toy_stageII_geometry
+#print axioms toy_constraint_generator_span
+
+end MaleyLean

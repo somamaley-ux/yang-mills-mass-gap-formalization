@@ -1,0 +1,17 @@
+import MaleyLean.Papers.GaugeConstraintDynamics.EverettDecoherence
+
+namespace MaleyLean
+
+#print axioms decoherence_record_noninvariant_not_state_determined
+#print axioms decoherence_record_noninvariant_forces_branch_noninvariance
+#print axioms pointer_weight_outcome_relevant_not_state_determined
+#print axioms everett_toy_pointer_record_noninvariant
+#print axioms everett_toy_pointer_record_not_state_determined
+#print axioms everett_toy_decoherence_branching_noninvariant
+#print axioms everett_toy_pointer_weight_outcome_relevant
+#print axioms everett_toy_pointer_weight_not_state_determined
+#print axioms everett_toy_decoherence_meta_if_not_reified
+#print axioms everett_toy_fine_record_pair_invariant_measure
+#print axioms everett_toy_fine_record_constant_selector_free
+
+end MaleyLean

@@ -1,0 +1,14 @@
+import MaleyLean.Papers.GaugeConstraintDynamics.EverettSelectors
+
+namespace MaleyLean
+
+#print axioms noninvariant_branch_extraction_not_state_determined
+#print axioms noninvariant_branch_extraction_forces_auxiliary_dependence
+#print axioms state_determined_weights_not_outcome_relevant
+#print axioms outcome_relevant_weights_require_auxiliary_dependence
+#print axioms everett_selector_diagnosis
+#print axioms invariant_measure_on_symmetric_pair_blocks_selector_free_singling
+#print axioms symmetric_pair_selector_requires_break_or_extra_structure
+#print axioms everett_no_admissible_certifier_from_terminal_classes
+
+end MaleyLean
