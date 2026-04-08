@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{booktabs,tabularx,array,enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{\textbf{Phase 7 Submission and Scrutiny Readiness Pack}\\[0.3em]\large Non-proof-bearing companion to the clay-level standalone manuscript}
+\author{Amos Jay Maley}
+\date{March 22, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Status}
+This document is intentionally \emph{non-proof-bearing}. It does not alter the theorem or the live dependency chain of the manuscript \emph{Carrier Universality and Global Smoothness for the Periodic 3D Navier--Stokes Equations}. Its role is to complete Phase~7 of the updated clay-level closure plan: target-journal choice, hostile-read preparation, reproducibility freeze, errata posture, and public-scrutiny readiness.
+
+\section{Clay-rule posture}
+Under the official Clay rules, direct submission to the Clay Mathematics Institute is not the route for a proposed solution. The operative track is: publication in a refereed mathematics venue of worldwide repute (or another form later deemed qualifying), followed by public mathematical examination and at least two years of general acceptance before prize consideration. This readiness pack therefore treats journal fit and public scrutiny as first-class operational tasks.
+
+\section{Recommended journal track}
+\begin{tabularx}{\textwidth}{@{}L{0.19\textwidth}L{0.28\textwidth}L{0.21\textwidth}Y@{}}
+\toprule
+\textbf{Outlet} & \textbf{Current public evidence} & \textbf{Why plausible} & \textbf{Recommendation}\\
+\midrule
+Archive for Rational Mechanics and Analysis & The Springer journal overview states that the journal publishes research of ``exceptional moment, depth and permanence''; the 2026 editorial-board page is public and current. & Strong topical fit for fluid mechanics / PDE / analysis; strong reputation optics for a millennium-problem claim. & \textbf{Primary target}. Submit here first.\\[0.4em]
+Analysis \& PDE & MSP public pages state that the full editorial board votes on all articles and provide peer-review and editorial information. & Excellent specialist fit and very strong scrutiny optics for PDE-facing refereeing. & \textbf{Backup A}. Move here if the primary outlet declines.\\[0.4em]
+Journal of the European Mathematical Society & EMS Press public pages remain current; the submission page explicitly notes that papers longer than 80 pages are encouraged toward the Memoirs of the EMS. & Outstanding prestige and worldwide-repute optics, but the current manuscript length is a real caution. & \textbf{Backup B / stretch option}. Use only if the length/timeline tradeoff is accepted.\\
+\bottomrule
+\end{tabularx}
+
+\paragraph{Operational decision.}
+The Phase~7 recommendation is: \textbf{submit first to ARMA}, keep \textbf{APDE} as the specialist backup, and treat \textbf{JEMS} as a prestige backup only if the author is comfortable with the current length issue and the likely longer editorial cycle.
+
+\section{Three hostile reads before submission}
+The submission packet should not go out until three written hostile reads have been completed:
+\begin{enumerate}[leftmargin=1.5em]
+\item \textbf{PDE analyst} --- audits Part~III, Appendix~B, the official endpoint match, and the PDE-native admissibility / witness packet.
+\item \textbf{Foundations / scope critic} --- audits same-scope, admissibility, quotient / factorization, no-admissibility-dynamics, and the no-third-status closure.
+\item \textbf{Generalist proof auditor} --- audits the proof spine, appendix burden, theorem-local closure, and endpoint compression.
+\end{enumerate}
+Each surviving objection must point to a named theorem, definition, appendix, or primitive assumption. The detailed packets live in \texttt{phase7\_readiness/02--05}.
+
+\section{Source freeze, build scripts, and QA}
+This project now includes:
+\begin{itemize}[leftmargin=1.5em]
+\item local build scripts in \texttt{tools/},
+\item a frozen source-hash manifest in \texttt{phase7\_readiness/06\_source\_manifest\_sha256.txt},
+\item a local build and QA report in \texttt{phase7\_readiness/07\_build\_and\_qa\_report.txt},
+\item a compact live theorem index and Clay-compatibility note in \texttt{phase7\_readiness/13--14}.
+\end{itemize}
+These are not proof-bearing, but they materially improve reproducibility and trust.
+
+\section{Errata and public-response posture}
+The readiness pack also includes:
+\begin{itemize}[leftmargin=1.5em]
+\item a public errata policy,
+\item a theorem-local public response template,
+\item a post-publication scrutiny plan,
+\item a final go / no-go checklist.
+\end{itemize}
+The governing rule is simple: no side note becomes proof-bearing. If a correction changes the proof, the manuscript itself changes and the source hash is refreshed.
+
+\section{Go / no-go rule}
+Do \emph{not} submit until:
+\begin{enumerate}[leftmargin=1.5em]
+\item the three hostile reads are on file,
+\item the manuscript version and source hash are frozen,
+\item the QA report is refreshed for that version,
+\item the editor cover note is checked against the exact version being submitted.
+\end{enumerate}
+The detailed checklist is bundled in \texttt{phase7\_readiness/11\_submission\_go\_no\_go\_checklist.md}.
+
+\section*{Bottom line}
+Phase~7 does not change the mathematics. It changes the \emph{publication posture}: the manuscript is now paired with a current journal-target matrix, hostile-read packets, a reproducible source freeze, and a public-scrutiny protocol appropriate for a serious proposed solution to a Clay problem.
+
+\end{document}

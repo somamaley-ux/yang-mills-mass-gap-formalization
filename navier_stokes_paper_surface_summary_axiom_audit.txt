@@ -1,0 +1,3 @@
+Axiom audit for `NavierStokesPaperSurfaceSummaryAxiomCheck.lean`.
+
+'MaleyLean.NavierStokesPaperSurfaceSummaryStatement' does not depend on any axioms

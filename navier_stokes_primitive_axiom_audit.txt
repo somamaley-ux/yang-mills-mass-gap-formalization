@@ -1,0 +1,26 @@
+Axiom Audit - Primitive Navier-Stokes Scaffold
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesPrimitiveAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperCarrierToLineageBindingStatement
+- MaleyLean.PaperStandingPositiveLineageStatement
+- MaleyLean.PaperNoAdmissibilityDynamicsStatement
+- MaleyLean.PaperPreHorizonWitnessStatement
+- MaleyLean.PaperSingularCandidateTypingStatement
+- MaleyLean.PaperMetricDivergenceSkinNonAuthorityStatement
+- MaleyLean.PaperQuotientVisibleWitnessVsIllicitMetricGateStatement
+- MaleyLean.PaperVortexStretchingAnomalyBoundaryStatement
+- MaleyLean.PaperPrimitiveToPDEBridgeBoundaryStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current primitive Navier-Stokes scaffold is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

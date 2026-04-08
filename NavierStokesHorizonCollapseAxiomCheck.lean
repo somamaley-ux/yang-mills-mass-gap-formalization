@@ -1,0 +1,13 @@
+import MaleyLean.NavierStokesHorizonCollapse
+
+namespace MaleyLean
+
+#print axioms PaperHorizonSingularImageStatement
+#print axioms PaperGenuineContinuationObstructionStatement
+#print axioms PaperHorizonCollapseBoundaryStatement
+#print axioms PaperBookkeepingVisibilityBlocksObstructionStatement
+#print axioms PaperBookkeepingOnlyHorizonImageNotObstructionStatement
+#print axioms PaperHorizonVisibleVsGenuineObstructionStatement
+#print axioms PaperPrimitiveBoundaryToHorizonCollapseStatement
+
+end MaleyLean

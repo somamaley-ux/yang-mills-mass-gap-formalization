@@ -1,0 +1,11 @@
+import MaleyLean.NavierStokesPrimitiveNoBlowup
+
+namespace MaleyLean
+
+#print axioms PaperAdmissibleSameScopeBlowupWitnessStatement
+#print axioms PaperTerminalObstructionAbsorbsBlowupStatement
+#print axioms PaperNoAdmissibleSameScopeBlowupFromTerminalClosureStatement
+#print axioms PaperPrimitiveNoBlowupBoundaryStatement
+#print axioms PaperPrimitiveRestartClosureBlocksBlowupStatement
+
+end MaleyLean

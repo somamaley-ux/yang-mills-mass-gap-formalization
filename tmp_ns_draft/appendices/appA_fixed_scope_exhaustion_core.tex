@@ -1,0 +1,84 @@
+\clearpage
+\section{Minimal self-contained fixed-scope exhaustion core}
+
+This appendix supplies the full proof core for P4. It ports only the minimal fixed-scope exhaustion core required by the Navier--Stokes manuscript. No quotient universal-property material, role-trichotomy machinery, or ATS-style attack map is used here. Fix a fixed-scope reasoning regime in the sense of Definition~\ref{def:fixed-scope-reasoning-regime}. Let $\mathcal E$ denote its evaluated fragment and let $L:\mathcal E\to\{0,1\}$ denote the standing-bearing admissibility judgement already in force at that scope. Throughout this appendix assume the four governance hypotheses named in Theorem~\ref{thm:imported-structural-exhaustion}: bivalent fail-closed admissibility, lawful redescription neutrality, irreversibility / no standing-preserving repair, and boundary signature-closure, meaning that no additional boundary-level discriminator, selector, comparison rule, or admissibility authority may be introduced while still claiming the same scope.
+
+\begin{manualdefinition}[D.1 (Evaluated fragment / fixed typed domain)]
+\phantomsection\manualcurrentlabel{D.1}\label{def:p4-evaluated-fragment}
+The \emph{evaluated fragment} $\mathcal E$ of a fixed-scope reasoning regime is the class of same-scope candidates for which the admissibility judgement is well-formed. The pair $(\mathcal E,L)$, where $L:\mathcal E\to\{0,1\}$ is the existing standing-bearing admissibility judgement, is the \emph{fixed typed domain}. Fail-closed means that any candidate outside $\mathcal E$ is rejected as unlicensed rather than carried as a third standing-preserving value.
+\end{manualdefinition}
+
+\begin{manualdefinition}[D.2 (Gate on the evaluated fragment)]
+\phantomsection\manualcurrentlabel{D.2}\label{def:p4-gate}
+A \emph{gate} on the fixed typed domain $(\mathcal E,L)$ is any map $G:\mathcal E\to\{0,1\}$. The existing admissibility classification is the distinguished gate $L$ itself.
+\end{manualdefinition}
+
+\begin{manualdefinition}[D.3 (Standing-relevant discriminator)]
+\phantomsection\manualcurrentlabel{D.3}\label{def:p4-standing-relevant-discriminator}
+A \emph{same-scope discriminator} is any extra datum, clause, or rule $F$ presented as refining admissibility while still claiming the same fixed scope. It is \emph{standing-relevant} if it comes with a candidate revised admissibility classification $L^{\langle F\rangle}:\mathcal E\to\{0,1\}$ and $L^{\langle F\rangle}\neq L$ on at least one element of $\mathcal E$.
+\end{manualdefinition}
+
+\begin{manualdefinition}[D.4 (Admissibility-relevant parameterization)]
+\phantomsection\manualcurrentlabel{D.4}\label{def:p4-admissibility-parameterization}
+An \emph{admissibility-relevant parameterization} is a family of gates $\{G_i\}_{i\in I}$ on the same evaluated fragment $\mathcal E$ together with a selector rule $\sigma:\mathcal E\to I$ used to choose which gate governs each evaluated candidate. It is \emph{admissibility-relevant} if there exist $a\in\mathcal E$ and $i\neq j$ with $G_i(a)\neq G_j(a)$ so that the selector changes admissibility outcomes while claiming to preserve scope.
+\end{manualdefinition}
+
+\begin{manuallemma}[D.5 (Gate induction)]
+\phantomsection\manualcurrentlabel{D.5}\label{lem:p4-gate-induction}
+Any standing-relevant same-scope discriminator induces a competing gate on the evaluated fragment. If a purported discriminator claims to change admissibility outcomes but does not determine a bivalent gate on $\mathcal E$, then it is ill-typed and terminates fail-closed.
+\end{manuallemma}
+
+\begin{proof}
+By Definition~\ref{def:p4-standing-relevant-discriminator}, a standing-relevant discriminator $F$ is presented together with a candidate revised admissibility classification $L^{\langle F\rangle}:\mathcal E\to\{0,1\}$. Setting $G^{\langle F\rangle}:=L^{\langle F\rangle}$ produces a gate in the sense of Definition~\ref{def:p4-gate}, and standing-relevance means exactly that $G^{\langle F\rangle}$ disagrees with the existing gate $L$ somewhere on $\mathcal E$. If, instead, a proposal says that admissibility outcomes change but leaves some evaluated candidate without a determinate bivalent output, then it has not defined a gate on the fixed typed domain at all. Under fail-closed admissibility such an under-specified proposal is not a third standing value; it is simply not licensed for downstream use.
+\end{proof}
+
+\begin{manuallemma}[D.6 (No admissibility-relevant selector)]
+\phantomsection\manualcurrentlabel{D.6}\label{lem:p4-no-selector}
+Within a fixed scope, no admissibility-relevant selector is well-typed. Any rule that chooses between two disagreeing gates or admissibility profiles introduces an additional boundary-level selector and therefore fails the boundary signature-closure hypothesis.
+\end{manuallemma}
+
+\begin{proof}
+A selector that changes which gate governs an evaluated candidate is itself acting as admissibility authority. But boundary signature-closure is exactly the prohibition on inserting any additional boundary-level discriminator, selector, comparison rule, or admissibility authority while still claiming the same scope. Therefore an admissibility-relevant selector is not a same-scope refinement. It is either a scope change or an ill-typed proposal, and in either case it cannot survive inside the fixed typed domain.
+\end{proof}
+
+\begin{manuallemma}[D.7 (Evaluated-fragment fixity)]
+\phantomsection\manualcurrentlabel{D.7}\label{lem:p4-evaluated-fragment-fixity}
+A same-scope refinement cannot change the evaluated fragment. If a purported admissibility refinement changes which candidates count as evaluated, then it changes the fixed typed domain and is not a same-scope move.
+\end{manuallemma}
+
+\begin{proof}
+Changing the evaluated fragment means that some candidate is now declared evaluable or non-evaluable by a rule not already contained in the fixed typed domain of Definition~\ref{def:p4-evaluated-fragment}. That extra rule acts at the same boundary level as the admissibility judgement itself: it decides whether a candidate even enters the standing-bearing fragment. By boundary signature-closure, no such extra boundary-level authority may be inserted while still claiming the same scope. Hence same-scope admissibility refinements must keep the evaluated fragment fixed.
+\end{proof}
+
+\begin{manuallemma}[D.8 (No competing gates)]
+\phantomsection\manualcurrentlabel{D.8}\label{lem:p4-no-competing-gates}
+Let $G,H:\mathcal E\to\{0,1\}$ be same-scope gates on the fixed typed domain. Then $G=H$ extensionally on $\mathcal E$.
+\end{manuallemma}
+
+\begin{proof}
+Assume, for contradiction, that there exists $a\in\mathcal E$ with $G(a)\neq H(a)$. Since admissibility on the evaluated fragment is bivalent, the candidate $a$ would then receive two incompatible same-scope classifications. To preserve a determinate standing judgement, one would have to specify which gate governs $a$. That specification is precisely an admissibility-relevant selector, excluded by Lemma~\ref{lem:p4-no-selector}. Nor can the discrepancy be treated as something repaired later, because irreversibility / no standing-preserving repair forbids retroactive rewriting of an already standing-bearing same-scope commitment. Hence no such $a$ exists, and the two gates agree everywhere on $\mathcal E$.
+\end{proof}
+
+\begin{manualtheorem}[D.9 (Structural Exhaustion core)]
+\phantomsection\manualcurrentlabel{D.9}\label{thm:p4-structural-exhaustion-core}
+Assume bivalent fail-closed admissibility, lawful redescription neutrality, irreversibility, and boundary signature-closure at a fixed scope. Then admissibility classification on the fixed typed domain is unique. Consequently, no second same-scope discriminator, gate, selector, or admissibility-relevant parameterization survives inside that scope.
+\end{manualtheorem}
+
+\begin{proof}
+Let $F$ be any purported same-scope discriminator. If $F$ is standing-irrelevant, then it contributes no new admissibility authority and is bookkeeping only. Suppose instead that $F$ is standing-relevant. By Lemma~\ref{lem:p4-gate-induction}, it induces a competing gate $G^{\langle F\rangle}$ on the evaluated fragment. By Lemma~\ref{lem:p4-evaluated-fragment-fixity}, a same-scope refinement cannot evade the issue by changing which candidates belong to the evaluated fragment. By Lemma~\ref{lem:p4-no-competing-gates}, the induced gate cannot disagree with the existing gate $L$ anywhere on $\mathcal E$. Therefore no standing-relevant same-scope discriminator survives.
+
+The same conclusion rules out admissibility-relevant parameterizations: if a family of gates $\{G_i\}_{i\in I}$ genuinely disagreed on some evaluated candidate, then any rule selecting which member governs would be an admissibility-relevant selector, forbidden by Lemma~\ref{lem:p4-no-selector}; and if no disagreement occurs, then the family is not admissibility-relevant in the first place. Finally, lawful redescription neutrality prevents presentation-only rephrasings from masquerading as new admissibility authority. Therefore admissibility classification is unique at fixed scope, and no second same-scope discriminator, gate, selector, or admissibility-relevant parameterization survives.
+\end{proof}
+
+\begin{manualcorollary}[D.10 (Closure logic / singleton meta-necessity)]
+\phantomsection\manualcurrentlabel{D.10}\label{cor:p4-closure-logic}
+Any purported second same-scope admissibility mechanism either agrees extensionally with the existing gate and is bookkeeping only, or else it is not a same-scope refinement.
+\end{manualcorollary}
+
+\begin{proof}
+If the mechanism changes admissibility outcomes, then by Theorem~\ref{thm:p4-structural-exhaustion-core} it would be a second same-scope discriminator or gate and is therefore impossible. If it does not change outcomes, then it contributes no new standing-bearing authority and is bookkeeping only. This is exactly the singleton meta-necessity / closure-logic form of P4 used by the main text.
+\end{proof}
+
+\begin{remark}[Appendix A in the proof spine]
+Appendix~A is the first appendix-level burden carried beyond the main line of the paper. Its role is narrow: it internalizes the minimal generic gate/exhaustion theorem needed by the main text. The later carrier-specific exhaustion theorem and corollary remain valuable because they show that the standard periodic carrier itself realizes this generic fixed-scope prohibition and therefore closes the official theorem on a fully periodic carrier-side scope.
+\end{remark}

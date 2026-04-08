@@ -1,0 +1,258 @@
+\clearpage
+\section{Detailed analytic atlas of standard routes}
+
+The sections collected in this appendix are the route-by-route standard analytic atlas compressed out
+of the main line of the paper. They justify the common bottleneck statement and the
+atlas-closure theorem used in Part~I and Part~II, but they are not needed for the first-pass reading of
+the proof spine.
+
+\subsection{The Navier--Stokes system, its bundle, and its scale}
+We consider the incompressible Navier--Stokes equations on $\R^3$ or $\T^3$:
+\begin{equation}\label{eq:NS}
+\partial_t u + (u\cdot\nabla)u + \nabla p = \nu \Delta u,\qquad \nabla\cdot u = 0,
+\end{equation}
+with viscosity $\nu>0$ and divergence-free initial data $u(0)=u_0$.
+
+\subsubsection{A ``constraint bundle'' viewpoint (standard content, nonstandard name)}
+In the Yang--Mills manuscript the central objects are \emph{constraint bundles} and the
+compatibility classes they induce. We introduce the analogous standard content for Navier--Stokes.
+
+\begin{definition}[Navier--Stokes constraint bundle]\label{def:NS-bundle}
+Fix a domain $M\in\{\R^3,\T^3\}$. The Navier--Stokes constraint bundle $B_{\mathrm{NS}}(M,\nu)$
+consists of:
+\begin{enumerate}[label=(\roman*), leftmargin=2.1em]
+\item incompressibility ($\nabla\cdot u=0$);
+\item momentum compatibility \eqref{eq:NS} in the appropriate sense (distributional for weak solutions);
+\item pressure compatibility (e.g.\ $p$ determined up to constants by $-\Delta p=\partial_i\partial_j(u_i u_j)$ on $\T^3$);
+\item the energy inequality (global or local, depending on solution class).
+\end{enumerate}
+\end{definition}
+
+Nothing in Definition \ref{def:NS-bundle} is new; the term ``bundle'' is simply a mnemonic for
+the fact that global regularity would follow if one could show that compatibility with
+$B_{\mathrm{NS}}$ forces membership in the smooth class.
+
+\subsubsection{Scaling and criticality}
+Equation \eqref{eq:NS} is invariant under the scaling
+\begin{equation}\label{eq:scaling}
+u(x,t)\mapsto u_\lambda(x,t)=\lambda u(\lambda x, \lambda^2 t),\qquad
+p(x,t)\mapsto p_\lambda(x,t)=\lambda^2 p(\lambda x, \lambda^2 t).
+\end{equation}
+A norm $\norm{\cdot}_X$ is \emph{critical} if $\norm{u_\lambda}_X=\norm{u}_X$.
+
+\begin{remark}[Where the Clay difficulty lives]
+The energy class $L^\infty_t L^2_x \cap L^2_t \dot H^1_x$ is subcritical under \eqref{eq:scaling}.
+The Clay difficulty can be read as the absence of an a priori mechanism that upgrades
+subcritical control (energy) to critical control (any of the known criteria).
+\end{remark}
+
+\subsection{Energy method, Leray--Hopf theory, and the vortex-stretching tensor}
+\subsubsection{Energy inequality}
+Formally multiplying \eqref{eq:NS} by $u$ and integrating yields
+\begin{equation}\label{eq:energy}
+\frac12 \frac{\dd}{\dd t}\norm{u(t)}_{L^2(M)}^2 + \nu \norm{\nabla u(t)}_{L^2(M)}^2 = 0.
+\end{equation}
+
+\begin{definition}[Leray--Hopf weak solution]\label{def:LerayHopf}
+A vector field $u$ is a Leray--Hopf solution on $[0,\infty)$ if
+$u\in L^\infty([0,\infty);L^2)\cap L^2([0,\infty);\dot H^1)$,
+$\nabla\cdot u=0$ in distributions, \eqref{eq:NS} holds in distributions for some pressure $p$,
+and the energy inequality corresponding to \eqref{eq:energy} holds for almost every $t$.
+\end{definition}
+
+\begin{theorem}[Leray--Hopf existence {\cite{leray1934,hopf1951}}]
+For divergence-free $u_0\in L^2(M)$, there exists a global Leray--Hopf weak solution.
+\end{theorem}
+
+\subsubsection{Enstrophy and the nonlocal production channel}
+Let $\omega=\nabla\times u$ be the vorticity and $S(u)=\tfrac12(\nabla u+\nabla u^\top)$
+the strain tensor. Formally $\omega$ satisfies
+\begin{equation}\label{eq:vorticity}
+\partial_t \omega + (u\cdot\nabla)\omega = (\omega\cdot\nabla)u + \nu \Delta \omega.
+\end{equation}
+Taking $L^2$ inner product with $\omega$ yields the enstrophy balance
+\begin{equation}\label{eq:enstrophy}
+\frac12\frac{\dd}{\dd t}\norm{\omega}_{L^2}^2 + \nu \norm{\nabla \omega}_{L^2}^2
+= \int_{M}\omega\cdot S(u)\,\omega \,\dd x.
+\end{equation}
+
+\begin{definition}[Vortex-stretching tensor load]\label{def:stretching}
+Define the vortex-stretching production functional
+\[
+\mathcal T(u)\coloneqq\int_{M}\omega\cdot S(u)\,\omega.
+\]
+\end{definition}
+
+\begin{proposition}[The first wall]\label{prop:first-wall}
+Energy control \eqref{eq:energy} does not, by itself, control the sign or size of $\mathcal T(u)$.
+Any global regularity argument must either:
+\begin{enumerate}[label=(\alph*), leftmargin=2.1em]
+\item bound $\mathcal T(u)$ by dissipation at a scale-critical level, or
+\item replace \eqref{eq:enstrophy} by a mechanism that bypasses $\mathcal T(u)$ entirely.
+\end{enumerate}
+\end{proposition}
+
+\subsubsection{Kernel representation: why geometry alone does not close}
+In $\R^3$ (or on $\T^3$ with periodic kernels), the strain may be written as a Calder\'on--Zygmund
+transform of vorticity:
+\[
+S(u)=\mathcal R_s(\omega),
+\]
+where $\mathcal R_s$ is a matrix of singular integral operators. Symbolically,
+\[
+S(x)=\mathrm{p.v.}\int K(x-y)\,\omega(y)\,\dd y,\qquad \int_{|z|=1}K(z)\,\dd\sigma(z)=0.
+\]
+Kernel cancellation permits the rewriting
+\[
+S(x)=\mathrm{p.v.}\int K(x-y)\big(\omega(y)-\omega(x)\big)\,\dd y.
+\]
+This decomposition is the root of many ``geometric depletion'' arguments: one splits
+$\omega(y)-\omega(x)$ into direction-difference and magnitude-difference pieces.
+The latter is the persistent escape channel (see \Cref{sec:geometry}).
+
+\subsection{Mild formulation, Fujita--Kato, and the critical fixed-point barrier}
+Another standard route writes \eqref{eq:NS} in mild form:
+\begin{equation}\label{eq:mild}
+u(t)=e^{\nu t\Delta}u_0 - \int_0^t e^{\nu(t-s)\Delta}\Pproj\nabla\cdot (u\otimes u)(s)\,\dd s.
+\end{equation}
+Fixed-point arguments in critical spaces yield global solutions for small data.
+
+\begin{theorem}[Prototype small-data global theory (Fujita--Kato paradigm)]
+If the initial data is sufficiently small in a critical norm (e.g.\ $\dot H^{1/2}$ or $BMO^{-1}$),
+then the mild solution exists globally and is smooth.
+\end{theorem}
+
+\begin{proposition}[The fixed-point wall]\label{prop:fixedpoint-wall}
+For large data, \eqref{eq:mild} offers no coercive a priori smallness.
+Any large-data global result must supply a new mechanism that prevents the bilinear term in
+\eqref{eq:mild} from building critical norm.
+This restates the vortex-stretching wall in semigroup language.
+\end{proposition}
+
+\subsection{Scale-critical regularity criteria (Serrin--Prodi, endpoints)}
+\begin{theorem}[Serrin--Prodi regularity {\cite{prodi1959,serrin1962}}]\label{thm:Serrin}
+Let $u$ be a Leray--Hopf solution on $(0,T)$. If
+$u\in L^p(0,T;L^q(\R^3))$ with $\frac{2}{p}+\frac{3}{q}\le 1$ and $q>3$,
+then $u$ is smooth on $(0,T]$.
+\end{theorem}
+
+\begin{theorem}[Endpoint $L^\infty L^3$ criterion {\cite{ess2003}}]\label{thm:ESS}
+If a suitable weak solution satisfies $u\in L^\infty(0,T;L^3(\R^3))$, then it is smooth on $(0,T]$.
+\end{theorem}
+
+\begin{proposition}[The Serrin wall]\label{prop:serrin-wall}
+Theorems \ref{thm:Serrin}--\ref{thm:ESS} reduce regularity to showing that every energy-class solution
+satisfies at least one critical integrability condition. No known a priori mechanism upgrades
+\eqref{eq:energy} to any of these critical bounds without extra hypotheses.
+\end{proposition}
+
+\subsection{Weak--strong uniqueness and the uniqueness barrier}
+\begin{theorem}[Weak--strong uniqueness (standard)]
+If $u$ is a Leray--Hopf solution and $v$ is a strong solution with the same initial data on $(0,T)$,
+then $u=v$ on $(0,T)$.
+\end{theorem}
+
+\begin{proposition}[The uniqueness wall]\label{prop:uniqueness-wall}
+Weak--strong uniqueness shifts the problem: if one could produce \emph{any} strong solution globally,
+it would coincide with the weak solution. The remaining obstruction is exactly the construction of
+a global strong solution for large data, which again reduces to a critical a priori bound on
+the nonlinear term.
+\end{proposition}
+
+\subsection{Beale--Kato--Majda and vorticity control}
+\begin{theorem}[Beale--Kato--Majda {\cite{bkm1984}}]\label{thm:BKM}
+Let $u$ be a smooth solution on $[0,T)$. If
+\[
+\int_0^T \norm{\omega(t)}_{L^\infty}\,\dd t <\infty,
+\]
+then $u$ extends smoothly past $T$.
+\end{theorem}
+
+\begin{proposition}[The BKM wall]\label{prop:bkm-wall}
+Theorem \ref{thm:BKM} reduces blow-up prevention to controlling the critical quantity
+$\int_0^T \norm{\omega}_{L^\infty}\dd t$, but the energy inequality does not provide such control.
+The missing step is a scale-critical upgrade from $L^\infty_t L^2_x\cap L^2_t \dot H^1_x$
+to $L^1_t L^\infty_x$.
+\end{proposition}
+
+\subsection{Local energy inequality and partial regularity}
+\begin{definition}[Suitable weak solution]
+A weak solution is \emph{suitable} if it satisfies the local energy inequality in the sense of
+Caffarelli--Kohn--Nirenberg.
+\end{definition}
+
+\begin{theorem}[Partial regularity (CKN) {\cite{ckn1982}}]\label{thm:CKN}
+The one-dimensional parabolic Hausdorff measure of the singular set of a suitable weak solution is zero.
+\end{theorem}
+
+\begin{proposition}[The CKN wall]\label{prop:ckn-wall}
+Theorem \ref{thm:CKN} provides epsilon-regularity and a strong geometric measure restriction on
+possible singularities, but does not rule out their existence. The missing step is to show that every point
+satisfies the requisite smallness condition; doing so would again yield a critical bound.
+\end{proposition}
+
+\subsection{Blow-up profiles, Type I/II, and ancient solutions}
+\subsubsection{Rescaling and profiles}
+Assume a smooth solution fails to extend past $T<\infty$.
+Consider the rescaling around a point $(x_0,T)$:
+\[
+u(x,t)=\lambda(t)\,U\!\left(\lambda(t)(x-x_0),\, s(t)\right),\qquad \frac{\dd s}{\dd t}=\lambda(t)^2.
+\]
+Type I blow-up corresponds to $\lambda(t)\sim (T-t)^{-1/2}$; Type II corresponds to faster growth.
+
+\begin{theorem}[Nonexistence of nontrivial Leray self-similar profiles {\cite{necas1996,tsai1998}}]
+There are no nontrivial backward self-similar finite-energy solutions corresponding to Leray's ansatz.
+\end{theorem}
+
+\begin{proposition}[The profile wall]\label{prop:profile-wall}
+Excluding explicit self-similar blow-up leaves the Type~II (ancient-solution) regime.
+To close regularity via profiles one must prove a rigidity theorem for all relevant ancient solutions
+or extract a contradiction from a scale-critical normalization. This is equivalent to establishing
+a critical a priori bound (often $L^\infty_t L^3_x$ or equivalent Morrey/Besov control).
+\end{proposition}
+
+\subsection{Geometric depletion of nonlinearity}\label{sec:geometry}
+One line of attack exploits cancellations in $\mathcal T(u)$ by imposing geometric structure on vorticity.
+
+\begin{theorem}[Vorticity-direction coherence criterion (Constantin--Fefferman) {\cite{constantin-fefferman1993}}]
+If the vorticity direction field $\xi=\omega/|\omega|$ is sufficiently coherent (e.g.\ H\"older continuous in regions of large vorticity),
+then the solution remains regular.
+\end{theorem}
+
+\begin{proposition}[The geometry-to-kernel wall]\label{prop:geo-wall}
+Geometric criteria control the direction-difference contribution in kernel representations of $S(u)$,
+but do not control the magnitude-difference channel without an additional coupling mechanism.
+Thus geometric depletion is conditional: the missing step is to prove the required coherence (or an equivalent cancellation)
+from the energy-class invariants.
+\end{proposition}
+
+\subsection{Frequency splitting and Littlewood--Paley bottlenecks}
+Let $(\Delta_j)_{j\in\mathbb Z}$ be a Littlewood--Paley decomposition. Many arguments split
+\[
+u = u_{\le N}+u_{>N},
+\]
+attempting to show dissipation dominates at high frequencies and nonlinearity is controlled at low frequencies.
+Formally one seeks differential inequalities of the form
+\[
+\frac{\dd}{\dd t}\norm{u_{>N}}_{L^2}^2 + \nu \norm{\nabla u_{>N}}_{L^2}^2 \le \text{(controlled)}.
+\]
+
+\begin{proposition}[The frequency wall]\label{prop:freq-wall}
+Frequency splitting reorganizes the nonlinear term but does not remove the need for a critical control:
+one must prevent transfer of energy/enstrophy into arbitrarily high frequencies at the scaling rate.
+Any successful frequency argument ultimately supplies a critical bound equivalent to
+\Cref{prop:common-bottleneck} below.
+\end{proposition}
+
+\subsection{Critical harmonic analysis (Koch--Tataru and beyond)}
+\begin{theorem}[Small data global well-posedness in $BMO^{-1}$ {\cite{koch-tataru2001}}]
+There exists $\delta>0$ such that if $\norm{u_0}_{BMO^{-1}}<\delta$, then the corresponding solution is global and smooth.
+\end{theorem}
+
+\begin{proposition}[The large-data wall]\label{prop:large-data-wall}
+Critical-space well-posedness provides global regularity for small initial data in critical norms.
+The Clay problem concerns large data, where no a priori mechanism yields critical smallness or a coercive monotonicity.
+\end{proposition}
+
+
+\clearpage

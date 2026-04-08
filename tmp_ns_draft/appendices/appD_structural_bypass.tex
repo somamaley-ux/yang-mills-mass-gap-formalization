@@ -1,0 +1,57 @@
+\clearpage
+\section{How the structural route bypasses the standard analytic walls}
+
+This appendix is expository and non-load-bearing. Its purpose is to give a Clay-style referee a
+single ledger showing, row by row, how the structural route replaces the familiar analytic continuation
+walls. Nothing here adds a new step to the proof of Theorem~\ref{thm:official-periodic-pde-theorem};
+it records in one place how the carrier-side structures already established in the main text absorb or
+render unnecessary the continuation functions controlled by the standard analytic criteria.
+
+\begin{manualproposition}[C.1 (Structural replacement of the standard analytic walls)]
+For each standard analytic continuation wall listed in Table~C.1, the continuation function it seeks
+to control is already represented or rendered unnecessary by the carrier-side structures indicated in
+the table. Consequently, no row of Table~C.1 supplies an independent same-scope escape from the
+official periodic theorem.
+\end{manualproposition}
+
+\begin{proof}
+Case-by-case by Table~C.1. In each row, the continuation-relevant content is either already carried by
+the horizon discriminator and the strong continuation-completeness package, or else the proposed
+analytic criterion would amount to an additional same-scope selector, parameterized gate, or branch
+move already excluded by the zero-parameter certification, branch-forcing package, and terminality
+results cited in the table.
+\end{proof}
+
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.26\textwidth}}
+\toprule
+\textbf{Classical analytic wall} & \textbf{What it tries to control} & \textbf{Structural replacement} & \textbf{Primary citations}\\
+\midrule
+Serrin--Prodi & Mixed-norm continuation criterion & No same-scope continuation gate beyond the carrier-side horizon discriminator; any additional continuation threshold is absorbed or ruled out by strong continuation-completeness and terminality. & Theorem~\ref{thm:strong-continuation-completeness-standard-carrier}; Lemma~\ref{lem:strong-completeness-to-realized-completeness}; Corollary~\ref{cor:no-same-scope-analytic-escape}.\\
+\addlinespace[2pt]
+Beale--Kato--Majda & Vorticity-growth continuation gate & Formal $\Theta_x$-gate collapse in the main line; any BKM-style gate used as an independent same-scope continuation criterion forces a forbidden move. & Theorem~\ref{thm:dynamic-stretching-compatibility}; Proposition~\ref{prop:bkm-forces-s3}; Corollary~\ref{cor:concrete-bkm-translation}.\\
+\addlinespace[2pt]
+Koch--Tataru / scale-critical smallness & Scale-based continuation selector & The zero-parameter carrier blocks any same-scope scale gate; smallness criteria are large-data external selectors rather than new carrier-side continuation data. & Theorem~\ref{thm:ns-zero-parameter}; Propositions 13.5A--13.5C; Corollary 13.5D.\\
+\addlinespace[2pt]
+Geometric depletion & Special geometric regularization selector & Geometric information is already interior skin/tensor data represented in the carrier dictionary, not a second same-scope gate. & Table~13.A; Theorem~\ref{thm:scope-completeness-standard-carrier}; Theorem~\ref{thm:strong-continuation-completeness-standard-carrier}.\\
+\addlinespace[2pt]
+Ancient-solution / profile extraction & Asymptotic profile selector & Profile-based continuation requires a forbidden branch move or parameterized gate; no same-scope profile selector reopens the certified carrier. & Theorem~\ref{thm:constructive-branch-forcing}; Lemma~\ref{lem:profile-gate-collapse}; Corollary~\ref{cor:no-same-scope-analytic-escape}.\\
+\bottomrule
+\end{tabularx}
+\caption{Table C.1 --- Bypassing the classical obstructions. Each standard analytic wall seeks to control a continuation function that is already represented, absorbed, or rendered unnecessary by the carrier-side structures established in the main text.}
+\label{tab:appendix-obstruction-ledger}
+\end{table}
+
+\begin{remark}[How to read Table~C.1]
+The table is not a new proof layer. It is a one-page summary of how the main structural package
+replaces the continuation work usually assigned to the classical analytic criteria. Appendix~C is the
+worked BKM row in full detail; the present appendix records the broader ledger in compressed form.
+\end{remark}
+
+
+
+\clearpage

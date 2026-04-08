@@ -1,0 +1,22 @@
+Axiom Audit - Navier-Stokes Continuation Boundary Packet
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesContinuationBoundaryAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperContinuationRelevanceFactorsThroughQuotientStatement
+- MaleyLean.PaperSingularExtractorFactorsThroughQuotientStatement
+- MaleyLean.PaperExtractorOutputsSameScopeStatement
+- MaleyLean.PaperSingularExtractorNoSecondGateStatement
+- MaleyLean.PaperContinuationBoundaryClosedStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes continuation-boundary packet is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

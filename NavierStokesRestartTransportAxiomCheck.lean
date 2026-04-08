@@ -1,0 +1,11 @@
+import MaleyLean.NavierStokesRestartTransport
+
+namespace MaleyLean
+
+#print axioms PaperObstructionPersistsUnderRestartStatement
+#print axioms PaperRestartPreservesSameScopeStatement
+#print axioms PaperFailedRestartTransportCollapsesObstructionStatement
+#print axioms PaperRestartTransportOrCollapseStatement
+#print axioms PaperPrimitiveLocalTheorySupportsRestartTransportStatement
+
+end MaleyLean

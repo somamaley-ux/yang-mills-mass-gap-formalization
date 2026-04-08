@@ -1,0 +1,25 @@
+Axiom Audit - Claim Modality Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `ClaimModalityAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperScopeAlignmentStatement
+- MaleyLean.PaperRedescriptionMonotonicityStatement
+- MaleyLean.PaperNonAmplificationStatement
+- MaleyLean.PaperFailClosedBehaviorStatement
+- MaleyLean.PaperModalOverreachInducesStandingFailureStatement
+- MaleyLean.PaperModalOverreachIsNotErrorStatement
+- MaleyLean.PaperModalityConstraintNecessityStatement
+- MaleyLean.PaperClaimModalityGateJustificationStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current claim modality paper-facing surface is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

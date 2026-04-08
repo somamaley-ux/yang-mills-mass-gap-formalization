@@ -1,0 +1,206 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{array,booktabs,tabularx,longtable,multirow}
+\usepackage{xurl}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{ragged2e}
+
+\hypersetup{
+  pdftitle={Supplementary Referee Dossier -- Bridge-patch Phase 6 audit},
+  pdfauthor={OpenAI}
+}
+
+\definecolor{Accent}{HTML}{163A5F}
+\definecolor{Accent2}{HTML}{456B8C}
+\definecolor{Light}{HTML}{F5F8FC}
+\definecolor{Soft}{HTML}{FAFBFD}
+\definecolor{Line}{HTML}{C8D3E0}
+\definecolor{Good}{HTML}{155724}
+\definecolor{Warn}{HTML}{7A4F00}
+\definecolor{Muted}{HTML}{5B6773}
+
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.25em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.55em,itemsep=0.25em,topsep=0.35em}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.14}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcommand{\closed}{\textcolor{Good}{\textbf{CLOSED}}}
+\newcommand{\narrow}{\textcolor{Warn}{\textbf{NARROW}}}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{Muted}{Supplementary Referee Dossier}}
+\fancyhead[R]{\textcolor{Muted}{Bridge-patch Phase 6 audit}}
+\fancyfoot[C]{\textcolor{Muted}{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+
+\titleformat{\section}{\Large\bfseries\color{Accent}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{Accent2}}{\thesubsection}{0.6em}{}
+
+\tcbset{colback=Soft,colframe=Line,boxrule=0.8pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt}
+\newtcolorbox{verdictbox}{colback=white,colframe=Accent,boxrule=1pt,arc=2pt}
+\newtcolorbox{scopebox}{colback=white,colframe=Accent2,boxrule=0.9pt,arc=2pt}
+\newtcolorbox{spinebox}{colback=Light,colframe=Accent,boxrule=1pt,arc=2pt}
+\newtcolorbox{freezebox}{colback=Light,colframe=Accent2,boxrule=1pt,arc=2pt}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begin{titlepage}
+\centering
+\vspace*{1.1cm}
+{\Large\color{Accent}\bfseries Supplementary Referee Dossier\par}
+\vspace{0.35cm}
+{\LARGE\bfseries Bridge-patch Phase 6 audit\par}
+\vspace{0.25cm}
+{\Large\bfseries Carrier Universality and Global Smoothness for the Periodic 3D Navier--Stokes Equations\par}
+\vspace{0.25cm}
+{\large Hardened manuscript + 12F / 12G / P4 bridge clarification\par}
+\vspace{0.8cm}
+
+\begin{tcolorbox}[width=0.93\textwidth,colback=Light,colframe=Accent,boxrule=1pt]
+\small
+\textbf{Audited entry files.}\\[-0.1em]
+\footnotesize Main manuscript: \path{main.tex}\\
+Readiness companion: \path{phase7_readiness_pack.tex}\\
+Supplementary dossier: \path{supplementary_referee_dossier.tex}\\[0.35em]
+\small Manuscript state audited here: \textbf{Phase 7 hardened packet + Bridge-patch Phase 6}.\\[0.35em]
+\textbf{Purpose.} This dossier is a referee-facing audit aid. It does not add proof burden, new theorems, or new primitives. Its job is to state the current live proof spine, identify the exact role of Lemma~12F in the hardened submission, and record the narrow honest defense posture against the current second-gate / boundary-signature-closure objection.
+\end{tcolorbox}
+
+\vfill
+{\large March 22, 2026\par}
+\end{titlepage}
+\clearpage
+\pagenumbering{arabic}
+
+\begin{verdictbox}
+\textbf{Executive verdict.} In the current packet, 12F is still \emph{live}, but it is no longer presented as the whole exclusion engine. The manuscript now states on the page that 12F is a fixed-periodic scope-fixity / typing premise only, that 12G is the first node where P4 yields the no-second-gate consequence, and that later nodes carry this packet forward in one direction only. The honest defense posture is therefore: the 12F seam is \narrow{}, not magically gone. Keeping the objection alive now requires denying either 12F as a legitimate bridge premise, 12G/P4 as the first exclusion node, or the downstream transport chain through 13K / 20.5B / 20B and ST2--ST3 / 20C.
+\end{verdictbox}
+
+\begin{scopebox}
+\textbf{Scope of this dossier.}
+\begin{itemize}
+\item It audits the manuscript as currently written.
+\item It does \emph{not} argue Clay eligibility, publication acceptance, or community acceptance.
+\item It does \emph{not} replace the manuscript with philosophy or side papers.
+\item It records where the bridge has been clarified and where a hostile reader may still press.
+\end{itemize}
+\end{scopebox}
+
+\tableofcontents
+\newpage
+
+\section{Current live proof spine}
+
+\begin{spinebox}
+\textbf{Live route only.}
+\begin{enumerate}[label=(S\arabic*),leftmargin=2.5em]
+\item \textbf{Fixed-scope bridge.} The Section~12 packet culminates in 12G, where P4 is applied at the fixed periodic scope after 12C--12F have supplied the bridge hypotheses.
+\item \textbf{Carrier packet.} 13K carries the no-new-criterion consequence into the periodic carrier packet, while 20.5B and 20B transport that same consequence into the realized classical layer.
+\item \textbf{Standing packet.} ST2 and ST3 carry the same fixed-scope packet into standing / admissibility language; 20C.1 carries it into endpoint-status language.
+\item \textbf{Realized-lineage packet.} 19C--19F derive PDE-native admissibility on the maximal classical interval; 20B.1--20B.3 and ST4--ST5 bind the admitted carrier seed to one realized lineage and block time-indexed admissibility dynamics.
+\item \textbf{Endpoint collapse.} 20C.1--20C.3 state and collapse the realized-lineage status trichotomy; 21.10 / 21.15 / 21A / 21.17 compress the final endpoint.
+\end{enumerate}
+\end{spinebox}
+
+\section{What changed in the bridge patch}
+
+\begin{longtable}{L{0.75in}L{2.05in}L{3.45in}}
+\toprule
+\textbf{Phase} & \textbf{Patch target} & \textbf{Referee-facing effect}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Phase} & \textbf{Patch target} & \textbf{Referee-facing effect}\\
+\midrule
+\endhead
+0 & Front-matter governance & Added method-neutral Clay-rules paragraph, no-hidden-premise sentence, and one live endgame spine.\\
+1 & 12F role clarification & 12F now says it is same-scope typing / scope-fixity only; added the two-case split and the ``What 12F is not'' box.\\
+2 & 12G / P4 bridge tightening & 12G now states explicitly that 12F contributes boundary-signature closure / scope-fixity and that P4 is the first place the no-second-gate consequence enters.\\
+3 & Downstream dependency transparency & 13K, 20.5B, and 20B now say they inherit the exclusion consequence from 12G / P4 rather than from 12F in isolation.\\
+4 & Standing-chain clarification & ST2, ST3, and 20C.1 now state that the fixed-scope standing packet is transported from 12G / P4, not restarted from 12F.\\
+5 & Endgame visibility + audit & Page~1 and Appendix~F now expose the unique bridge-to-endgame chain in one place.\\
+6 & Lexical / referee pass & Compressed summaries now all say the same thing: 12F is a live premise only as scope-fixity, 12G / P4 is the first exclusion node, and the external referee package uses that same narrow honest posture.\\
+\bottomrule
+\end{longtable}
+
+\section{The 12F seam: exact current position}
+
+\subsection{What the manuscript now claims}
+
+\begin{itemize}
+\item 12F is \textbf{not} a PDE estimate.
+\item 12F is \textbf{not} a continuation criterion.
+\item 12F is \textbf{not} a standalone impossibility theorem.
+\item 12F \textbf{is} the fixed-periodic typing / scope-fixity form of boundary-signature closure.
+\item 12G is the first node where P4 is applied to that completed packet and where the no-second-gate consequence is locally obtained.
+\end{itemize}
+
+\subsection{What remains live}
+12F is still on the live route. The manuscript does \emph{not} now claim that 12F is dispensable. Instead it claims a narrower and more honest ordering:
+\begin{center}
+\fbox{12F (scope-fixity premise) $\to$ 12G/P4 (first exclusion node) $\to$ downstream carry-through}
+\end{center}
+
+\subsection{What a hostile referee must now deny}
+To keep the current 12F objection alive, a referee must deny at least one of the following:
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item that 12F is a legitimate fixed-periodic scope-fixity / typing premise;
+\item that 12G validly applies P4 to the completed periodic bridge packet;
+\item that 13K / 20.5B / 20B correctly carry the no-new-criterion consequence forward;
+\item that ST2--ST3 / 20C.1 / 20C correctly carry the same fixed-scope packet into standing / endpoint-status language.
+\end{enumerate}
+
+That is materially narrower than the earlier blanket complaint that ``12F is circular, therefore everything downstream fails.''
+
+\section{Current denial-by-theorem map}
+
+\begin{longtable}{L{2.15in}L{2.35in}L{1.5in}}
+\toprule
+\textbf{Objection} & \textbf{To keep it alive, deny at least one of} & \textbf{Status}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Objection} & \textbf{To keep it alive, deny at least one of} & \textbf{Status}\\
+\midrule
+\endhead
+12F is still the whole no-second-gate engine. & 12F as a legitimate fixed-scope typing premise; 12G/P4 as first exclusion node; downstream carry-through via 13K / 20.5B / 20B and ST2--ST3 / 20C.1 / 20C. & \narrow\\
+The realized lineage can be reclassified slice-by-slice. & 20B.1, 20B.2, 20B.3, ST4, ST5. & \closed\\
+There is still a neutral third same-scope endpoint status. & 20C.1, 20C.2, 20C, 20C.3. & \closed\\
+A hidden same-scope discriminator can enter through history, order, or representative-only diagnostics. & Standing quotient theorem, factorization discipline, history-factorization theorem, ATS role packet, skin non-authority corollaries. & \closed\\
+Metric divergence itself is the singularity gate. & Metric / tensor / witness localization packet plus 20B / 20C. & \closed\\
+The paper claims admissibility supplies the missing analytic bridge inequality. & Front-matter claim-type box, non-claim list, no-new-criterion theorems. & \closed\\
+\bottomrule
+\end{longtable}
+
+\section{Referee guidance}
+
+\begin{freezebox}
+\textbf{How to use this dossier.}
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
+\item Read page~1 of the manuscript first. The bridge-patch live dependency chain is now there explicitly.
+\item If you think 12F is still circular, identify whether your complaint attacks: 12F as premise, 12G/P4 as bridge application, or one of the downstream transport nodes.
+\item Do not report the objection in the vague form ``this feels circular.'' The hostile-read protocol now requires a theorem-local target.
+\item Use Appendix~F for the node-by-node bridge audit, not as proof support but as a navigation aid.
+\end{enumerate}
+\end{freezebox}
+
+\begin{scopebox}
+\textbf{Bottom line.} The bridge-patch hardening does not change the proof class. It changes the visibility and asymmetry of the bridge. The seam is tighter, more honest, and more referee-readable; it is not claimed to be metaphysically invisible.
+\end{scopebox}
+
+\end{document}

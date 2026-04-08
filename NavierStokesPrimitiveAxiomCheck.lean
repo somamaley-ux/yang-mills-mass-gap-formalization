@@ -1,0 +1,15 @@
+import MaleyLean.NavierStokesPrimitiveBridge
+
+namespace MaleyLean
+
+#print axioms PaperCarrierToLineageBindingStatement
+#print axioms PaperStandingPositiveLineageStatement
+#print axioms PaperNoAdmissibilityDynamicsStatement
+#print axioms PaperPreHorizonWitnessStatement
+#print axioms PaperSingularCandidateTypingStatement
+#print axioms PaperMetricDivergenceSkinNonAuthorityStatement
+#print axioms PaperQuotientVisibleWitnessVsIllicitMetricGateStatement
+#print axioms PaperVortexStretchingAnomalyBoundaryStatement
+#print axioms PaperPrimitiveToPDEBridgeBoundaryStatement
+
+end MaleyLean

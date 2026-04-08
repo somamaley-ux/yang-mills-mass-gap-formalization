@@ -1,0 +1,122 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{aliascnt}
+\usepackage{cleveref}
+\usepackage[backend=biber,style=alphabetic,maxbibnames=99]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{caption}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{float} % force Appendix C ledger table before declarations/references
+\usepackage{authblk}
+
+\hypersetup{
+  colorlinks=false,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={Carrier Universality and Global Smoothness for the Periodic 3D Navier--Stokes Equations},
+  pdfauthor={Amos Jay Maley},
+  pdfsubject={The official periodic theorem as a corollary of structural necessity}
+}
+\hypersetup{pdfborder={0 0 0}}
+\setlength{\emergencystretch}{1.5em}
+\makeatletter
+\providecommand*{\theHfigure}{\thefigure}
+\providecommand*{\theHtable}{\thetable}
+\renewcommand*{\theHfigure}{fig.\arabic{figure}.\arabic{page}}
+\renewcommand*{\theHtable}{tab.\arabic{table}.\arabic{page}}
+\makeatother
+% --- Theorem environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\crefname{definition}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+
+% When multiple statement environments share a counter, cleveref will otherwise
+% label them all as the first-defined type. We use aliascnt so that \Cref prints
+% the correct environment name (Theorem/Lemma/...) while preserving a single
+% statement numbering stream.
+
+\newaliascnt{remark}{definition}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\crefname{remark}{Remark}{Remarks}
+\Crefname{remark}{Remark}{Remarks}
+
+\newaliascnt{example}{definition}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+\crefname{example}{Example}{Examples}
+\Crefname{example}{Example}{Examples}
+
+\newaliascnt{axiom}{definition}
+\newtheorem{axiom}[axiom]{Axiom}
+\aliascntresetthe{axiom}
+\crefname{axiom}{Axiom}{Axioms}
+\Crefname{axiom}{Axiom}{Axioms}
+
+\newaliascnt{rulelabel}{definition}
+\newtheorem{rulelabel}[rulelabel]{Rule label}
+\aliascntresetthe{rulelabel}
+\crefname{rulelabel}{Rule label}{Rule labels}
+\Crefname{rulelabel}{Rule label}{Rule labels}
+
+\theoremstyle{plain}
+\newaliascnt{theorem}{definition}
+\newtheorem{theorem}[theorem]{Theorem}
+\aliascntresetthe{theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\Crefname{theorem}{Theorem}{Theorems}
+
+\newaliascnt{proposition}{definition}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\crefname{proposition}{Proposition}{Propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+
+\newaliascnt{lemma}{definition}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+
+\newaliascnt{corollary}{definition}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\crefname{corollary}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
+
+% --- Unnumbered manual theorem headings used for expository subpackages ---
+\newtheorem*{manualproposition}{Proposition}
+\newtheorem*{manualcorollary}{Corollary}
+\newtheorem*{manualtheorem}{Theorem}
+\newtheorem*{manuallemma}{Lemma}
+\newtheorem*{manualdefinition}{Definition}
+\makeatletter
+\newcommand{\manualcurrentlabel}[1]{\protected@edef\@currentlabel{#1}}
+\makeatother
+
+% --- Macros ---
+\newcommand{\HorizonDetectabilityRef}{Theorem~20.7A}
+\newcommand{\StructuralPacketRef}{Theorem~\ref{thm:imported-ametric-boundary}, Corollary~\ref{thm:imported-bivalence}, Corollary~\ref{thm:imported-unique-interior}, and Theorem~\ref{thm:imported-structural-exhaustion}}
+\newcommand{\ImportedStructuralPacketRef}{Theorem~\ref{thm:imported-structural-exhaustion}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Pproj}{\mathbb{P}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\ang}[1]{\left\langle #1\right\rangle}
+\newcommand{\eps}{\varepsilon}

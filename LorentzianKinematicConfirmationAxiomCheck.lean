@@ -1,0 +1,14 @@
+import MaleyLean.LorentzianKinematicConfirmationPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperNonLorentzAdmissibleKinematicsInducesFrameRelativeClaimsStatement
+#print axioms PaperFrameRelativeSupportIsNotTheoryLevelKinematicConfirmationStatement
+#print axioms PaperFixationLocalityOfFrameChangeStatement
+#print axioms PaperLorentzianAdmissibilityAsEnablingConditionStatement
+#print axioms PaperPreferredFrameFailureModeStatement
+#print axioms PaperIdlePreferredStructurePermittedStatement
+#print axioms PaperDeformedKinematicsClassificationStatement
+#print axioms PaperEmergentKinematicsClassificationStatement
+
+end MaleyLean

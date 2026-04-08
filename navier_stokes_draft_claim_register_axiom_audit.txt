@@ -1,0 +1,23 @@
+Axiom Audit - Navier-Stokes Draft Claim Register
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesDraftClaimRegisterAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperDraftRegisterClassificationStatement
+- MaleyLean.PaperDraftRegisterAgreesWithPaperClaimLedgerStatement
+- MaleyLean.PaperDraftStructuralClaimsCertifiedStatement
+- MaleyLean.PaperDraftNamedFailureBoundaryStatement
+- MaleyLean.PaperDraftEndpointGapStatement
+- MaleyLean.PaperDraftRegisterInheritsStructuralAlignmentStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes draft claim register is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

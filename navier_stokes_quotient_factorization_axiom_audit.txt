@@ -1,0 +1,22 @@
+Axiom Audit - Navier-Stokes Quotient Factorization Packet
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesQuotientFactorizationAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperFutureBehaviorQuotientStatement
+- MaleyLean.PaperHistoryFactorizationNoPathDependentAdmissibilityStatement
+- MaleyLean.PaperSameScopeDiscriminatorFactorizationStatement
+- MaleyLean.PaperNoSecondGateSameScopeStatement
+- MaleyLean.PaperPrimitivePeriodicPacketWithQuotientStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes quotient/factorization packet is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

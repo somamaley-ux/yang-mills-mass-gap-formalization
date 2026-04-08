@@ -1,0 +1,23 @@
+Axiom Audit - Navier-Stokes Paper Obligation Ledger
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesPaperObligationLedgerAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperSectionLedgerCompleteStatement
+- MaleyLean.PaperSectionAnalyticReductionStatement
+- MaleyLean.PaperPrimitiveSectionsAreStructurallyClosedStatement
+- MaleyLean.PaperVortexStretchingSectionIsNamedFailureStatement
+- MaleyLean.PaperEndpointTransferSectionDependsOnNamedFailureStatement
+- MaleyLean.PaperLedgerMatchesConcreteInventoryStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes paper obligation ledger is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

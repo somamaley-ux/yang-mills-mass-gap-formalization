@@ -1,0 +1,10 @@
+import MaleyLean.NavierStokesVerbatimDependencySpineSimple
+
+namespace MaleyLean
+
+#print axioms PaperVerbatimStructuralTitlesClosedSimpleStatement
+#print axioms PaperVerbatimNamedFailureTitleSimpleStatement
+#print axioms PaperVerbatimEndpointTitlesSimpleStatement
+#print axioms PaperVerbatimSupportDependencyAlignmentSimpleStatement
+
+end MaleyLean

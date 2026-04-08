@@ -1,0 +1,15 @@
+import MaleyLean.MetaNecessityAdmissibilityPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperFailureOfIrreversibilityUnderUnconstrainedCompositionStatement
+#print axioms PaperTemporalAsymmetryAsAdmissibleInteriorArtifactStatement
+#print axioms PaperNoAggregationLemmaTemporalStatement
+#print axioms PaperInformationNonPrimitivityStatement
+#print axioms PaperEncodingPresuppositionStatement
+#print axioms PaperNoRelabelingLemmaInformationalStatement
+#print axioms PaperStandingConservationConstraintTemporalStatement
+#print axioms PaperMetaNecessityOfAdmissibilityStatement
+#print axioms PaperRoleInductionStatement
+
+end MaleyLean

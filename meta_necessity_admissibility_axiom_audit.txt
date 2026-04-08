@@ -1,0 +1,26 @@
+Axiom Audit - Meta Necessity of Admissibility Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `MetaNecessityAdmissibilityAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperFailureOfIrreversibilityUnderUnconstrainedCompositionStatement
+- MaleyLean.PaperTemporalAsymmetryAsAdmissibleInteriorArtifactStatement
+- MaleyLean.PaperNoAggregationLemmaTemporalStatement
+- MaleyLean.PaperInformationNonPrimitivityStatement
+- MaleyLean.PaperEncodingPresuppositionStatement
+- MaleyLean.PaperNoRelabelingLemmaInformationalStatement
+- MaleyLean.PaperStandingConservationConstraintTemporalStatement
+- MaleyLean.PaperMetaNecessityOfAdmissibilityStatement
+- MaleyLean.PaperRoleInductionStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current meta necessity of admissibility paper-facing surface is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

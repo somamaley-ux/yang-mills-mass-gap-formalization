@@ -1,0 +1,24 @@
+Axiom Audit - Navier-Stokes Maximal Lineage Closure Packet
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesMaximalLineageClosureAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperTerminalObstructionOnMaximalLineageStatement
+- MaleyLean.PaperNoTerminalSecondGateStatement
+- MaleyLean.PaperMaximalLineageClosurePrincipleStatement
+- MaleyLean.PaperFailedTerminalTransportIsSecondGateStatement
+- MaleyLean.PaperTerminalBoundaryOrSecondGateStatement
+- MaleyLean.PaperRestartCompatibleTerminalObstructionClosesLineageStatement
+- MaleyLean.PaperPrimitiveRestartToMaximalLineageClosureStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes maximal-lineage closure packet is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

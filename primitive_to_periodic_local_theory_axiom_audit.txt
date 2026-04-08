@@ -1,0 +1,24 @@
+Axiom Audit - Primitive To Periodic Local Theory Bridge
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `PrimitiveToPeriodicLocalTheoryAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperDatumEntryToAdmittedCarrierStatement
+- MaleyLean.PaperLocalRealizationOnCarrierStatement
+- MaleyLean.PaperRestartConsistencySameObjectPersistenceStatement
+- MaleyLean.PaperPreHorizonSliceReentryStatement
+- MaleyLean.PaperFiniteHorizonWitnessVisibilityStatement
+- MaleyLean.PaperPrimitivePeriodicLocalTheoryPacketStatement
+- MaleyLean.PaperPrimitiveBridgeCompatibleWithAnomalyBoundaryStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current primitive-to-periodic-local-theory bridge is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

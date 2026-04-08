@@ -1,0 +1,22 @@
+Axiom Audit - Navier-Stokes PDE Obligation Register
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesPDEObligationRegisterAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperPrimitiveToPDEObligationPacketStatement
+- MaleyLean.PaperVortexStretchingNamedFailureStatement
+- MaleyLean.PaperAllObligationsDischargedExceptNamedFailureStatement
+- MaleyLean.PaperPrimitiveBoundaryReducesPDEBurdenStatement
+- MaleyLean.PaperPrimitiveNoBlowupToNamedPDEGapStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes PDE obligation register is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

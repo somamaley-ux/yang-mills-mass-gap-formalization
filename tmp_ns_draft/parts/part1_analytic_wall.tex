@@ -1,0 +1,80 @@
+\part*{Part I. Compressed Analytic Wall Statement}
+\addcontentsline{toc}{part}{Part I. Compressed Analytic Wall Statement}
+
+\paragraph{Burden status at entry.}
+Nothing primitive or carrier-specific has yet been certified. Part~I carries only the analytic-side burden of the paper: isolate the common vortex-stretching wall, show that every standard same-scope analytic route meets that wall, and compress the analytic search space into a finite atlas that Part~II can then reclassify. What remains after Part~I is \emph{not} a PDE continuation theorem, but the theorem-visible statement that any successful same-scope continuation argument would require a discriminator not supplied by the existing analytic bundle.
+
+\paragraph{Compression note.}
+The detailed route-by-route analytic atlas is moved to Appendix~E in this edition.
+The main line retains only the shared bottleneck formulation and the atlas-closure theorem needed for
+Part~II's pivot.
+
+\section{The shared bottleneck (``the same wall'')}
+We now formulate the common endpoint in a single statement.
+
+\begin{proposition}[Common bottleneck formulation]\label{prop:common-bottleneck}
+All standard analytic routes catalogued in Appendix~E reduce global regularity to establishing at least one of the following
+\emph{critical upgrades} for every energy-class solution on $(0,T)$:
+\begin{enumerate}[label=(\alph*)]
+\item a scale-critical spacetime bound (Serrin--Prodi, $L^\infty_t L^3_x$, $L^5_{t,x}$, or equivalent Besov/Morrey control);
+\item a scale-critical vorticity bound (e.g.\ $\int_0^T \|\omega\|_\infty<\infty$);
+\item a rigidity/compactness principle excluding all nontrivial ancient solutions arising in Type II rescaling;
+\item a depletion mechanism controlling $\mathcal T(u)$ without introducing extra hypotheses.
+\end{enumerate}
+In each case, the missing step is an \emph{unconditional} bridge from energy-class invariants to
+critical control of the nonlocal vortex-stretching channel.
+\end{proposition}
+
+\section{Analytic obstruction and atlas closure}
+
+\begin{theorem}[Analytic obstruction]
+\label{thm:analytic-obstruction}
+Within the classical formulation of the three--dimensional incompressible Navier--Stokes equations on $\mathbb T^3$, all known analytic continuation routes require an unconditional same--scope discriminator capable of globally suppressing vortex--stretching amplification.
+No currently available analytic invariant, estimate, or continuation criterion provides such a discriminator.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:common-bottleneck} isolates the shared endpoint of the standard routes: each reduces global regularity to an unconditional bridge from energy-class control to a scale-critical suppression of the vortex--stretching channel.
+The route-by-route survey in Appendix~E shows that the standard criteria either assume critical control (smallness/integrability) or re-express the same missing bridge as an a priori blow-up condition.
+None supplies an unconditional bundle-internal discriminator that closes the wall.
+\end{proof}
+
+\begin{corollary}[Analytic incompleteness]
+\label{cor:analytic-incompleteness}
+The classical analytic program cannot close the Navier--Stokes regularity problem without introducing a discriminator external to the existing analytic bundle.
+\end{corollary}
+
+\begin{definition}[Analytic continuation mechanism]\label{def:analytic-mechanism}
+Fix the standard Navier--Stokes carrier on $\mathbb T^3$. An \emph{analytic continuation mechanism}
+is a same-scope analytic attempt to certify continuation by strengthening control over some interior
+feature of the admitted carrier while preserving its equations, scope constants, and licensed skins.
+A purported mechanism that requires additional standing-bearing bundle data or a new same-scope
+operator family is not an analytic continuation mechanism of the standard carrier but a scope change.
+\end{definition}
+
+\begin{theorem}[Atlas closure]
+\label{thm:atlas-closure}
+Within the classical Navier--Stokes carrier on $\mathbb T^3$, every analytic continuation mechanism in
+the sense of Definition~\ref{def:analytic-mechanism} must modify exactly one of the following
+structural features:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item norm growth,
+\item scale transfer,
+\item geometric structure,
+\item profile formation.
+\end{enumerate}
+No additional analytic continuation mechanism exists without introducing new bundle structure.
+\end{theorem}
+
+\begin{proof}
+Energy/enstrophy programs target norm growth.
+Littlewood--Paley and cascade analyses target scale transfer.
+Geometric depletion and alignment arguments target geometric structure.
+Blow-up profile and ancient-solution rigidity programs target profile formation.
+A same-scope analytic continuation mechanism must act on some interior feature already visible in the
+standard carrier skins. For that carrier, the compressed Part~I statement together with Appendix~E exposes only the four listed feature
+families. Any purported fifth mechanism would require additional standing-bearing bundle data or a new
+same-scope operator family not already licensed in the standard carrier. By definition, that is not a
+continuation mechanism of the fixed carrier but a scope change. Hence the atlas is complete.
+\end{proof}
+\newpage

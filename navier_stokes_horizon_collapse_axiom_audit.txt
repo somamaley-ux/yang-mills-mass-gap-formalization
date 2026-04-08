@@ -1,0 +1,24 @@
+Axiom Audit - Navier-Stokes Horizon Collapse Packet
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesHorizonCollapseAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperHorizonSingularImageStatement
+- MaleyLean.PaperGenuineContinuationObstructionStatement
+- MaleyLean.PaperHorizonCollapseBoundaryStatement
+- MaleyLean.PaperBookkeepingVisibilityBlocksObstructionStatement
+- MaleyLean.PaperBookkeepingOnlyHorizonImageNotObstructionStatement
+- MaleyLean.PaperHorizonVisibleVsGenuineObstructionStatement
+- MaleyLean.PaperPrimitiveBoundaryToHorizonCollapseStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes horizon-collapse packet is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

@@ -1,0 +1,6 @@
+Axiom audit for `NavierStokesVerbatimDependencySpineSimpleAxiomCheck.lean`.
+
+'MaleyLean.PaperVerbatimStructuralTitlesClosedSimpleStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimNamedFailureTitleSimpleStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimEndpointTitlesSimpleStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimSupportDependencyAlignmentSimpleStatement' does not depend on any axioms

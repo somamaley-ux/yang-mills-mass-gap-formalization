@@ -1,0 +1,12 @@
+import MaleyLean.NavierStokesVerbatimSubsectionRegister
+
+namespace MaleyLean
+
+#print axioms PaperVerbatimEntryClassificationStatement
+#print axioms PaperVerbatimRegisterAgreesWithDraftRegisterStatement
+#print axioms PaperVerbatimStructuralEntriesCertifiedStatement
+#print axioms PaperVerbatimNamedFailureBoundaryStatement
+#print axioms PaperVerbatimEndpointGapStatement
+#print axioms PaperVerbatimRegisterInheritsStructuralAlignmentStatement
+
+end MaleyLean

@@ -1,0 +1,22 @@
+Axiom Audit - Navier-Stokes PDE Obligation Inventory
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesPDEObligationInventoryAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperObligationInventoryCompleteStatement
+- MaleyLean.PaperAnalyticInventoryReducesToNamedFailureStatement
+- MaleyLean.PaperConcreteRegisterMatchesInventoryStatement
+- MaleyLean.PaperConcreteRegisterHasNamedFailureStatement
+- MaleyLean.PaperConcreteRegisterReducesAnalyticBurdenStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes PDE obligation inventory is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

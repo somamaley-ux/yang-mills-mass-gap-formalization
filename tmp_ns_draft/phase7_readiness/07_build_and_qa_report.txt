@@ -1,0 +1,53 @@
+Phase 7 + bridge-patch Phase 6 local build and QA report
+Date frozen: 2026-03-22 UTC
+
+Build commands executed successfully:
+1. latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+2. latexmk -pdf -interaction=nonstopmode -halt-on-error phase7_readiness_pack.tex
+3. latexmk -pdf -interaction=nonstopmode -halt-on-error supplementary_referee_dossier.tex
+4. tools/hash_bundle.sh
+
+Output artifacts:
+- main.pdf
+- phase7_readiness_pack.pdf
+- supplementary_referee_dossier.pdf
+- phase7_readiness/06_source_manifest_sha256.txt
+
+PDF metadata / page counts:
+MAIN
+Title:           Carrier Universality and Global Smoothness for the Periodic 3D Navier–Stokes Equations
+Subject:         The official periodic theorem as a corollary of structural necessity
+Author:          Amos Jay Maley
+Pages:           158
+Page size:       612 x 792 pts (letter)
+
+READINESS PACK
+Pages:           3
+Page size:       612 x 792 pts (letter)
+
+SUPPLEMENTARY REFEREE DOSSIER
+Title:           Supplementary Referee Dossier – Bridge-patch Phase 6 audit
+Author:          OpenAI
+Pages:           5
+Page size:       612 x 792 pts (letter)
+
+Reference / citation QA:
+- No undefined references found in main.log.
+- No undefined citations found in main.log.
+- phase7_readiness_pack.tex compiles without bibliography dependencies.
+- supplementary_referee_dossier.tex compiles without bibliography dependencies.
+
+Visual QA spot-check:
+- Reviewed the page-1 front matter carrying the bridge-patch live dependency chain.
+- Reviewed the 12F / 12G neighborhood and the Appendix F bridge-patch Phase 5 / Phase 6 audit sections.
+- Reviewed the supplementary referee dossier cover and denial-by-theorem map.
+- No clipping, overlap, or missing glyphs were observed in the inspected rendered pages.
+
+Known non-fatal layout warnings:
+- The manuscript still contains several legacy overfull/overheight box warnings inherited from earlier phases.
+- These warnings did not block compilation and the inspected rendered pages remained legible.
+- The supplementary referee dossier has a few minor overfull hbox warnings in narrow tables; these are cosmetic only.
+
+Hash manifest summary:
+55 phase7_readiness/06_source_manifest_sha256.txt
+The manifest was regenerated after the Phase 6 bridge-patch lexical / dossier refresh.

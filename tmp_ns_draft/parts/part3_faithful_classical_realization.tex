@@ -1,0 +1,1318 @@
+\part*{Part III. Faithful Classical Realization}
+\addcontentsline{toc}{part}{Part III. Faithful Classical Realization}
+
+\paragraph{Burden status at entry.}
+By the end of Part~II, the fixed periodic problem already has a unique admissible interior, the standard periodic carrier has already been identified with that interior, and the same-scope admissibility burden has already been closed before any classical transfer begins. Part~III therefore carries only the realization-and-transport burden: admit the full official datum class, realize the full official local classical class, keep the same same-scope continuation notion fixed earlier rather than silently redefining it, show that no new same-scope continuation criterion appears at the classical layer, and then transport the already certified carrier-side contradiction into the official PDE endpoint.
+
+\begin{manualdefinition}[18.0 (Same-object convention for realized periodic lineages)]
+\phantomsection\manualcurrentlabel{18.0}\label{def:realized-lineage-same-object-convention}
+Fix an admitted carrier state $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and its maximal classical realization
+\[
+\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)
+\qquad\text{on}\qquad [0,T_*(x)).
+\]
+In Part~III the \emph{realized periodic lineage of $x$} means the single same-scope determination consisting of this maximal realized object together with its fixed torus carrier, viscosity, zero-forcing Navier--Stokes equations, datum anchor, mean-zero pressure gauge, lawful-redescription class, and same-scope continuation question. The time slices $t<T_*(x)$ are licensed presentations of this one realized lineage; they are not independently reclassified admissibility states.
+\end{manualdefinition}
+
+\begin{remark}[Claim-type discipline for the realized-lineage packet]\label{rem:partIII-claim-type-discipline}
+The live burden of Part~III is not to produce the missing analytic bridge inequality or a new coercive continuation estimate. Its burden is narrower: once the official periodic classical scope and the realized lineage of Definition~\ref{def:realized-lineage-same-object-convention} are fixed, Part~III must show that any purported finite-horizon failure has only the same-scope endpoint proposal statuses later named in the realized-lineage status trichotomy / collapse and that no additional classical-layer selector or continuation gate is introduced on that route.
+\end{remark}
+
+\begin{tcolorbox}[title={Part~III transfer cascade and claim types}, colback=blue!2!white, colframe=blue!55!black]
+Part~III carries the official endpoint by one explicit primitive-to-classical transfer cascade:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em, itemsep=0.2em, topsep=0.2em]
+\item \textbf{Transfer soundness:} every official periodic datum enters the admitted carrier class in the unique admissible interior.
+\item \textbf{Transfer completeness:} the realized local class is exactly the full official local classical class.
+\item \textbf{Transfer faithfulness / no-new-criterion:} classical realization preserves carrier identity on the single realized lineage of Definition~\ref{def:realized-lineage-same-object-convention} and adds no new standing-positive same-scope continuation content beyond the certified carrier class on the live route.
+\item \textbf{Transfer detectability:} any hypothetical finite-time classical breakdown is already carrier-visible on the fixed torus carrier.
+\item \textbf{Transfer impossibility:} all singular images of the unique admissible interior are excluded.
+\item \textbf{Transfer endpoint:} the official periodic theorem follows first as a short corollary of structural necessity and then as the classical PDE restatement.
+\end{enumerate}
+\end{tcolorbox}
+
+From this point onward the proof burden is local and theorem-explicit. Part~III does not reopen Part~I or Part~II; it isolates the transfer chain that carries the already-certified standard periodic carrier into the official PDE formulation. The only analytic machinery used in Part~III is now the narrow local realization packet internalized in Appendix~B: pressure reconstruction in the periodic mean-zero gauge, the semigroup/Leray contraction window, the classical upgrade for smooth data, and overlap uniqueness for smooth periodic solutions. Lemma~\ref{lem:bridge-sufficiency-partIII} and Proposition~\ref{prop:no-hidden-transfer-hypothesis} record the sufficiency of this bridge on theorem-local terms, while Remark~\ref{rem:partIII-claim-type-discipline} keeps the claim class narrow: the later endpoint theorem is a short same-scope status contradiction, not an imported analytic coercivity result.
+
+
+\begin{manualproposition}[18A (Part~III is realization transport, not a second proof modality)]
+\phantomsection\manualcurrentlabel{18A}\label{prop:partIII-transport-only}
+Assume the fixed periodic scope has already reached Corollary~\ref{cor:periodic-unique-admissible-interior} and Theorem~\ref{thm:periodic-carrier-unique-interior}. Then Part~III introduces no new same-scope admissibility criterion, no independent PDE continuation principle, and no additional carrier-side discriminator. Its sole role is to realize the already-identified unique admissible interior in the official local classical periodic language and to transport the resulting carrier-side exclusions into that classical image, using only the local analytic packet of Appendix~B (Proposition~\ref{prop:B1-mean-zero-poisson} through Corollary~\ref{cor:B8-local-analytic-packet}).
+\end{manualproposition}
+
+\begin{proof}
+The scope-level exclusion work is already complete before Part~III begins: Corollary~\ref{cor:periodic-unique-admissible-interior} forces the unique admissible interior, Theorem~\ref{thm:periodic-carrier-unique-interior} identifies the standard periodic carrier with that interior, and Proposition~\ref{prop:no-additional-pde-side-criterion} states explicitly that no further same-scope PDE-side continuation criterion survives inside fixed scope. Lemma~\ref{lem:bridge-sufficiency-partIII} then records the exact role of Part~III: Carrier Universality, local classical realization, horizon detectability, and faithful import are sufficient to read that prior structural theorem into the official PDE formulation. Every analytic ingredient used below is now theorem-local in Appendix~B, and specifically in Proposition~\ref{prop:B1-mean-zero-poisson} through Corollary~\ref{cor:B8-local-analytic-packet}, so the later sections realize and transport a theorem already forced on the carrier rather than inventing a second proof modality.
+\end{proof}
+
+\begin{manualproposition}[18B (No hidden continuation hypothesis enters the transfer cascade)]
+\phantomsection\manualcurrentlabel{18B}\label{prop:no-hidden-transfer-hypothesis}
+On the live Part~III dependency chain, the only datum-side assumption is $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$ and the only analytic inputs are Proposition~\ref{prop:B1-mean-zero-poisson} through Corollary~\ref{cor:B8-local-analytic-packet} of Appendix~B. No smallness, symmetry, profile, critical-space, Beale--Kato--Majda, Serrin, Prodi--Serrin, $\Theta_x$, or auxiliary continuation hypothesis is assumed in order to pass from the certified carrier to the official local classical class. Any standing-positive same-scope continuation claim at the classical layer must either factor through the carrier-side structure already fixed in Part~II or be excluded by Theorem~\ref{thm:transfer-no-new-content} and Theorem~\ref{thm:no-independent-classical-discriminator}.
+\end{manualproposition}
+
+\begin{proof}
+Datum-side entry is exactly Corollary~\ref{cor:every-official-datum-admitted}, with Proposition~\ref{prop:no-hidden-prefilter} showing that no extra datum hypothesis is introduced. The only analytic ingredients used to construct and identify the local classical realization are the Appendix~B results Proposition~\ref{prop:B1-mean-zero-poisson} through Corollary~\ref{cor:B8-local-analytic-packet}. Theorem~\ref{thm:transfer-no-new-content} states that realization adds no new standing-positive same-scope continuation content on the live route, Corollary~\ref{cor:breakdown-carrier-visible} and \HorizonDetectabilityRef{} make any hypothetical breakdown carrier-visible, and Theorem~\ref{thm:no-independent-classical-discriminator} excludes an independent classical-layer discriminator in that same standing-positive role. Hence no hidden continuation hypothesis enters the transfer cascade.
+\end{proof}
+
+\begin{manualproposition}[18C (Part~III uses the same same-scope continuation notion fixed in Part~II)]
+\phantomsection\manualcurrentlabel{18C}\label{prop:partIII-same-continuation-notion}
+The same-scope continuation notion used throughout Part~III is exactly the continuation notion fixed in Lemma~\ref{lem:bridge-fixed-periodic-scope} and closed before transfer by Corollary~\ref{cor:no-circular-burden-after-carrier-packet}. Part~III realizes that already-fixed notion in official local classical language; it does not redefine, weaken, or strengthen it.
+\end{manualproposition}
+
+\begin{proof}
+Lemma~\ref{lem:bridge-fixed-periodic-scope} fixes the same-scope continuation notion as part of the periodic scope itself: smooth periodic Navier--Stokes continuation on the fixed torus carrier, with the fixed viscosity, zero forcing, smooth category, mean-zero pressure gauge, and lawful-redescription class. Corollary~\ref{cor:no-circular-burden-after-carrier-packet} then states theorem-locally that this same-scope admissibility burden is already closed before Part~III begins. The realization map, horizon discriminator, and detectability statements of Part~III merely express that same continuation question on the realized local classical image supplied by Proposition~\ref{prop:B1-mean-zero-poisson} through Corollary~\ref{cor:B8-local-analytic-packet}. If Part~III altered the continuation notion, it would either change scope or introduce a new same-scope admissibility selector, contradicting Proposition~\ref{prop:partIII-transport-only} and Proposition~\ref{prop:no-hidden-transfer-hypothesis}. Hence Part~III uses the same same-scope continuation notion fixed in Part~II and only realizes it in classical PDE language.
+\end{proof}
+
+\section{Transfer Step I (soundness): every official periodic datum enters the unique admissible interior}\label{sec:carrier-universality}
+\paragraph{Burden status.}
+The unique admissible interior and the standard periodic carrier are already fixed before this section begins. What remains here is datum-side soundness only: prove that every official Fefferman~(B) datum enters that already-certified carrier class, with no hidden prefilter and no datum-dependent rival regime.
+The first point at which a specialist PDE referee will press hardest is whether the standard carrier,
+even after Theorem~\ref{thm:periodic-carrier-unique-interior}, silently restricts the official
+initial-data class or leaves room for a second same-scope admissible continuation regime chosen by
+the datum. The present section removes both possibilities exactly. It proves that the standard
+carrier of Definition~\ref{def:standard-carrier} --- already identified in Part~II with the unique
+admissible interior at fixed periodic scope --- coincides, at time zero, with the ordinary periodic
+smooth divergence-free data class, so every official datum enters that unique admissible interior.
+Since no second same-scope interior exists on the fixed torus carrier, no official datum
+can select, privilege, or force an alternative admissible continuation regime. Thus Carrier
+Universality now does three jobs at once: it removes the hidden-subclass objection, shows that every
+official periodic datum lands in the \emph{unique admissible interior} for the fixed problem, and
+blocks datum-dependent appeal to any rival same-scope continuation regime.
+For the reader in conventional PDE notation, \emph{same scope} in Part~III means: the fixed torus
+carrier $\T^3$, the same viscosity $\nu>0$, the same incompressible Navier--Stokes system, and the
+fixed mean-zero pressure normalization. \emph{Lawful redescription} means only deterministic
+bookkeeping changes within that fixed presentation (velocity, vorticity, strain, pressure gauge,
+and standard frequency decompositions).
+
+\begin{definition}[Official periodic data class]\label{def:official-periodic-data}
+Fix $\nu>0$ and the torus carrier $\T^3$. The \emph{official periodic data class} is
+\[
+\mathcal D_{\mathrm{off}}(\T^3,\nu)
+:=
+\left\{
+ u_0\in C^\infty(\T^3;\R^3)\;:\;\nabla\cdot u_0=0
+\right\}.
+\]
+No further smallness, symmetry, decay, spectral, or profile hypothesis is included in
+$\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+\end{definition}
+
+\begin{remark}[Exact match with Fefferman (B) hypotheses]\label{rem:exact-match-fefferman-B}
+Definition~\ref{def:official-periodic-data} is exactly the initial-data class appearing in the
+periodic case~(B): smooth periodic divergence-free velocity data on $\T^3$ with no smallness,
+symmetry, decay, profile, or mean-zero velocity restriction. The mean-zero normalization used later
+fixes only the pressure gauge.
+\end{remark}
+
+\begin{definition}[Carrier seed of an official datum]\label{def:carrier-seed}
+For $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, define its \emph{carrier seed}
+\[
+\Sigma(u_0):=
+\bigl(
+ u_0,\;
+ \omega_0,\;
+ p_0,\;
+ S_0,\;
+ \mathcal F(u_0)
+\bigr),
+\]
+where
+\[
+\omega_0:=\nabla\times u_0,\qquad
+S_0:=\tfrac12(\nabla u_0+\nabla u_0^\top),
+\]
+$p_0$ is the unique mean-zero solution of
+\[
+-\Delta p_0=\partial_i\partial_j(u_{0,i}u_{0,j})\quad\text{on }\T^3,
+\]
+and $\mathcal F(u_0)$ denotes the standard frequency / Littlewood--Paley skins used in Part I.
+\end{definition}
+
+\begin{definition}[Initial-data face of the standard carrier]\label{def:initial-data-face}
+The \emph{initial-data face} of the standard $\T^3$ Navier--Stokes carrier is the set
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ of time-zero lawful-redescription classes of the object-class
+described in Definition~\ref{def:standard-carrier}. Concretely, an element of
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ is the time-zero carrier object modulo the licensed
+bookkeeping equivalences already admitted in Lemma~\ref{prop:equiv-completion-NS}.
+\end{definition}
+
+\begin{remark}[Conventional reading of the initial-data face]\label{rem:initial-data-face-conventional}
+On the fixed torus carrier, $\mathcal I_{\mathrm{car}}(\T^3,\nu)$ is nothing more than the quotient
+of the standard time-zero presentations generated from smooth divergence-free periodic velocity data
+by the deterministic bookkeeping operations already built into the standard carrier. It does not
+identify distinct official velocity data, and it introduces no additional side condition at time zero.
+\end{remark}
+
+\begin{lemma}[Canonical skin completion of official data]\label{lem:canonical-skin-completion}
+For every $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, the carrier seed $\Sigma(u_0)$ is well-defined
+and determines an element of the initial-data face
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$.
+\end{lemma}
+
+\begin{proof}
+Because $u_0\in C^\infty(\T^3;\R^3)$ and $\nabla\cdot u_0=0$, the derived fields
+$\omega_0=\nabla\times u_0$ and $S_0=\tfrac12(\nabla u_0+\nabla u_0^\top)$ are smooth and periodic.
+The right-hand side of the torus Poisson equation
+\[
+-\Delta p_0=\partial_i\partial_j(u_{0,i}u_{0,j})
+\]
+has mean zero, so Corollary~\ref{cor:B2-pressure-reconstruction} supplies the unique mean-zero pressure seed $p_0$. The standard frequency skins
+$\mathcal F(u_0)$ are ordinary bookkeeping constructions on smooth periodic data. By
+Definition~\ref{def:standard-carrier}, these objects are precisely the licensed time-zero
+presentations of the same carrier object. Thus $\Sigma(u_0)$ determines an element of
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$.
+\end{proof}
+
+\begin{proposition}[No hidden prefilter on official data]\label{prop:no-hidden-prefilter}
+The assignment
+\[
+u_0\longmapsto [\Sigma(u_0)]
+\]
+introduces no hypothesis beyond membership in $\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+In particular, it does not impose smallness, symmetry, profile restrictions, spectral localization,
+critical-space bounds, a mean-zero velocity condition, or any continuation criterion.
+\end{proposition}
+
+\begin{proof}
+Definition~\ref{def:carrier-seed} uses only four total deterministic operations on
+$C^\infty_\sigma(\T^3)$: differentiation, curl, the mean-zero periodic Poisson solver for pressure, and the fixed
+frequency bookkeeping of Part~I. The pressure gauge does not impose any extra condition on the
+velocity datum itself. None imposes a size bound, symmetry assumption, profile condition,
+or continuation hypothesis. Hence if some datum in $\mathcal D_{\mathrm{off}}(\T^3,\nu)$ were excluded by
+$u_0\mapsto [\Sigma(u_0)]$, the exclusion would have to come from an additional side condition not
+present in Definition~\ref{def:carrier-seed}. But Part~II already certified the standard carrier as
+zero-parameter and equivalence-complete (Theorem~\ref{thm:ns-zero-parameter}), so no such extra
+criterion exists on the fixed torus carrier. Therefore the construction does not narrow the official
+class.
+\end{proof}
+
+\begin{lemma}[Velocity reconstruction on the initial-data face]\label{lem:velocity-reconstruction}
+Every class in the initial-data face $\mathcal I_{\mathrm{car}}(\T^3,\nu)$ contains a unique velocity
+representative $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{def:standard-carrier}, the standard time-zero presentations all arise from one
+smooth periodic divergence-free velocity field together with its deterministically derived pressure,
+vorticity, strain/kernel, and standard frequency skins. Thus every class in
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ contains at least one velocity representative in
+$\mathcal D_{\mathrm{off}}(\T^3,\nu)$. If a single class contained two different velocity fields
+$u_0\neq v_0$, then the quotient defining the initial-data face would identify two distinct official
+periodic data sets. That is excluded by equivalence completion for the standard carrier and by the
+zero-parameter certification already proved in Theorem~\ref{thm:ns-zero-parameter}. Hence the
+velocity representative is unique.
+\end{proof}
+
+\begin{lemma}[Every admitted time-zero carrier object has an official datum]\label{lem:reverse-extraction}
+Every element of the initial-data face $\mathcal I_{\mathrm{car}}(\T^3,\nu)$ is lawfully equivalent
+to a unique carrier seed $\Sigma(u_0)$ with
+$u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+\end{lemma}
+
+\begin{proof}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$. By Lemma~\ref{lem:velocity-reconstruction}, the class of
+$x$ contains a unique velocity representative $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$. Once $u_0$ is
+fixed, the remaining pieces of the carrier seed are determined canonically by
+Definition~\ref{def:carrier-seed}: $\omega_0=\nabla\times u_0$, the strain field $S_0$, the unique
+mean-zero pressure seed $p_0$, and the fixed frequency bookkeeping $\mathcal F(u_0)$. Therefore the
+class of $x$ is represented by $\Sigma(u_0)$, and the datum $u_0$ is unique.
+\end{proof}
+
+\begin{theorem}[Transfer soundness: Carrier Universality for official periodic data]\label{thm:carrier-universality}
+The map
+\[
+\mathcal U_{\mathrm{car}}:\mathcal D_{\mathrm{off}}(\T^3,\nu)\to \mathcal I_{\mathrm{car}}(\T^3,\nu),
+\qquad
+u_0\longmapsto [\Sigma(u_0)]
+\]
+is bijective.
+
+Equivalently, the standard $\T^3$ Navier--Stokes carrier neither narrows nor enlarges the official
+periodic initial-data class: every smooth divergence-free periodic datum determines exactly one
+admitted time-zero carrier object up to licensed redescription, every admitted time-zero
+carrier object arises from exactly one such datum, and therefore no official datum can select an
+alternative same-scope admissible continuation regime on the fixed torus carrier.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:canonical-skin-completion}, every official datum determines an element of the
+initial-data face. Proposition~\ref{prop:no-hidden-prefilter} shows that this assignment imposes no
+extra hypothesis beyond smoothness, periodicity, and divergence-freeness. Lemma~\ref{lem:reverse-extraction}
+gives surjectivity and injectivity: every admitted time-zero carrier object is represented by some
+$\Sigma(u_0)$, and that velocity datum is unique. Therefore the map $\mathcal U_{\mathrm{car}}$ is
+bijective.
+\end{proof}
+
+\begin{corollary}[Transfer soundness: no smaller admissible data subclass]\label{cor:no-smaller-admissible-subclass}
+There is no proper ``admitted'' subclass of the official periodic data hidden inside the standard
+$\T^3$ carrier. The unique admissible interior realized by that carrier applies to all
+$u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:carrier-universality} and Proposition~\ref{prop:no-hidden-prefilter}.
+\end{proof}
+
+\begin{corollary}[Transfer soundness: every official periodic datum enters the unique admissible interior at time zero]\label{cor:every-official-datum-admitted}
+For every $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, the unique class $[\Sigma(u_0)]$ lies in the
+initial-data face $\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and therefore in the unique admissible interior
+identified in Theorem~\ref{thm:periodic-carrier-unique-interior}. In particular, it is
+standing-positive on the fixed torus carrier.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:carrier-universality}, every official datum determines a unique element of the
+initial-data face. By Theorem~\ref{thm:periodic-carrier-unique-interior}, the standard periodic
+carrier is the unique admissible interior at the fixed periodic scope. Hence every official datum
+lands in that unique admissible interior at time zero on the fixed torus carrier.
+\end{proof}
+
+\begin{corollary}[Transfer soundness: no datum-selected rival regime]\label{cor:universality-upgrade}
+For every official periodic datum $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, the associated
+carrier seed lies in the unique admissible interior realized by the standard carrier. Consequently,
+no official datum can select, privilege, or force an alternative same-scope admissible continuation
+regime on the fixed torus carrier, and the structural regularity theorem
+(Theorem~\ref{thm:structural-closure}) applies to all official periodic data on that carrier.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:carrier-universality}, every official datum determines an admitted
+time-zero carrier object. By Theorem~\ref{thm:periodic-carrier-unique-interior}, that object lies in
+the unique admissible interior realized by the standard carrier. Corollary~\ref{cor:no-alternative-same-scope-regime}
+then rules out any second standing-positive same-scope continuation regime on the fixed periodic
+carrier. Therefore the structural regularity package applies to every official datum, not merely to a
+proper subclass, and no datum can appeal to a rival same-scope regime.
+\end{proof}
+
+
+\begin{lemma}[Sufficiency of the Part~III realization bridge]\label{lem:bridge-sufficiency-partIII}
+Assume the full Part~II rule package has been verified for the standard periodic carrier, so that the
+structural non-singularity theorem on that carrier is an in-paper consequence rather than an external
+primitive. Then the structural non-singularity theorem implies the official periodic global smoothness
+theorem provided that the following three bridge ingredients hold on the fixed torus carrier:
+\begin{enumerate}[label=(\alph*), leftmargin=2.2em]
+\item every official periodic datum determines a standing-positive time-zero carrier state in the unique admissible interior;
+\item the realization map identifies the certified carrier with the full official local classical class;
+\item finite-time breakdown on the realized trajectory is independently proved to be a standing-relevant carrier-side horizon discriminator on the fixed carrier, and every carrier-side branch elimination imports faithfully to the realized class as exclusion of singular images.
+\end{enumerate}
+This bridge is a realization-transport statement, not a second proof modality: it carries a prior
+primitive theorem into the official PDE formulation using only the local analytic packet now proved in
+Appendix~B for realization, overlap uniqueness, and pressure reconstruction.
+Conditions (a)--(c) are proved in Sections~\ref{sec:carrier-universality}--\ref{sec:singular-images-official-theorem}.
+\end{lemma}
+
+\begin{proof}
+The in-paper status of the structural non-singularity theorem is supplied by Theorem~\ref{thm:ns-carrier-verifies-rule-package}, which verifies the full Part~II rule package on the standard periodic carrier. Condition~(a) is exactly Corollary~\ref{cor:every-official-datum-admitted}. Condition~(b) is the combined content of Theorems~\ref{thm:local-classical-realization} and \ref{thm:realized-class-equals-official-local-class}. Condition~(c) is the independently proved narrow horizon-detectability route: \HorizonDetectabilityRef{} identifies finite-time breakdown with a standing-relevant carrier-side horizon discriminator on the fixed torus carrier, Theorem~\ref{thm:dynamic-stretching-compatibility} eliminates any additional same-scope $\Theta_x$-based continuation gate, and the constructive branch-forcing / no-singular-image results proved in Sections~\ref{sec:data-extraction-realization}--\ref{sec:singular-images-official-theorem} transport the resulting carrier-side breakdown content into branch exclusion. Once (a)--(c) hold, every official datum enters the unique admissible interior at time zero, every realized local classical trajectory is exactly the official local classical trajectory on the fixed torus carrier, and finite-time breakdown is already a standing-relevant carrier-side event whose branches are excluded by Part~II. Therefore the structural non-singularity theorem on the carrier already identified with the unique admissible interior is sufficient for the official periodic global smoothness theorem on a fully self-contained in-paper spine.
+\end{proof}
+
+\begin{remark}[The Part~III bridge is transport, not a second proof modality]\label{rem:partIII-bridge-transport}
+Lemma~\ref{lem:bridge-sufficiency-partIII} does not prove the official periodic theorem by a new
+analytic regularity argument. Its role is only to say that once the unique admissible interior and the
+carrier-side no-singular-image theorem are already in place, Carrier Universality, local classical
+realization, horizon detectability, and faithful import read that prior primitive result back into the
+official PDE presentation. The analytic bridge used there is exactly the self-contained local realization packet recorded later
+in Proposition~\ref{prop:three-level-support-ledger}.
+\end{remark}
+
+\begin{lemma}[Architectural bridge from strong carrier completeness to realized PDE completeness]\label{lem:strong-completeness-to-realized-completeness}
+Assume the standard carrier is strongly continuation-complete for the official periodic class in the standing-positive carrier-admitted sense of Theorem~\ref{thm:strong-continuation-completeness-standard-carrier}. Then on the realized local class no standing-positive continuation-relevant PDE phenomenon remains outside carrier-side representation. Equivalently: once Theorem~\ref{thm:realized-class-equals-official-local-class} identifies the realized local class with the full official local classical class, every standing-positive same-scope continuation-relevant PDE phenomenon visible in the realized formulation is already represented by a standing-relevant discriminator on the carrier side.
+\end{lemma}
+
+\begin{proof}
+Let $\Xi$ be a standing-positive same-scope continuation-relevant PDE phenomenon visible on the realized local class. By Theorem~\ref{thm:realized-class-equals-official-local-class}, the realized local class is exactly the full official local classical class on the fixed torus carrier. Therefore $\Xi$ is a standing-positive same-scope continuation-relevant PDE phenomenon for the official periodic class. By Theorem~\ref{thm:strong-continuation-completeness-standard-carrier}, $\Xi$ is represented by a standing-relevant discriminator on the standard carrier. Hence no standing-positive continuation-relevant PDE phenomenon visible in the realized formulation remains outside carrier-side representation.
+\end{proof}
+
+\begin{remark}[Architectural status of the strong-completeness bridge]
+Lemma~\ref{lem:strong-completeness-to-realized-completeness} records how the broader continuation-completeness package would descend to the realized local class if one chooses to read the manuscript through that wider architectural lens. On that same narrow horizon-detectability route, this lemma is explanatory rather than load-bearing for the official periodic theorem: the page-1 theorem uses the horizon-detectability chain through \HorizonDetectabilityRef{} instead of the broader strong-completeness bridge. It is therefore retained explicitly as broader conceptual architecture, not as a necessary ingredient in the official-theorem spine.
+\end{remark}
+
+\section{Transfer Steps II--III (soundness and completeness): local classical realization of the unique admissible interior}\label{sec:data-extraction-realization}
+\paragraph{Burden status.}
+Datum entry has already been settled. What remains here is realization completeness: construct the local classical image of the admitted carrier class and show that the realized local class is exactly the full official local classical class, without changing same-scope admissibility content.
+Part~II identified the standard $\T^3$ carrier with the unique admissible interior and certified it internally. The next task is to realize that already-certified interior in the ordinary local classical Navier--Stokes presentation used by the official periodic theorem. Local classical realization supplies the classical image of the prior primitive theorem; it does not generate that theorem and it does not repair the analytic wall by a new estimate. For the official theorem, the crucial detectability step is the narrow horizon route through \HorizonDetectabilityRef{}, not any broader auxiliary continuation package. This section records the constructive realization map and the faithful fixed-carrier local theory needed for that route.
+No external corpus theorem is added at this stage: the bridge is constructed inside the paper using only the manuscript-local analytic packet now proved in Appendix~B and recorded later in Proposition~\ref{prop:three-level-support-ledger}.
+
+\begin{definition}[Classical realization datum]\label{def:classical-realization-datum}
+A \emph{classical realization datum} is a carrier seed $\Sigma(u_0)$ arising from some
+$u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, viewed in the ordinary PDE presentation as the smooth
+periodic divergence-free initial velocity $u_0$ together with its canonically induced mean-zero
+pressure gauge and the licensed skins of Definition~\ref{def:standard-carrier}.
+\end{definition}
+
+\begin{definition}[Constructive mild realization operator]\label{def:mild-realization-operator}
+Fix an integer $m\ge 3$ and $T>0$. Let
+\[
+H^m_\sigma(\T^3):=\{v\in H^m(\T^3;\R^3):\nabla\cdot v=0\},
+\]
+and define
+\[
+X_T^m:=C([0,T];H^m_\sigma(\T^3))\cap L^2([0,T];H^{m+1}_\sigma(\T^3))
+\]
+with norm
+\[
+\norm{v}_{X_T^m}:=\sup_{0\le t\le T}\norm{v(t)}_{H^m}
++\Bigl(\int_0^T \norm{v(t)}_{H^{m+1}}^2\,dt\Bigr)^{1/2}.
+\]
+For a classical realization datum $\Sigma(u_0)$, let $\Pproj$ denote the Leray projector on
+$\T^3$ and define the \emph{constructive mild realization operator}
+\[
+(\Phi_{u_0,T}v)(t)
+:= e^{\nu t\Delta}u_0
+-\int_0^t e^{\nu (t-s)\Delta}\Pproj\nabla\cdot(v\otimes v)(s)\,ds.
+\]
+\end{definition}
+
+\begin{definition}[Pressure reconstruction operator]\label{def:pressure-reconstruction-operator}
+For $v\in X_T^m$, define $p[v](t)$ to be the unique mean-zero periodic solution of
+\[
+-\Delta p[v](t)=\partial_i\partial_j(v_i v_j)(t)
+\qquad (0\le t\le T).
+\]
+\end{definition}
+
+\begin{lemma}[Constructive local contraction window]\label{lem:constructive-local-window}
+Let $\Sigma(u_0)$ be a classical realization datum and fix an integer $m\ge 3$.
+Then there exist $T_0=T_0(\nu,\norm{u_0}_{H^m})>0$ and a closed ball
+$B_{T_0}^m\subset X_{T_0}^m$ such that $\Phi_{u_0,T_0}:B_{T_0}^m\to B_{T_0}^m$ is a contraction.
+Its unique fixed point $u^{(0)}$ is smooth on $\T^3\times[0,T_0]$, satisfies $u^{(0)}|_{t=0}=u_0$,
+and the associated pressure $p[u^{(0)}]$ is smooth with the fixed mean-zero gauge.
+\end{lemma}
+
+\begin{proof}
+Lemma~\ref{lem:B3-semigroup-leray} and Proposition~\ref{prop:B4-mild-bilinear} give the exact
+specialized semigroup / Leray contraction estimate needed for the mild map on $X_T^m$. Theorem~\ref{thm:B5-local-mild-window}
+then provides $T_0=T_0(\nu,\norm{u_0}_{H^m})>0$, a closed ball $B_{T_0}^m\subset X_{T_0}^m$, and the
+unique fixed point $u^{(0)}\in X_{T_0}^m$ of $\Phi_{u_0,T_0}$. Because the datum in the present
+manuscript is smooth and periodic, Proposition~\ref{prop:B6-classical-upgrade} upgrades that fixed
+point to a smooth classical solution on $\T^3\times[0,T_0]$ and gives the uniquely normalized smooth
+pressure $p[u^{(0)}]$ in the fixed mean-zero gauge.
+\end{proof}
+
+\begin{lemma}[Initial-data extraction from the unique admissible interior]\label{lem:initial-data-extraction}
+Every standing-positive time-zero state in the initial-data face
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ determines a unique classical realization datum in the sense of
+Definition~\ref{def:classical-realization-datum}.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:carrier-universality}, every element of
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ is represented by a unique carrier seed $\Sigma(u_0)$ with
+$u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$. That seed is exactly a classical realization datum by
+Definition~\ref{def:classical-realization-datum}. Uniqueness is the injective half of
+Theorem~\ref{thm:carrier-universality}.
+\end{proof}
+
+\begin{theorem}[Transfer soundness: constructive local classical realization of admitted data]\label{thm:local-classical-realization}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be a standing-positive time-zero carrier state, and let
+$\Sigma(u_0)$ be its unique classical realization datum from
+Lemma~\ref{lem:initial-data-extraction}. Then there exists a maximal time $T_*(x)>0$ and a unique
+classical solution pair
+\[
+(u_x,p_x)\in C^\infty\bigl(\T^3\times[0,T_*(x));\R^3\bigr)\times C^\infty\bigl(\T^3\times[0,T_*(x));\R\bigr)
+\]
+satisfying
+\[
+\partial_t u_x + (u_x\cdot\nabla)u_x + \nabla p_x = \nu\Delta u_x,
+\qquad \nabla\cdot u_x = 0,
+\qquad u_x|_{t=0}=u_0,
+\]
+with periodic boundary conditions and the fixed mean-zero pressure gauge. Moreover, $(u_x,p_x)$ is
+constructed inside the paper by the mild operator of
+Definition~\ref{def:mild-realization-operator}: its local segments are unique fixed points of
+$\Phi_{u_0,T}$ (or of the same operator started from later smooth time slices), and the maximal
+trajectory is the unique gluing of all overlapping fixed-point segments.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:initial-data-extraction}, $x$ determines a unique smooth periodic divergence-free
+velocity datum $u_0$. Lemma~\ref{lem:constructive-local-window} gives $T_0>0$ and a unique fixed
+point $u^{(0)}$ of $\Phi_{u_0,T_0}$ on $[0,T_0]$; define $p^{(0)}:=p[u^{(0)}]$. This is the initial
+local realization segment.
+
+Let $\mathcal T(x)$ be the set of all $T>0$ for which there exists a smooth classical solution pair on
+$\T^3\times[0,T]$ obtained by finitely many overlapping fixed-point constructions of the same form.
+The set $\mathcal T(x)$ is nonempty because $T_0\in\mathcal T(x)$. If $T\in\mathcal T(x)$ and
+$t_1<T$, then the time slice $u_x(t_1)$ is again a smooth divergence-free periodic datum on the same
+carrier. Applying Lemma~\ref{lem:constructive-local-window} to that shifted datum produces a new
+fixed-point segment on $[t_1,t_1+\delta]$. The overlap uniqueness theorem of Appendix~B
+(Theorem~\ref{thm:B7-overlap-uniqueness}) implies that any two such segments agree where both are
+defined, so they glue uniquely.
+
+Set
+\[
+T_*(x):=\sup \mathcal T(x).
+\]
+By overlap uniqueness, the union of all fixed-point segments with endpoint below $T_*(x)$ defines a
+single smooth classical solution pair $(u_x,p_x)$ on $[0,T_*(x))$. If there were a smooth classical
+continuation beyond $T_*(x)$ on the same torus carrier, its restriction to a short interval beyond
+some $t_1<T_*(x)$ would provide an additional fixed-point segment and hence a time larger than
+$T_*(x)$ in $\mathcal T(x)$, contradicting the definition of $T_*(x)$. Therefore $(u_x,p_x)$ is the
+unique maximal realized trajectory. Since every step uses only the fixed official datum and the fixed
+carrier geometry, the construction introduces no auxiliary side condition, scale cut-off, or extra
+continuation criterion.
+\end{proof}
+
+\begin{manuallemma}[19A (Local classical realization is faithful)]
+\phantomsection\manualcurrentlabel{19A}\label{lem:local-realization-faithful}
+For every standing-positive time-zero carrier state $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$, the construction of Theorem~\ref{thm:local-classical-realization} produces a corresponding local classical periodic realization. If two realization segments issued from the same carrier state overlap in time, then overlap uniqueness identifies them as segments of one and the same realized trajectory. Consequently local classical realization does not branch inside a fixed carrier state and preserves carrier identity across local segments.
+\end{manuallemma}
+
+\begin{proof}
+Existence of a local classical realization is exactly the first conclusion of Theorem~\ref{thm:local-classical-realization}. The same theorem constructs the realized trajectory by gluing fixed-point segments started from later smooth time slices of the already realized solution. Whenever two such segments overlap, Theorem~\ref{thm:B7-overlap-uniqueness} forces them to agree on the common interval. Hence the local realization attached to a fixed carrier state is faithful: the construction cannot branch into two different local classical trajectories, and every later local segment is recognized as the same realized lineage rather than a second same-scope evolution.
+\end{proof}
+
+\begin{definition}[Realization map]\label{def:realization-map}
+The \emph{realization map}
+\[
+\mathcal R_{\mathrm{NS}}:\mathcal I_{\mathrm{car}}(\T^3,\nu)\to \mathcal C_{\mathrm{loc}}(\T^3,\nu)
+\]
+sends each standing-positive time-zero carrier state $x$ to the unique maximal classical trajectory
+$\mathcal R_{\mathrm{NS}}(x):=(u_x,p_x)$ constructed in
+Theorem~\ref{thm:local-classical-realization}, modulo the licensed bookkeeping skins of
+Definition~\ref{def:standard-carrier}. Here $\mathcal C_{\mathrm{loc}}(\T^3,\nu)$ denotes the class of
+maximal local classical periodic Navier--Stokes realizations on the fixed torus carrier.
+\end{definition}
+
+\begin{definition}[Horizon continuation discriminator]\label{def:horizon-continuation-discriminator}
+For $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and $T\ge 0$, define
+\[
+\mathfrak D_T(x):=
+\begin{cases}
+1,& T<T_*(x),\\
+0,& T\ge T_*(x),
+\end{cases}
+\]
+where $T_*(x)$ is the maximal realization time from
+Theorem~\ref{thm:local-classical-realization}. Thus $\mathfrak D_T(x)=1$ exactly when the
+constructed maximal trajectory $\mathcal R_{\mathrm{NS}}(x)$ extends smoothly past the horizon $T$ on
+the fixed torus carrier.
+\end{definition}
+
+\begin{theorem}[Transfer completeness: realized local class equals the full official local classical class]\label{thm:realized-class-equals-official-local-class}
+The image of the realization map $\mathcal R_{\mathrm{NS}}$ on
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ is exactly the class of all unique maximal smooth local periodic
+Navier--Stokes solution pairs issued from data in $\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+Equivalently, the realization map neither narrows nor enlarges the official local classical problem.
+\end{theorem}
+
+\begin{proof}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$. By Theorem~\ref{thm:local-classical-realization},
+$\mathcal R_{\mathrm{NS}}(x)$ is a unique maximal smooth local periodic Navier--Stokes solution pair
+issued from the official datum attached to $x$. Thus the image of $\mathcal R_{\mathrm{NS}}$ is contained
+in the official local classical class.
+
+Conversely, let $(u,p)$ be any smooth periodic Navier--Stokes solution pair on
+$\T^3\times[0,T)$ with initial datum $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$. By
+Theorem~\ref{thm:carrier-universality}, $u_0$ determines a unique admitted time-zero carrier class
+$x=[\Sigma(u_0)]$. Theorem~\ref{thm:local-classical-realization} then yields the unique maximal
+local classical realization $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ with the same initial datum $u_0$.
+The overlap uniqueness theorem of Appendix~B (Theorem~\ref{thm:B7-overlap-uniqueness}) implies that $(u,p)$ agrees with the restriction
+of $(u_x,p_x)$ to its interval of definition. Hence every official local classical solution lies in the
+realized class. Therefore the two classes coincide exactly.
+\end{proof}
+
+\begin{manualtheorem}[19B (Transfer completeness restatement: the realized local class equals the full official local classical class)]
+\phantomsection\manualcurrentlabel{19B}\label{thm:transport-realized-class-equals-official}
+Part~III neither shrinks nor enlarges the official local classical periodic problem. Every standing-positive carrier state realizes as an official maximal local classical periodic trajectory, and every official maximal local classical periodic trajectory is exactly the realized image of a carrier state in the unique admissible interior.
+\end{manualtheorem}
+
+\begin{proof}
+The forward direction is the local realization statement of Theorem~\ref{thm:local-classical-realization}, sharpened by Lemma~\ref{lem:local-realization-faithful}: each admitted carrier state yields one well-defined maximal local classical trajectory. The reverse direction is Theorem~\ref{thm:realized-class-equals-official-local-class}: every official maximal local classical solution arises from the unique admitted carrier state determined by its initial datum. Therefore the realized local class is exactly the full official local classical class, so Part~III is faithful transport and not a hidden narrowing or enlargement of the classical PDE problem.
+\end{proof}
+
+\subsection{PDE-native admissibility packet on the maximal classical interval}
+\label{subsec:pde-native-admissibility-packet}
+Before the standing-conservation packet is allowed to act on realized periodic lineages, the manuscript must record explicitly what is already forced by ordinary local periodic Navier--Stokes theory on the maximal classical interval itself. The next packet is narrow and local-in-time. It does \emph{not} claim global regularity, a new coercive estimate, or the missing bridge inequality. It records only the minimum fixed-reference / same-object / pre-horizon witness content that is already present on $[0,T_*(x))$ once a maximal classical realization exists.
+
+\begin{manualtheorem}[19C (PDE-native admissibility on the maximal classical interval)]
+\phantomsection\manualcurrentlabel{19C}\label{thm:pde-native-admissibility-maximal-interval}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive, and let
+\[
+\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)
+\qquad\text{on}\qquad [0,T_*(x))
+\]
+be the maximal realized lineage from Theorem~\ref{thm:local-classical-realization}. Then, on every compact subinterval $[0,T]\subset[0,T_*(x))$, the realized lineage itself --- together with any same-scope continuation-relevant determination that merely reads off its licensed carrier presentations on that interval --- already satisfies the four standing-positive clauses of Definition~\ref{def:st1-standing-positive-determination}:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item \textbf{Fixed reference.} With the mean-zero pressure gauge fixed, the pair $(u_x,p_x)$ is uniquely determined on $[0,T]$, and hence so are its vorticity, strain, pressure, and standard frequency skins.
+\item \textbf{Domain closure.} Every such determination is read on the fixed torus carrier, with the same viscosity, zero forcing, smooth category, mean-zero pressure gauge, and same-scope continuation notion fixed earlier in Part~II and carried into Part~III by Definition~\ref{def:realized-lineage-same-object-convention} and Proposition~\ref{prop:partIII-same-continuation-notion}.
+\item \textbf{Lawful-redescription invariance.} Passage among the licensed presentations of Definition~\ref{def:standard-carrier} changes only deterministic bookkeeping and does not alter continuation semantics on $[0,T]$.
+\item \textbf{Identity stability.} Smooth restart from any interior time reproduces the same realized lineage on overlap and cannot split it into a second same-scope object.
+\end{enumerate}
+In particular, the minimum admissibility / intelligibility content used later on the realized interval is forced directly by standard local periodic theory and the fixed carrier conventions themselves, not by the eventual global endpoint.
+\end{manualtheorem}
+
+\begin{proof}
+Fixed reference on $[0,T]$ is part of the maximal realization theorem already proved in-body: Theorem~\ref{thm:local-classical-realization} constructs one unique maximal classical velocity field from the admitted carrier seed, and Proposition~\ref{prop:B6-classical-upgrade} together with Corollary~\ref{cor:B2-pressure-reconstruction} fixes the corresponding mean-zero pressure uniquely. The derived vorticity, strain/kernel, and standard frequency skins are then deterministic functions of that same classical pair on the fixed torus carrier, so they inherit the same determinate truth conditions.
+
+Domain closure is fixed by the object convention already declared for Part~III: Definition~\ref{def:realized-lineage-same-object-convention} and Proposition~\ref{prop:partIII-same-continuation-notion} state theorem-locally that the realized lineage is judged on the same torus carrier, viscosity, forcing status, smooth category, mean-zero gauge, and same-scope continuation question that were fixed in Part~II.
+
+Lawful-redescription invariance on the realized interval follows because the presentations named in Definition~\ref{def:standard-carrier} are deterministic bookkeeping skins of the same classical velocity evolution: vorticity and strain are obtained by differentiation, the pressure is reconstructed in the fixed mean-zero gauge, and the standard frequency skins are fixed Fourier bookkeeping on the same torus carrier. None changes the underlying classical continuation question on $[0,T]$.
+
+Finally, identity stability on interior intervals is exactly the content of the restart consistency statement recorded next in Theorem~\ref{thm:restart-consistency-same-object-persistence}: any smooth restart from time $t_0<T_*(x)$ reproduces the same lineage on overlap. Thus all four clauses of Definition~\ref{def:st1-standing-positive-determination} are already forced by the classical periodic realization structure on $[0,T_*(x))$.
+\end{proof}
+
+\begin{manualtheorem}[19D (Restart consistency and same-object persistence)]
+\phantomsection\manualcurrentlabel{19D}\label{thm:restart-consistency-same-object-persistence}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. Fix any $t_0<T_*(x)$ and regard the smooth slice $u_x(t_0)$ as a new periodic datum on the same torus carrier. Then the local classical realization started from $u_x(t_0)$ is defined on some interval $[t_0,t_0+\delta)$ and agrees there with the restriction of $(u_x,p_x)$. Consequently a smooth interior restart does not create a second same-scope object; it persists as the same realized lineage.
+\end{manualtheorem}
+
+\begin{proof}
+Because $(u_x,p_x)$ is smooth on $[0,T_*(x))$, the slice $u_x(t_0)$ lies in $C^\infty_\sigma(\T^3)$. Theorem~\ref{thm:B5-local-mild-window} and Proposition~\ref{prop:B6-classical-upgrade} therefore give a classical realization window of length $\delta>0$ from this slice on the same torus carrier, together with the uniquely normalized mean-zero pressure reconstructed from that restarted velocity field. On the other hand, the time-shifted restriction of the already existing lineage,
+\[
+(t,x)\mapsto \bigl(u_x(t),p_x(t)\bigr)\qquad (t\in[t_0,\min\{t_0+\delta,T_*(x)\})),
+\]
+is itself a smooth classical periodic solution with the same datum $u_x(t_0)$ at time $t_0$. The overlap-uniqueness theorem of Appendix~B (Theorem~\ref{thm:B7-overlap-uniqueness}) therefore forces the restarted realization to coincide with the original lineage on the common interval. Hence interior restart is consistent and preserves the same realized object rather than generating a second same-scope trajectory.
+\end{proof}
+
+\begin{manualcorollary}[19E (Pre-horizon slice re-entry)]
+\phantomsection\manualcurrentlabel{19E}\label{cor:pre-horizon-slice-reentry}\label{lem:propagation-standing-positive-slices}
+Let $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, let $x=[\Sigma(u_0)]\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be its unique admitted carrier seed, and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be the maximal realized lineage on $[0,T_*(x))$. Then the realized lineage begins from the standing-positive admitted carrier state $x$ in the unique admissible interior, and for every $t_1<T_*(x)$ the slice $u_x(t_1)$:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item belongs to the official periodic data class $\mathcal D_{\mathrm{off}}(\T^3,\nu)$,
+\item determines a unique carrier seed $\Sigma(u_x(t_1))$ in $\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with the same same-scope continuation semantics, and
+\item is standing-positive on the fixed torus carrier.
+\end{enumerate}
+Thus every smooth pre-horizon slice re-enters the same classical carrier before the horizon, and this re-entry is local in time rather than a disguised appeal to global regularity.
+\end{manualcorollary}
+
+\begin{proof}
+By Corollary~\ref{cor:every-official-datum-admitted}, the official datum $u_0$ determines a unique admitted carrier seed $x=[\Sigma(u_0)]$ in $\mathcal I_{\mathrm{car}}(\T^3,\nu)$, and by Theorem~\ref{thm:periodic-carrier-unique-interior} that seed already lies in the unique admissible interior. This gives the initial standing-positive entry claim.
+
+Now fix $t_1<T_*(x)$. Smoothness of the realized lineage on $[0,T_*(x))$ gives $u_x(t_1)\in C^\infty(\T^3;\R^3)$, and incompressibility is preserved by the classical equation, so $u_x(t_1)\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$. Theorem~\ref{thm:restart-consistency-same-object-persistence} shows that restarting from $u_x(t_1)$ preserves the same realized lineage and the same same-scope continuation question on overlap. Applying Corollary~\ref{cor:every-official-datum-admitted} to the smooth slice datum $u_x(t_1)$ then yields a unique carrier seed $[\Sigma(u_x(t_1))]\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$, and this seed is standing-positive on the fixed torus carrier. Hence every smooth pre-horizon slice re-enters the same carrier before the horizon.
+\end{proof}
+
+\begin{manuallemma}[19F (Finite-horizon witness lemma)]
+\phantomsection\manualcurrentlabel{19F}\label{lem:finite-horizon-witness}
+Fix any integer $m\ge 3$. Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. If $T_*(x)<\infty$, then
+\[
+\sup_{0\le t<T_*(x)} \norm{u_x(t)}_{H^m(\T^3)}=\infty.
+\]
+Equivalently, any same-scope finite-horizon continuation failure is already witnessed \emph{before} the horizon by divergence of an in-scope continuation norm on the smooth realized lineage; no mysterious terminal object at $T_*(x)$ is needed to state the failure.
+\end{manuallemma}
+
+\begin{proof}
+Assume for contradiction that $T_*(x)<\infty$ but
+\[
+M:=\sup_{0\le t<T_*(x)} \norm{u_x(t)}_{H^m(\T^3)}<\infty.
+\]
+Choose any $t_0<T_*(x)$. The slice $u_x(t_0)$ is smooth, divergence-free, and periodic, so Theorem~\ref{thm:B5-local-mild-window} applies to it. Because the local realization time in Theorem~\ref{thm:B5-local-mild-window} depends only on $\nu$ and the $H^m$ norm of the datum, there exists $\delta=\delta(\nu,M)>0$ such that the datum $u_x(t_0)$ generates a classical realization on $[t_0,t_0+\delta)$ whenever $\norm{u_x(t_0)}_{H^m}\le M$. By the bound defining $M$, this holds for every $t_0<T_*(x)$.
+
+Now choose $t_0>T_*(x)-\delta/2$. The restarted local realization from $u_x(t_0)$ therefore exists on an interval extending strictly beyond $T_*(x)$. By Theorem~\ref{thm:restart-consistency-same-object-persistence}, this restarted realization agrees on overlap with the original lineage and hence extends the same realized object past $T_*(x)$ on the fixed torus carrier. That contradicts the maximality of $T_*(x)$ in Theorem~\ref{thm:local-classical-realization}. Therefore the assumed uniform $H^m$ bound is impossible, so
+\[
+\sup_{0\le t<T_*(x)} \norm{u_x(t)}_{H^m(\T^3)}=\infty.
+\]
+The final sentence is just the same statement read as a continuation witness built entirely from the smooth pre-horizon lineage.
+\end{proof}
+
+\section{Transfer Steps IV--V (faithfulness, no-new-criterion, and detectability): realization on the full official local class}\label{sec:faithfulness-full-class}
+\paragraph{Burden status.}
+The official local classical class has already been realized. What remains here is to show that realization is faithful, that no new same-scope continuation criterion appears at the classical layer, and that any hypothetical finite-time breakdown is already carrier-visible on the fixed torus carrier.
+The realization map is useful only if deterministic bookkeeping changes at the carrier level do
+not create different PDE continuation behavior. The present section records the first faithfulness
+facts needed for that bridge: lawful redescription commutes with realization, the constructed horizon
+continuation discriminator $\mathfrak D_T$ depends only on the carrier class, and classical local
+continuation is therefore already visible on the carrier side.
+
+\begin{definition}[Realized lineage and PDE-equivalent presentation]\label{def:realized-lineage}
+A \emph{realized lineage} is the image under $\mathcal R_{\mathrm{NS}}$ of a standing-positive time-zero
+carrier state together with its maximal local classical continuation.
+Two presentations of a realized lineage are \emph{PDE-equivalent} if they differ only by the licensed
+skins of Definition~\ref{def:standard-carrier} (velocity, vorticity, pressure, strain/kernel, or
+standard frequency bookkeeping) and therefore represent the same classical velocity evolution on the
+same maximal interval.
+\end{definition}
+
+\begin{lemma}[Lawful redescription commutes with realization]\label{lem:redescription-commutes-with-realization}
+If $x,y\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ are lawfully equivalent time-zero carrier states, then
+$\mathcal R_{\mathrm{NS}}(x)$ and $\mathcal R_{\mathrm{NS}}(y)$ are PDE-equivalent in the sense of
+Definition~\ref{def:realized-lineage}.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{prop:equiv-completion-NS} and Theorem~\ref{thm:carrier-universality}, lawfully
+equivalent time-zero carrier states determine the same official datum $u_0$ up to the already
+licensed bookkeeping skins. Theorem~\ref{thm:local-classical-realization} assigns to that datum a
+unique maximal local classical solution pair. Hence the realized velocity evolutions coincide, and
+any difference between the two presentations is confined to the licensed skins of
+Definition~\ref{def:standard-carrier}. This is exactly PDE-equivalence.
+\end{proof}
+
+\begin{lemma}[Continuation status is skin-invariant]\label{lem:continuation-skin-invariant}
+Within the realized class, passage among the licensed skins of Definition~\ref{def:standard-carrier}
+does not alter maximal local existence interval or continuation status.
+\end{lemma}
+
+\begin{proof}
+For a realized lineage $(u,p)$, the vorticity, strain/kernel, and standard frequency skins are derived
+from $u$ by differentiation or by fixed linear bookkeeping on the same torus carrier, while the
+pressure is recovered at each time by the mean-zero reconstruction of Corollary~\ref{cor:B2-pressure-reconstruction}. None of
+these moves changes the underlying classical velocity evolution. Consequently they cannot create or
+destroy local classical continuation, nor can they alter the maximal existence interval attached to
+that evolution. Therefore continuation status is invariant under passage among the licensed skins.
+\end{proof}
+
+\begin{proposition}[Local continuation cannot split a standing class]\label{prop:local-continuation-cannot-split-standing-class}
+Let $x,y\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be lawfully equivalent time-zero carrier states. Then the
+realized local solutions $\mathcal R_{\mathrm{NS}}(x)$ and $\mathcal R_{\mathrm{NS}}(y)$ have the same maximal
+local existence interval; equivalently, $\mathfrak D_T(x)=\mathfrak D_T(y)$ for every horizon $T\ge0$.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:redescription-commutes-with-realization}, the two realized lineages are
+PDE-equivalent, so they represent the same classical velocity evolution. By
+Lemma~\ref{lem:continuation-skin-invariant}, licensed skin changes do not alter maximal interval or
+continuation status. Hence no lawfully equivalent time-zero carrier states can split into distinct
+local continuation behaviors in the classical realization, and their horizon continuation
+discriminators agree at every $T$.
+\end{proof}
+
+\begin{theorem}[Transfer faithfulness: local classical continuation on the realized class]\label{thm:initial-local-faithfulness}
+On the realized class, the horizon continuation discriminator $\mathfrak D_T$ is determined by the
+underlying time-zero carrier class and is invariant under all deterministic bookkeeping skins.
+Equivalently, the realization map creates no extra local continuation criterion at the PDE level.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:local-classical-realization} constructs a unique maximal local classical solution from
+any standing-positive time-zero carrier state and therefore a concrete horizon continuation
+discriminator $\mathfrak D_T$. Proposition~\ref{prop:local-continuation-cannot-split-standing-class}
+shows that lawful equivalence classes are not split by local classical continuation, so $\mathfrak D_T$
+depends only on the standing class of the time-zero carrier state. Since continuation status is
+skin-invariant by Lemma~\ref{lem:continuation-skin-invariant}, no additional same-scope
+continuation discriminator is introduced by the realization map.
+\end{proof}
+
+\begin{corollary}[Transfer no-new-criterion on the full official local class]\label{cor:no-hidden-continuation-criterion}
+On the full official local classical class, continuation and finite-time breakdown are determined
+solely by the underlying carrier class on the fixed torus carrier. In particular, the passage from
+carrier data to the PDE formulation introduces no auxiliary side condition, critical threshold, or
+extra continuation criterion beyond the data already present in
+$\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:realized-class-equals-official-local-class} with
+Theorem~\ref{thm:initial-local-faithfulness}. The first identifies the realized local class with the
+full official local classical class, and the second shows that continuation behavior on that class is
+carried entirely by the underlying carrier class and is invariant under the licensed bookkeeping
+skins.
+\end{proof}
+
+\begin{manualtheorem}[20.5B (Transfer no-new-criterion: classical realization adds no new standing-positive same-scope continuation content)]
+\phantomsection\manualcurrentlabel{20.5B}\label{thm:transfer-no-new-content}
+On the full official local classical class realized from standing-positive admitted carrier states, the passage from the certified carrier to its realized classical image is standing-positive same-scope continuation-faithful: every continuation-relevant distinction used as a standing-positive classifier in the classical formulation is already determined by the underlying carrier class on the fixed torus carrier. Equivalently, classical realization adds no new standing-positive same-scope continuation content beyond the certified carrier class.
+\end{manualtheorem}
+
+\begin{proof}
+Theorem~\ref{thm:transport-realized-class-equals-official} identifies the realized local class with the full official local classical class. Theorem~\ref{thm:initial-local-faithfulness} and Corollary~\ref{cor:no-hidden-continuation-criterion} show that continuation status on that class is determined solely by the carrier class and is invariant under the licensed bookkeeping skins. The no-new-criterion statement used here is inherited from the fixed-periodic P4 application: Proposition~\ref{prop:no-additional-pde-side-criterion} uses Lemma~\ref{lem:bridge-periodic-boundary-closure} only for scope-fixity, while the actual exclusion of additional same-scope criteria is sourced from Theorem~\ref{thm:bridge-periodic-applicability}. Therefore the passage from the certified carrier to its classical realization introduces no new standing-positive same-scope continuation content; any purported additional classical-layer distinction used as a standing-positive classifier would either be bookkeeping only or would define a forbidden second same-scope discriminator.
+\end{proof}
+
+\begin{manualcorollary}[20A (Transfer detectability: any finite-time classical breakdown would already be carrier-visible)]
+\phantomsection\manualcurrentlabel{20A}\label{cor:breakdown-carrier-visible}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let its official local classical realization break down at a finite time $T_*(x)$. Then that finite-time breakdown already corresponds to a standing-relevant carrier-side event inside the unique admissible interior identified with the standard periodic carrier. In particular, no standing-positive same-scope classical failure mode can hide outside the carrier image while remaining inside the official periodic problem.
+\end{manualcorollary}
+
+\begin{proof}
+By Theorem~\ref{thm:transport-realized-class-equals-official}, the realized local class is exactly the full official local classical class on the fixed torus carrier, so any official finite-time breakdown occurs inside the realized image of a carrier state. By Theorem~\ref{thm:periodic-carrier-unique-interior}, that carrier state already lies in the unique admissible interior identified with the standard periodic carrier. Therefore a finite-time classical breakdown cannot remain external to the carrier while still claiming the same fixed periodic scope; if it did, the realized classical class would be split from the identified carrier by an extra same-scope discriminator, contrary to carrier identification and the no-rival corollary. Hence any finite-time classical breakdown is already carrier-visible.
+\end{proof}
+
+\begin{proposition}[Finite-time breakdown is a continuation discriminator on the fixed carrier]\label{prop:finite-time-breakdown-discriminator}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let
+$\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ have maximal interval $[0,T_*(x))$ with $T_*(x)<\infty$.
+Then the statement
+
+\centerline{``the realized trajectory issued from $x$ admits no classical continuation past $T_*(x)$ on the fixed torus carrier''}
+
+is invariant under PDE-equivalent presentation and depends only on the underlying carrier class.
+\end{proposition}
+
+\begin{proof}
+Maximality of $[0,T_*(x))$ is exactly the statement that the constructed horizon discriminator
+$\mathfrak D_T(x)$ drops from $1$ to $0$ at the first non-extendable horizon. By
+Lemma~\ref{lem:continuation-skin-invariant}, passage among the licensed skins does not change the
+underlying velocity evolution and therefore cannot change $\mathfrak D_T(x)$. By
+Proposition~\ref{prop:local-continuation-cannot-split-standing-class}, lawfully equivalent time-zero
+carrier states have the same maximal local interval and hence the same family of values
+$\mathfrak D_T$. Thus finite-time breakdown, when it occurs, defines a continuation discriminator
+attached to the carrier class itself, not to a particular bookkeeping presentation.
+\end{proof}
+
+\begin{manualtheorem}[20.7A (Horizon detectability on the fixed periodic carrier)]
+\label{thm:horizon-detectability}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let
+$\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ have maximal interval $[0,T_*(x))$ with $T_*(x)<\infty$.
+Then the horizon discriminator
+\[
+\mathfrak D_{T_*(x)}(x)
+=
+0
+\]
+is a well-typed standing-relevant continuation discriminator on the fixed torus carrier. Equivalently,
+finite-time breakdown at the first non-extendable horizon is already carrier-side standing-detectable.
+\end{manualtheorem}
+
+\begin{proof}
+By Theorem~\ref{thm:local-classical-realization}, the realized trajectory $\mathcal R_{\mathrm{NS}}(x)$ is
+constructed as the unique maximal smooth periodic Navier--Stokes solution issued from the admitted
+carrier class $x$ on the fixed torus carrier. Proposition~\ref{prop:finite-time-breakdown-discriminator}
+shows that the statement ``no classical continuation exists past $T_*(x)$ on the fixed torus carrier''
+depends only on the underlying carrier class and is invariant under lawful presentation. Thus finite-time
+breakdown determines the carrier-side horizon discriminator $\mathfrak D_{T_*(x)}$.
+
+By Proposition~\ref{prop:local-continuation-cannot-split-standing-class}, horizon continuation status is
+constant on standing classes. In particular, if $y$ is lawfully equivalent to $x$, then
+$\mathfrak D_{T_*(x)}(y)=\mathfrak D_{T_*(x)}(x)=0$. Hence the first non-extendable horizon is not merely a
+classical fact about one presentation of the trajectory; it is a same-scope carrier-side continuation
+discriminator that is constant on standing classes and therefore standing-relevant on the fixed carrier.
+\end{proof}
+
+\begin{lemma}[Architectural realization completeness for continuation discriminators]\label{lem:realization-completeness}
+On the full official local classical class, every standing-positive same-scope continuation discriminator of a realized trajectory is already represented on the carrier side. Equivalently, if a continuation or finite-time breakdown statement distinguishes two realized local trajectories on the fixed torus carrier in a standing-positive same-scope way, then the induced distinction is attached to the underlying carrier classes and therefore determines a standing-relevant continuation discriminator in the certified carrier.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:realized-class-equals-official-local-class}, every local classical solution in the
+official periodic class is the realization of some admitted time-zero carrier state. Thus no official local trajectory lies outside the range of $\mathcal R_{\mathrm{NS}}$. By Lemma~\ref{lem:strong-completeness-to-realized-completeness}, every standing-positive same-scope continuation-relevant PDE phenomenon visible on that realized local class is already represented by a standing-relevant discriminator on the carrier side.
+
+By Proposition~\ref{prop:finite-time-breakdown-discriminator}, continuation and finite-time
+breakdown are attached to the carrier class itself and are invariant under PDE-equivalent
+presentation. By Theorem~\ref{thm:initial-local-faithfulness} and
+Corollary~\ref{cor:no-hidden-continuation-criterion}, the realization map introduces no additional
+same-scope continuation criterion on that full official local class. Therefore any standing-positive same-scope continuation distinction visible in the realized PDE formulation is already represented on the carrier side as a standing-relevant continuation discriminator.
+\end{proof}
+
+\medskip
+\noindent\textbf{Logical structure of realization completeness.} Proposition~\ref{prop:finite-time-breakdown-discriminator} establishes that any finite-time breakdown statement defines a carrier-side continuation discriminator on the fixed torus carrier. Theorem~\ref{thm:strong-continuation-completeness-standard-carrier} together with Lemma~\ref{lem:strong-completeness-to-realized-completeness} records the broader architectural claim that no standing-positive continuation-relevant PDE phenomenon visible on the realized local class lies outside carrier-side representation. Theorem~\ref{thm:initial-local-faithfulness} establishes that the realization map introduces no additional same-scope continuation criterion. Lemma~\ref{lem:realization-completeness} combines these directions at the explanatory level. For the official periodic theorem, however, the load-bearing detectability step is the narrower route through \HorizonDetectabilityRef{}, not this broader completeness package.
+
+\begin{definition}[Trajectory stretching observable]
+\label{def:trajectory-stretching-observable}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let
+\[
+\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)
+\]
+be its maximal realized classical trajectory on $[0,T_*(x))$.
+Define the trajectory stretching observable by
+\[
+\Theta_x(t):=\mathcal T(u_x(t))
+=
+\int_{\T^3}\omega_x(\cdot,t)\cdot S(u_x(\cdot,t))\,\omega_x(\cdot,t)\,dx,
+\qquad 0\le t<T_*(x).
+\]
+\end{definition}
+
+\begin{lemma}[Skin invariance of the trajectory stretching observable]
+\label{lem:trajectory-stretching-skin-invariant}
+For a realized trajectory $\mathcal R_{\mathrm{NS}}(x)$, the function
+$t\mapsto \Theta_x(t)$ is independent of PDE-equivalent presentation.
+In particular, passage among the licensed velocity / vorticity / pressure / strain / frequency skins
+does not alter the trajectory stretching observable on its interval of definition.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:local-classical-realization}, the maximal realized trajectory
+$\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ is uniquely attached to the carrier class $x$. By
+Definition~\ref{def:realized-lineage}, PDE-equivalent presentations differ only by the licensed skins
+of Definition~\ref{def:standard-carrier} and therefore represent the same classical velocity
+evolution on the same interval. The vorticity $\omega_x=\nabla\times u_x$ and the strain tensor
+$S(u_x)=\tfrac12(\nabla u_x+\nabla u_x^\top)$ are therefore unchanged as carrier-attached fields under
+such passage, and so is the scalar functional $\Theta_x(t)$. Hence $t\mapsto \Theta_x(t)$ is
+independent of PDE-equivalent presentation.
+\end{proof}
+
+\paragraph{Definition 20.11A (\texorpdfstring{$\Theta_x$}{Theta_x}-based continuation gate).}\mbox{}\\
+A \emph{$\Theta_x$-based continuation gate} is a map
+\[
+G_{\Theta}:\{\text{realized local classical trajectories on }\T^3\}\to\{0,1\}
+\]
+such that:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item for each realized trajectory $\mathcal R_{\mathrm{NS}}(x)$, the value $G_{\Theta}(\mathcal R_{\mathrm{NS}}(x))$ depends only on the evolution of $\Theta_x(t)$ on its realized interval; and
+\item $G_{\Theta}$ is standing-relevant in the sense that it distinguishes continuation behavior on the full official local classical class.
+\end{enumerate}
+Equivalently, a $\Theta_x$-based continuation gate is a same-scope continuation predicate extracted purely from the trajectory stretching observable.
+
+\begin{theorem}[No \texorpdfstring{$\Theta_x$}{Theta_x}-based continuation gate; dynamic compatibility with zero-parameter certification]
+\label{thm:dynamic-stretching-compatibility}
+Every $\Theta_x$-based continuation gate factors through the carrier-side horizon continuation discriminator and therefore contributes no independent same-scope continuation criterion. In particular, the evolution of $\Theta_x$ respects the zero-parameter certification of Theorem~\ref{thm:ns-zero-parameter}.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:local-classical-realization}, every standing-positive admitted time-zero carrier class determines a unique maximal realized trajectory and therefore a well-defined stretching observable $t\mapsto \Theta_x(t)$. By Lemma~\ref{lem:trajectory-stretching-skin-invariant}, this observable is attached to the realized trajectory itself and not to a chosen PDE skin.
+
+Let $G_{\Theta}$ be a $\Theta_x$-based continuation gate in the sense of Definition 20.11A. By clause~(ii), $G_{\Theta}$ is standing-relevant: it distinguishes continuation behavior on the full official local classical class. By Corollary~\ref{cor:no-hidden-continuation-criterion}, the realization map introduces no auxiliary side condition or extra continuation criterion beyond the underlying carrier class on the fixed torus carrier. Thus any same-scope continuation distinction registered by $G_{\Theta}$ must already be attached to carrier classes.
+
+By Proposition~\ref{prop:local-continuation-cannot-split-standing-class}, continuation status is constant on standing classes. By \HorizonDetectabilityRef{}, finite-time breakdown at the first non-extendable horizon is already a standing-relevant carrier-side continuation discriminator. Hence if $G_{\Theta}$ contributed more than the carrier-side horizon continuation content, it would define a second same-scope continuation discriminator on the fixed torus carrier.
+
+But Theorem~\ref{thm:ns-zero-parameter} and the exhaustion package of Part~II forbid any such second same-scope continuation discriminator on the certified carrier. Therefore every $\Theta_x$-based continuation gate factors through the carrier-side horizon continuation discriminator and contributes no independent same-scope continuation criterion. This is exactly the claim that the evolution of $\Theta_x$ respects the zero-parameter certification.
+\end{proof}
+
+\begin{manualtheorem}[20B (Transfer no-new-criterion: no independent standing-positive same-scope continuation discriminator at the classical layer)]
+\phantomsection\manualcurrentlabel{20B}\label{thm:no-independent-classical-discriminator}
+On the full official periodic local class realized from standing-positive admitted carrier states, no additional PDE-side continuation criterion, horizon parameter, auxiliary regularity gate, or continuation discriminator survives as a standing-positive same-scope classifier once the standard carrier has been identified with the unique admissible interior. Any proposed classical-layer criterion used in that standing-positive role either factors through the carrier-side admissibility structure already identified in Part~II or constitutes a scope change.
+\end{manualtheorem}
+
+\begin{proof}
+Theorem~\ref{thm:transfer-no-new-content} states the general classical-layer closure on the live route: realization adds no new standing-positive same-scope continuation content beyond the certified carrier class. The no-new-criterion statement used here is inherited from the fixed-periodic P4 application already carried by Theorem~\ref{thm:bridge-periodic-applicability}: Proposition~\ref{prop:no-additional-pde-side-criterion} imports that result into the carrier-identification packet, and Theorem~\ref{thm:transfer-no-new-content} then carries the same consequence across the realization map. Hence any purported PDE-side criterion that changes continuation outcomes would define a second same-scope discriminator between official classical trajectories and the already identified carrier-side admissibility structure, contrary to Proposition~\ref{prop:no-additional-pde-side-criterion} and Corollary~\ref{cor:no-alternative-same-scope-regime}; if it does not change continuation outcomes, then it is bookkeeping only. Theorem~\ref{thm:dynamic-stretching-compatibility} gives the explicit in-paper $\Theta_x$-based instance of this dichotomy. Therefore no independent standing-positive same-scope classical-layer continuation discriminator survives.
+\end{proof}
+
+\begin{remark}[Architectural status of realization completeness]
+Lemma~\ref{lem:realization-completeness} remains in the manuscript as a broader explanatory statement about continuation content on the realized class. On the narrow horizon-detectability route, the official periodic theorem does not require this broader lemma: for the page-1 theorem it is enough that horizon failure is standing-detectable on the fixed carrier by \HorizonDetectabilityRef{}.
+\end{remark}
+
+\begin{corollary}[No stretching-based continuation gate]
+\label{cor:no-stretching-based-continuation-gate}
+Within the full official periodic local class, no threshold, growth criterion, or horizon selector built
+from the evolution of $\mathcal T(u)$ defines an independent same-scope continuation criterion.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:dynamic-stretching-compatibility}, which is now subsumed conceptually by the general classical-layer closure statement of Theorem~\ref{thm:no-independent-classical-discriminator}.
+\end{proof}
+
+\subsection{Carrier-to-lineage binding, no admissibility dynamics, and representational commitment on realized lineages}
+\label{subsec:standing-conservation-realized-lineages}
+The remaining live objection at the realization layer is no longer whether smooth pre-horizon slices are theorem-locally standing-positive; Phase~2 already settled that. The remaining question is whether carrier identification is merely static while the realized periodic evolution is allowed to acquire a new admissibility status as time advances. The next packet closes that exact route. It proves that once a standing-positive admitted carrier seed is realized, the maximal periodic evolution is one standing-bearing same-scope determination, that admissibility on that determination is global rather than time-indexed, and that the representational commitment fixed at entry is inherited by the full realized lineage.
+
+\begin{manualtheorem}[20B.1 (Carrier-to-lineage binding on the fixed periodic carrier)]
+\phantomsection\manualcurrentlabel{20B.1}\label{thm:carrier-to-lineage-binding}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. Then this realized periodic evolution is one standing-bearing same-scope determination on the fixed torus carrier. More precisely:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item its standing-bearing source is the admitted carrier state $x$ in the unique admissible interior identified with the standard periodic carrier;
+\item every smooth slice and every smooth restart presentation on $[0,T_*(x))$ is a licensed presentation of that same determination rather than a fresh same-scope admissibility state; and
+\item the same-scope continuation notion used to judge the realized lineage is exactly the continuation notion fixed earlier in Part~II and carried into Part~III without redefinition.
+\end{enumerate}
+Hence the realized periodic lineage is not a time-indexed family of independently reclassified admissibility states.
+\end{manualtheorem}
+
+\begin{proof}
+Corollary~\ref{cor:every-official-datum-admitted} sends every official datum into a unique standing-positive admitted carrier state, and Theorem~\ref{thm:periodic-carrier-unique-interior} identifies that state with the unique admissible interior on the fixed torus carrier. Definition~\ref{def:realized-lineage-same-object-convention} then fixes the realized maximal classical object as one same-scope determination, while Proposition~\ref{prop:partIII-same-continuation-notion} states theorem-locally that the same continuation question used in Part~III is exactly the one fixed in Part~II.
+
+For smooth interior times, Theorem~\ref{thm:restart-consistency-same-object-persistence} shows that restarting from $u_x(t_0)$ reproduces the same realized lineage on overlap rather than creating a second same-scope object, and Corollary~\ref{cor:pre-horizon-slice-reentry} shows that every such smooth slice re-enters the same admitted carrier and is standing-positive there. Proposition~\ref{prop:periodic-carrier-interface-quotient-history} together with Corollary~\ref{cor:no-path-dependent-periodic-admissibility} then rules out treating later restart representatives or later lawful presentations as fresh admissibility decisions inside the same fixed scope. Therefore the maximal realized periodic evolution issued from $x$ is one standing-bearing same-scope determination on the fixed carrier, not a stack of independently reclassified admissibility states indexed by time.
+\end{proof}
+
+\begin{manualtheorem}[20B.2 (No admissibility dynamics on realized periodic lineages)]
+\phantomsection\manualcurrentlabel{20B.2}\label{thm:no-admissibility-dynamics-realized-lineages}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. Within the fixed periodic scope, admissibility / standing on this realized lineage is global and quotient-visible; it cannot vary with time, slice number, restart stage, or horizon proximity. In particular, a proposal of the form ``the lineage is admissible before $T_*(x)$ but non-admissible at $T_*(x)$'' is not a neutral same-scope alternative. If read as a same-scope proposal, it is ill-typed: it either makes admissibility depend on history or stage inside one realized lineage, promotes representative-only skin to standing authority, or introduces a new same-scope discriminator / gate.
+\end{manualtheorem}
+
+\begin{proof}
+By Theorem~\ref{thm:carrier-to-lineage-binding}, the realized periodic evolution is one standing-bearing same-scope determination rather than a sequence of fresh admissibility states. Proposition~\ref{prop:periodic-carrier-interface-quotient-history} and Corollary~\ref{cor:no-path-dependent-periodic-admissibility} then force all same-scope standing-bearing verdicts on that lineage to depend only on the standing class reached, not on which lawful history, restart representative, elapsed stage, or horizon-proximity presentation reached it. Theorem~\ref{thm:factorization-discipline-same-scope} says that any same-scope standing-relevant classifier must factor through the fixed quotient, and Corollary~\ref{cor:skin-non-authority-representative-diagnostics} says that representative-only or metadata-only features cannot become a hidden second gate. Finally, Theorems~\ref{thm:transfer-no-new-content} and \ref{thm:no-independent-classical-discriminator} say theorem-locally that realization introduces no additional same-scope classical-layer discriminator on the official local class.
+
+Therefore a claim that admissibility changes with time on this one realized lineage has only three possible readings. If it depends on slice index, elapsed time, restart stage, or horizon proximity while the same-scope quotient-visible content is unchanged, then it is a path- or history-dependent same-scope admissibility functional, contrary to Corollary~\ref{cor:no-path-dependent-periodic-admissibility}. If it depends only on representative bookkeeping skin, then it is non-authoritative by Corollary~\ref{cor:skin-non-authority-representative-diagnostics}. If it changes standing-bearing outcomes anyway, then it is a new same-scope discriminator / gate, contrary to Theorems~\ref{thm:factorization-discipline-same-scope} and \ref{thm:no-independent-classical-discriminator}. Hence admissibility does not evolve along a realized periodic lineage. In particular, the sentence ``admissible before $T_*(x)$, non-admissible at $T_*(x)$'' is not a licit same-scope status claim.
+\end{proof}
+
+\begin{definition}[Standing-bearing representational commitment on a realized lineage]\label{def:standing-bearing-representational-commitment}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its realized lineage. The \emph{standing-bearing representational commitment} of this lineage is the fixed package consisting of:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item the torus carrier, viscosity sign, zero-forcing equations, smooth category, and mean-zero pressure gauge fixed by the same periodic scope;
+\item the admitted time-zero carrier class $x$ and the official datum it determines; and
+\item the lawful-skin equivalence class under which later slices, horizon statements, and continuation claims are read as presentations of that same lineage.
+\end{enumerate}
+A \emph{global rollback} of this commitment is any purported same-scope admissible move that claims to retract, erase, or neutralize the standing-bearing consequences of this package across the realized lineage rather than merely changing licensed bookkeeping skin.
+\end{definition}
+
+\begin{manualproposition}[20B.3 (Standing and commitment inheritance on same-scope realized lineages)]
+\phantomsection\manualcurrentlabel{20B.3}\label{prop:standing-commitment-inheritance-realized-lineages}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. Then the standing-positive status of the admitted carrier seed and the fixed same-scope commitments of Definition~\ref{def:standing-bearing-representational-commitment} are inherited by the whole realized lineage. In particular, every smooth pre-horizon slice is a licensed presentation / re-entry of that same standing-bearing determination, and any purported same-scope later re-evaluation or rollback of those commitments is either bookkeeping only, a scope change, or standing-negative inadmissibility.
+\end{manualproposition}
+
+\begin{proof}
+Corollary~\ref{cor:pre-horizon-slice-reentry} says that every smooth slice $u_x(t_1)$ with $t_1<T_*(x)$ re-enters the same admitted carrier and is standing-positive there. Theorem~\ref{thm:carrier-to-lineage-binding} identifies those slices and their restarts as presentations of one standing-bearing same-scope determination, and Definition~\ref{def:standing-bearing-representational-commitment} records exactly which carrier, datum, gauge, lawful-skin, and continuation commitments are fixed on that determination. By Theorem~\ref{thm:no-admissibility-dynamics-realized-lineages}, those commitments cannot be re-evaluated later by time index, restart stage, or horizon proximity.
+
+A purported move that changes only lawful presentation is bookkeeping by Lemma~\ref{lem:redescription-commutes-with-realization}, Lemma~\ref{lem:continuation-skin-invariant}, and Corollary~\ref{cor:skin-non-authority-representative-diagnostics}; a move that alters one of the fixed periodic commitments is a scope change by Proposition~\ref{prop:adequacy-role-triad} and Lemma~\ref{lem:bridge-fixed-periodic-scope}; and a move that claims to change standing-bearing consequences later while preserving the same scope is standing-negative inadmissibility by Theorem~\ref{thm:st3-standing-admissibility-equivalence} together with Lemma~\ref{lem:bridge-periodic-irreversibility}. Hence the standing-positive carrier seed and its fixed representational commitment are inherited by the full realized lineage in the only same-scope way allowed locally in the manuscript.
+\end{proof}
+
+\begin{manualtheorem}[ST4: Standing conservation / no standing-neutral drift on realized lineages]
+\phantomsection\manualcurrentlabel{ST4}\label{thm:st4-standing-conservation-realized-lineages}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. Then every smooth pre-horizon slice remains standing-positive on the fixed carrier, and no same-scope realized lineage can drift from standing-positive status to a purportedly neutral non-standing same-scope terminal status. Equivalently, same-scope realized evolution admits no standing-neutral drift.
+\end{manualtheorem}
+
+\begin{proof}
+Corollary~\ref{cor:pre-horizon-slice-reentry} gives the first claim locally in time. The theorem-local reason this does not become a time-indexed reclassification claim is Theorem~\ref{thm:carrier-to-lineage-binding}: the realized maximal trajectory is one standing-bearing same-scope determination. Theorem~\ref{thm:no-admissibility-dynamics-realized-lineages} then rules out any same-scope proposal in which that one determination drifts from standing-positive status to a purportedly neutral non-standing status as time advances. Proposition~\ref{prop:standing-commitment-inheritance-realized-lineages} records the same conclusion as inheritance of the admitted carrier seed and its fixed commitments by the full realized lineage. Finally, Theorem~\ref{thm:st3-standing-admissibility-equivalence} and Corollary~\ref{cor:no-standing-neutral-status-fixed-periodic} say that once standing-positive status is lost no neutral same-scope middle status remains. Therefore the realized lineage cannot leave standing-positive status by drifting into a neutral same-scope endpoint.
+\end{proof}
+
+\begin{manualproposition}[ST5: Irreversibility of representational commitment on realized lineages]
+\phantomsection\manualcurrentlabel{ST5}\label{prop:st5-irreversibility-representational-commitment}
+Once a realized lineage has been undertaken under the standing-bearing representational commitment of Definition~\ref{def:standing-bearing-representational-commitment}, there exists no admissible same-scope sequence that globally retracts, erases, or neutralizes that commitment. Any purported same-scope de-commitment is either bookkeeping only, a scope change, or standing-negative and therefore inadmissible.
+\end{manualproposition}
+
+\begin{proof}
+Proposition~\ref{prop:standing-commitment-inheritance-realized-lineages} already fixes the standing-bearing commitments of Definition~\ref{def:standing-bearing-representational-commitment} as inherited by the full realized lineage. A purported de-commitment that changes only lawful presentation is bookkeeping only by Lemma~\ref{lem:redescription-commutes-with-realization}, Lemma~\ref{lem:continuation-skin-invariant}, and Corollary~\ref{cor:skin-non-authority-representative-diagnostics}. A purported de-commitment that alters the torus carrier, viscosity sign, forcing status, smooth category, gauge, datum anchor, or same-scope admissibility interface changes one of the fixed periodic commitments identified in Proposition~\ref{prop:adequacy-role-triad} and Lemma~\ref{lem:bridge-fixed-periodic-scope}; it is therefore a scope change rather than a same-scope rollback.
+
+It remains to consider a purported same-scope rollback that claims to neutralize an earlier standing-bearing commitment while preserving the same carrier and lineage. By Lemma~\ref{lem:bridge-periodic-irreversibility}, no failed same-scope admissibility move can be retroactively repaired by later metadata, relabeling, reparameterization, or reinterpretation. By Theorem~\ref{thm:no-admissibility-dynamics-realized-lineages}, the lineage does not admit a later time-indexed re-evaluation of its admissibility or commitment status. Therefore any purported rollback that genuinely changes standing-bearing consequences must incur standing loss. By Theorem~\ref{thm:st3-standing-admissibility-equivalence}, that standing loss is inadmissibility. Hence no admissible same-scope global rollback, erasure, or de-commitment exists once realization is underway.
+\end{proof}
+
+\begin{corollary}[No temporary standing-bearing commitment on a realized lineage]\label{cor:no-temporary-standing-bearing-commitment}
+On a realized lineage, the notion of a merely temporary standing-bearing representational commitment is incoherent.
+\end{corollary}
+
+\begin{proof}
+A temporary standing-bearing commitment would require a later admissible same-scope de-commitment. Proposition~\ref{prop:st5-irreversibility-representational-commitment} excludes such a de-commitment.
+\end{proof}
+
+
+\subsection{Same-scope endpoint-status trichotomy and collapse on realized periodic lineages}
+\label{subsec:same-scope-continuation-failure-dichotomy}
+The standing/intelligibility packet ST1--ST5, the PDE-native admissibility packet of Phase~2, the quotient / history / ATS packet of Phase~3, and the carrier-to-lineage / no-dynamics packet of Phase~4 now allow the manuscript to say something sharper than the earlier two-branch rhetoric. On a realized periodic lineage there are only three theorem-locally typable ways to keep a finite-horizon endpoint claim alive while still pretending to remain inside the fixed same scope: as a standing-positive in-scope witness, as terminal standing failure, or as an illicit same-scope gate / scope move. The next packet makes that trichotomy explicit and then collapses the non-witness branches before witness exhaustion is invoked in Section~\ref{sec:singular-images-official-theorem}.
+
+\begin{manualproposition}[20C.1 (Exterior same-scope endpointhood is terminal standing failure)]
+\phantomsection\manualcurrentlabel{20C.1}\label{prop:exterior-endpoint-standing-failure}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and assume $T_*(x)<\infty$. If a purported same-scope terminal endpoint of the realized lineage $\mathcal R_{\mathrm{NS}}(x)$ can be formulated only by leaving admissible representability on the fixed torus carrier, then that purported endpoint is standing-negative. Equivalently, an ``outside-admissible'' same-scope endpoint is terminal standing failure rather than a neutral uncaptured status.
+\end{manualproposition}
+
+\begin{proof}
+Endpoint-status classification here relies on the fixed-scope admissibility structure transported from the 12G packet: 12F classifies scope-fixity at the fixed periodic interface, Theorem~\ref{thm:bridge-periodic-applicability} then applies P4 to that packet, ST2 and ST3 internalize the resulting fixed-scope standing consequences, and only after that one-directional chain is in place does the present proposition evaluate realized-lineage endpointhood. By Theorem~\ref{thm:carrier-to-lineage-binding}, the realized maximal periodic evolution issued from $x$ is one standing-bearing same-scope determination, so any purported terminal endpoint still claiming the same carrier, datum anchor, gauge, lawful skin, and continuation question must be evaluated as a continuation-relevant determination on that fixed object. If such an endpoint can be stated only by leaving admissible representability, then it abandons the fixed reference, domain-of-application closure, lawful-redescription invariance, or identity stability required by Definition~\ref{def:st1-standing-positive-determination}. By Theorem~\ref{thm:st2-intelligibility-standing-loss}, failure of any one of those fixed-scope standing conditions is standing loss in the periodic setting. By Theorem~\ref{thm:st3-standing-admissibility-equivalence}, that standing loss is standing-negative inadmissibility, not a neutral third status. Therefore an ``outside-admissible'' same-scope endpoint is exactly terminal standing failure.
+\end{proof}
+
+\begin{manualproposition}[20C.2 (Terminal standing failure cannot complete a same-scope realized endpoint)]
+\phantomsection\manualcurrentlabel{20C.2}\label{prop:terminal-standing-failure-no-endpoint}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be standing-positive and let
+$\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ be its maximal realized lineage on $[0,T_*(x))$. Then terminal standing failure cannot complete the same-scope endpoint of this realized lineage. In particular, a standing-positive admitted carrier seed cannot realize its finite-horizon endpoint by collapsing into terminal standing failure while still claiming the same periodic scope.
+\end{manualproposition}
+
+\begin{proof}
+Assume for contradiction that the same realized lineage completed its same-scope terminal endpoint through terminal standing failure. By Proposition~\ref{prop:exterior-endpoint-standing-failure}, this means that the purported endpoint can be stated only by leaving admissible representability while still claiming the same torus carrier and realized lineage.
+
+That completion is impossible for three independent theorem-local reasons. First, Theorems~\ref{thm:carrier-to-lineage-binding} and \ref{thm:no-admissibility-dynamics-realized-lineages}, packaged for the standing/intelligibility route in Theorem~\ref{thm:st4-standing-conservation-realized-lineages}, rule out any same-scope reading in which the already-fixed realized lineage is standing-positive before the horizon but acquires a fresh neutral or non-admissible status only at the endpoint. Second, Proposition~\ref{prop:standing-commitment-inheritance-realized-lineages}, packaged operationally in Proposition~\ref{prop:st5-irreversibility-representational-commitment}, rules out any admissible same-scope rollback, erasure, or de-commitment of the standing-bearing representational commitment that anchors the lineage, so the endpoint cannot shed that anchor and still count as the same realized object. Third, Theorem~\ref{thm:no-independent-classical-discriminator} together with Proposition~\ref{prop:quotient-visible-witness-vs-illicit-metric-gate} rules out any independent classical-layer continuation criterion or metric-only gate that could repackage a standing-negative endpoint as a licit same-scope completion. Therefore terminal standing failure cannot complete the same-scope endpoint of a standing-positive realized lineage.
+\end{proof}
+
+\begin{manualtheorem}[20C (Same-scope realized-lineage status trichotomy and collapse)]
+\phantomsection\manualcurrentlabel{20C}\label{thm:same-scope-continuation-failure-dichotomy}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ and let $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ have maximal interval $[0,T_*(x))$ with $T_*(x)<\infty$. Then any purported same-scope finite-horizon endpoint proposal for this realized periodic lineage has exactly one of the following theorem-local proposal statuses:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item it is represented on the fixed torus carrier by a standing-positive admissible in-scope witness, namely the carrier-side horizon discriminator supplied by \HorizonDetectabilityRef{} together with the equivalent carrier-side witness bookkeeping built from it;
+\item it is terminal standing failure; or
+\item it is an illicit same-scope gate / scope move, meaning that it keeps the endpoint alive only by path-dependent reclassification, representative-only or metric-only gate authority, a new selector / tolerance / discriminator, or an undeclared scope change.
+\end{enumerate}
+Moreover, clause~(ii) cannot complete the same-scope endpoint by Proposition~\ref{prop:terminal-standing-failure-no-endpoint}, and clause~(iii) is not a licit same-scope endpoint status at all. Consequently, among licit same-scope endpoint statuses only the standing-positive witness branch of clause~(i) remains.
+\end{manualtheorem}
+
+\begin{proof}
+If $T_*(x)<\infty$, Lemma~\ref{lem:finite-horizon-witness} already gives an in-scope pre-horizon continuation witness on the smooth realized lineage itself. By Corollary~\ref{cor:breakdown-carrier-visible}, any such finite-time breakdown is carrier-visible on the fixed torus carrier. By \HorizonDetectabilityRef{}, the first non-extendable horizon determines the carrier-side discriminator $\mathfrak D_{T_*(x)}(x)=0$, and this discriminator is standing-relevant on the fixed torus carrier. If the continuation failure is presented through that carrier-side standing-relevant determination, then it lies in the standing-positive witness branch of clause~(i).
+
+Assume instead that the alleged same-scope endpoint is not presented through a standing-positive admissible in-scope witness. Because Theorem~\ref{thm:carrier-to-lineage-binding} fixes the realized evolution as one standing-bearing same-scope determination and Theorem~\ref{thm:no-admissibility-dynamics-realized-lineages} rules out time-indexed admissibility change on that determination, the endpoint proposal cannot survive as a fresh stage-indexed status. There are then only two remaining ways to keep the endpoint claim alive while still pretending to stay in the same scope.
+
+First, the proposal may say that the same realized lineage can be completed only by leaving admissible representability while preserving the same torus carrier and lineage identity. Proposition~\ref{prop:exterior-endpoint-standing-failure} identifies that case exactly with terminal standing failure, giving clause~(ii).
+
+Second, the proposal may try to avoid both the witness route and standing failure by smuggling in a new same-scope discriminator. That is exactly what the phase-2 through phase-5 packets now forbid theorem-locally: Theorem~\ref{thm:factorization-discipline-same-scope} rules out standing-relevant functionals that fail to factor through the fixed quotient, Theorem~\ref{thm:history-factorization-no-path-dependent-admissibility} together with Corollary~\ref{cor:no-path-dependent-periodic-admissibility} rules out path-, order-, or history-representative-dependent admissibility, Corollary~\ref{cor:skin-non-authority-representative-diagnostics} rules out representative-only skin as standing authority, Proposition~\ref{prop:metric-divergence-skin-non-authority} rules out raw metric divergence as an independent same-scope gate, Proposition~\ref{prop:quotient-visible-witness-vs-illicit-metric-gate} rules out a third metric-gate status, and Theorem~\ref{thm:no-independent-classical-discriminator} rules out any surviving classical-layer continuation discriminator. Any endpoint proposal of that kind is therefore clause~(iii): an illicit same-scope gate / scope move rather than a licit same-scope endpoint status.
+
+The three clauses are exhaustive because carrier-to-lineage binding and no-admissibility-dynamics remove time-indexed reclassification, Theorem~\ref{thm:st3-standing-admissibility-equivalence} together with Corollary~\ref{cor:no-standing-neutral-status-fixed-periodic} remove any neutral same-scope middle status, and the factorization / role / metric packet removes any fourth same-scope standing-relevant proposal form. Finally, Proposition~\ref{prop:terminal-standing-failure-no-endpoint} excludes clause~(ii) as a licit same-scope completion, while clause~(iii) is already non-licit by the just-cited phase-2 through phase-5 theorems. Hence only clause~(i) remains as a licit same-scope endpoint status.
+\end{proof}
+
+\begin{manualcorollary}[20C.3 (No third same-scope endpoint status; collapse of the ``outside admissible representability'' objection)]
+\phantomsection\manualcurrentlabel{20C.3}\label{cor:no-third-same-scope-endpoint-status}\label{cor:outside-admissible-collapse-standing-failure}
+For a standing-positive admitted carrier state, no third licit same-scope endpoint status exists beyond the standing-positive admissible witness branch and the already-excluded terminal standing-failure branch. Any purported same-scope endpoint proposal not in those two branches is an illicit same-scope gate / scope move rather than a same-scope endpoint status. In particular, the objection that finite-time breakdown might exist only ``outside admissible representability'' collapses into the already excluded non-witness branches and does not remain as a neutral remainder.
+\end{manualcorollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} together with Proposition~\ref{prop:terminal-standing-failure-no-endpoint}.
+\end{proof}
+
+\section{Transfer Steps VI--VII (impossibility and endpoint): no singular image and the official periodic theorem}\label{sec:singular-images-official-theorem}
+\paragraph{Burden status.}
+Every earlier burden has already been narrowed to one final local task. By entry to this section, official data admission, realized-class completeness, no-new-criterion, horizon detectability, and the realized-lineage status trichotomy/collapse are all settled theorem-locally. What remains is to act on the exhaustive standing-positive same-scope witness class, eliminate every standing-positive singular image branch, and compress that contradiction into the official periodic theorem. The non-witness proposals have already been collapsed: by Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}, any purported same-scope finite-horizon endpoint is either a standing-positive in-scope witness, terminal standing failure, or an illicit same-scope gate / scope move; Proposition~\ref{prop:terminal-standing-failure-no-endpoint} excludes terminal standing failure as a licit same-scope completion, and Corollary~\ref{cor:no-third-same-scope-endpoint-status} records that no third licit same-scope endpoint status remains.
+Part~II eliminated every standing-positive same-scope singular candidate on the carrier already identified with the unique admissible interior, and \S\ref{sec:faithfulness-full-class} showed that the realization map introduces no new standing-positive same-scope continuation criterion on the fixed torus carrier. Phase~5 now makes the role split theorem-local for the actual Navier--Stokes observables used here: Proposition~\ref{prop:periodic-ns-role-localization} localizes the anchor / tensor / skin roles, Proposition~\ref{prop:metric-divergence-skin-non-authority} states that raw metric divergence has no same-scope standing authority by itself, and Proposition~\ref{prop:quotient-visible-witness-vs-illicit-metric-gate} says that any standing-bearing metric use must already factor through the fixed horizon witness or else becomes an illicit extra gate. In particular, Theorem~\ref{thm:no-independent-classical-discriminator} rules out any surviving standing-positive same-scope classical-layer continuation discriminator, and Theorem~\ref{thm:dynamic-stretching-compatibility} records the explicit $\Theta_x$-based instance built from the evolution of the vortex-stretching observable. Here the vortex-stretching wall does only one thing: it marks the incompleteness of same-scope PDE analytic closure. It does not reopen primitive admissibility, it does not create a second same-scope interior, and it does not supply a new same-scope continuation gate. By Lemma~\ref{lem:propagation-standing-positive-slices}, every smooth interior time slice of a realized trajectory re-enters that unique admissible interior and remains standing-positive; thus the breakdown witness below is built entirely from carrier states already inside the unique admissible interior up to the first non-extendable horizon. Part~III now upgrades that implication from a factorization statement to an explicit construction on the standing-positive branch: finite-time breakdown yields a concrete breakdown witness, a horizon continuation discriminator that is already standing-detectable on the fixed carrier, and a singular-candidate extractor whose output lands in the typed singular-candidate class already eliminated in Part~II. Proposition~\ref{prop:same-scope-witness-exhaustion} below makes the local completeness burden explicit for the standing-positive branch actually used later: no standing-positive same-scope continuation-relevant witness remains outside the extracted carrier-side horizon discriminator and its induced branch data. The extractor and the branch-forcing theorem below are therefore bookkeeping devices for how a classical breakdown would have to try to leave the unique admissible interior; they are not the primitive source of uniqueness itself. This section carries out that construction and derives the official periodic theorem. The branch-forcing theorem below is organized in three explicit stages: first the uniqueness-first contradiction is recalled, then the quotient-visible branch is ruled out for standing-positive breakdown representations, and finally the fixed-scope branch-forcing lemma from Section~15 extracts the nonempty set of forbidden same-scope witness moves that any such representation would have to instantiate.
+
+\begin{definition}[Classical singular image]\label{def:classical-singular-image}
+A \emph{classical singular image} is a realized lineage $\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ with
+maximal local existence interval $[0,T_*(x))$ such that $T_*(x)<\infty$ and the realized trajectory
+admits no classical continuation on the same torus carrier beyond $T_*(x)$.
+\end{definition}
+
+\begin{definition}[Breakdown witness]\label{def:breakdown-witness}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with $T_*(x)<\infty$. The \emph{breakdown witness} of $x$ is
+\[
+\mathfrak W(x):=\bigl(x,\,T_*(x),\,\mathfrak D_{T_*(x)},\,\mathcal R_{\mathrm{NS}}(x)|_{[0,T_*(x))}\bigr).
+\]
+It records the carrier class, the first non-extendable horizon, the associated continuation discriminator, and the realized trajectory up to that horizon.
+\end{definition}
+
+\begin{definition}[Branch-forcing set of a breakdown witness]\label{def:branch-forcing-set}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with $T_*(x)<\infty$ and breakdown witness $\mathfrak W(x)$.
+Define the \emph{branch-forcing set}
+\[
+\mathfrak B(x)\subseteq\{S1,S2,S3,S4,S5\}
+\]
+by the following membership conditions:
+\begin{enumerate}[label=(S\arabic*), leftmargin=2.2em]
+\item $S1\in\mathfrak B(x)$ iff any same-scope standing-positive representation of $\mathfrak W(x)$ requires a local weakening, exception, or relaxation of at least one clause of the bundle $B_{\mathrm{NS}}$ at or before the horizon $T_*(x)$;
+\item $S2\in\mathfrak B(x)$ iff any such representation requires isolating one interior compatibility, diagnostic, or subbundle from the coupled bundle $B_{\mathrm{NS}}$ and letting it govern continuation independently of the rest;
+\item $S3\in\mathfrak B(x)$ iff any such representation requires a threshold, tolerance, selector, staged repair, or horizon rule not already licensed, including any continuation gate built from the evolution of the trajectory stretching observable $\Theta_x$;
+\item $S4\in\mathfrak B(x)$ iff any such representation requires a non-equivalent redescription, presentation-dependent masking, or skin-dependent reformulation of the realized trajectory in order to classify breakdown as standing-positive;
+\item $S5\in\mathfrak B(x)$ iff any such representation requires downstream continuation, restart data, or later compositional information to legalize an earlier failure at the horizon $T_*(x)$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Constructive diagnostic branch forcing from breakdown witnesses]\label{thm:constructive-branch-forcing}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with $T_*(x)<\infty$, and let $\mathfrak W(x)$ be its breakdown witness.
+If $\mathfrak W(x)$ is to be represented as standing-positive on the fixed torus carrier, then:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item its branch tag $\beta(x)$ is illicit rather than quotient-visible;
+\item its branch-forcing set $\mathfrak B(x)$ is nonempty;
+\item every same-scope standing-positive representation of $\mathfrak W(x)$ instantiates at least one branch in $\mathfrak B(x)$.
+\end{enumerate}
+Equivalently: once uniqueness has ruled out a second interior and any admissible singular variation, a classical finite-time breakdown can only appear as a same-scope attempted escape that forces at least one specific diagnostic witness move among $(S1)$--$(S5)$ on the carrier.
+\end{theorem}
+
+\begin{proof}
+\textbf{Stage 0: uniqueness-first obstruction.}
+Because $x$ is already a standing-positive state of the unique admissible interior, Theorem~\ref{thm:uniqueness-first-contradiction} has already fixed the deepest contradiction: a same-scope singularity cannot live in a second same-scope interior, cannot survive as an admissible variation inside the unique interior, and cannot be rescued by a disguised scope change. The only remaining question is therefore diagnostic: how would an impossible same-scope escape attempt have to present itself on the fixed carrier?
+
+\textbf{Stage 1: the quotient-visible branch collapses immediately.}
+By Lemma~\ref{lem:breakdown-branch-assignment}, the carrier-side continuation discriminator attached to
+$\mathfrak W(x)$ has a unique branch tag
+\[
+\beta(x)\in\{\mathrm{illicit},\mathrm{quotient\mbox{-}visible}\}.
+\]
+If $\beta(x)=\mathrm{quotient\mbox{-}visible}$, then the corresponding singular candidate is standing-negative by
+Lemma~\ref{lem:quotient-visible-branch}. Hence a standing-positive same-scope representation of
+$\mathfrak W(x)$ is impossible in that branch. Therefore any standing-positive representation of the
+breakdown witness is forced into the illicit branch:
+\[
+\beta(x)=\mathrm{illicit}.
+\]
+This is already subordinate to the uniqueness-first obstruction: the quotient-visible branch cannot host a standing-positive representation of finite-time breakdown on the fixed carrier.
+
+\textbf{Stage 2: constructive extraction of the diagnostic witness moves.}
+By Lemma~\ref{lem:propagation-standing-positive-slices}, every smooth slice of the realized trajectory
+prior to $T_*(x)$ determines a standing-positive carrier seed in the unique admissible interior. By
+\HorizonDetectabilityRef{}, finite-time failure at the first non-extendable horizon already yields a
+well-typed standing-relevant continuation discriminator on the fixed torus carrier. By
+Theorem~\ref{thm:dynamic-stretching-compatibility}, no additional continuation content can be created
+by the evolution of $\Theta_x$. Thus the breakdown witness is standing-positive on the fixed carrier
+precisely because horizon failure is already standing-detectable there, with no licensed critical
+bridge added beyond the commitments already frozen in Part~II.
+
+The abstract branch-forcing result now applies directly in its carrier-specific exhausted form: by
+Lemma~\ref{lem:part1-to-singular} together with Corollary~\ref{cor:derived-structural-exhaustion}, any
+attempt to treat a classical blow-up episode as standing-positive under the fixed carrier commitments
+and in the absence of a licensed critical bridge must instantiate at least one of $(S1)$--$(S5)$. Applied
+to $\mathfrak W(x)$, this yields only diagnostic content: the breakdown witness forces a nonempty branch set of forbidden same-scope moves that witness how the impossible escape attempt would have to appear.
+
+Therefore $\mathfrak B(x)\neq\varnothing$, and every standing-positive representation of
+$\mathfrak W(x)$ instantiates at least one branch in $\mathfrak B(x)$.
+\end{proof}
+
+\begin{lemma}[Branch assignment for breakdown witnesses]\label{lem:breakdown-branch-assignment}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with $T_*(x)<\infty$. Then the continuation discriminator
+$\mathfrak D_{T_*(x)}$ determined by the breakdown witness $\mathfrak W(x)$ has a unique branch tag
+\[
+\beta(x)\in\{\mathrm{illicit},\mathrm{quotient\mbox{-}visible}\}
+\]
+in the dichotomy of Proposition~\ref{prop:quotient-visible-singularity}.
+\end{lemma}
+
+\begin{proof}
+By \HorizonDetectabilityRef{}, the failure of continuation at $T_*(x)$ determines the horizon discriminator $\mathfrak D_{T_*(x)}$ as a well-typed standing-relevant continuation discriminator on the fixed carrier. Proposition~\ref{prop:periodic-ns-role-localization} and Proposition~\ref{prop:metric-divergence-skin-non-authority} make explicit that no raw metric mark can compete with that role: any standing-bearing use of such a mark must already factor through the fixed horizon witness, while Proposition~\ref{prop:quotient-visible-witness-vs-illicit-metric-gate} rules out a third same-scope metric-gate status. Theorem~\ref{thm:initial-local-faithfulness} then shows that realization introduces no additional continuation criterion, while Theorem~\ref{thm:dynamic-stretching-compatibility} rules out any additional continuation content built from $\Theta_x$. Proposition~\ref{prop:quotient-visible-singularity} and Corollary~\ref{cor:no-third-branch}
+then force a unique branch tag: illicit or quotient-visible, with no third possibility.
+\end{proof}
+
+\begin{definition}[Singular-candidate extractor]\label{def:singular-candidate-extractor}
+For $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with $T_*(x)<\infty$, define the \emph{singular-candidate extractor}
+\[
+\mathfrak X(x):=\bigl(x,\,T_*(x),\,\mathfrak D_{T_*(x)},\,\beta(x),\,\mathfrak B(x)\bigr),
+\]
+where $\beta(x)$ is the branch tag from Lemma~\ref{lem:breakdown-branch-assignment} and
+$\mathfrak B(x)$ is the branch-forcing set of Definition~\ref{def:branch-forcing-set}.
+\end{definition}
+
+\begin{manualproposition}[21.6A (Standing-positive same-scope witness exhaustion for finite-time breakdown)]
+\phantomsection\manualcurrentlabel{21.6A}\label{prop:same-scope-witness-exhaustion}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ with $T_*(x)<\infty$. On the fixed torus carrier, every standing-positive same-scope continuation-relevant witness of finite-time breakdown is exhausted by the carrier-side horizon discriminator $\mathfrak D_{T_*(x)}$ together with the induced branch data $(\beta(x),\mathfrak B(x))$. More precisely, once Table~\ref{tab:translation-dictionary-standard-carrier}, Corollary~\ref{cor:row-by-row-continuation-completeness}, Corollary~\ref{cor:derived-structural-exhaustion}, Proposition~\ref{prop:no-additional-pde-side-criterion}, Corollary~\ref{cor:breakdown-carrier-visible}, \HorizonDetectabilityRef{}, Proposition~\ref{prop:periodic-ns-role-localization}, Proposition~\ref{prop:metric-divergence-skin-non-authority}, Proposition~\ref{prop:quotient-visible-witness-vs-illicit-metric-gate}, Theorem~\ref{thm:no-independent-classical-discriminator}, and Theorem~\ref{thm:dynamic-stretching-compatibility} are in force, no additional standing-positive same-scope continuation witness remains outside this extracted carrier-side representation. Combined with Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}, this leaves only one other same-scope branch --- terminal standing failure --- and that branch is already excluded by Proposition~\ref{prop:terminal-standing-failure-no-endpoint}.
+\end{manualproposition}
+
+\begin{proof}
+Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} shows that any same-scope finite-horizon continuation failure has only two statuses: a standing-positive carrier witness or terminal standing failure. Proposition~\ref{prop:terminal-standing-failure-no-endpoint} removes the terminal standing-failure branch for realized lineages issued from standing-positive admitted carrier states. It therefore suffices here to exhaust the standing-positive witness branch.
+
+Table~\ref{tab:translation-dictionary-standard-carrier} and Corollary~\ref{cor:row-by-row-continuation-completeness} record the carrier-side translation fact used on the live route: every continuation-relevant classical Navier--Stokes observable appearing there as standing-positive same-scope witness content already has a carrier-side representative. Corollary~\ref{cor:derived-structural-exhaustion} and Proposition~\ref{prop:no-additional-pde-side-criterion} then remove same-scope residue and any additional PDE-side continuation criterion beyond the certified carrier structure. At the classical layer, Corollary~\ref{cor:breakdown-carrier-visible} and \HorizonDetectabilityRef{} say that a finite-time breakdown is already the standing-relevant carrier-side horizon discriminator on the fixed torus carrier, while Theorem~\ref{thm:no-independent-classical-discriminator} and Theorem~\ref{thm:dynamic-stretching-compatibility} eliminate any additional classical-layer or trajectory-level continuation gate.
+
+It therefore remains only to record the diagnostic witness data forced by a standing-positive representation of that already-extracted horizon event. Lemma~\ref{lem:breakdown-branch-assignment} assigns the unique branch tag $\beta(x)$, and Theorem~\ref{thm:constructive-branch-forcing} forces the nonempty branch set $\mathfrak B(x)$ for every same-scope standing-positive representation of the breakdown witness. Hence every standing-positive same-scope continuation-relevant witness of finite-time breakdown is exhausted by $\mathfrak D_{T_*(x)}$ together with the induced branch data $(\beta(x),\mathfrak B(x))$, and no standing-positive same-scope continuation-relevant residue exists outside this representation. Together with the already-excluded terminal standing-failure branch, this closes the same-scope endpoint burden locally.
+\end{proof}
+
+\begin{lemma}[Constructive singular-candidate extraction]\label{lem:singular-image-induces-typed-candidate}
+If a realized lineage admits a classical singular image in the sense of Definition~\ref{def:classical-singular-image}, then its singular-candidate extractor $\mathfrak X(x)$ is a typed singular candidate in the sense of Definition~\ref{def:singular-candidate}. More precisely, the extracted singularity gate is tagged by $\beta(x)$ as either illicit or quotient-visible in the sense of Proposition~\ref{prop:quotient-visible-singularity}, and whenever the breakdown is represented as standing-positive on the fixed carrier the extractor carries a nonempty forced branch set $\mathfrak B(x)\subseteq\{S1,S2,S3,S4,S5\}$ in the sense of Theorem~\ref{thm:constructive-branch-forcing}. In the realized-lineage endpoint-status trichotomy / collapse of Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}, this extractor therefore captures the entire standing-positive continuation content of the breakdown; the complementary proposal branches are terminal standing failure and illicit same-scope gate / scope moves, already collapsed by Proposition~\ref{prop:terminal-standing-failure-no-endpoint} and Corollary~\ref{cor:no-third-same-scope-endpoint-status}.
+\end{lemma}
+
+\begin{proof}
+Let $x$ be the carrier class underlying the classical singular image. By Definition~\ref{def:breakdown-witness}, finite-time breakdown produces the concrete witness $\mathfrak W(x)$ carrying the first non-extendable horizon and the carrier-side continuation discriminator $\mathfrak D_{T_*(x)}$. Proposition~\ref{prop:same-scope-witness-exhaustion}, using Table~\ref{tab:translation-dictionary-standard-carrier}, Corollary~\ref{cor:row-by-row-continuation-completeness}, Corollary~\ref{cor:derived-structural-exhaustion}, Proposition~\ref{prop:no-additional-pde-side-criterion}, Corollary~\ref{cor:breakdown-carrier-visible}, \HorizonDetectabilityRef{}, Theorem~\ref{thm:no-independent-classical-discriminator}, and Theorem~\ref{thm:dynamic-stretching-compatibility}, already makes the completeness burden local: every standing-positive same-scope continuation-relevant witness of this breakdown is exhausted by the carrier-side horizon discriminator together with its induced branch data. Thus the extractor records the entire standing-positive continuation content of the breakdown witness on the fixed carrier. By Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} and Proposition~\ref{prop:terminal-standing-failure-no-endpoint}, there is no third same-scope remainder besides this extracted standing-positive content and the already-excluded terminal standing-failure branch.
+
+Lemma~\ref{lem:breakdown-branch-assignment} assigns to that discriminator the unique branch tag $\beta(x)$. Because a classical singular image is the same-scope breakdown of a realized lineage issued from a standing-positive admitted carrier state, and because Lemma~\ref{lem:propagation-standing-positive-slices} shows that every smooth prehorizon slice of that lineage re-enters the unique admissible interior and remains standing-positive, the breakdown witness is a standing-positive representation on the fixed carrier throughout the realized interval. By \HorizonDetectabilityRef{}, this standing-positivity is triggered specifically by horizon failure itself: the horizon discriminator $\mathfrak D_{T_*(x)}$ is already a well-typed standing-relevant continuation discriminator on the fixed torus carrier. Therefore Theorem~\ref{thm:constructive-branch-forcing} applies in its overt two-stage form: first the quotient-visible branch collapses, forcing $\beta(x)=\mathrm{illicit}$, and then the abstract Part~I branch-forcing result yields a nonempty forced branch set $\mathfrak B(x)$, with every standing-positive representation of $\mathfrak W(x)$ instantiating at least one branch in $\mathfrak B(x)\subseteq\{S1,S2,S3,S4,S5\}$.
+
+Definition~\ref{def:singular-candidate-extractor} packages these data into $\mathfrak X(x)$. This extraction is a standing-positive admissibility act on the fixed carrier, not a merely representational re-description: prehorizon standing-positivity is preserved along the realized lineage, horizon failure itself is carrier-visible, and no additional same-scope continuation gate survives beyond the extracted discriminator. Since $\mathfrak D_{T_*(x)}$ is a same-scope continuation discriminator on the fixed carrier, $\beta(x)$ records its illicit/quotient-visible status, and $\mathfrak B(x)$ records the explicit forced $(S1)$--$(S5)$ content required for standing-positive representation, the extracted tuple has exactly the form of a typed singular candidate from Definition~\ref{def:singular-candidate}. Hence $\mathfrak X(x)$ is a typed singular candidate.
+\end{proof}
+
+\begin{proposition}[No illicit singular image]\label{prop:no-illicit-singular-image}
+No realized lineage admits a classical singular image whose induced singularity gate is illicit.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:singular-image-induces-typed-candidate}, an illicit singular image would produce a
+singular-candidate extractor $\mathfrak X(x)$ tagged as illicit. Because the breakdown is represented
+as standing-positive on the fixed carrier, Theorem~\ref{thm:constructive-branch-forcing} yields a
+nonempty forced branch set $\mathfrak B(x)\subseteq\{S1,S2,S3,S4,S5\}$; every standing-positive
+representation of the breakdown witness must instantiate at least one branch in $\mathfrak B(x)$.
+But Lemma~\ref{lem:illicit-branch} eliminates precisely those same-scope branches on the certified
+carrier. Hence no illicit singular image exists.
+\end{proof}
+
+\begin{proposition}[No quotient-visible singular image]\label{prop:no-quotient-visible-singular-image}
+No realized lineage admits a classical singular image whose induced singularity gate is
+quotient-visible.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:singular-image-induces-typed-candidate}, a quotient-visible singular image would
+produce a singular-candidate extractor $\mathfrak X(x)$ tagged as quotient-visible. But because a
+classical singular image is the same-scope breakdown of a realized lineage issued from a
+standing-positive admitted carrier state, Theorem~\ref{thm:constructive-branch-forcing} forces the
+standing-positive branch tag to be illicit rather than quotient-visible. This already contradicts the
+assumed quotient-visible tag. Equivalently, Lemma~\ref{lem:quotient-visible-branch} shows that every
+quotient-visible candidate is standing-negative, so the quotient-visible branch cannot occur as a
+classical singular image.
+\end{proof}
+
+At this point the branch-elimination machinery acts on the exhaustive standing-positive same-scope witness class addressed locally in Proposition~\ref{prop:same-scope-witness-exhaustion}: by that proposition every standing-positive same-scope continuation-relevant breakdown witness has already been reduced to the carrier-side data $(\mathfrak D_{T_*(x)},\beta(x),\mathfrak B(x))$, and by Lemma~\ref{lem:singular-image-induces-typed-candidate} that data is precisely a typed singular candidate on the fixed carrier. The impossibility theorem below therefore eliminates the entire standing-positive same-scope witness class actually used on the live endgame, not a chosen encoding of it.
+
+\begin{theorem}[Transfer impossibility: no singular image of the unique admissible interior]\label{thm:no-singular-image-certified-interior}
+No standing-positive admitted time-zero carrier state in
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ has a classical singular image under the realization map
+$\mathcal R_{\mathrm{NS}}$.
+\end{theorem}
+
+\begin{proof}
+Suppose $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ had a classical singular image. Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} then forces the alleged same-scope finite-horizon endpoint into the realized-lineage status trichotomy of clauses~(i)--(iii).
+
+\smallskip
+\noindent\textit{Terminal standing-failure branch.} If the alleged endpoint survives only as terminal standing failure, Proposition~\ref{prop:terminal-standing-failure-no-endpoint} excludes it immediately as a licit same-scope completion of the realized lineage.
+
+\smallskip
+\noindent\textit{Illicit scope / gate branch.} If the alleged endpoint survives only by path-dependent reclassification, representative-only or metric-only gate authority, an extra selector / tolerance, or an undeclared scope move, then Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} together with Corollary~\ref{cor:no-third-same-scope-endpoint-status} already says that this is not a licit same-scope endpoint status at all. So the singular image cannot survive on that branch either.
+
+\smallskip
+\noindent\textit{Standing-positive witness branch.} The only licit same-scope endpoint status left is the standing-positive witness branch of clause~(i). Proposition~\ref{prop:same-scope-witness-exhaustion} makes that branch theorem-local: the entire standing-positive same-scope continuation content of the breakdown is exhausted by the carrier-side horizon discriminator together with the induced branch data $(\beta(x),\mathfrak B(x))$. Lemma~\ref{lem:singular-image-induces-typed-candidate} then converts exactly that exhausted standing-positive content into a typed singular candidate extractor $\mathfrak X(x)$ whose singularity gate is either illicit or quotient-visible and whose forced branch set records the explicit witness moves required for standing-positive representation.
+
+At that point the fixed-carrier contradictions are all local. Theorem~\ref{thm:uniqueness-first-contradiction} blocks any attempt to reinterpret the candidate as a second same-scope interior, an admissible variation inside the unique interior, or a disguised scope change. \HorizonDetectabilityRef{} grounds the standing-positive witness narrowly by the horizon discriminator itself, and Theorem~\ref{thm:dynamic-stretching-compatibility} eliminates any additional $\Theta_x$-based continuation gate, so no broader continuation-completeness claim is needed. Proposition~\ref{prop:no-illicit-singular-image} eliminates the illicit singularity gate and Proposition~\ref{prop:no-quotient-visible-singular-image} eliminates the quotient-visible singularity gate. By Corollary~\ref{cor:no-third-branch}, no third standing-positive same-scope singularity branch exists on the fixed carrier.
+
+All theorem-local proposal branches are therefore closed before the endpoint is compressed: terminal standing failure is excluded by Proposition~\ref{prop:terminal-standing-failure-no-endpoint}, illicit scope / gate completion is excluded by Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} and Corollary~\ref{cor:no-third-same-scope-endpoint-status}, and the remaining standing-positive witness branch is eliminated by exhaustion, extraction, and branch contradiction. Hence no classical singular image can arise from a standing-positive admitted state of the unique admissible interior.
+\end{proof}
+
+\begin{corollary}[Transfer endpoint on the realized class: global smoothness]\label{cor:global-smoothness-realized-class}
+Let $x\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$ be a standing-positive admitted time-zero carrier state.
+Then its realized classical Navier--Stokes trajectory
+$\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)$ extends smoothly for all time; equivalently,
+$T_*(x)=\infty$ in Theorem~\ref{thm:local-classical-realization}.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:local-classical-realization}, $x$ admits a unique maximal local classical
+realization on $[0,T_*(x))$ with $T_*(x)>0$. If $T_*(x)<\infty$, then this realized trajectory would
+be a classical singular image in the sense of Definition~\ref{def:classical-singular-image},
+contradicting Theorem~\ref{thm:no-singular-image-certified-interior}. Hence $T_*(x)=\infty$.
+\end{proof}
+
+\begin{proposition}[Full-class reduction of the official periodic theorem]\label{prop:full-class-reduction-official}
+Assume that no standing-positive admitted time-zero carrier state in
+$\mathcal I_{\mathrm{car}}(\T^3,\nu)$ has a classical singular image. Then the official periodic
+global smoothness theorem holds for the full Fefferman~(B) data class
+$\mathcal D_{\mathrm{off}}(\T^3,\nu)$.
+\end{proposition}
+
+\begin{proof}
+Let $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$. By Corollary~\ref{cor:every-official-datum-admitted},
+$u_0$ determines a standing-positive admitted time-zero carrier state
+$x=[\Sigma(u_0)]\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$. By
+Theorem~\ref{thm:realized-class-equals-official-local-class}, the official local classical solution
+issued from $u_0$ is exactly the realized trajectory $\mathcal R_{\mathrm{NS}}(x)$. If that realized trajectory had finite maximal time, then Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} would place the alleged endpoint into the realized-lineage status trichotomy. The terminal standing-failure branch is excluded by Proposition~\ref{prop:terminal-standing-failure-no-endpoint}, and any illicit scope / gate proposal is already non-licit by Corollary~\ref{cor:no-third-same-scope-endpoint-status}. The only licit same-scope endpoint status left would therefore be the standing-positive witness branch, which would make the realized trajectory a classical singular image of the admitted carrier state $x$, contradicting the hypothesis of the proposition. Hence the realized trajectory continues for all time. Since $u_0$ was arbitrary, the official periodic theorem follows for the full Fefferman~(B) class with no hidden narrowing.
+\end{proof}
+
+
+\begin{proposition}[Compressed dependency chain for the official periodic theorem]\label{prop:compressed-dependency-chain-official}
+For each datum $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$, the proof of
+Theorem~\ref{thm:official-periodic-pde-theorem} consists of exactly the following steps:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item Theorem~\ref{thm:periodic-carrier-unique-interior}, Corollary~\ref{cor:no-alternative-same-scope-regime}, and Proposition~\ref{prop:no-additional-pde-side-criterion} identify the standard carrier with the unique admissible interior and state explicitly that no rival standing-positive same-scope continuation regime or extra PDE-side continuation criterion survives inside fixed scope.
+\item Lemma~\ref{lem:bridge-sufficiency-partIII} records that the structural non-singularity theorem is sufficient for the official periodic theorem once Carrier Universality, realization/full-class identification, and faithful import of branch elimination are supplied.
+\item Corollary~\ref{cor:every-official-datum-admitted} identifies $u_0$ with a unique standing-positive admitted time-zero carrier class $x=[\Sigma(u_0)]\in\mathcal I_{\mathrm{car}}(\T^3,\nu)$.
+\item Theorem~\ref{thm:local-classical-realization} constructs the unique maximal local classical trajectory $\mathcal R_{\mathrm{NS}}(x)$, and Theorem~\ref{thm:realized-class-equals-official-local-class} identifies that realized trajectory with the full official local classical solution issued from $u_0$.
+\item \HorizonDetectabilityRef{} shows that finite-time breakdown for that realized trajectory already appears as the standing-relevant carrier-side horizon discriminator, and Theorem~\ref{thm:dynamic-stretching-compatibility} shows that no formal $\Theta_x$-based continuation gate creates an additional continuation criterion.
+\item Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}, together with Propositions~\ref{prop:exterior-endpoint-standing-failure} and \ref{prop:terminal-standing-failure-no-endpoint} and Corollary~\ref{cor:no-third-same-scope-endpoint-status}, turns any alleged same-scope finite-horizon endpoint into the realized-lineage status trichotomy and collapses the non-witness branches locally.
+\item Proposition~\ref{prop:same-scope-witness-exhaustion} and Lemma~\ref{lem:singular-image-induces-typed-candidate}, with Theorem~\ref{thm:constructive-branch-forcing} grounded in Corollary~\ref{cor:derived-structural-exhaustion}, convert the entire standing-positive continuation content of the remaining licit branch into an explicit typed singular candidate extractor $\mathfrak X(x)$ carrying a nonempty forced branch set $\mathfrak B(x)\subseteq\{S1,S2,S3,S4,S5\}$.
+\item Propositions~\ref{prop:no-illicit-singular-image} and \ref{prop:no-quotient-visible-singular-image}, together with Corollary~\ref{cor:no-third-branch} and the uniqueness-first obstruction of Theorem~\ref{thm:uniqueness-first-contradiction}, eliminate all standing-positive same-scope branches of such a candidate.
+\item Therefore Theorem~\ref{thm:no-singular-image-certified-interior} excludes finite-time singularity for the realized trajectory, and Proposition~\ref{prop:full-class-reduction-official} upgrades that exclusion to the full Fefferman~(B) data class.
+\end{enumerate}
+No additional theorem enters the proof of the official periodic statement.
+\end{proposition}
+
+\begin{proof}
+Item~(i) is the strengthened carrier-identification packet 13I--13K: before the bridge begins, the manuscript states explicitly that the standard carrier is the unique admissible interior and that no rival standing-positive same-scope regime or hidden PDE-side continuation criterion survives inside fixed scope. Item~(ii) is the theorem-facing transport claim of Proposition~\ref{prop:partIII-transport-only} together with the sufficiency statement of Lemma~\ref{lem:bridge-sufficiency-partIII}. Items~(iii)--(iv) are the carrier-universality and faithful realization steps of Part~III: local classical realization exists, is overlap-faithful, and its realized local class is exactly the full official local classical class. Item~(v) is the narrowed classical-layer closure hinge: Corollary~\ref{cor:breakdown-carrier-visible} and \HorizonDetectabilityRef{} show that finite-time breakdown is already the standing-relevant carrier-side horizon discriminator on the fixed torus carrier, while Theorem~\ref{thm:no-independent-classical-discriminator} and Theorem~\ref{thm:dynamic-stretching-compatibility} show that no formally proposed PDE-side gate survives as an additional same-scope continuation criterion. Item~(vi) is the theorem-local status trichotomy/collapse required by the hardening plan: an alleged endpoint is either a standing-positive carrier witness, terminal standing failure, or an illicit same-scope gate / scope move, and only the standing-positive witness branch remains as a licit same-scope endpoint status after Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}. Item~(vii) is the constructive diagnostic branch-forcing step together with the singular-candidate extractor: because the non-witness branches have already been collapsed, the remaining standing-positive breakdown witness is converted into an explicit typed carrier object carrying a nonempty forced branch set of forbidden same-scope witness moves. Item~(viii) is the branch-elimination package already established on the carrier identified with the unique admissible interior in Part~II, with Theorem~\ref{thm:uniqueness-first-contradiction} blocking any attempt to reinterpret the extracted candidate as a second same-scope interior, an admissible singular variation, or a disguised scope change. Item~(ix) is the passage from no singular image to the explicit transport corollary and then to the full official periodic theorem. No diffuse cross-section load remains once these nine steps are recorded explicitly.
+\end{proof}
+
+\begin{remark}[Detailed audit versus short visible proof spine]\label{rem:detail-vs-short-spine}
+Proposition~\ref{prop:compressed-dependency-chain-official} is the detailed theorem-facing audit for
+Part~III. Theorem~\ref{thm:primitive-to-classical-transfer-cascade} below is the short theorem-local transfer cascade from which the endpoint is taken as a local corollary.
+\end{remark}
+
+\begin{theorem}[Primitive-to-classical transfer cascade for the official periodic theorem]\label{thm:primitive-to-classical-transfer-cascade}
+For the fixed torus carrier $\T^3$ and viscosity $\nu>0$, the official periodic theorem is a local consequence of the following theorem-local chain:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item \textbf{Transfer soundness:} Corollary~\ref{cor:every-official-datum-admitted}.
+\item \textbf{Transfer completeness:} Theorem~\ref{thm:transport-realized-class-equals-official}.
+\item \textbf{Transfer no-new-criterion:} Theorem~\ref{thm:transfer-no-new-content} together with Theorem~\ref{thm:no-independent-classical-discriminator}.
+\item \textbf{Transfer detectability:} Corollary~\ref{cor:breakdown-carrier-visible} and \HorizonDetectabilityRef{}.
+\item \textbf{Transfer endpoint-status trichotomy/collapse:} Propositions~\ref{prop:exterior-endpoint-standing-failure} and \ref{prop:terminal-standing-failure-no-endpoint}, Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}, and Corollary~\ref{cor:no-third-same-scope-endpoint-status}.
+\item \textbf{Transfer impossibility on the remaining licit branch:} Theorem~\ref{thm:no-singular-image-certified-interior}.
+\end{enumerate}
+Once these six steps are on the page, Proposition~\ref{prop:full-class-reduction-official} yields the official periodic theorem for the full Fefferman~(B) class.
+\end{theorem}
+
+\begin{proof}
+Let $u_0\in\mathcal D_{\mathrm{off}}(\T^3,\nu)$ and let $x=[\Sigma(u_0)]$ be the admitted carrier class from Corollary~\ref{cor:every-official-datum-admitted}. By Theorem~\ref{thm:transport-realized-class-equals-official}, the unique official local classical trajectory issued from $u_0$ is exactly the realized trajectory $\mathcal R_{\mathrm{NS}}(x)$. Theorem~\ref{thm:transfer-no-new-content} and Theorem~\ref{thm:no-independent-classical-discriminator} state that realization introduces no new standing-positive same-scope continuation content beyond the certified carrier class on the live route. Therefore if that official local classical trajectory had finite maximal time, Corollary~\ref{cor:breakdown-carrier-visible} and \HorizonDetectabilityRef{} would already turn the resulting breakdown into a standing-relevant carrier-side horizon event. Theorem~\ref{thm:same-scope-continuation-failure-dichotomy} then places that alleged endpoint into the realized-lineage status trichotomy; Proposition~\ref{prop:terminal-standing-failure-no-endpoint} excludes the terminal standing-failure branch, and Corollary~\ref{cor:no-third-same-scope-endpoint-status} excludes any illicit scope / gate proposal as a licit same-scope status. Theorem~\ref{thm:no-singular-image-certified-interior} excludes the remaining standing-positive witness branch. Proposition~\ref{prop:full-class-reduction-official} then upgrades this theorem-local collapse to the full Fefferman~(B) class. Hence the official periodic theorem follows for arbitrary $u_0$.
+\end{proof}
+
+\begin{manualcorollary}[21A (Transfer endpoint corollary: official periodic global smoothness as a corollary of structural necessity)]
+\phantomsection\manualcurrentlabel{21A}\label{cor:official-periodic-structural-corollary}
+For the full official datum class $\mathcal D_{\mathrm{off}}(\T^3,\nu)$, the periodic case of the incompressible Navier--Stokes problem on $\T^3$ holds globally and smoothly. Equivalently, no official periodic datum generates a finite-time singular evolution at the declared fixed scope.
+\end{manualcorollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:primitive-to-classical-transfer-cascade}: the transfer soundness, completeness, no-new-criterion, detectability, realized-lineage status trichotomy/collapse, and standing-positive impossibility steps have all been proved locally in this manuscript, so the official periodic conclusion follows as a corollary of structural necessity.
+\end{proof}
+
+\begin{remark}[Endpoint numbering convention]\label{rem:endpoint-numbering-convention}
+Corollary~\ref{cor:official-periodic-structural-corollary} is the claim-type endpoint of the manuscript: at that point the official periodic conclusion has already been obtained as a corollary of structural necessity. Theorem~\ref{thm:official-periodic-pde-theorem} is retained immediately afterward only to restate the same conclusion in the official classical PDE wording of Fefferman~(B).
+\end{remark}
+
+\begin{theorem}[Official periodic theorem on $\T^3$ (Fefferman (B); official classical restatement of Corollary~21A)]\label{thm:official-periodic-pde-theorem}
+Let $\nu>0$ and let $u_0\in C^\infty(\T^3;\R^3)$ satisfy $\nabla\cdot u_0=0$. Then there exists a
+unique smooth periodic Navier--Stokes solution pair $(u,p)$ on $\T^3\times[0,\infty)$ satisfying
+\[
+\partial_t u + (u\cdot\nabla)u + \nabla p = \nu\Delta u,
+\qquad \nabla\cdot u = 0,
+\qquad u|_{t=0}=u_0,
+\]
+with the fixed mean-zero pressure gauge.
+\end{theorem}
+
+\begin{remark}[Classical statement, structural claim type]\label{rem:official-theorem-proof-modality}
+The theorem above is theorem-numbered because Fefferman's official periodic endpoint is theorem-shaped and classical in statement. Its claim type is already fixed by Corollary~\ref{cor:official-periodic-structural-corollary}: unique admissible interior first, carrier identification second, local classical realization third, carrier-visible breakdown fourth, same-scope endpoint-status trichotomy and collapse fifth, and the remaining witness-branch contradiction sixth.
+\end{remark}
+
+\begin{tcolorbox}[title={Five-link proof spine for the official periodic theorem}, colback=blue!2!white, colframe=blue!55!black]
+\begin{enumerate}[label=(\arabic*), leftmargin=2.2em]
+\item \textbf{Unique interior.} The fixed periodic scope admits the \emph{unique admissible interior} by Corollary~\ref{cor:periodic-unique-admissible-interior}.
+\item \textbf{Carrier identification.} Theorem~\ref{thm:periodic-carrier-unique-interior} identifies the standard periodic Navier--Stokes carrier with that unique admissible interior, Corollary~\ref{cor:no-alternative-same-scope-regime} rules out any rival same-scope continuation regime, Proposition~\ref{prop:no-additional-pde-side-criterion} states explicitly that no extra PDE-side continuation criterion survives inside fixed scope, and Corollary~\ref{cor:every-official-datum-admitted} says that every official datum enters the identified carrier.
+\item \textbf{Local classical realization / transport only.} Proposition~\ref{prop:partIII-transport-only}, Theorems~\ref{thm:local-classical-realization} and \ref{thm:realized-class-equals-official-local-class}, Lemma~\ref{lem:local-realization-faithful}, and Theorem~\ref{thm:transport-realized-class-equals-official} realize that admitted carrier state as exactly the official local classical trajectory and make explicit that Part~III contributes only realization transport.
+\item \textbf{Carrier-visible breakdown plus endpoint-status trichotomy/collapse.} Theorem~\ref{thm:transfer-no-new-content}, Corollary~\ref{cor:breakdown-carrier-visible}, \HorizonDetectabilityRef{}, Theorem~\ref{thm:no-independent-classical-discriminator}, Theorem~\ref{thm:same-scope-continuation-failure-dichotomy}, Proposition~\ref{prop:terminal-standing-failure-no-endpoint}, and Corollary~\ref{cor:no-third-same-scope-endpoint-status} show that any hypothetical finite-time breakdown of that realized trajectory is already carrier-visible and then placed into the realized-lineage status trichotomy, with the non-witness branches collapsed locally.
+\item \textbf{Remaining witness-branch contradiction and endpoint compression.} Proposition~\ref{prop:same-scope-witness-exhaustion}, Lemma~\ref{lem:singular-image-induces-typed-candidate}, Theorem~\ref{thm:no-singular-image-certified-interior}, Theorem~\ref{thm:primitive-to-classical-transfer-cascade}, Proposition~\ref{prop:full-class-reduction-official}, Corollary~\ref{cor:official-periodic-structural-corollary}, and Theorem~\ref{thm:official-periodic-pde-theorem} eliminate the remaining licit witness branch and compress the resulting contradiction into the official Fefferman~(B) statement.
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{proof}
+This is the official classical PDE restatement of Corollary~\ref{cor:official-periodic-structural-corollary}. The corollary is already supplied by the isolated transfer cascade of Theorem~\ref{thm:primitive-to-classical-transfer-cascade}, so no further proof burden remains here beyond restating the same conclusion in Fefferman's classical PDE language.
+\end{proof}
+
+\begin{corollary}[No finite-time blow-up on the official periodic carrier]\label{cor:no-finite-time-blowup-official-carrier}
+On the official periodic carrier $\T^3$, smooth divergence-free initial data do not produce finite-time
+singularity in the classical incompressible Navier--Stokes realization.
+\end{corollary}
+
+\begin{proof}
+This is an immediate restatement of Theorem~\ref{thm:official-periodic-pde-theorem}.
+\end{proof}

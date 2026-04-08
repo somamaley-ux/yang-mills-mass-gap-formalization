@@ -1,0 +1,14 @@
+import MaleyLean.ClaimModalityPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperScopeAlignmentStatement
+#print axioms PaperRedescriptionMonotonicityStatement
+#print axioms PaperNonAmplificationStatement
+#print axioms PaperFailClosedBehaviorStatement
+#print axioms PaperModalOverreachInducesStandingFailureStatement
+#print axioms PaperModalOverreachIsNotErrorStatement
+#print axioms PaperModalityConstraintNecessityStatement
+#print axioms PaperClaimModalityGateJustificationStatement
+
+end MaleyLean

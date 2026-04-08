@@ -1,0 +1,23 @@
+Axiom Audit - Navier-Stokes Section Theorem Ledger
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesSectionTheoremLedgerAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperClaimSupportClassificationStatement
+- MaleyLean.PaperStructuralClaimLedgerAlignmentStatement
+- MaleyLean.PaperAnalyticClaimReductionStatement
+- MaleyLean.PaperPrimitiveClaimsAreCertifiedStatement
+- MaleyLean.PaperVortexStretchingClaimIsNamedFailureStatement
+- MaleyLean.PaperEndpointTransferClaimIsAnalyticDependentStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes section-to-theorem ledger is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

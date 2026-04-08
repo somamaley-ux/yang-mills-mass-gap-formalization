@@ -1,0 +1,106 @@
+\clearpage
+\section{Worked outsider-facing translation of a BKM-type blow-up heuristic}
+
+This appendix is optional and non-load-bearing. It is included only to make visible, in ordinary PDE
+notation, one explicit instance of the mechanism used abstractly in the main proof: a familiar blow-up
+heuristic is translated into a forbidden same-scope carrier move. Nothing in this appendix is needed
+for the proof of Theorem~\ref{thm:official-periodic-pde-theorem}; its role is explanatory and audit-facing.
+Appendix~D records the broader obstruction ledger; the present appendix is one concrete worked row of that ledger.
+
+\subsection{A BKM-type blow-up observable}
+Let $x\in I_{\mathrm{car}}(\T^3,\nu)$ and let
+\[
+\mathcal R_{\mathrm{NS}}(x)=(u_x,p_x)
+\]
+be its maximal realized trajectory on $[0,T_*(x))$. Define the BKM-type vorticity-growth observable
+\[
+\mathcal I_x(t):=\int_0^t \|\omega_x(s)\|_{L^\infty(\T^3)}\,\dd s,
+\qquad 0\le t<T_*(x).
+\]
+
+\begin{remark}[Why this is the right test case]
+The Beale--Kato--Majda criterion is a standard continuation criterion for smooth solutions: if
+$\int_0^{T}\|\omega(s)\|_{L^\infty}\,\dd s<\infty$, then the solution continues past $T$.
+Consequently, any finite-time breakdown hypothesis for a smooth trajectory forces the growth of the
+observable $\mathcal I_x(t)$ as $t\uparrow T_*(x)$. This makes $\mathcal I_x$ the cleanest outsider-facing
+example of a PDE-side quantity that appears to detect breakdown.
+\end{remark}
+
+\begin{lemma}[BKM growth at a finite breakdown horizon]\label{lem:bkm-growth-at-breakdown}
+Let $(u_x,p_x)=\mathcal R_{\mathrm{NS}}(x)$ be a smooth realized trajectory on $[0,T_*(x))$ with
+$T_*(x)<\infty$. Then
+\[
+\lim_{t\uparrow T_*(x)} \mathcal I_x(t)=\infty.
+\]
+\end{lemma}
+
+\begin{proof}
+If $\sup_{0\le t<T_*(x)}\mathcal I_x(t)<\infty$, then the Beale--Kato--Majda criterion applies on
+$[0,T_*(x))$ and yields smooth continuation past $T_*(x)$, contradicting maximality of the realized
+trajectory. Therefore $\mathcal I_x(t)$ cannot remain bounded as $t\uparrow T_*(x)$.
+\end{proof}
+
+\subsection{Threshold selectors and forbidden same-scope gates}
+The structural point is not that $\mathcal I_x$ fails to exist. It is that using it as an independent
+same-scope continuation test requires an extra threshold, tolerance, or horizon selector not contained
+in the fixed carrier.
+
+\begin{definition}[Finite-threshold BKM gate]\label{def:finite-threshold-bkm-gate}
+Fix $M>0$ and $T>0$. The associated finite-threshold BKM gate on realized trajectories is
+\[
+G^{\mathrm{BKM}}_{M,T}(x):=\mathbf 1\!\left[\sup_{0\le t<T}\mathcal I_x(t)\le M\right].
+\]
+More generally, a BKM-profile gate is any same-scope rule asserting continuation from a comparison of
+$\mathcal I_x(t)$ with a prescribed bound, threshold, tolerance, or growth profile as $t\uparrow T$.
+\end{definition}
+
+\begin{proposition}[Worked translation: BKM-type continuation tests force $S3$]\label{prop:bkm-forces-s3}
+Let $x\in I_{\mathrm{car}}(\T^3,\nu)$ and suppose a same-scope continuation statement for the realized
+trajectory $\mathcal R_{\mathrm{NS}}(x)$ is certified by a finite-threshold BKM gate or, more generally, by a
+BKM-profile gate in the sense of Definition~\ref{def:finite-threshold-bkm-gate}. Then the certification
+instantiates the forbidden move $S3$: it introduces a threshold, tolerance, selector, or horizon rule
+not already licensed by the fixed carrier.
+\end{proposition}
+
+\begin{proof}
+The observable $\mathcal I_x(t)$ is built from the realized vorticity field and is therefore a lawful
+PDE-side quantity. The extra structure enters when one attempts to turn $\mathcal I_x$ into a
+same-scope continuation criterion.
+
+For the finite-threshold gate $G^{\mathrm{BKM}}_{M,T}$, the rule depends on the choice of the external
+parameter $M$ and on the horizon parameter $T$. Neither parameter is determined by the carrier seed,
+by the realization map, or by the horizon continuation discriminator already present in Part~III. The
+same is true for any profile gate depending on a prescribed growth profile $\Phi(T-t)$, tolerance
+$\varepsilon$, or selector determining what growth rate counts as admissible. Such data are not forced by
+lawful redescription of the realized trajectory; they are additional same-scope choices.
+
+Therefore the gate does not merely read continuation content already present on the carrier. It adds a
+threshold / tolerance / selector rule for deciding continuation from the BKM observable. That is exactly
+the structural role labeled $S3$ in the main text.
+\end{proof}
+
+\begin{corollary}[Concrete PDE-to-carrier translation of one blow-up heuristic]\label{cor:concrete-bkm-translation}
+A BKM-style blow-up heuristic does not produce an admissible independent continuation mechanism on the
+fixed torus carrier. Interpreted as a same-scope continuation gate, it forces the forbidden branch $S3$.
+If one weakens the gate by allowing local exceptions or selective tolerance to large-vorticity episodes,
+then one additionally enters the bundle-exemption branches $S1$ or $S2$.
+\end{corollary}
+
+\begin{proof}
+The first statement is Proposition~\ref{prop:bkm-forces-s3}. If the gate is weakened by saying, for
+example, that only selected portions of the trajectory, selected regions of the flow, or selected
+instances of large vorticity matter, then the rule no longer treats the bundle clauses uniformly on the
+fixed carrier. That is precisely the move-class captured by $S1$ or $S2$ in the main theorem package.
+\end{proof}
+
+\begin{remark}[What this appendix shows]
+The main proof does not require any special analytic calculation attached to the BKM observable. The
+role of this appendix is different: it shows, in one concrete and familiar PDE example, how a standard
+blow-up heuristic is translated by hand into the carrier language. The contradiction in the main line is
+therefore not a bare reclassification; it is the same mechanism exhibited abstractly in the proof spine,
+made explicit here for one canonical continuation test.
+\end{remark}
+
+
+
+\clearpage

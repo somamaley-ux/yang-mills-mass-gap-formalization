@@ -1,0 +1,22 @@
+Axiom Audit - Navier-Stokes Primitive No-Blowup Packet
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesPrimitiveNoBlowupAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperAdmissibleSameScopeBlowupWitnessStatement
+- MaleyLean.PaperTerminalObstructionAbsorbsBlowupStatement
+- MaleyLean.PaperNoAdmissibleSameScopeBlowupFromTerminalClosureStatement
+- MaleyLean.PaperPrimitiveNoBlowupBoundaryStatement
+- MaleyLean.PaperPrimitiveRestartClosureBlocksBlowupStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes primitive no-blowup packet is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

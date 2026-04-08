@@ -1,0 +1,11 @@
+import MaleyLean.NavierStokesContinuationBoundary
+
+namespace MaleyLean
+
+#print axioms PaperContinuationRelevanceFactorsThroughQuotientStatement
+#print axioms PaperSingularExtractorFactorsThroughQuotientStatement
+#print axioms PaperExtractorOutputsSameScopeStatement
+#print axioms PaperSingularExtractorNoSecondGateStatement
+#print axioms PaperContinuationBoundaryClosedStatement
+
+end MaleyLean

@@ -1,0 +1,12 @@
+import MaleyLean.NavierStokesPaperObligationLedger
+
+namespace MaleyLean
+
+#print axioms PaperSectionLedgerCompleteStatement
+#print axioms PaperSectionAnalyticReductionStatement
+#print axioms PaperPrimitiveSectionsAreStructurallyClosedStatement
+#print axioms PaperVortexStretchingSectionIsNamedFailureStatement
+#print axioms PaperEndpointTransferSectionDependsOnNamedFailureStatement
+#print axioms PaperLedgerMatchesConcreteInventoryStatement
+
+end MaleyLean

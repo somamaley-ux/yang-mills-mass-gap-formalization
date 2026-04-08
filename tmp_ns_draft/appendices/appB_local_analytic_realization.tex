@@ -1,0 +1,345 @@
+\clearpage
+\section{Self-contained local analytic realization packet}
+
+This appendix internalizes the exact local analytic subroutines used in Part~III and nothing more.
+Its role is narrow and theorem-local: it proves the periodic mean-zero Poisson solver used for
+pressure normalization, the torus heat-semigroup / Leray-projector bounds used in the mild
+realization window, the corresponding contraction estimate on $X_T^m$, the classical upgrade for
+smooth data, and overlap uniqueness for smooth periodic solutions. Classical references such as
+Leray, Hopf, and later local well-posedness papers remain historical provenance only; the results
+actually used by the proof spine are recorded below in their exact specialized form.
+
+\begin{manualproposition}[B.1 (Mean-zero torus Poisson solver)]
+\phantomsection\manualcurrentlabel{B.1}\label{prop:B1-mean-zero-poisson}
+Let $s\ge 2$, and let $f\in H^{s-2}(\T^3)$ satisfy
+\[
+\int_{\T^3} f(x)\,\dd x = 0.
+\]
+Then there exists a unique mean-zero solution $p\in H^s(\T^3)$ of
+\[
+-\Delta p = f \qquad \text{on }\T^3,
+\qquad \int_{\T^3} p(x)\,\dd x = 0.
+\]
+Moreover,
+\[
+\norm{p}_{H^s(\T^3)} \le C_s \norm{f}_{H^{s-2}(\T^3)}.
+\]
+If $f$ is smooth, then $p$ is smooth.
+\end{manualproposition}
+
+\begin{proof}
+Write
+\[
+f(x)=\sum_{k\in\mathbb Z^3}\widehat f(k)e^{ik\cdot x}.
+\]
+The mean-zero hypothesis is exactly $\widehat f(0)=0$. Define
+\[
+\widehat p(0):=0,
+\qquad
+\widehat p(k):=|k|^{-2}\widehat f(k)\quad (k\neq 0).
+\]
+Then $-\Delta p=f$ and $p$ has zero mean by construction. Uniqueness in the mean-zero gauge is
+immediate: if $-\Delta p=0$ and $\int_{\T^3}p=0$, then every Fourier mode vanishes. The estimate follows from
+\[
+(1+|k|^2)^s |\widehat p(k)|^2
+\le
+(1+|k|^2)^{s-2} |\widehat f(k)|^2
+\qquad (k\neq 0),
+\]
+after summation over $k\in\mathbb Z^3$. If $f$ is smooth, the Fourier coefficients decay faster than
+every power, and the same formula shows the same for $\widehat p$.
+\end{proof}
+
+\begin{manualcorollary}[B.2 (Pressure reconstruction in the periodic mean-zero gauge)]
+\phantomsection\manualcurrentlabel{B.2}\label{cor:B2-pressure-reconstruction}
+Let $m\ge 2$ and let $u\in H^m_\sigma(\T^3)$. Then
+\[
+f_u:=\partial_i\partial_j(u_i u_j)
+\]
+has mean zero, and there exists a unique mean-zero pressure $p[u]\in H^m(\T^3)$ satisfying
+\[
+-\Delta p[u]=\partial_i\partial_j(u_i u_j).
+\]
+Moreover,
+\[
+\norm{p[u]}_{H^m} \le C_m \norm{u}_{H^m}^2.
+\]
+If $u$ is smooth, then $p[u]$ is smooth.
+\end{manualcorollary}
+
+\begin{proof}
+Because $u_i u_j$ is periodic, integration by parts on $\T^3$ gives
+\[
+\int_{\T^3}\partial_i\partial_j(u_i u_j)\,\dd x = 0.
+\]
+Since $m>3/2$ on $\T^3$, $H^m(\T^3)$ is an algebra, so
+\[
+\norm{u_i u_j}_{H^m}\le C_m \norm{u}_{H^m}^2.
+\]
+Hence $f_u\in H^{m-2}(\T^3)$ with
+\[
+\norm{f_u}_{H^{m-2}} \le C_m \norm{u}_{H^m}^2.
+\]
+Apply Proposition~\ref{prop:B1-mean-zero-poisson} with $s=m$.
+\end{proof}
+
+\begin{manuallemma}[B.3 (Torus heat semigroup and Leray-projector bounds)]
+\phantomsection\manualcurrentlabel{B.3}\label{lem:B3-semigroup-leray}
+Let $s\ge 0$ and $\nu>0$. Then:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item the Leray projector $\Pproj$ is bounded on $H^s(\T^3;\mathbb R^3)$;
+\item the heat semigroup satisfies
+\[
+\norm{e^{\nu t\Delta}f}_{H^s}\le \norm{f}_{H^s}\qquad (t\ge 0);
+\]
+\item there exists $C_s>0$ such that for every $t>0$,
+\[
+\norm{e^{\nu t\Delta}f}_{H^{s+1}}
+\le C_s (\nu t)^{-1/2}\norm{f}_{H^s},
+\qquad
+\norm{\nabla e^{\nu t\Delta}\Pproj g}_{H^s}
+\le C_s (\nu t)^{-1/2}\norm{g}_{H^s}.
+\]
+\end{enumerate}
+\end{manuallemma}
+
+\begin{proof}
+On nonzero Fourier modes,
+\[
+\widehat{\Pproj f}(k)=\left(I-\frac{k\otimes k}{|k|^2}\right)\widehat f(k),
+\]
+and the multiplier matrix has operator norm at most $1$ uniformly in $k\neq 0$. This gives (i).
+For the heat semigroup,
+\[
+\widehat{e^{\nu t\Delta}f}(k)=e^{-\nu t|k|^2}\widehat f(k),
+\]
+so $|e^{-\nu t|k|^2}|\le 1$ and (ii) follows immediately. For (iii), use
+\[
+(1+|k|^2)^{1/2}e^{-\nu t|k|^2}\le C(\nu t)^{-1/2}
+\]
+uniformly in $k\in\mathbb Z^3$, together with the boundedness of the Leray symbol.
+\end{proof}
+
+\begin{manualproposition}[B.4 (Mild bilinear estimate on $X_T^m$)]
+\phantomsection\manualcurrentlabel{B.4}\label{prop:B4-mild-bilinear}
+Let $m\ge 3$, let $T>0$, and let
+\[
+\mathcal B(v,w)(t):=\int_0^t e^{\nu (t-s)\Delta}\Pproj\nabla\cdot(v\otimes w)(s)\,\dd s.
+\]
+Then for all $v,w\in X_T^m$,
+\[
+\norm{\mathcal B(v,w)}_{X_T^m}
+\le C_{m,\nu} T^{1/2}\norm{v}_{X_T^m}\norm{w}_{X_T^m}.
+\]
+Consequently,
+\[
+\norm{\Phi_{u_0,T}(v)-\Phi_{u_0,T}(w)}_{X_T^m}
+\le
+C_{m,\nu}T^{1/2}
+\bigl(\norm{v}_{X_T^m}+\norm{w}_{X_T^m}\bigr)
+\norm{v-w}_{X_T^m}.
+\]
+\end{manualproposition}
+
+\begin{proof}
+Because $m>3/2$, $H^m(\T^3)$ is an algebra. Hence
+\[
+\norm{v\otimes w}_{H^m}\le C_m \norm{v}_{H^m}\norm{w}_{H^m}.
+\]
+Applying Lemma~\ref{lem:B3-semigroup-leray} to $g=v\otimes w$ gives
+\[
+\norm{\mathcal B(v,w)(t)}_{H^m}
+\le
+C_{m,\nu}\int_0^t (t-s)^{-1/2}\norm{v(s)}_{H^m}\norm{w(s)}_{H^m}\,\dd s.
+\]
+Taking the time supremum and using $\int_0^t (t-s)^{-1/2}\dd s\le 2T^{1/2}$ yields
+\[
+\sup_{0\le t\le T}\norm{\mathcal B(v,w)(t)}_{H^m}
+\le
+C_{m,\nu}T^{1/2}\norm{v}_{X_T^m}\norm{w}_{X_T^m}.
+\]
+For the $L^2_tH^{m+1}_x$ part, Lemma~\ref{lem:B3-semigroup-leray} gives
+\[
+\norm{\mathcal B(v,w)(t)}_{H^{m+1}}
+\le
+C_{m,\nu}\int_0^t (t-s)^{-1/2}\norm{v(s)}_{H^m}\norm{w(s)}_{H^m}\,\dd s.
+\]
+Convolution on $[0,T]$ with the kernel $r^{-1/2}$ maps $L^\infty$ to $L^2$ with norm
+$O(T^{1/2})$, so the same bound holds for the $L^2([0,T];H^{m+1})$ term. The displayed Lipschitz
+estimate follows by writing
+\[
+v\otimes v-w\otimes w = v\otimes(v-w)+(v-w)\otimes w
+\]
+and applying the same estimate.
+\end{proof}
+
+\begin{manualtheorem}[B.5 (Local mild realization window)]
+\phantomsection\manualcurrentlabel{B.5}\label{thm:B5-local-mild-window}
+Let $m\ge 3$ and let $u_0\in H^m_\sigma(\T^3)$. Then there exist
+\[
+T_0=T_0(\nu,\norm{u_0}_{H^m})>0
+\]
+and a closed ball $B_{T_0}^m\subset X_{T_0}^m$ such that the operator $\Phi_{u_0,T_0}$ of
+Definition~\ref{def:mild-realization-operator} maps $B_{T_0}^m$ to itself and is a contraction there.
+Consequently it has a unique fixed point
+\[
+u^{(0)}\in X_{T_0}^m.
+\]
+\end{manualtheorem}
+
+\begin{proof}
+Set $M:=\norm{u_0}_{H^m}$. By Lemma~\ref{lem:B3-semigroup-leray},
+\[
+\sup_{0\le t\le T}\norm{e^{\nu t\Delta}u_0}_{H^m}\le M.
+\]
+Also
+\[
+\int_0^T \norm{e^{\nu t\Delta}u_0}_{H^{m+1}}^2\,\dd t
+\le
+C_{m,\nu} M^2,
+\]
+because on each Fourier mode
+\[
+\int_0^T (1+|k|^2)^{m+1}e^{-2\nu t|k|^2}\,\dd t
+\le
+C_\nu (1+|k|^2)^m.
+\]
+Hence
+\[
+\norm{e^{\nu t\Delta}u_0}_{X_T^m}\le C_{m,\nu}M.
+\]
+Choose
+\[
+R:=2C_{m,\nu}M
+\]
+and let $B_T^m:=\{v\in X_T^m:\norm{v}_{X_T^m}\le R\}$. For $v\in B_T^m$,
+\[
+\norm{\Phi_{u_0,T}(v)}_{X_T^m}
+\le C_{m,\nu}M + C_{m,\nu}T^{1/2}R^2
+\]
+by Proposition~\ref{prop:B4-mild-bilinear}. Choose $T_0>0$ so that
+\[
+C_{m,\nu}T_0^{1/2}R\le \tfrac14,
+\qquad
+C_{m,\nu}T_0^{1/2}R^2\le \tfrac12 R.
+\]
+Then $\Phi_{u_0,T_0}$ maps $B_{T_0}^m$ into itself and, again by
+Proposition~\ref{prop:B4-mild-bilinear},
+\[
+\norm{\Phi_{u_0,T_0}(v)-\Phi_{u_0,T_0}(w)}_{X_{T_0}^m}
+\le \tfrac12 \norm{v-w}_{X_{T_0}^m}
+\]
+for $v,w\in B_{T_0}^m$. Banach's fixed-point theorem gives the unique fixed point.
+\end{proof}
+
+\begin{manualproposition}[B.6 (Classical upgrade and smooth pressure on the local window)]
+\phantomsection\manualcurrentlabel{B.6}\label{prop:B6-classical-upgrade}
+Assume the hypotheses of Theorem~\ref{thm:B5-local-mild-window}, and suppose in addition that
+$u_0\in C^\infty(\T^3;\mathbb R^3)$ and $\nabla\cdot u_0=0$. Then the unique fixed point
+$u^{(0)}\in X_{T_0}^m$ from Theorem~\ref{thm:B5-local-mild-window} is a smooth classical solution on
+$\T^3\times[0,T_0]$, and the pressure reconstructed by Definition~\ref{def:pressure-reconstruction-operator}
+is the unique smooth mean-zero pressure associated to $u^{(0)}$.
+\end{manualproposition}
+
+\begin{proof}
+Because $u^{(0)}$ is a mild fixed point, it satisfies
+\[
+u^{(0)}(t)=e^{\nu t\Delta}u_0-\int_0^t e^{\nu(t-s)\Delta}\Pproj\nabla\cdot(u^{(0)}\otimes u^{(0)})(s)\,\dd s.
+\]
+Since $m\ge 3$, the quadratic term belongs to $C([0,T_0];H^{m-1})$, and differentiation of the
+mild formula shows that
+\[
+\partial_t u^{(0)}=\nu\Delta u^{(0)}-\Pproj\nabla\cdot(u^{(0)}\otimes u^{(0)})
+\]
+in $C([0,T_0];H^{m-2})$. Thus $u^{(0)}$ is a classical solution in the usual periodic sense.
+
+For every $\tau>0$, repeated use of the smoothing estimate in Lemma~\ref{lem:B3-semigroup-leray}
+on the Duhamel formula upgrades $u^{(0)}$ to $C([\tau,T_0];H^{m+r})$ for every integer $r\ge 0$.
+Hence $u^{(0)}$ is smooth on $\T^3\times(0,T_0]$. At $t=0$, the datum $u_0$ is smooth, and
+Corollary~\ref{cor:B2-pressure-reconstruction} gives a smooth mean-zero pressure seed. Repeated
+time differentiation of the equation therefore determines all mixed derivatives at $t=0$ recursively
+from smooth spatial data. Thus the smoothness extends to the closed strip
+$\T^3\times[0,T_0]$.
+
+Finally, for each $t\in[0,T_0]$, Corollary~\ref{cor:B2-pressure-reconstruction} applied to the
+smooth slice $u^{(0)}(t)$ gives the unique mean-zero pressure $p[u^{(0)}](t)$, and the same
+bootstrap implies that $p[u^{(0)}]$ is smooth on $\T^3\times[0,T_0]$.
+\end{proof}
+
+\begin{manualtheorem}[B.7 (Overlap uniqueness for smooth periodic realizations)]
+\phantomsection\manualcurrentlabel{B.7}\label{thm:B7-overlap-uniqueness}
+Let $(u,p)$ and $(v,q)$ be smooth periodic Navier--Stokes solution pairs on
+$\T^3\times[t_0,t_1]$ with the same viscosity, the same torus carrier, and the same mean-zero
+pressure gauge. If
+\[
+u(\cdot,t_0)=v(\cdot,t_0),
+\]
+then
+\[
+u(\cdot,t)=v(\cdot,t)
+\qquad\text{and}\qquad
+p(\cdot,t)=q(\cdot,t)
+\quad\text{for all }t\in[t_0,t_1].
+\]
+\end{manualtheorem}
+
+\begin{proof}
+Set
+\[
+w:=u-v,
+\qquad
+r:=p-q.
+\]
+Then $w$ is divergence-free and satisfies
+\[
+\partial_t w + (u\cdot\nabla)w + (w\cdot\nabla)v + \nabla r = \nu\Delta w,
+\qquad
+w(\cdot,t_0)=0.
+\]
+Taking the $L^2(\T^3)$ inner product with $w$ and integrating by parts gives
+\[
+\frac12 \frac{\dd}{\dd t}\norm{w(t)}_{L^2}^2 + \nu \norm{\nabla w(t)}_{L^2}^2
+=
+-\int_{\T^3}(w\cdot\nabla)v\cdot w\,\dd x,
+\]
+because the transport term with $u$ vanishes by $\nabla\cdot u=0$ and the pressure term vanishes by
+$\nabla\cdot w=0$. Since $v$ is smooth,
+\[
+\left|\int_{\T^3}(w\cdot\nabla)v\cdot w\,\dd x\right|
+\le
+\norm{\nabla v}_{L^\infty}\norm{w}_{L^2}^2.
+\]
+Gronwall's inequality and $w(\cdot,t_0)=0$ imply $w\equiv 0$ on $[t_0,t_1]$. Then
+\[
+-\Delta r = \partial_i\partial_j(u_i u_j-v_i v_j)=0,
+\]
+and the mean-zero pressure gauge forces $r\equiv 0$.
+\end{proof}
+
+\begin{manualcorollary}[B.8 (The local analytic packet used in Part~III)]
+\phantomsection\manualcurrentlabel{B.8}\label{cor:B8-local-analytic-packet}
+For every smooth divergence-free periodic datum $u_0$ on $\T^3$ and every fixed viscosity $\nu>0$,
+the local realization bridge used in Part~III is now fully internalized in the manuscript:
+\begin{enumerate}[label=(\roman*), leftmargin=2.2em]
+\item the mean-zero pressure seed and all later pressure slices are reconstructed uniquely by
+Proposition~\ref{prop:B1-mean-zero-poisson} and Corollary~\ref{cor:B2-pressure-reconstruction};
+\item the mild realization operator admits a unique local fixed point by
+Theorem~\ref{thm:B5-local-mild-window};
+\item for smooth data, that fixed point is a smooth classical periodic solution with smooth
+mean-zero pressure by Proposition~\ref{prop:B6-classical-upgrade};
+\item any two smooth local realization segments with the same initial slice agree on overlap by
+Theorem~\ref{thm:B7-overlap-uniqueness}.
+\end{enumerate}
+Accordingly, no statement in Part~III depends on unstated local periodic PDE folklore.
+\end{manualcorollary}
+
+\begin{proof}
+Items (i)--(iv) are exactly the statements proved above.
+\end{proof}
+
+\begin{remark}[Appendix B in the proof spine]
+Appendix~B is the only analytic appendix carrying proof load for the endpoint theorem. Its role is
+local and specialized: it does not contribute any global continuation criterion, blow-up exclusion
+theorem, or analytic replacement for Part~I. It only internalizes the realization machinery already
+isolated in Part~III.
+\end{remark}

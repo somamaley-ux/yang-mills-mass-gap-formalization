@@ -1,0 +1,22 @@
+Axiom Audit - Navier-Stokes Restart Transport Packet
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `NavierStokesRestartTransportAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperObstructionPersistsUnderRestartStatement
+- MaleyLean.PaperRestartPreservesSameScopeStatement
+- MaleyLean.PaperFailedRestartTransportCollapsesObstructionStatement
+- MaleyLean.PaperRestartTransportOrCollapseStatement
+- MaleyLean.PaperPrimitiveLocalTheorySupportsRestartTransportStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Navier-Stokes restart-transport packet is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

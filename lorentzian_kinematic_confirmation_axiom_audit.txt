@@ -1,0 +1,25 @@
+Axiom Audit - Lorentzian Kinematic Confirmation Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+in `LorentzianKinematicConfirmationAxiomCheck.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperNonLorentzAdmissibleKinematicsInducesFrameRelativeClaimsStatement
+- MaleyLean.PaperFrameRelativeSupportIsNotTheoryLevelKinematicConfirmationStatement
+- MaleyLean.PaperFixationLocalityOfFrameChangeStatement
+- MaleyLean.PaperLorentzianAdmissibilityAsEnablingConditionStatement
+- MaleyLean.PaperPreferredFrameFailureModeStatement
+- MaleyLean.PaperIdlePreferredStructurePermittedStatement
+- MaleyLean.PaperDeformedKinematicsClassificationStatement
+- MaleyLean.PaperEmergentKinematicsClassificationStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Lorentzian kinematic confirmation paper-facing surface is axiom-free.
+
+All audited declarations listed above do not depend on any axioms.

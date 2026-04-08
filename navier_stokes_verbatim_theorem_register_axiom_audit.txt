@@ -1,0 +1,8 @@
+Axiom audit for `NavierStokesVerbatimTheoremRegisterAxiomCheck.lean`.
+
+'MaleyLean.PaperVerbatimTheoremClassificationStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimTheoremRegisterAgreesWithClaimLedgerStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimStructuralTheoremsCertifiedStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimTheoremNamedFailureBoundaryStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimTheoremEndpointGapStatement' does not depend on any axioms
+'MaleyLean.PaperVerbatimTheoremRegisterInheritsAlignmentStatement' does not depend on any axioms
