@@ -1,0 +1,33 @@
+Axiom Audit - Standing Localization and Life Paper Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+for the declarations in
+`MaleyLean/Papers/StandingLocalizationLife/PaperStatements.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperNonStandingOfGloballyCoordinatedRegimesStatement
+- MaleyLean.PaperPersistenceUnderPerturbationForcesInternalRegulationStatement
+- MaleyLean.PaperMinimalLifeEquivalenceStatement
+- MaleyLean.PaperLocalizedViabilityForcesMinimalLifeStatement
+- MaleyLean.PaperConditionalInevitabilityOfLifeStatement
+- MaleyLean.PaperStandingLocalizationAdmitsLifeLikeStructuresStatement
+- MaleyLean.PaperStandingLocalizationVerifiedCoreStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Standing Localization and Life paper-facing surface in this repo is
+axiom-free.
+
+This certifies an explicit manuscript-facing theorem surface covering:
+
+- standing-localization linkage
+- exclusion of globally coordinated persistence
+- internal regulation from perturbation persistence
+- minimal-life collapse
+- the conditional inevitability theorem
+- the bundled verified-core theorem

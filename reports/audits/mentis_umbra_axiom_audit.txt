@@ -1,0 +1,43 @@
+Axiom Audit - Mentis Umbra Paper Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+for the declarations in
+`MaleyLean/Papers/MentisUmbra/PaperStatements.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperMentisUmbraSingleSystemProjectionNecessityStatement
+- MaleyLean.PaperMentisUmbraNecessityUnderRemovalStatement
+- MaleyLean.PaperMentisUmbraRoleClassificationStatement
+- MaleyLean.PaperMentisUmbraInvariantReferenceUniquenessStatement
+- MaleyLean.PaperMentisUmbraRoleClassifierCollapseStatement
+- MaleyLean.PaperMentisUmbraInteractionProjectionNecessityStatement
+- MaleyLean.PaperMentisUmbraUniversalGlobalFactorizationStatement
+- MaleyLean.PaperMentisUmbraObstructionStatement
+- MaleyLean.PaperMentisUmbraClosureStatement
+- MaleyLean.PaperMentisUmbraVerifiedCoreStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current Mentis Umbra paper-facing surface in this repo is axiom-free.
+
+This certifies an explicit manuscript-facing theorem surface covering:
+
+- mediator/reference projection packaging
+- necessity-under-removal logic
+- role-based classification as derived structural predicates
+- reference uniqueness and standing-role collapse
+- pairwise/global mediation and obstruction packaging
+- the bundled verified-core theorem
+
+This audit should be read together with the support map and status note so the
+repo records both facts at once:
+
+1. the present theorem surface is axiom-free
+2. the current certification level is a repo-native structural formalization
+   rather than a complete low-level semantics for every informal notion in the
+   manuscript prose

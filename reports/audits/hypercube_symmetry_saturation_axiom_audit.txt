@@ -1,0 +1,33 @@
+Axiom Audit - Hypercube Symmetry Saturation Paper Surface
+
+This audit tracks direct kernel-level results obtained via Lean `#print axioms`
+for the declarations in
+`MaleyLean/Papers/HypercubeSymmetrySaturation/PaperStatements.lean`.
+
+----------------------------------------
+Axiom-free declarations
+----------------------------------------
+
+- MaleyLean.PaperFullSymmetryObstructionStatement
+- MaleyLean.PaperMaximalVertexTransitiveSymmetryStatement
+- MaleyLean.PaperExactMinimizersUnderSnStatement
+- MaleyLean.PaperSnExtremizerClassificationStatement
+- MaleyLean.PaperSymmetryCostStatement
+- MaleyLean.PaperBoundarySharpnessStatement
+- MaleyLean.PaperHypercubeSymmetrySaturationVerifiedCoreStatement
+
+----------------------------------------
+Conclusion
+----------------------------------------
+
+The current hypercube symmetry/saturation paper-facing surface in this repo is
+axiom-free.
+
+This certifies an explicit manuscript-facing theorem surface covering:
+
+- full-symmetry obstruction
+- maximal `S_n` compatibility
+- exact minimizer and extremizer packaging
+- symmetry cost
+- boundary sharpness
+- the bundled verified-core theorem

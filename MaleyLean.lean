@@ -83,6 +83,10 @@ import MaleyLean.Papers.StandardModel.Support.ChargedCurrent.Derived
 import MaleyLean.Papers.StandardModel.Support.ChargedCurrent.DerivedPaperStatements
 import MaleyLean.Papers.StandardModel.Support.QCDCPodd.CoreClean
 import MaleyLean.Papers.StandardModel.Support.QCDCPodd.CleanPaperStatements
+import MaleyLean.Papers.HypercubeSymmetrySaturation.PaperStatements
+import MaleyLean.Papers.MentisUmbra.ProjectionCore
+import MaleyLean.Papers.MentisUmbra.PaperStatements
+import MaleyLean.Papers.StandingLocalizationLife.PaperStatements
 import MaleyLean.Papers.GaugeConstraintDynamics.SymplecticGeometry
 import MaleyLean.Papers.GaugeConstraintDynamics.CanonicalGR
 import MaleyLean.Papers.GaugeConstraintDynamics.EverettDecoherence

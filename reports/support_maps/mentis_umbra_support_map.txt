@@ -1,0 +1,94 @@
+Mentis Umbra Support Map
+
+Date: 2026-04-09
+
+Primary statement source
+------------------------
+
+Canonical manuscript source:
+
+- [main.tex](/d:/lean/MaleyLean/papers/mentis_umbra/main.tex)
+
+Lean support surface
+--------------------
+
+Primary Lean modules:
+
+- [ProjectionCore.lean](/d:/lean/MaleyLean/MaleyLean/Papers/MentisUmbra/ProjectionCore.lean)
+- [PaperStatements.lean](/d:/lean/MaleyLean/MaleyLean/Papers/MentisUmbra/PaperStatements.lean)
+
+Audit artifacts:
+
+- [MentisUmbraAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/MentisUmbraAxiomCheck.lean)
+- [mentis_umbra_axiom_audit.txt](/d:/lean/MaleyLean/reports/audits/mentis_umbra_axiom_audit.txt)
+
+Theorem correspondence
+----------------------
+
+Single-system projection structure
+
+- manuscript theorem family:
+  "Mediator Necessity"
+  "Invariant Reference Necessity"
+  "Single-System Projection Necessity"
+- Lean witnesses:
+  `MaleyLean.single_system_projection_of_components`
+  `MaleyLean.PaperMentisUmbraSingleSystemProjectionNecessityStatement`
+
+Necessity-under-removal
+
+- manuscript theorem:
+  "Necessity Under Removal (Single-System)"
+- Lean witness:
+  `MaleyLean.PaperMentisUmbraNecessityUnderRemovalStatement`
+
+Role-based classification
+
+- manuscript lemma / convention:
+  role predicates for agency-structure, intentional-structure, and
+  interior-representation-structure
+- Lean witnesses:
+  `MaleyLean.projection_structure_supports_role_predicates`
+  `MaleyLean.PaperMentisUmbraRoleClassificationStatement`
+
+Reference uniqueness and role collapse
+
+- manuscript strengthening:
+  uniqueness-style reference resolution and role naming as non-primitive
+  classification
+- Lean witnesses:
+  `MaleyLean.invariant_reference_uniqueness`
+  `MaleyLean.standing_role_classifier_collapse`
+  `MaleyLean.PaperMentisUmbraInvariantReferenceUniquenessStatement`
+  `MaleyLean.PaperMentisUmbraRoleClassifierCollapseStatement`
+
+Multi-system and global mediation
+
+- manuscript theorem family:
+  "Interaction Projection Necessity"
+  "Universal Global Factorization Under Triple Compatibility"
+  "Obstruction"
+  "Multi-Agent Mentis Umbra Closure"
+- Lean witnesses:
+  `MaleyLean.PaperMentisUmbraInteractionProjectionNecessityStatement`
+  `MaleyLean.PaperMentisUmbraUniversalGlobalFactorizationStatement`
+  `MaleyLean.PaperMentisUmbraObstructionStatement`
+  `MaleyLean.PaperMentisUmbraClosureStatement`
+
+Verified core bundle
+--------------------
+
+- Lean witness:
+  `MaleyLean.PaperMentisUmbraVerifiedCoreStatement`
+
+Coverage note
+-------------
+
+This Lean layer certifies the current Mentis Umbra theorem surface with
+explicit hypotheses and no hidden axioms.
+
+It does not yet claim a complete low-level formalization of:
+
+- typed alpha-renaming supply and capture-avoidance
+- concrete envelope semantics for every manuscript operator
+- full multi-agent compatibility semantics beyond the present structural layer

@@ -17,11 +17,13 @@ import Checks.Axiom.FCNCAxiomCheck
 import Checks.Axiom.GaugeConstraintDynamicsAxiomCheck
 import Checks.Axiom.GodelAxiomCheck
 import Checks.Axiom.GodelVerbatimRegisterAxiomCheck
+import Checks.Axiom.HypercubeSymmetrySaturationAxiomCheck
 import Checks.Axiom.HyperchargeAxiomCheck
 import Checks.Axiom.LongitudinalGoldstoneAxiomCheck
 import Checks.Axiom.LorentzianKinematicConfirmationAxiomCheck
 import Checks.Axiom.MathClosureAxiomCheck
 import Checks.Axiom.MetaNecessityAdmissibilityAxiomCheck
+import Checks.Axiom.MentisUmbraAxiomCheck
 import Checks.Axiom.NavierStokesContinuationBoundaryAxiomCheck
 import Checks.Axiom.NavierStokesDraftClaimRegisterAxiomCheck
 import Checks.Axiom.NavierStokesHorizonCollapseAxiomCheck
@@ -50,6 +52,7 @@ import Checks.Axiom.StandardModelL1SupportBundleAxiomCheck
 import Checks.Axiom.StandardModelStructuralAxiomCheck
 import Checks.Axiom.StandardModelSupportAxiomCheck
 import Checks.Axiom.StandardModelUmbrellaVerifiedCoreAxiomCheck
+import Checks.Axiom.StandingLocalizationLifeAxiomCheck
 import Checks.Axiom.SymplecticGeometryAxiomCheck
 import Checks.Axiom.TmpClaimLedgerDirectAxiomCheck
 import Checks.Axiom.UniquenessAxiomCheck

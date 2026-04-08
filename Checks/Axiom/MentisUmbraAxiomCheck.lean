@@ -1,0 +1,16 @@
+import MaleyLean.Papers.MentisUmbra.PaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperMentisUmbraSingleSystemProjectionNecessityStatement
+#print axioms PaperMentisUmbraNecessityUnderRemovalStatement
+#print axioms PaperMentisUmbraRoleClassificationStatement
+#print axioms PaperMentisUmbraInvariantReferenceUniquenessStatement
+#print axioms PaperMentisUmbraRoleClassifierCollapseStatement
+#print axioms PaperMentisUmbraInteractionProjectionNecessityStatement
+#print axioms PaperMentisUmbraUniversalGlobalFactorizationStatement
+#print axioms PaperMentisUmbraObstructionStatement
+#print axioms PaperMentisUmbraClosureStatement
+#print axioms PaperMentisUmbraVerifiedCoreStatement
+
+end MaleyLean

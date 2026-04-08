@@ -1,0 +1,75 @@
+Standing Localization and Life Support Map
+
+Date: 2026-04-09
+
+Primary statement source
+------------------------
+
+Canonical manuscript source:
+
+- [main.tex](/d:/lean/MaleyLean/papers/standing_localization_life/main.tex)
+
+Lean support surface
+--------------------
+
+Primary Lean module:
+
+- [PaperStatements.lean](/d:/lean/MaleyLean/MaleyLean/Papers/StandingLocalizationLife/PaperStatements.lean)
+
+Audit artifacts:
+
+- [StandingLocalizationLifeAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/StandingLocalizationLifeAxiomCheck.lean)
+- [standing_localization_life_axiom_audit.txt](/d:/lean/MaleyLean/reports/audits/standing_localization_life_axiom_audit.txt)
+
+Theorem correspondence
+----------------------
+
+Localization constraint
+
+- manuscript lemma:
+  "Non-Standing of Globally Coordinated Regimes"
+- Lean witness:
+  `MaleyLean.PaperNonStandingOfGloballyCoordinatedRegimesStatement`
+
+Persistence and regulation
+
+- manuscript section / lemma family:
+  persistence under perturbation
+  internal regulation
+  minimal life equivalence
+- Lean witnesses:
+  `MaleyLean.PaperPersistenceUnderPerturbationForcesInternalRegulationStatement`
+  `MaleyLean.PaperMinimalLifeEquivalenceStatement`
+  `MaleyLean.PaperLocalizedViabilityForcesMinimalLifeStatement`
+
+Central theorem
+
+- manuscript theorem:
+  "Conditional Inevitability of Life-Like Structures"
+- Lean witness:
+  `MaleyLean.PaperConditionalInevitabilityOfLifeStatement`
+
+Admitted existence form
+
+- manuscript conclusion:
+  standing-supporting physical regimes must admit life-like structures
+- Lean witness:
+  `MaleyLean.PaperStandingLocalizationAdmitsLifeLikeStructuresStatement`
+
+Verified core bundle
+--------------------
+
+- Lean witness:
+  `MaleyLean.PaperStandingLocalizationVerifiedCoreStatement`
+
+Coverage note
+-------------
+
+This Lean layer certifies the current manuscript-facing structural spine with
+explicit hypotheses and no hidden axioms.
+
+It does not yet claim a full internalization of:
+
+- low-level localization physics
+- perturbation dynamics in detail
+- biological or chemical realization conditions

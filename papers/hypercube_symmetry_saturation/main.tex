@@ -1,0 +1,179 @@
+% !TEX program = pdflatex
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\title{Symmetry Constraints and Saturation in the Hypercube}
+\author{Amos Jay Maley}
+\date{\today}
+
+% ---------- Theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---------- Notation ----------
+\newcommand{\Qn}{Q_n}
+\newcommand{\Aut}{\mathrm{Aut}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study square-free saturated subgraphs of the $n$-dimensional hypercube under symmetry constraints.  
+Introducing a symmetry-restricted saturation parameter, we show that full automorphism invariance precludes nontrivial saturation for $n\ge3$.  
+We then identify the largest vertex-transitive symmetry group compatible with saturation, determine the exact minimum edge count under this symmetry, and classify all extremal configurations.  
+This establishes a sharp boundary between symmetry and maximal square-avoidance in the hypercube.
+\end{abstract}
+
+\section{Introduction}
+
+Let $\Qn$ denote the $n$-dimensional hypercube.  
+A copy of $Q_2$ in $\Qn$ is a $4$-cycle induced by two coordinates.  
+A subgraph $G\subseteq \Qn$ is \emph{$(Q_n,Q_2)$-saturated} if it contains no $4$-cycle, but the addition of any missing cube-edge creates one.
+
+Saturated subgraphs of the hypercube have been studied extensively without symmetry restrictions.  
+In this paper we initiate a complementary viewpoint: \emph{extremal saturation under symmetry constraints}.
+
+\subsection{A symmetry-restricted saturation parameter}
+
+Let $H\le \Aut(\Qn)$ be a subgroup of the hypercube automorphism group.
+
+\begin{definition}
+Define
+\[
+\mathrm{sat}_H(\Qn,Q_2)
+\;=\;
+\min\{|E(G)|:\;
+G\subseteq \Qn,\;
+G\text{ is $(Q_n,Q_2)$-saturated and $H$-invariant}\}.
+\]
+\end{definition}
+
+The goal is to understand how increasing symmetry restricts maximal square-avoidance.
+
+\section{Full Symmetry Obstruction}
+
+We begin with a necessary boundary observation.
+
+\begin{lemma}[Full symmetry obstruction]
+For $n\ge3$, no proper $\Aut(\Qn)$-invariant $(Q_n,Q_2)$-saturated subgraph of $\Qn$ exists.
+\end{lemma}
+
+\begin{proof}
+The automorphism group $\Aut(\Qn)$ acts transitively on edges.  
+Hence any $\Aut(\Qn)$-invariant edge set is either empty or all of $E(\Qn)$.  
+A saturated subgraph must be nonempty and proper, which is impossible under full invariance.
+\end{proof}
+
+\begin{remark}
+This lemma is not presented as a deep result, but as a structural obstruction motivating the search for the largest symmetry compatible with saturation.
+\end{remark}
+
+\section{Maximal Symmetry Compatible with Saturation}
+
+Let $S_n$ denote the group acting on $\Qn$ by permuting coordinates (without bit-flips).
+
+\begin{lemma}
+Any vertex-transitive subgroup $H\le\Aut(\Qn)$ strictly containing $S_n$ is edge-transitive.
+\end{lemma}
+
+\begin{proof}
+Any element of $\Aut(\Qn)$ outside $S_n$ introduces a nontrivial bit-flip.  
+Together with coordinate permutations, this generates the full automorphism group, which is edge-transitive.
+\end{proof}
+
+\begin{corollary}
+Among vertex-transitive subgroups of $\Aut(\Qn)$, $S_n$ is maximal with more than one edge orbit.
+\end{corollary}
+
+Thus $S_n$ is the largest vertex-transitive symmetry group under which nontrivial invariant edge-sets exist.
+
+\section{$S_n$-Invariant Saturated Subgraphs}
+
+\subsection{Orbit structure}
+
+Under the action of $S_n$, edges of $\Qn$ decompose into $n$ orbits, one for each coordinate direction.  
+Any $S_n$-invariant subgraph is determined by the subset of coordinate orbits it contains.
+
+\subsection{Square forcing}
+
+Each $4$-cycle in $\Qn$ corresponds to a pair of coordinates.  
+Saturation imposes explicit constraints: omitting too many coordinate directions leaves a square unguarded.
+
+\section{Classification of Extremal Configurations}
+
+\begin{theorem}[Exact minimizers under $S_n$]
+For $n\ge3$:
+\begin{enumerate}[label=(\roman*)]
+\item $\mathrm{sat}_{S_n}(\Qn,Q_2)$ is attained.
+\item The minimum edge count equals
+\[
+\mathrm{sat}_{S_n}(\Qn,Q_2)
+=
+(n-1)2^{n-1}.
+\]
+\item Every minimizer is obtained by omitting exactly one coordinate direction (up to symmetry), with a fixed parity orientation.
+\item No other $S_n$-invariant saturated subgraph attains this minimum.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Omitting two or more coordinate directions leaves a square with both directions absent, violating saturation.  
+Omitting exactly one direction yields a square-free subgraph in which every missing edge is witnessed by a $4$-cycle.  
+Counting edges gives the stated minimum.  
+Uniqueness follows from orbit considerations.
+\end{proof}
+
+\section{Cost of Symmetry}
+
+Let $\mathrm{sat}(\Qn,Q_2)$ denote the unrestricted saturation number.
+
+\begin{corollary}
+For $n\ge3$,
+\[
+\mathrm{sat}_{S_n}(\Qn,Q_2)
+>
+\mathrm{sat}(\Qn,Q_2),
+\qquad
+\text{but}\qquad
+\mathrm{sat}_{S_n}(\Qn,Q_2)
+=
+\Theta(\mathrm{sat}(\Qn,Q_2)).
+\]
+\end{corollary}
+
+\begin{remark}
+Thus symmetry imposes a genuine extremal cost, while preserving the correct order of magnitude.
+\end{remark}
+
+\section{Boundary Sharpness}
+
+\begin{theorem}
+Let $H\le\Aut(\Qn)$ be vertex-transitive.
+If $H\not\subseteq S_n$, then either:
+\begin{enumerate}[label=(\roman*)]
+\item $\mathrm{sat}_H(\Qn,Q_2)$ is undefined, or
+\item every $H$-invariant minimizer coincides with an $S_n$-orbit extremizer.
+\end{enumerate}
+\end{theorem}
+
+\section{Small Dimensions}
+
+The cases $n=1,2$ are degenerate.  
+For $n=3$, all claims can be verified by direct inspection.
+
+\section{Conclusion}
+
+We identify the largest vertex-transitive symmetry compatible with maximal square-avoidance in the hypercube and classify all extremal configurations under that symmetry.  
+This introduces symmetry-restricted saturation as a new extremal lens for problems on structured graphs.
+
+\end{document}

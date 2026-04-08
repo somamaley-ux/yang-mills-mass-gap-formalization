@@ -1,0 +1,13 @@
+import MaleyLean.Papers.HypercubeSymmetrySaturation.PaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperFullSymmetryObstructionStatement
+#print axioms PaperMaximalVertexTransitiveSymmetryStatement
+#print axioms PaperExactMinimizersUnderSnStatement
+#print axioms PaperSnExtremizerClassificationStatement
+#print axioms PaperSymmetryCostStatement
+#print axioms PaperBoundarySharpnessStatement
+#print axioms PaperHypercubeSymmetrySaturationVerifiedCoreStatement
+
+end MaleyLean

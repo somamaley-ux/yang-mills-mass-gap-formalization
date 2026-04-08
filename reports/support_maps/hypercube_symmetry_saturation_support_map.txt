@@ -1,0 +1,75 @@
+Hypercube Symmetry Saturation Support Map
+
+Date: 2026-04-09
+
+Primary statement source
+------------------------
+
+Canonical manuscript source:
+
+- [main.tex](/d:/lean/MaleyLean/papers/hypercube_symmetry_saturation/main.tex)
+
+Lean support surface
+--------------------
+
+Primary Lean module:
+
+- [PaperStatements.lean](/d:/lean/MaleyLean/MaleyLean/Papers/HypercubeSymmetrySaturation/PaperStatements.lean)
+
+Audit artifacts:
+
+- [HypercubeSymmetrySaturationAxiomCheck.lean](/d:/lean/MaleyLean/Checks/Axiom/HypercubeSymmetrySaturationAxiomCheck.lean)
+- [hypercube_symmetry_saturation_axiom_audit.txt](/d:/lean/MaleyLean/reports/audits/hypercube_symmetry_saturation_axiom_audit.txt)
+
+Theorem correspondence
+----------------------
+
+Full symmetry obstruction
+
+- manuscript lemma:
+  "Full symmetry obstruction"
+- Lean witness:
+  `MaleyLean.PaperFullSymmetryObstructionStatement`
+
+Maximal symmetry compatibility
+
+- manuscript lemma/corollary:
+  maximal vertex-transitive symmetry compatible with saturation
+- Lean witness:
+  `MaleyLean.PaperMaximalVertexTransitiveSymmetryStatement`
+
+Exact minimizers under `S_n`
+
+- manuscript theorem:
+  "Exact minimizers under `S_n`"
+- Lean witnesses:
+  `MaleyLean.sn_candidate_edge_count`
+  `MaleyLean.PaperExactMinimizersUnderSnStatement`
+  `MaleyLean.PaperSnExtremizerClassificationStatement`
+
+Cost of symmetry and boundary sharpness
+
+- manuscript corollary/theorem:
+  symmetry cost
+  boundary sharpness
+- Lean witnesses:
+  `MaleyLean.PaperSymmetryCostStatement`
+  `MaleyLean.PaperBoundarySharpnessStatement`
+
+Verified core bundle
+--------------------
+
+- Lean witness:
+  `MaleyLean.PaperHypercubeSymmetrySaturationVerifiedCoreStatement`
+
+Coverage note
+-------------
+
+This Lean layer certifies the current manuscript-facing symmetry/saturation
+spine with explicit hypotheses and no hidden axioms.
+
+It does not yet claim a full internalization of:
+
+- low-level hypercube graph theory
+- constructive orbit decomposition proofs
+- complete extremizer enumeration machinery

@@ -1,0 +1,13 @@
+import MaleyLean.Papers.StandingLocalizationLife.PaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperNonStandingOfGloballyCoordinatedRegimesStatement
+#print axioms PaperPersistenceUnderPerturbationForcesInternalRegulationStatement
+#print axioms PaperMinimalLifeEquivalenceStatement
+#print axioms PaperLocalizedViabilityForcesMinimalLifeStatement
+#print axioms PaperConditionalInevitabilityOfLifeStatement
+#print axioms PaperStandingLocalizationAdmitsLifeLikeStructuresStatement
+#print axioms PaperStandingLocalizationVerifiedCoreStatement
+
+end MaleyLean
