@@ -2,6 +2,21 @@ Godel Support Map
 
 Date: 2026-04-07
 
+Update note
+-----------
+
+The manuscript has since been updated under the title:
+
+- `Non-Instantiability of Same-Domain Godel Threat Architectures in the Unique Admissible Interior`
+
+The original theorem surface in `MaleyLean/GodelPaperStatements.lean` remains
+the main paper-facing Lean support file, and the updated manuscript wording is
+now tracked by:
+
+- [GodelVerbatimRegister.lean](/d:/lean/MaleyLean/MaleyLean/GodelVerbatimRegister.lean)
+- [GodelVerbatimRegisterAxiomCheck.lean](/d:/lean/MaleyLean/GodelVerbatimRegisterAxiomCheck.lean)
+- [godel_verbatim_register_axiom_audit.txt](/d:/lean/MaleyLean/godel_verbatim_register_axiom_audit.txt)
+
 Primary statement source
 ------------------------
 
@@ -15,11 +30,14 @@ Lean support surface
 Primary Lean module:
 
 - [GodelPaperStatements.lean](/d:/lean/MaleyLean/MaleyLean/GodelPaperStatements.lean)
+- [GodelVerbatimRegister.lean](/d:/lean/MaleyLean/MaleyLean/GodelVerbatimRegister.lean)
 
 Audit artifacts:
 
 - [GodelAxiomCheck.lean](/d:/lean/MaleyLean/GodelAxiomCheck.lean)
 - [godel_axiom_audit.txt](/d:/lean/MaleyLean/godel_axiom_audit.txt)
+- [GodelVerbatimRegisterAxiomCheck.lean](/d:/lean/MaleyLean/GodelVerbatimRegisterAxiomCheck.lean)
+- [godel_verbatim_register_axiom_audit.txt](/d:/lean/MaleyLean/godel_verbatim_register_axiom_audit.txt)
 
 Theorem correspondence
 ----------------------

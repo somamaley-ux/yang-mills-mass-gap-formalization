@@ -1,0 +1,6 @@
+Axiom audit for `GodelVerbatimRegisterAxiomCheck.lean`.
+
+'MaleyLean.PaperGodelUpdatedTitleRegisteredStatement' does not depend on any axioms
+'MaleyLean.PaperGodelVerbatimSectionRegisterCompleteStatement' does not depend on any axioms
+'MaleyLean.PaperGodelVerbatimTheoremRegisterCompleteStatement' does not depend on any axioms
+'MaleyLean.PaperGodelVerbatimTerminalTheoremMatchesSurfaceStatement' does not depend on any axioms

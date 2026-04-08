@@ -11,6 +11,7 @@ import MaleyLean.NoGeneratorsConstructive
 import MaleyLean.ATSPaperStatements
 import MaleyLean.AmetricPaperStatements
 import MaleyLean.GodelPaperStatements
+import MaleyLean.GodelVerbatimRegister
 import MaleyLean.UniquenessPaperStatements
 import MaleyLean.BivalentTrajectoryPaperStatements
 import MaleyLean.EmpiricalCompletenessCore
