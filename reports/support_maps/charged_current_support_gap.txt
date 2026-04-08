@@ -12,8 +12,9 @@ Primary statement source used here
 ----------------------------------
 
 The PDF itself does not text-extract cleanly in the current environment, so this
-note uses the umbrella manuscript source `.tmp_standard_model_main.tex` as the
-primary local source for the charged-current theorem cluster.
+note uses the umbrella manuscript source
+`.standard_model_paper/sources/umbrella_main.tex` as the primary local source
+for the charged-current theorem cluster.
 
 Relevant umbrella sections
 --------------------------

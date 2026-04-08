@@ -8,12 +8,12 @@ inspected directly.
 Available extracted sources
 ---------------------------
 
-- .tmp_paper5_main.tex
-- .tmp_paper6_main.tex
-- .tmp_paper8_main.tex
-- .tmp_paper9_main.tex
-- .tmp_paper10_main.tex
-- .tmp_paper11_main.tex
+- .standard_model_paper/sources/paper5_main.tex
+- .standard_model_paper/sources/paper6_main.tex
+- .standard_model_paper/sources/paper8_main.tex
+- .standard_model_paper/sources/paper9_main.tex
+- .standard_model_paper/sources/paper10_main.tex
+- .standard_model_paper/sources/paper11_main.tex
 
 Core theorem shapes
 -------------------
