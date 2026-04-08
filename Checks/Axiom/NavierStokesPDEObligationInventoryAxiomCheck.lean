@@ -1,0 +1,11 @@
+import MaleyLean.Papers.NavierStokes.Obligations.Inventory
+
+namespace MaleyLean
+
+#print axioms PaperObligationInventoryCompleteStatement
+#print axioms PaperAnalyticInventoryReducesToNamedFailureStatement
+#print axioms PaperConcreteRegisterMatchesInventoryStatement
+#print axioms PaperConcreteRegisterHasNamedFailureStatement
+#print axioms PaperConcreteRegisterReducesAnalyticBurdenStatement
+
+end MaleyLean

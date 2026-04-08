@@ -1,0 +1,11 @@
+import MaleyLean.Papers.StandardModel.Support.ChargedCurrent.DerivedPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperChargedCurrentRestrictedCollapseStatement
+#print axioms PaperNoIndependentRestrictedChargedCurrentDegreeStatement
+#print axioms PaperChargedCurrentExtendedScopeWitnessStatement
+#print axioms PaperChargedCurrentRestrictedFormulaChainStatement
+#print axioms PaperChargedCurrentExtendedWitnessReconstructionStatement
+
+end MaleyLean

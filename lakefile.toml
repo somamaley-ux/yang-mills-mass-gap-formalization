@@ -1,7 +1,11 @@
 name = "MaleyLean"
 version = "0.1.0"
-defaultTargets = ["MaleyLean"]
+defaultTargets = ["MaleyLean", "Checks"]
 
 [[lean_lib]]
 name = "MaleyLean"
 root = "Main"
+
+[[lean_lib]]
+name = "Checks"
+root = "Checks"

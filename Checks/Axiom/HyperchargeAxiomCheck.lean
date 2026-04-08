@@ -1,0 +1,10 @@
+import MaleyLean.Papers.StandardModel.Support.Hypercharge.DerivedPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperHyperchargeChargeQuantizationEquivalenceStatement
+#print axioms PaperNoHyperchargeQuantizationSplitStatement
+#print axioms PaperHyperchargeSharedWitnessStatement
+#print axioms PaperNoHyperchargeSharedWitnessSplitStatement
+
+end MaleyLean

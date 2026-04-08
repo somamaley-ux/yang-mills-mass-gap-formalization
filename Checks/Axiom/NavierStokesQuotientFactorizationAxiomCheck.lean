@@ -1,0 +1,12 @@
+import MaleyLean.Papers.Meta.PrimitiveToPeriodicLocalTheory
+import MaleyLean.Papers.NavierStokes.Primitive.QuotientFactorization
+
+namespace MaleyLean
+
+#print axioms PaperFutureBehaviorQuotientStatement
+#print axioms PaperHistoryFactorizationNoPathDependentAdmissibilityStatement
+#print axioms PaperSameScopeDiscriminatorFactorizationStatement
+#print axioms PaperNoSecondGateSameScopeStatement
+#print axioms PaperPrimitivePeriodicPacketWithQuotientStatement
+
+end MaleyLean

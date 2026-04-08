@@ -1,0 +1,13 @@
+import MaleyLean.Papers.Meta.PrimitiveToPeriodicLocalTheory
+
+namespace MaleyLean
+
+#print axioms PaperDatumEntryToAdmittedCarrierStatement
+#print axioms PaperLocalRealizationOnCarrierStatement
+#print axioms PaperRestartConsistencySameObjectPersistenceStatement
+#print axioms PaperPreHorizonSliceReentryStatement
+#print axioms PaperFiniteHorizonWitnessVisibilityStatement
+#print axioms PaperPrimitivePeriodicLocalTheoryPacketStatement
+#print axioms PaperPrimitiveBridgeCompatibleWithAnomalyBoundaryStatement
+
+end MaleyLean

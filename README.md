@@ -36,14 +36,14 @@ the remaining analytic burden sits.
 The Lean surface certifies the structural part of the manuscript route as
 axiom-free. In particular, the current finalized manuscript-facing layers are:
 
-- `MaleyLean.NavierStokesVerbatimSubsectionRegister`
-- `MaleyLean.NavierStokesVerbatimTheoremRegister`
-- `MaleyLean.NavierStokesVerbatimDependencySpineSimple`
-- `MaleyLean.NavierStokesVortexStretchingNonLoadBearing`
-- `MaleyLean.NavierStokesPaperSurfaceSummaryClean`
+- `MaleyLean.Papers.NavierStokes.Verbatim.SubsectionRegister`
+- `MaleyLean.Papers.NavierStokes.Verbatim.TheoremRegister`
+- `MaleyLean.Papers.NavierStokes.Verbatim.DependencySpineSimple`
+- `MaleyLean.Papers.NavierStokes.Surface.VortexStretchingNonLoadBearing`
+- `MaleyLean.Papers.NavierStokes.Surface.SummaryClean`
 
 The top-level summary theorem in
-`MaleyLean.NavierStokesPaperSurfaceSummaryClean` packages the current state
+`MaleyLean.Papers.NavierStokes.Surface.SummaryClean` packages the current state
 into one axiom-free manuscript-facing statement.
 
 ### What is not claimed
@@ -95,23 +95,24 @@ would amount to introducing a hidden second gate.
 If you want the shortest path through the finalized Navier--Stokes layer, read
 these in order:
 
-1. `MaleyLean/NavierStokesPrimitiveNoBlowup.lean`
-2. `MaleyLean/NavierStokesPDEObligationInventory.lean`
-3. `MaleyLean/NavierStokesVerbatimSubsectionRegister.lean`
-4. `MaleyLean/NavierStokesVerbatimTheoremRegister.lean`
-5. `MaleyLean/NavierStokesVerbatimDependencySpineSimple.lean`
-6. `MaleyLean/NavierStokesVortexStretchingNonLoadBearing.lean`
-7. `MaleyLean/NavierStokesPaperSurfaceSummaryClean.lean`
+1. `MaleyLean/Papers/NavierStokes/Primitive/NoBlowup.lean`
+2. `MaleyLean/Papers/NavierStokes/Obligations/Inventory.lean`
+3. `MaleyLean/Papers/NavierStokes/Verbatim/SubsectionRegister.lean`
+4. `MaleyLean/Papers/NavierStokes/Verbatim/TheoremRegister.lean`
+5. `MaleyLean/Papers/NavierStokes/Verbatim/DependencySpineSimple.lean`
+6. `MaleyLean/Papers/NavierStokes/Surface/VortexStretchingNonLoadBearing.lean`
+7. `MaleyLean/Papers/NavierStokes/Surface/SummaryClean.lean`
 
 ### Verification
 
-The final manuscript-facing Navier--Stokes surface has dedicated axiom checks,
-including:
+The final manuscript-facing Navier--Stokes surface has dedicated axiom checks
+under `Checks/Axiom/`, including:
 
-- `NavierStokesVerbatimSubsectionRegisterAxiomCheck.lean`
-- `NavierStokesVerbatimTheoremRegisterAxiomCheck.lean`
-- `NavierStokesVerbatimDependencySpineSimpleAxiomCheck.lean`
-- `NavierStokesVortexStretchingNonLoadBearingAxiomCheck.lean`
-- `NavierStokesPaperSurfaceSummaryCleanAxiomCheck.lean`
+- `Checks/Axiom/NavierStokesVerbatimSubsectionRegisterAxiomCheck.lean`
+- `Checks/Axiom/NavierStokesVerbatimTheoremRegisterAxiomCheck.lean`
+- `Checks/Axiom/NavierStokesVerbatimDependencySpineSimpleAxiomCheck.lean`
+- `Checks/Axiom/NavierStokesVortexStretchingNonLoadBearingAxiomCheck.lean`
+- `Checks/Axiom/NavierStokesPaperSurfaceSummaryCleanAxiomCheck.lean`
 
-Their audit files report the finalized surface as axiom-free.
+Their audit files now live under `reports/audits/` and report the finalized
+surface as axiom-free.

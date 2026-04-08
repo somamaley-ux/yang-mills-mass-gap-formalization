@@ -1,0 +1,13 @@
+import MaleyLean.Papers.NavierStokes.Continuation.MaximalLineageClosure
+
+namespace MaleyLean
+
+#print axioms PaperTerminalObstructionOnMaximalLineageStatement
+#print axioms PaperNoTerminalSecondGateStatement
+#print axioms PaperMaximalLineageClosurePrincipleStatement
+#print axioms PaperFailedTerminalTransportIsSecondGateStatement
+#print axioms PaperTerminalBoundaryOrSecondGateStatement
+#print axioms PaperRestartCompatibleTerminalObstructionClosesLineageStatement
+#print axioms PaperPrimitiveRestartToMaximalLineageClosureStatement
+
+end MaleyLean

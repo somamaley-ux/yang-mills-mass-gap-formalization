@@ -1,0 +1,11 @@
+import MaleyLean.Papers.NavierStokes.Obligations.Register
+
+namespace MaleyLean
+
+#print axioms PaperPrimitiveToPDEObligationPacketStatement
+#print axioms PaperVortexStretchingNamedFailureStatement
+#print axioms PaperAllObligationsDischargedExceptNamedFailureStatement
+#print axioms PaperPrimitiveBoundaryReducesPDEBurdenStatement
+#print axioms PaperPrimitiveNoBlowupToNamedPDEGapStatement
+
+end MaleyLean

@@ -1,0 +1,10 @@
+import MaleyLean.Papers.StandardModel.Support.YukawaMass.DerivedPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperFermionYukawaMassEquivalenceStatement
+#print axioms PaperNoIndependentYukawaDegreeStatement
+#print axioms PaperYukawaMassSharedWitnessStatement
+#print axioms PaperNoYukawaMassWitnessSplitStatement
+
+end MaleyLean

@@ -1,0 +1,9 @@
+import MaleyLean.Papers.StandardModel.Support.QCDCPodd.CleanPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperQCDBarThetaInvariantCleanStatement
+#print axioms PaperQCDCPoddCollapseCleanStatement
+#print axioms PaperNoQCDCPoddObservableSplitCleanStatement
+
+end MaleyLean

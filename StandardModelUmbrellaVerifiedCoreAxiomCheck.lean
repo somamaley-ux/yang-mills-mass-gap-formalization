@@ -1,7 +1,0 @@
-import MaleyLean.StandardModelUmbrellaVerifiedCore
-
-namespace MaleyLean
-
-#print axioms PaperStandardModelUmbrellaVerifiedCoreStatement
-
-end MaleyLean

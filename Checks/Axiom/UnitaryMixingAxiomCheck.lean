@@ -1,0 +1,10 @@
+import MaleyLean.Papers.StandardModel.Support.UnitaryMixing.DerivedPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperUnitaryMixingSaturationStatement
+#print axioms PaperNoResidualUnitaryMixingStatement
+#print axioms PaperUnitaryMixingSharedWitnessStatement
+#print axioms PaperNoUnitaryMixingWitnessSplitStatement
+
+end MaleyLean

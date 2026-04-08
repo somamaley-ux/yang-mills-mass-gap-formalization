@@ -1,0 +1,12 @@
+import MaleyLean.Papers.NavierStokes.Verbatim.TheoremRegister
+
+namespace MaleyLean
+
+#print axioms PaperVerbatimTheoremClassificationStatement
+#print axioms PaperVerbatimTheoremRegisterAgreesWithClaimLedgerStatement
+#print axioms PaperVerbatimStructuralTheoremsCertifiedStatement
+#print axioms PaperVerbatimTheoremNamedFailureBoundaryStatement
+#print axioms PaperVerbatimTheoremEndpointGapStatement
+#print axioms PaperVerbatimTheoremRegisterInheritsAlignmentStatement
+
+end MaleyLean

@@ -1,0 +1,10 @@
+import MaleyLean.Papers.StandardModel.Support.LongitudinalGoldstone.DerivedPaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperLongitudinalGoldstoneEquivalenceStatement
+#print axioms PaperNoIndependentLongitudinalDegreeStatement
+#print axioms PaperLongitudinalGoldstoneSharedWitnessStatement
+#print axioms PaperNoLongitudinalGoldstoneWitnessSplitStatement
+
+end MaleyLean

@@ -1,5 +1,0 @@
-import MaleyLean.NavierStokesSectionTheoremLedger
-namespace MaleyLean
-#print PaperVortexStretchingClaimIsNamedFailureStatement
-#print PaperClaimSupportClassificationStatement
-end MaleyLean
