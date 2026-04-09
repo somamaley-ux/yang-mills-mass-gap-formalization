@@ -62,6 +62,28 @@ kernel formalization and theorem-facing export?"
 - `MaleyLean/Papers/YangMills/Kernel/TheoremBridgeConsequences.lean`
 - `MaleyLean/Papers/YangMills/Kernel/TheoremAssemblyWitness.lean`
 
+### Canonical alignment-free boundary
+
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalCoreOutputAssembly.lean`
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalRouteClosure.lean`
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalTheoremAssemblyWitness.lean`
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalVerifiedPayload.lean`
+- `MaleyLean/Papers/YangMills/Surface/CanonicalVerifiedPayloadSummary.lean`
+
+### Explicit heart-level statement path
+
+- `MaleyLean/Papers/YangMills/Kernel/ConstructiveCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/VacuumGapCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/EndpointCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/ExplicitHeartStatementAssembly.lean`
+- `MaleyLean/Papers/YangMills/Surface/ExplicitHeartStatementAssemblySummary.lean`
+
+### Preferred submission-facing theorem path
+
+- `MaleyLean/Papers/YangMills/Kernel/PaperClaimStatements.lean`
+- `MaleyLean/Papers/YangMills/Kernel/FaithfulPaperTheoremAssembly.lean`
+- `MaleyLean/Papers/YangMills/Surface/Summary.lean`
+
 ### Deep native path
 
 - `MaleyLean/Papers/YangMills/Kernel/NativeLawAssembly.lean`
@@ -74,6 +96,17 @@ kernel formalization and theorem-facing export?"
 
 Relative to the Yang-Mills inventory encoded in this repository, all currently
 registered live claim families appear covered.
+
+The repository now also contains a separate canonical alignment-free payload
+path that records the exact non-arbitrary verified content currently available,
+without relying on theorem-part landing maps.
+
+It also now contains an explicit heart-statement path in which Part C, Part D,
+and the endpoint route are stated as direct output conjunctions rather than only
+through abstract `*_part` placeholders.
+
+It now also contains a theorem-register-keyed paper-claim path, and the main
+surface summary includes that repaired theorem-facing boundary.
 
 No obvious local unfinished markers were found in `MaleyLean/Papers/YangMills`,
 and the current workflow-level Yang-Mills verification passes.

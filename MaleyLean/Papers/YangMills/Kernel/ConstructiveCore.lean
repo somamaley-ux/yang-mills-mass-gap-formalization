@@ -81,6 +81,21 @@ def ym_laneA_constructive_core (R : YMConstructiveRoute) : Prop :=
   R.inductive_union_ready ->
   R.constructive_part
 
+/--
+Explicit paper-facing Lane~A statement carried by the current constructive core.
+
+Unlike `constructive_part`, this does not hide behind an abstract placeholder:
+it names the concrete finite-cap and sharp-local outputs that the current
+constructive route exposes.
+-/
+def ym_laneA_explicit_statement (R : YMConstructiveRoute) : Prop :=
+  R.finite_cap_package.truncation_window_ready /\
+  R.finite_cap_package.finite_cap_extension_ready /\
+  R.finite_cap_package.positive_bridge_ready /\
+  R.sharp_local_package.bounded_state_compatibility_ready /\
+  R.sharp_local_package.inductive_union_ready /\
+  R.sharp_local_package.sharp_local_state.extends_bounded_base
+
 theorem YangMillsFiniteCapBridgeCoreStatement
   (R : YMConstructiveRoute)
   (h : ym_finite_cap_bridge_core R)
@@ -203,5 +218,57 @@ theorem YangMillsConstructiveCoreExhibitsNamedOutputsStatement
       And.intro hcap.2.2 <|
         And.intro hsharp.1 <|
           And.intro hsharp.2.1 hsharp.2.2
+
+theorem YangMillsLaneAExplicitStatementFromReadinessStatement
+  (R : YMConstructiveRoute)
+  (htrunc : R.finite_truncation_ready)
+  (hext : R.finite_cap_extension_ready)
+  (hcompat : R.bounded_state_compatibility_ready)
+  (hunion : R.inductive_union_ready) :
+  ym_laneA_explicit_statement R := by
+  exact
+    YangMillsConstructiveCoreExhibitsNamedOutputsStatement
+      R htrunc hext hcompat hunion
+
+theorem YangMillsLoadBearingSpineFeedsLaneAExplicitStatement
+  (S : YMLoadBearingSpine)
+  (R : YMConstructiveRoute)
+  (h4 : S.packet4_flowed_state)
+  (h5 : S.packet5_finite_truncation)
+  (h6 : S.packet6_finite_cap_closure.finite_cap_sharp_local_extension)
+  (h7 : S.packet7_cyclicity)
+  (hb : S.packet6_finite_cap_closure.positive_unital_bridge)
+  (hc : S.packet6_finite_cap_closure.bounded_state_compatibility)
+  (hu : S.packet6_finite_cap_closure.inductive_union_passage)
+  (hflowed : R.flowed_state_ready)
+  (htrunc : R.finite_truncation_ready)
+  (hext : R.finite_cap_extension_ready)
+  (hcyc : R.cyclicity_ready)
+  (hbridge : R.finite_cap_bridge_ready)
+  (hcompat : R.bounded_state_compatibility_ready)
+  (hunion : R.inductive_union_ready)
+  (hbuild : ym_laneA_constructive_core R) :
+  S.packet4_flowed_state /\
+  S.packet5_finite_truncation /\
+  S.packet6_finite_cap_closure.finite_cap_sharp_local_extension /\
+  S.packet7_cyclicity /\
+  S.packet6_finite_cap_closure.positive_unital_bridge /\
+  S.packet6_finite_cap_closure.bounded_state_compatibility /\
+  S.packet6_finite_cap_closure.inductive_union_passage /\
+  ym_laneA_explicit_statement R := by
+  have hspine :=
+    YangMillsLoadBearingSpineFeedsConstructiveCoreStatement
+      S R h4 h5 h6 h7 hb hc hu
+      hflowed htrunc hext hcyc hbridge hcompat hunion hbuild
+  have hexplicit :=
+    YangMillsLaneAExplicitStatementFromReadinessStatement
+      R htrunc hext hcompat hunion
+  exact And.intro hspine.1 <|
+    And.intro hspine.2.1 <|
+      And.intro hspine.2.2.1 <|
+        And.intro hspine.2.2.2.1 <|
+          And.intro hspine.2.2.2.2.1 <|
+            And.intro hspine.2.2.2.2.2.1 <|
+              And.intro hspine.2.2.2.2.2.2.1 hexplicit
 
 end MaleyLean

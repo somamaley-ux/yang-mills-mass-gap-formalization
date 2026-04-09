@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsFaithfulPaperTheoremAssembly
+
+namespace MaleyLean
+
+#print axioms YangMillsFaithfulPaperTheoremAssemblyTopExportStatement
+
+end MaleyLean

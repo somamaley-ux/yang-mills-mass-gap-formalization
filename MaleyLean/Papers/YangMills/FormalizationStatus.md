@@ -87,6 +87,58 @@ The theorem and source-facing registries currently include:
 These files serve as the clearest local evidence that the manuscript-facing
 claim inventory has been translated into repo-visible formal objects.
 
+## Canonical Verified Boundary
+
+In addition to the older manuscript-facing theorem assembly, the repo now has a
+stricter canonical boundary that avoids arbitrary theorem-part landing maps.
+
+The key files are:
+
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalCoreOutputAssembly.lean`
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalRouteClosure.lean`
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalTheoremAssemblyWitness.lean`
+- `MaleyLean/Papers/YangMills/Kernel/CanonicalVerifiedPayload.lean`
+- `MaleyLean/Papers/YangMills/Surface/CanonicalVerifiedPayloadSummary.lean`
+- `MaleyLean/Papers/YangMills/Kernel/ExplicitHeartStatementAssembly.lean`
+- `MaleyLean/Papers/YangMills/Surface/ExplicitHeartStatementAssemblySummary.lean`
+
+These files expose the exact canonically verified content currently present in
+the checkout:
+
+- public-scope closure,
+- Part C / Part D / endpoint route outputs,
+- intrinsic constructive bounded-base output,
+- intrinsic vacuum-gap transport output,
+- intrinsic endpoint exactness output,
+- and the bridge consequences connecting those intrinsic heart outputs.
+
+This canonical path is the best current answer to:
+
+"What does the repo verify without using arbitrary theorem-part alignment maps?"
+
+There is now also a more specific heart-level repair path showing that the
+three main theorem hearts no longer need to be read only through abstract
+placeholder props:
+
+- Part C has `ym_laneA_explicit_statement`
+- Part D has `ym_route1_explicit_statement`
+- the endpoint heart has `ym_endpoint_explicit_statement`
+
+and these are assembled together in
+`MaleyLean/Papers/YangMills/Kernel/ExplicitHeartStatementAssembly.lean`.
+
+The preferred submission-facing theorem path now goes one step further:
+
+- `MaleyLean/Papers/YangMills/Kernel/PaperClaimStatements.lean` keys the Part C,
+  Part D, and endpoint claims directly to named theorem-register families,
+- `MaleyLean/Papers/YangMills/Kernel/FaithfulPaperTheoremAssembly.lean` builds
+  the preferred theorem-facing path over those theorem-register-keyed claims,
+- and `MaleyLean/Papers/YangMills/Surface/Summary.lean` now includes that
+  repaired path in the main manuscript-facing summary.
+
+The older landing-map theorem path remains in the repo for compatibility, but
+it is no longer the preferred submission-facing theorem boundary.
+
 ## Kernel Coverage Highlights
 
 The constructive family is centered in:

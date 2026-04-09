@@ -1,0 +1,4 @@
+import MaleyLean.YangMillsCanonicalTheoremAssemblyWitness
+open Classical
+
+#print axioms MaleyLean.YangMillsCanonicalTheoremAssemblyWitnessWrapperExportStatement

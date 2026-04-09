@@ -5,7 +5,9 @@ import MaleyLean.Papers.YangMills.Kernel.Register
 import MaleyLean.Papers.YangMills.Kernel.PacketRegister
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveCore
 import MaleyLean.Papers.YangMills.Kernel.EndpointCore
+import MaleyLean.Papers.YangMills.Kernel.FaithfulPaperTheoremAssembly
 import MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly
+import MaleyLean.Papers.YangMills.Kernel.PaperClaimStatements
 import MaleyLean.Papers.YangMills.Kernel.ReadingOrder
 import MaleyLean.Papers.YangMills.Kernel.SeamRegister
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapCore
@@ -18,7 +20,8 @@ Top-level manuscript-facing summary surface for the hardened Yang--Mills suite.
 
 This theorem certifies the structural package layout extracted from the source
 archive: the four live proof roots, the extracted proof kernel, the closure
-gate, the reserve packet, and the first companion routing of the core paper.
+gate, the reserve packet, the first companion routing of the core paper, and
+the theorem-register-keyed paper-claim path.
 -/
 theorem YangMillsPaperSurfaceSummaryStatement :
   (ym_root_role .core = .liveProofSurface /\
@@ -100,7 +103,28 @@ theorem YangMillsPaperSurfaceSummaryStatement :
       some .laneASharpLocalConstruction /\
     ym_core_section_owner .qe3Transport = some .ultravioletGateAndRoute1 /\
     ym_core_section_owner .endpointPacket = some .reconstructionAndUniversality /\
-    ym_core_section_owner .assembly = none) := by
+    ym_core_section_owner .assembly = none) /\
+  (ym_laneA_verbatim_claim_family /\
+    ym_route1_verbatim_claim_family /\
+    ym_endpoint_verbatim_claim_family) /\
+  (forall S : YMLoadBearingSpine,
+    forall RC : YMConstructiveRoute,
+    forall RD : YMVacuumGapRoute,
+    forall RE : YMEndpointCore,
+      S.packet1_uv_gate ->
+      S.packet2_entrance ->
+      ym_public_scope_route S ->
+      RC.finite_truncation_ready ->
+      RC.finite_cap_extension_ready ->
+      RC.bounded_state_compatibility_ready ->
+      RC.inductive_union_ready ->
+      RD.weak_window_certificate_ready ->
+      RE.euclidean_dossier_ready ->
+      RE.endpoint_packet_ready ->
+      Nonempty (YMFaithfulPaperTheoremAssembly S RC RD RE) /\
+      ym_paper_partC_statement RC /\
+      ym_paper_partD_statement RD /\
+      ym_paper_endpoint_statement RE) := by
   refine And.intro YangMillsLiveProofSurfaceRootsStatement <|
     And.intro YangMillsKernelRoleStatement <|
     And.intro YangMillsClosureGateRoleStatement <|
@@ -133,7 +157,20 @@ theorem YangMillsPaperSurfaceSummaryStatement :
             intro RE hE hP
             have h := YangMillsEndpointCoreExhibitsNamedOutputsStatement RE hE hP
             exact And.intro h.2.1 h.2.2.2.2.2)) <|
-    And.intro YangMillsRoute1TransportSpineStatement
-      YangMillsCoreSectionOwnershipStatement
+    And.intro YangMillsRoute1TransportSpineStatement <|
+      And.intro YangMillsCoreSectionOwnershipStatement <|
+        And.intro
+          (And.intro YangMillsLaneAVerbatimClaimFamilyStatement <|
+            And.intro YangMillsRoute1VerbatimClaimFamilyStatement
+              YangMillsEndpointVerbatimClaimFamilyStatement) <|
+          by
+            intro S RC RD RE hp1 hp2 hAroute htrunc hext hcompat hunion hww hE hP
+            let A :=
+              YangMillsFaithfulPaperTheoremAssemblyData
+                S RC RD RE hp1 hp2 hAroute htrunc hext hcompat hunion hww hE hP
+            exact And.intro ⟨A⟩ <|
+              And.intro A.partC_statement_witness <|
+                And.intro A.partD_statement_witness
+                  A.endpoint_statement_witness
 
 end MaleyLean

@@ -183,6 +183,25 @@ this checkout, see:
 - `MaleyLean/Papers/YangMills/FormalizationStatus.md`
 - `MaleyLean/Papers/YangMills/CoverageMatrix.md`
 
+For the stricter alignment-free Lean entry point that records the exact
+canonically verified Yang--Mills payload currently available, see:
+
+- `MaleyLean.Papers.YangMills.Surface.CanonicalVerifiedPayloadSummary`
+- `MaleyLean.YangMillsCanonicalVerifiedPayloadSummary`
+
+For the repaired heart-level statement path that exposes explicit Part C / Part
+D / endpoint statements instead of only abstract `*_part` placeholders, see:
+
+- `MaleyLean.Papers.YangMills.Surface.ExplicitHeartStatementAssemblySummary`
+- `MaleyLean.YangMillsExplicitHeartStatementAssemblySummary`
+
+For the preferred submission-facing theorem path keyed directly to named
+theorem-register families, see:
+
+- `MaleyLean.Papers.YangMills.Kernel.PaperClaimStatements`
+- `MaleyLean.Papers.YangMills.Kernel.FaithfulPaperTheoremAssembly`
+- `MaleyLean.Papers.YangMills.Surface.Summary`
+
 ### Yang--Mills verification
 
 The current Yang--Mills scaffold has dedicated axiom checks under

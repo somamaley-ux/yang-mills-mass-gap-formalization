@@ -62,6 +62,20 @@ def ym_reconstruction_endpoint_core (R : YMEndpointCore) : Prop :=
   R.endpoint_packet_ready ->
   R.endpoint_part
 
+/--
+Explicit paper-facing endpoint statement carried by the current endpoint core.
+
+Unlike `endpoint_part`, this names the concrete reconstruction and exact-endpoint
+outputs that the current endpoint route exposes.
+-/
+def ym_endpoint_explicit_statement (R : YMEndpointCore) : Prop :=
+  R.reconstruction_ready /\
+  R.reconstruction_package.wightman_fields_present /\
+  R.reconstruction_package.vacuum_vector_present /\
+  R.reconstruction_package.smearing_defined /\
+  R.reconstruction_package.vacuum_correlations_defined /\
+  R.endpoint_object.exact_local_net_endpoint
+
 theorem YangMillsReconstructionEndpointCoreStatement
   (R : YMEndpointCore)
   (h : ym_reconstruction_endpoint_core R)
@@ -142,5 +156,35 @@ theorem YangMillsEndpointCoreExhibitsNamedOutputsStatement
         And.intro hpack.2.1 <|
           And.intro hpack.2.2.1 <|
             And.intro hpack.2.2.2 hend
+
+theorem YangMillsEndpointExplicitStatementFromReadinessStatement
+  (R : YMEndpointCore)
+  (hE : R.euclidean_dossier_ready)
+  (hP : R.endpoint_packet_ready) :
+  ym_endpoint_explicit_statement R := by
+  exact YangMillsEndpointCoreExhibitsNamedOutputsStatement R hE hP
+
+theorem YangMillsLoadBearingSpineFeedsEndpointExplicitStatement
+  (S : YMLoadBearingSpine)
+  (R : YMEndpointCore)
+  (h9E : S.packet9_reconstruction.euclidean_os_dossier)
+  (h9W : S.packet9_reconstruction.wightman_reconstruction)
+  (h10 : S.packet10_endpoint)
+  (hE : R.euclidean_dossier_ready)
+  (hR : R.reconstruction_ready)
+  (hP : R.endpoint_packet_ready)
+  (hbuild : ym_reconstruction_endpoint_core R) :
+  S.packet9_reconstruction.euclidean_os_dossier /\
+  S.packet9_reconstruction.wightman_reconstruction /\
+  S.packet10_endpoint /\
+  ym_endpoint_explicit_statement R := by
+  have hspine :=
+    YangMillsLoadBearingSpineFeedsEndpointCoreStatement
+      S R h9E h9W h10 hE hR hP hbuild
+  have hexplicit :=
+    YangMillsEndpointExplicitStatementFromReadinessStatement R hE hP
+  exact And.intro hspine.1 <|
+    And.intro hspine.2.1 <|
+      And.intro hspine.2.2.1 hexplicit
 
 end MaleyLean

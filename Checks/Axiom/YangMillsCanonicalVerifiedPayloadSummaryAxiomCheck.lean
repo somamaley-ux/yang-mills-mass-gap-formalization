@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsCanonicalVerifiedPayloadSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsCanonicalVerifiedPayloadSummaryTopExportStatement
+
+end MaleyLean
