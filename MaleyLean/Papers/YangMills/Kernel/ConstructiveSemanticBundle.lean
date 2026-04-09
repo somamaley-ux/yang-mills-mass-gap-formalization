@@ -11,6 +11,8 @@ structure YMConstructiveSemanticBundle (R : YMConstructiveRoute) where
   sharp_local_package_shape : YMSharpLocalPackage
   finite_cap_window : Type
   finite_cap_extension_data : Type
+  positive_bridge_map : Type
+  bounded_base_carrier : Type
   bounded_state_data : Type
   inductive_union_data : Type
   truncation_window_ready : R.finite_cap_package.truncation_window_ready
@@ -27,7 +29,11 @@ theorem YangMillsConstructivePackageMetadataStatement
       R.finite_cap_package.finite_cap_window /\
   R.finite_cap_package.finite_cap_extension_data =
       R.finite_cap_package.finite_cap_extension_data /\
+  R.finite_cap_package.positive_bridge_map =
+      R.finite_cap_package.positive_bridge_map /\
   R.sharp_local_package = R.sharp_local_package /\
+  R.sharp_local_package.bounded_base_carrier =
+      R.sharp_local_package.bounded_base_carrier /\
   R.sharp_local_package.bounded_state_data =
       R.sharp_local_package.bounded_state_data /\
   R.sharp_local_package.inductive_union_data =
@@ -36,7 +42,9 @@ theorem YangMillsConstructivePackageMetadataStatement
     And.intro rfl <|
       And.intro rfl <|
         And.intro rfl <|
-          And.intro rfl rfl
+          And.intro rfl <|
+            And.intro rfl <|
+              And.intro rfl rfl
 
 def YangMillsConstructiveSemanticBundleData
   (R : YMConstructiveRoute)
@@ -51,6 +59,8 @@ def YangMillsConstructiveSemanticBundleData
       sharp_local_package_shape := R.sharp_local_package
       finite_cap_window := R.finite_cap_package.finite_cap_window
       finite_cap_extension_data := R.finite_cap_package.finite_cap_extension_data
+      positive_bridge_map := R.finite_cap_package.positive_bridge_map
+      bounded_base_carrier := R.sharp_local_package.bounded_base_carrier
       bounded_state_data := R.sharp_local_package.bounded_state_data
       inductive_union_data := R.sharp_local_package.inductive_union_data
       truncation_window_ready := h.1
