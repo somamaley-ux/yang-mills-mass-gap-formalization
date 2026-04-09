@@ -35,6 +35,11 @@ The most recent verification sweep also strengthened the deepest kernel so that:
 - and the main cross-heart route laws are exposed as named kernel theorems rather
   than hidden definitional equalities.
 
+The current manuscript-facing Yang-Mills surface is also now axiom-free under
+the repo audit workflow, including the public status/audit/support-map layer
+that summarizes the theorem register, claim architecture, reading order,
+crosswalk surface, and top-level paper summary.
+
 ## What "Complete" Means Here
 
 The word "complete" in this note is relative to the paper-facing inventory that
@@ -162,8 +167,8 @@ construction:
 The main remaining theorem-meaning limitation is no longer arbitrary theorem
 alignment or theorem-content bundling.
 
-Instead, the remaining boundary is that the current preferred top theorem is
-still parameterized by abstract route objects:
+The current preferred top theorem is still parameterized by abstract route
+objects:
 
 - `S : YMLoadBearingSpine`
 - `RC : YMConstructiveRoute`
@@ -175,6 +180,11 @@ instance of those objects. So the preferred theorem now reads as a direct,
 flattened manuscript-granular theorem over the manuscript route interfaces,
 rather than as one fully closed proposition over a single distinguished route
 instance.
+
+That parameterization should not be confused with residual support axioms: the
+remaining Yang-Mills axioms are only the imported standard QFT background
+assumptions already carried by the framework, not manuscript-specific support
+axioms.
 
 ## Kernel Coverage Highlights
 
@@ -245,6 +255,12 @@ lake env lean .github\\workflows\\AxiomCheck.lean
 
 The deepest Yang-Mills kernel slices touched in the latest pass also rebuilt and
 their export statements remained axiom-free.
+
+The clearest human-facing verification artifacts for that state are:
+
+- `reports/audits/yang_mills_axiom_audit.txt`
+- `reports/status/yang_mills_status.md`
+- `reports/support_maps/yang_mills_support_map.txt`
 
 ## Remaining Meaningful Work
 

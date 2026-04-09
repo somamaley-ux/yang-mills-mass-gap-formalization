@@ -22,6 +22,11 @@ What it does **not** yet contain is one actual closed constant:
 
 This file records what such a constant must provide.
 
+That remaining step should not be confused with residual axiom support: the
+current manuscript-facing Yang-Mills surface reported by the repo audits is
+already axiom-free. What is still missing is one closed distinguished
+manuscript instance of the already-formalized route objects.
+
 For a fillable author-facing version keyed to the paper/source labels, see:
 
 - [ClosedManuscriptAuthorWorksheet.md](/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/ClosedManuscriptAuthorWorksheet.md)
@@ -112,6 +117,8 @@ The repo is now extremely close to a full mechanically proven reflection of the
 paper.
 
 What remains is no longer theorem packaging or theorem meaning.
+
+It is also no longer witness-bundle axiom elimination.
 
 What remains is one object-level instantiation step:
 

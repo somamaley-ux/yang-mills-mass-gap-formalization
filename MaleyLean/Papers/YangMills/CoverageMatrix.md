@@ -127,6 +127,12 @@ It also now contains a flattened manuscript-granular submission-facing theorem
 surface built from named-theorem reflection and per-entry theorem-content
 statements, without the remaining `Nonempty` or theorem-content bundle layer.
 
+The current human-facing audited surface is also axiom-free, as recorded in:
+
+- `reports/audits/yang_mills_axiom_audit.txt`
+- `reports/status/yang_mills_status.md`
+- `reports/support_maps/yang_mills_support_map.txt`
+
 The remaining local theorem-shape caveat is narrower now: the preferred theorem
 is still parameterized by the manuscript route objects rather than closed over a
 single canonical manuscript instance, because no such distinguished concrete

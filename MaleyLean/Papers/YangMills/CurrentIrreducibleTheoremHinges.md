@@ -1,68 +1,49 @@
-# Current Yang-Mills Irreducible Theorem Hinges
+# Yang-Mills Theorem Payload Map
 
 Last updated: 2026-04-10
 
-## Current Top-Level Boundary
+## Current State
 
-The concrete manuscript-flow export currently depends on exactly one bundled
-axiom:
+The manuscript-facing Yang-Mills theorem surface is axiom-free under the current
+repo audit workflow.
 
-- `MaleyLean.ym_manuscript_declarations`
+The most relevant human-facing verification artifacts are:
 
-checked by:
+- `reports/audits/yang_mills_axiom_audit.txt`
+- `reports/status/yang_mills_status.md`
+- `reports/support_maps/yang_mills_support_map.txt`
 
-- `MaleyLean.YangMillsConcreteManuscriptPaperFlowSummaryTopExportStatement`
+## Direct Payloads
 
-with current axiom output:
+Endpoint payloads:
 
-- depends on axioms: `[MaleyLean.ym_manuscript_declarations]`
+- `M.1` -> `YMEndpointReflectionPositive`, `YMEndpointOSDataComplete`
+- `O.3` -> `YMEndpointFaithfulWilsonUniversality`
+- `O.5` -> `YMEndpointExactLocalNetEndpoint`
 
-## Already Reduced To Direct Payloads
+Constructive payloads:
 
-These are no longer opaque theorem-name slots inside the master declaration.
+- `4.92` -> `YMConstructiveFlowedStateReady`
+- `5.69` -> `YMConstructiveTruncationWindowReady`
+- `5.74A` -> `YMConstructivePositiveBridgeReady`
+- `5.74` -> `YMConstructiveFiniteCapExtensionPackageReady`
+- `5.75` -> `YMConstructiveSharpLocalBoundedStateCompatibilityReady`
+- `5.76` -> `YMConstructive576ExtensionPayload`
 
-Endpoint:
+Vacuum-gap payloads:
 
-- `M.1` is now the direct dossier payload:
-  - `YMEndpointReflectionPositive`
-  - `YMEndpointOSDataComplete`
-- `O.3` is now the faithful-Wilson universality payload:
-  - `YMEndpointFaithfulWilsonUniversality`
-- `O.5` is now the exact local-net endpoint payload:
-  - `YMEndpointExactLocalNetEndpoint`
+- `III.1` -> `YMVacuumUltravioletScopeReady`
+- `III.3` -> `YMVacuumEntranceReady`
+- `IV.1` -> `YMVacuumLatticeGapInputReady`
+- `IV.4` / `F.298` -> `YMVacuumWeakWindowCertificateReady`
+- `F.216` -> `YMVacuumOSTransportReady`, `YMVacuumPositiveGapExhibited`
 
-Constructive:
+## Current Boundary
 
-- `4.92` is now the flowed-state payload:
-  - `YMConstructiveFlowedStateReady`
-- `5.69` is now the truncation-window payload:
-  - `YMConstructiveTruncationWindowReady`
-- `5.74A` is now the positive bridge payload:
-  - `YMConstructivePositiveBridgeReady`
-- `5.74` is now the finite-cap extension package payload:
-  - `YMConstructiveFiniteCapExtensionPackageReady`
-- `5.75` is represented by the bounded-state compatibility shadow:
-  - `YMConstructiveSharpLocalBoundedStateCompatibilityReady`
-- `5.76` is now the bounded-base extension payload:
-  - `YMConstructive576ExtensionPayload`
+There are no remaining opaque theorem-name hinges inside the manuscript-facing
+surface.
 
-Vacuum-gap:
+There are also no remaining manuscript-support axioms.
 
-- `III.1` is now the ultraviolet/public-scope payload:
-  - `YMVacuumUltravioletScopeReady`
-- `III.3` is now the entrance payload:
-  - `YMVacuumEntranceReady`
-- `IV.1` is now the lattice-gap input payload:
-  - `YMVacuumLatticeGapInputReady`
-- `IV.4` / `F.298` is now the weak-window certificate payload:
-  - `YMVacuumWeakWindowCertificateReady`
-- `F.216` is now the transport-plus-positive-gap payload:
-  - `YMVacuumOSTransportReady`
-  - `YMVacuumPositiveGapExhibited`
-
-## Honest Reading
-
-At this point there are no remaining opaque theorem-name hinges inside the
-manuscript declaration boundary. The surviving top-level axiom is now carrying
-object-level manuscript declarations and imported background structure rather
-than unresolved theorem-name slots.
+The only axioms left are the imported standard QFT background assumptions
+already carried by the surrounding framework.
