@@ -70,6 +70,8 @@ import MaleyLean.Papers.YangMills.Kernel.HeartBridgeTheoremAlignment
 import MaleyLean.Papers.YangMills.Kernel.InterHeartCompatibility
 import MaleyLean.Papers.YangMills.Kernel.LoadBearingSpine
 import MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly
+import MaleyLean.Papers.YangMills.Kernel.NativeLawAssembly
+import MaleyLean.Papers.YangMills.Kernel.NativeLawConsequences
 import MaleyLean.Papers.YangMills.Kernel.ReadingOrder
 import MaleyLean.Papers.YangMills.Kernel.RelationalAssembly
 import MaleyLean.Papers.YangMills.Kernel.SemanticAssembly
@@ -107,6 +109,8 @@ import MaleyLean.Papers.YangMills.Surface.GapTransportEndpointLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.HeartBridgeInterfaceSummary
 import MaleyLean.Papers.YangMills.Surface.HeartBridgeTheoremAlignmentSummary
 import MaleyLean.Papers.YangMills.Surface.InterHeartCompatibilitySummary
+import MaleyLean.Papers.YangMills.Surface.NativeLawAssemblySummary
+import MaleyLean.Papers.YangMills.Surface.NativeLawConsequencesSummary
 import MaleyLean.Papers.YangMills.Surface.RelationalAssemblySummary
 import MaleyLean.Papers.YangMills.Surface.SemanticCompatibilitySummary
 import MaleyLean.Papers.YangMills.Surface.SemanticAssemblySummary
