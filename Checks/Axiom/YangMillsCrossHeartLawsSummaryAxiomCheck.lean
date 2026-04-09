@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsCrossHeartLawsSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsCrossHeartLawsSummaryExportStatement
+
+end MaleyLean
