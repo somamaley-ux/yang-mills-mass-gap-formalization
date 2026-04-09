@@ -11,10 +11,16 @@ structure YMVacuumGapSemanticBundle (R : YMVacuumGapRoute) where
   transport_state : Type
   lattice_observable_family : Type
   transport_map : Type
+  transport_observable :
+    transport_map -> lattice_observable_family -> transport_state
   reconstructed_sector : Type
   os_sector : Type
   minkowski_gap_functional : Type
   os_correlation_family : Type
+  realize_os_sector :
+    reconstructed_sector -> os_correlation_family -> os_sector
+  evaluate_minkowski_gap :
+    minkowski_gap_functional -> os_sector -> Prop
   reconstruction_package_shape : YMVacuumReconstructionPackage
   continuum_gap_transport_ready : R.continuum_gap_transport_ready
   os_transport_ready : R.transport_package.os_transport_ready
@@ -34,6 +40,8 @@ theorem YangMillsVacuumGapPackageMetadataStatement
       R.transport_package.lattice_observable_family /\
   R.transport_package.transport_map =
       R.transport_package.transport_map /\
+  R.transport_package.transport_observable =
+      R.transport_package.transport_observable /\
   R.reconstruction_package.reconstructed_sector =
       R.reconstruction_package.reconstructed_sector /\
   R.reconstruction_package.os_sector =
@@ -42,6 +50,10 @@ theorem YangMillsVacuumGapPackageMetadataStatement
       R.reconstruction_package.minkowski_gap_functional /\
   R.reconstruction_package.os_correlation_family =
       R.reconstruction_package.os_correlation_family /\
+  R.reconstruction_package.realize_os_sector =
+      R.reconstruction_package.realize_os_sector /\
+  R.reconstruction_package.evaluate_minkowski_gap =
+      R.reconstruction_package.evaluate_minkowski_gap /\
   R.reconstruction_package = R.reconstruction_package := by
   exact And.intro rfl <|
     And.intro rfl <|
@@ -50,7 +62,10 @@ theorem YangMillsVacuumGapPackageMetadataStatement
           And.intro rfl <|
             And.intro rfl <|
               And.intro rfl <|
-                And.intro rfl rfl
+                And.intro rfl <|
+                  And.intro rfl <|
+                    And.intro rfl <|
+                      And.intro rfl rfl
 
 def YangMillsVacuumGapSemanticBundleData
   (R : YMVacuumGapRoute)
@@ -62,10 +77,13 @@ def YangMillsVacuumGapSemanticBundleData
       transport_state := R.transport_package.transport_state
       lattice_observable_family := R.transport_package.lattice_observable_family
       transport_map := R.transport_package.transport_map
+      transport_observable := R.transport_package.transport_observable
       reconstructed_sector := R.reconstruction_package.reconstructed_sector
       os_sector := R.reconstruction_package.os_sector
       minkowski_gap_functional := R.reconstruction_package.minkowski_gap_functional
       os_correlation_family := R.reconstruction_package.os_correlation_family
+      realize_os_sector := R.reconstruction_package.realize_os_sector
+      evaluate_minkowski_gap := R.reconstruction_package.evaluate_minkowski_gap
       reconstruction_package_shape := R.reconstruction_package
       continuum_gap_transport_ready := h.1
       os_transport_ready := h.2.1

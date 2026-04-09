@@ -13,6 +13,8 @@ structure YMTransportPackage where
   transport_state : Type
   lattice_observable_family : Type
   transport_map : Type
+  transport_observable :
+    transport_map -> lattice_observable_family -> transport_state
   lattice_gap_input : Prop
   os_transport_ready : Prop
   positive_gap_exhibited : Prop
@@ -22,6 +24,10 @@ structure YMVacuumReconstructionPackage where
   os_sector : Type
   minkowski_gap_functional : Type
   os_correlation_family : Type
+  realize_os_sector :
+    reconstructed_sector -> os_correlation_family -> os_sector
+  evaluate_minkowski_gap :
+    minkowski_gap_functional -> os_sector -> Prop
   os_sector_ready : Prop
   minkowski_gap_ready : Prop
   obtained_from_transport : Prop
