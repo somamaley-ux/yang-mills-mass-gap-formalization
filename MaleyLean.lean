@@ -50,6 +50,7 @@ import MaleyLean.Papers.YangMills.Kernel.Register
 import MaleyLean.Papers.YangMills.Kernel.PacketRegister
 import MaleyLean.Papers.YangMills.Kernel.CoreAssembly
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveCore
+import MaleyLean.Papers.YangMills.Kernel.ConstructiveExtendAssembleLawPackage
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveEndpointLawPackage
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveRelationalInterface
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveSemanticBundle
@@ -57,6 +58,7 @@ import MaleyLean.Papers.YangMills.Kernel.BoundedBaseTransportLawPackage
 import MaleyLean.Papers.YangMills.Kernel.BridgeLawAssembly
 import MaleyLean.Papers.YangMills.Kernel.BridgeLawConsequences
 import MaleyLean.Papers.YangMills.Kernel.EndpointAlignment
+import MaleyLean.Papers.YangMills.Kernel.EndpointCorrelationLawPackage
 import MaleyLean.Papers.YangMills.Kernel.EndpointCore
 import MaleyLean.Papers.YangMills.Kernel.EndpointRelationalInterface
 import MaleyLean.Papers.YangMills.Kernel.EndpointSemanticBundle
@@ -80,6 +82,7 @@ import MaleyLean.Papers.YangMills.Kernel.TheoremAssemblyWitness
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapCore
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapRelationalInterface
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapSemanticBundle
+import MaleyLean.Papers.YangMills.Kernel.VacuumGapTransportRealizeLawPackage
 import MaleyLean.Papers.YangMills.Kernel.WitnessBundle
 import MaleyLean.Papers.YangMills.SourceCrosswalk.Register
 import MaleyLean.Papers.YangMills.SourceCrosswalk.CompanionTables
@@ -93,11 +96,13 @@ import MaleyLean.Papers.YangMills.Surface.BoundedBaseTransportLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.AssemblyTopSummary
 import MaleyLean.Papers.YangMills.Surface.BridgeLawAssemblySummary
 import MaleyLean.Papers.YangMills.Surface.BridgeLawConsequencesSummary
+import MaleyLean.Papers.YangMills.Surface.ConstructiveExtendAssembleLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.ConstructiveEndpointLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.ConstructiveRelationalSummary
 import MaleyLean.Papers.YangMills.Surface.CrossHeartLawObjectsSummary
 import MaleyLean.Papers.YangMills.Surface.CrossHeartLawsSummary
 import MaleyLean.Papers.YangMills.Surface.EndpointRelationalSummary
+import MaleyLean.Papers.YangMills.Surface.EndpointCorrelationLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.GapTransportEndpointLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.HeartBridgeInterfaceSummary
 import MaleyLean.Papers.YangMills.Surface.HeartBridgeTheoremAlignmentSummary
@@ -111,6 +116,7 @@ import MaleyLean.Papers.YangMills.Surface.TheoremBridgeInterfaceSummary
 import MaleyLean.Papers.YangMills.Surface.TheoremBridgeConsequencesSummary
 import MaleyLean.Papers.YangMills.Surface.TheoremAssemblyWitnessSummary
 import MaleyLean.Papers.YangMills.Surface.VacuumGapRelationalSummary
+import MaleyLean.Papers.YangMills.Surface.VacuumGapTransportRealizeLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.WitnessBundleSummary
 import MaleyLean.Papers.YangMills.Surface.WitnessHeartSummary
 import MaleyLean.ClosurePaperStatements

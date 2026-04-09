@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsEndpointCorrelationLawPackage
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointCorrelationLawPackageExportStatement
+
+end MaleyLean

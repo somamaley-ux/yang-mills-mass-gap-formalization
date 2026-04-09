@@ -1,0 +1,97 @@
+import MaleyLean.Papers.YangMills.Kernel.ConstructiveRelationalInterface
+
+namespace MaleyLean
+
+/--
+Structured constructive-side law package organizing finite-cap extension and
+sharp-local assembly around one chosen relational evaluation site.
+-/
+structure YMConstructiveExtendAssembleLawPackage (R : YMConstructiveRoute) where
+  interface : YMConstructiveRelationalInterface R
+  extend_then_assemble :
+    interface.bundle.finite_cap_window ->
+    interface.bundle.positive_bridge_map ->
+    interface.bundle.bounded_base_carrier ->
+    interface.bundle.bounded_state_data ->
+    interface.bundle.inductive_union_data ->
+    YMSharpLocalState
+  chosen_site_law :
+    extend_then_assemble
+      interface.chosen_window
+      interface.chosen_bridge_map
+      interface.chosen_bounded_base
+      interface.chosen_bounded_state
+      interface.chosen_inductive_union =
+      interface.chosen_sharp_local_state
+  bounded_base_from_assembly :
+    YMSharpLocalState ->
+    R.sharp_local_package.sharp_local_state.extends_bounded_base
+  bounded_base_witness : R.sharp_local_package.sharp_local_state.extends_bounded_base
+
+def YangMillsConstructiveExtendAssembleLawPackageData
+  (R : YMConstructiveRoute)
+  (htrunc : R.finite_truncation_ready)
+  (hext : R.finite_cap_extension_ready)
+  (hcompat : R.bounded_state_compatibility_ready)
+  (hunion : R.inductive_union_ready)
+  (win : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).finite_cap_window)
+  (bridge : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).positive_bridge_map)
+  (base : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).bounded_base_carrier)
+  (state : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).bounded_state_data)
+  (unionData :
+    (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).inductive_union_data) :
+  YMConstructiveExtendAssembleLawPackage R := by
+  let I := YangMillsConstructiveRelationalInterfaceData
+    R htrunc hext hcompat hunion win bridge base state unionData
+  refine
+    { interface := I
+      extend_then_assemble := fun _ _ base' state' unionData' =>
+        I.bundle.assemble_sharp_local_state base' state' unionData'
+      chosen_site_law := by
+        exact I.sharp_local_relation
+      bounded_base_from_assembly := by
+        intro _
+        exact I.bundle.bounded_base_extension
+      bounded_base_witness := I.bundle.bounded_base_extension }
+
+theorem YangMillsConstructiveExtendAssembleLawPackageExistsStatement
+  (R : YMConstructiveRoute)
+  (htrunc : R.finite_truncation_ready)
+  (hext : R.finite_cap_extension_ready)
+  (hcompat : R.bounded_state_compatibility_ready)
+  (hunion : R.inductive_union_ready)
+  (win : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).finite_cap_window)
+  (bridge : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).positive_bridge_map)
+  (base : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).bounded_base_carrier)
+  (state : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).bounded_state_data)
+  (unionData :
+    (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).inductive_union_data) :
+  Nonempty (YMConstructiveExtendAssembleLawPackage R) := by
+  exact Nonempty.intro
+    (YangMillsConstructiveExtendAssembleLawPackageData
+      R htrunc hext hcompat hunion win bridge base state unionData)
+
+theorem YangMillsConstructiveExtendAssembleLawPackageWitnessStatement
+  (R : YMConstructiveRoute)
+  (htrunc : R.finite_truncation_ready)
+  (hext : R.finite_cap_extension_ready)
+  (hcompat : R.bounded_state_compatibility_ready)
+  (hunion : R.inductive_union_ready)
+  (win : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).finite_cap_window)
+  (bridge : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).positive_bridge_map)
+  (base : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).bounded_base_carrier)
+  (state : (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).bounded_state_data)
+  (unionData :
+    (YangMillsConstructiveSemanticBundleData R htrunc hext hcompat hunion).inductive_union_data) :
+  let P := YangMillsConstructiveExtendAssembleLawPackageData
+    R htrunc hext hcompat hunion win bridge base state unionData
+  Nonempty (YMConstructiveExtendAssembleLawPackage R) /\
+  P.extend_then_assemble win bridge base state unionData = P.interface.chosen_sharp_local_state /\
+  R.sharp_local_package.sharp_local_state.extends_bounded_base := by
+  let P := YangMillsConstructiveExtendAssembleLawPackageData
+    R htrunc hext hcompat hunion win bridge base state unionData
+  exact And.intro
+    (Nonempty.intro P)
+    (And.intro P.chosen_site_law P.bounded_base_witness)
+
+end MaleyLean
