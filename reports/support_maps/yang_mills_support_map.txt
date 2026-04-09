@@ -28,6 +28,10 @@ Primary Lean modules:
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Obligations/ClaimLedger.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/Register.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/PacketRegister.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ConstructiveCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/EndpointCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ReadingOrder.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
@@ -39,6 +43,10 @@ Wrapper entry points:
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsClaimLedger.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsKernelRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsPacketRegister.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsConstructiveCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsEndpointCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsNamedOutputsAssembly.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsSeamRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsReadingOrder.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsSourceCrosswalk.lean`
@@ -51,6 +59,10 @@ Audit artifacts:
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsKernelRegisterAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsPacketRegisterAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsSeamRegisterAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsConstructiveCoreAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapCoreAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsEndpointCoreAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsReadingOrderAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsSourceCrosswalkAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsPaperSurfaceSummaryAxiomCheck.lean`
@@ -126,6 +138,19 @@ Stage VI: source-number crosswalk and reading order
   `MaleyLean.YangMillsKernelReadingOrderStatement`
   `MaleyLean.YangMillsAttackPointPacketStatement`
   `MaleyLean.YangMillsAttackPointSeamStatement`
+
+Stage VII: load-bearing theorem hearts and witness exports
+
+- manuscript surface:
+  dedicated constructive, vacuum-gap, and endpoint cores; named witness
+  outputs visible across the three theorem hearts
+- Lean witnesses:
+  `MaleyLean.YangMillsLaneAConstructiveCoreStatement`
+  `MaleyLean.YangMillsRoute1VacuumGapCoreStatement`
+  `MaleyLean.YangMillsReconstructionEndpointCoreStatement`
+  `MaleyLean.YangMillsSpineFeedsAlignedMainTheoremPartsStatement`
+  `MaleyLean.YangMillsSpineFeedsAllAlignedMainTheoremPartsStatement`
+  `MaleyLean.YangMillsSpineFeedsAllNamedOutputsStatement`
 
 Top-level summary
 -----------------

@@ -3,8 +3,12 @@ import MaleyLean.Papers.YangMills.Verbatim.TheoremRegister
 import MaleyLean.Papers.YangMills.Verbatim.DependencySpineSimple
 import MaleyLean.Papers.YangMills.Kernel.Register
 import MaleyLean.Papers.YangMills.Kernel.PacketRegister
+import MaleyLean.Papers.YangMills.Kernel.ConstructiveCore
+import MaleyLean.Papers.YangMills.Kernel.EndpointCore
+import MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly
 import MaleyLean.Papers.YangMills.Kernel.ReadingOrder
 import MaleyLean.Papers.YangMills.Kernel.SeamRegister
+import MaleyLean.Papers.YangMills.Kernel.VacuumGapCore
 import MaleyLean.Papers.YangMills.SourceCrosswalk.Register
 
 namespace MaleyLean
@@ -62,6 +66,23 @@ theorem YangMillsPaperSurfaceSummaryStatement :
       .laneASharpLocalConstruction /\
     ym_verbatim_theorem_owner .exactLocalNetEndpointAndExclusionOfExtendedSupportSectorData =
       .reconstructionAndUniversality) /\
+  ((∀ RC : YMConstructiveRoute,
+      RC.finite_truncation_ready ->
+      RC.finite_cap_extension_ready ->
+      RC.bounded_state_compatibility_ready ->
+      RC.inductive_union_ready ->
+      RC.finite_cap_package.positive_bridge_ready /\
+        RC.sharp_local_package.sharp_local_state.extends_bounded_base) /\
+    (∀ RD : YMVacuumGapRoute,
+      RD.weak_window_certificate_ready ->
+      RD.reconstruction_ready ->
+      RD.transport_package.positive_gap_exhibited /\
+        RD.reconstruction_package.minkowski_gap_ready) /\
+    (∀ RE : YMEndpointCore,
+      RE.euclidean_dossier_ready ->
+      RE.endpoint_packet_ready ->
+      RE.reconstruction_package.wightman_fields_present /\
+        RE.endpoint_object.exact_local_net_endpoint)) /\
   (ym_route1_transport_spine =
       [ .publicGroupScopeExport
       , .oneShotEntranceAtBoundedPhysicalScale
@@ -96,6 +117,23 @@ theorem YangMillsPaperSurfaceSummaryStatement :
       (And.intro rfl rfl) <|
     And.intro
       (And.intro rfl <| And.intro rfl rfl) <|
+    And.intro
+      (And.intro
+        (by
+          intro RC htrunc hext hcompat hunion
+          have h :=
+            YangMillsConstructiveCoreExhibitsNamedOutputsStatement
+              RC htrunc hext hcompat hunion
+          exact And.intro h.2.2.1 h.2.2.2.2.2)
+        <| And.intro
+          (by
+            intro RD hww hrec
+            have h := YangMillsVacuumGapCoreExhibitsNamedOutputsStatement RD hww hrec
+            exact And.intro h.2.1 h.2.2.2.2)
+          (by
+            intro RE hE hP
+            have h := YangMillsEndpointCoreExhibitsNamedOutputsStatement RE hE hP
+            exact And.intro h.2.1 h.2.2.2)) <|
     And.intro YangMillsRoute1TransportSpineStatement
       YangMillsCoreSectionOwnershipStatement
 

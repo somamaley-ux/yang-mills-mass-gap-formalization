@@ -15,6 +15,9 @@ What is finished:
 - the ten-packet reduction is encoded
 - the decisive seam nodes are encoded
 - the source-label crosswalk back to the canonical manuscript is encoded
+- the load-bearing proof spine is encoded
+- dedicated Part C, Part D, and endpoint cores are encoded
+- named abstract witness outputs are exposed across all three theorem hearts
 - the top-level manuscript-facing summary is axiom-free
 
 What is not finished:
@@ -36,6 +39,10 @@ The current Yang--Mills surface is centered on:
 - `MaleyLean/Papers/YangMills/Obligations/ClaimLedger.lean`
 - `MaleyLean/Papers/YangMills/Kernel/Register.lean`
 - `MaleyLean/Papers/YangMills/Kernel/PacketRegister.lean`
+- `MaleyLean/Papers/YangMills/Kernel/ConstructiveCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/VacuumGapCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/EndpointCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
 - `MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
 - `MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
 - `MaleyLean/Papers/YangMills/Surface/Summary.lean`
@@ -52,6 +59,11 @@ The current Lean development supports the following reading.
 - The decisive expert-attack seams are explicit rather than hidden in prose.
 - The cleaned public theorem nodes are crosswalked back to canonical source
   labels such as `F.331`, `5.74`, `F.216`, `M.3`, and `O.5`.
+- The load-bearing theorem object is split into dedicated constructive,
+  vacuum-gap, and endpoint cores rather than treated as one opaque packet list.
+- Those dedicated cores now expose named abstract witnesses such as finite-cap
+  bridge readiness, bounded-base extension, positive gap, Minkowski-gap
+  readiness, Wightman fields, and the exact endpoint object.
 
 ## Why this matters
 
@@ -77,6 +89,10 @@ The most relevant axiom checks are:
 - `YangMillsKernelRegisterAxiomCheck.lean`
 - `YangMillsPacketRegisterAxiomCheck.lean`
 - `YangMillsSeamRegisterAxiomCheck.lean`
+- `YangMillsConstructiveCoreAxiomCheck.lean`
+- `YangMillsVacuumGapCoreAxiomCheck.lean`
+- `YangMillsEndpointCoreAxiomCheck.lean`
+- `YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `YangMillsSourceCrosswalkAxiomCheck.lean`
 - `YangMillsPaperSurfaceSummaryAxiomCheck.lean`
 
@@ -92,5 +108,6 @@ If this project is pushed further, the highest-value directions are:
 2. extend the source crosswalk to more of the companion-local theorem tables
 3. write theorem-by-theorem support maps or audits parallel to the existing
    Navier--Stokes reporting style
-4. begin replacing selected structural packet statements with deeper native
-   Lean abstractions where the mathematics is stable enough
+4. keep deepening the dedicated theorem-heart cores so more of the manuscript's
+   mathematical exports live in structured witness packages instead of flat
+   route propositions

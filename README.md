@@ -134,6 +134,8 @@ Instead, it encodes:
 - the ten-packet kernel reduction
 - the decisive seam nodes
 - the source-label crosswalk back to the canonical manuscript
+- a load-bearing proof spine with dedicated Part C, Part D, and endpoint cores
+- a named-output witness layer collecting constructive, gap, and endpoint exports
 
 ### Current Yang--Mills surface
 
@@ -144,6 +146,10 @@ The main Yang--Mills entry points are:
 - `MaleyLean.Papers.YangMills.Obligations.ClaimLedger`
 - `MaleyLean.Papers.YangMills.Kernel.Register`
 - `MaleyLean.Papers.YangMills.Kernel.PacketRegister`
+- `MaleyLean.Papers.YangMills.Kernel.ConstructiveCore`
+- `MaleyLean.Papers.YangMills.Kernel.VacuumGapCore`
+- `MaleyLean.Papers.YangMills.Kernel.EndpointCore`
+- `MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly`
 - `MaleyLean.Papers.YangMills.Kernel.SeamRegister`
 - `MaleyLean.Papers.YangMills.SourceCrosswalk.Register`
 - `MaleyLean.Papers.YangMills.Surface.Summary`
@@ -162,6 +168,10 @@ The current Yang--Mills scaffold has dedicated axiom checks under
 - `Checks/Axiom/YangMillsKernelRegisterAxiomCheck.lean`
 - `Checks/Axiom/YangMillsPacketRegisterAxiomCheck.lean`
 - `Checks/Axiom/YangMillsSeamRegisterAxiomCheck.lean`
+- `Checks/Axiom/YangMillsConstructiveCoreAxiomCheck.lean`
+- `Checks/Axiom/YangMillsVacuumGapCoreAxiomCheck.lean`
+- `Checks/Axiom/YangMillsEndpointCoreAxiomCheck.lean`
+- `Checks/Axiom/YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `Checks/Axiom/YangMillsSourceCrosswalkAxiomCheck.lean`
 - `Checks/Axiom/YangMillsPaperSurfaceSummaryAxiomCheck.lean`
 

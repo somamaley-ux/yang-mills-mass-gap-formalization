@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsCompanionCrosswalk
+
+namespace MaleyLean
+
+#print axioms YangMillsCompanionCrosswalkAgreesWithSourceRegisterStatement
+
+end MaleyLean

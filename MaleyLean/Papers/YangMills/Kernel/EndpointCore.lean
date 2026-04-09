@@ -1,0 +1,119 @@
+import MaleyLean.Papers.YangMills.Kernel.LoadBearingSpine
+
+namespace MaleyLean
+
+/--
+Dedicated abstract core for the endpoint route of the load-bearing spine.
+
+This isolates the final reconstruction-to-endpoint chain:
+Euclidean dossier, Wightman reconstruction, and endpoint packet closure.
+-/
+structure YMEndpointDossier where
+  euclidean_input : Type
+  reflection_positive : Prop
+  os_data_complete : Prop
+
+structure YMEndpointReconstructionPackage where
+  reconstructed_hilbert : Type
+  vacuum_vector_present : Prop
+  wightman_fields_present : Prop
+  from_dossier : YMEndpointDossier
+
+structure YMEndpointCore where
+  euclidean_dossier_ready : Prop
+  reconstruction_ready : Prop
+  endpoint_packet_ready : Prop
+  endpoint_part : Prop
+  dossier : YMEndpointDossier
+  reconstruction_package : YMEndpointReconstructionPackage
+  endpoint_object : YMEndpointObject
+  build_endpoint_part :
+    euclidean_dossier_ready ->
+    reconstruction_ready ->
+    endpoint_packet_ready ->
+    endpoint_part
+  dossier_yields_reconstruction :
+    euclidean_dossier_ready -> reconstruction_ready
+  reconstruction_exhibits_fields :
+    reconstruction_ready -> reconstruction_package.wightman_fields_present
+  reconstruction_exhibits_vacuum :
+    reconstruction_ready -> reconstruction_package.vacuum_vector_present
+  endpoint_packet_exhibits_exact_endpoint :
+    endpoint_packet_ready -> endpoint_object.exact_local_net_endpoint
+
+/-- Abstract statement that reconstruction closes the endpoint once the dossier is in place. -/
+def ym_reconstruction_endpoint_core (R : YMEndpointCore) : Prop :=
+  R.euclidean_dossier_ready ->
+  R.reconstruction_ready ->
+  R.endpoint_packet_ready ->
+  R.endpoint_part
+
+theorem YangMillsReconstructionEndpointCoreStatement
+  (R : YMEndpointCore)
+  (h : ym_reconstruction_endpoint_core R)
+  (hE : R.euclidean_dossier_ready)
+  (hR : R.reconstruction_ready)
+  (hP : R.endpoint_packet_ready) :
+  R.endpoint_part := by
+  exact h hE hR hP
+
+theorem YangMillsEndpointCoreBuildStatement
+  (R : YMEndpointCore)
+  (hE : R.euclidean_dossier_ready)
+  (hR : R.reconstruction_ready)
+  (hP : R.endpoint_packet_ready) :
+  R.endpoint_part := by
+  exact R.build_endpoint_part hE hR hP
+
+theorem YangMillsEndpointDossierFeedsReconstructionStatement
+  (R : YMEndpointCore)
+  (hE : R.euclidean_dossier_ready) :
+  R.reconstruction_ready := by
+  exact R.dossier_yields_reconstruction hE
+
+theorem YangMillsEndpointReconstructionPackageStatement
+  (R : YMEndpointCore)
+  (hR : R.reconstruction_ready) :
+  R.reconstruction_package.wightman_fields_present /\
+  R.reconstruction_package.vacuum_vector_present := by
+  exact And.intro
+    (R.reconstruction_exhibits_fields hR)
+    (R.reconstruction_exhibits_vacuum hR)
+
+theorem YangMillsEndpointPacketExhibitsExactEndpointStatement
+  (R : YMEndpointCore)
+  (hP : R.endpoint_packet_ready) :
+  R.endpoint_object.exact_local_net_endpoint := by
+  exact R.endpoint_packet_exhibits_exact_endpoint hP
+
+theorem YangMillsLoadBearingSpineFeedsEndpointCoreStatement
+  (S : YMLoadBearingSpine)
+  (R : YMEndpointCore)
+  (h9E : S.packet9_reconstruction.euclidean_os_dossier)
+  (h9W : S.packet9_reconstruction.wightman_reconstruction)
+  (h10 : S.packet10_endpoint)
+  (hE : R.euclidean_dossier_ready)
+  (hR : R.reconstruction_ready)
+  (hP : R.endpoint_packet_ready)
+  (hbuild : ym_reconstruction_endpoint_core R) :
+  S.packet9_reconstruction.euclidean_os_dossier /\
+  S.packet9_reconstruction.wightman_reconstruction /\
+  S.packet10_endpoint /\
+  R.endpoint_part := by
+  have hpart := YangMillsReconstructionEndpointCoreStatement R hbuild hE hR hP
+  exact And.intro h9E <| And.intro h9W <| And.intro h10 hpart
+
+theorem YangMillsEndpointCoreExhibitsNamedOutputsStatement
+  (R : YMEndpointCore)
+  (hE : R.euclidean_dossier_ready)
+  (hP : R.endpoint_packet_ready) :
+  R.reconstruction_ready /\
+  R.reconstruction_package.wightman_fields_present /\
+  R.reconstruction_package.vacuum_vector_present /\
+  R.endpoint_object.exact_local_net_endpoint := by
+  have hR := YangMillsEndpointDossierFeedsReconstructionStatement R hE
+  have hpack := YangMillsEndpointReconstructionPackageStatement R hR
+  have hend := YangMillsEndpointPacketExhibitsExactEndpointStatement R hP
+  exact And.intro hR <| And.intro hpack.1 <| And.intro hpack.2 hend
+
+end MaleyLean

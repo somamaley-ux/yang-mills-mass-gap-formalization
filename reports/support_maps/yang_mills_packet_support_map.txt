@@ -43,6 +43,13 @@ Kernel extraction and reading order:
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/Register.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ReadingOrder.lean`
 
+Load-bearing theorem hearts:
+
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ConstructiveCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/EndpointCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
+
 Canonical source crosswalk:
 
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
@@ -122,6 +129,7 @@ Primary Lean witnesses:
 - `MaleyLean.YangMillsLaneASpineOwnershipStatement`
 - `MaleyLean.YangMillsPacketCrosswalkExamplesStatement`
 - `MaleyLean.YangMillsKernelReadingOrderStatement`
+- `MaleyLean.YangMillsConstructiveCoreExhibitsNamedOutputsStatement`
 
 Canonical source labels:
 
@@ -173,6 +181,7 @@ Primary Lean witnesses:
 - `MaleyLean.YangMillsSeamBridgeNodesStatement`
 - `MaleyLean.YangMillsSeamPacketAlignmentStatement`
 - `MaleyLean.YangMillsSeamCrosswalkExamplesStatement`
+- `MaleyLean.YangMillsConstructiveCoreExhibitsNamedOutputsStatement`
 
 Canonical source labels:
 
@@ -218,6 +227,7 @@ Primary Lean witnesses:
 - `MaleyLean.YangMillsQE3TransportOwnershipStatement`
 - `MaleyLean.YangMillsSeamPacketAlignmentStatement`
 - `MaleyLean.YangMillsReadingOrderCrosswalkStatement`
+- `MaleyLean.YangMillsVacuumGapCoreExhibitsNamedOutputsStatement`
 
 Canonical source labels:
 
@@ -245,6 +255,7 @@ Primary Lean witnesses:
 - `MaleyLean.YangMillsEndpointSpineOwnershipStatement`
 - `MaleyLean.YangMillsPacketOwnerExamplesStatement`
 - `MaleyLean.YangMillsCrosswalkExamplesStatement`
+- `MaleyLean.YangMillsEndpointCoreExhibitsNamedOutputsStatement`
 
 Canonical source labels:
 
@@ -269,6 +280,7 @@ Primary Lean witnesses:
 - `MaleyLean.YangMillsEndpointSpineOwnershipStatement`
 - `MaleyLean.YangMillsPacketCrosswalkExamplesStatement`
 - `MaleyLean.YangMillsCrosswalkExamplesStatement`
+- `MaleyLean.YangMillsEndpointCoreExhibitsNamedOutputsStatement`
 
 Canonical source labels:
 
