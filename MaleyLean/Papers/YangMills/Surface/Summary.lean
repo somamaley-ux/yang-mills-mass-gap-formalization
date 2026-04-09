@@ -132,7 +132,7 @@ theorem YangMillsPaperSurfaceSummaryStatement :
           (by
             intro RE hE hP
             have h := YangMillsEndpointCoreExhibitsNamedOutputsStatement RE hE hP
-            exact And.intro h.2.1 h.2.2.2)) <|
+            exact And.intro h.2.1 h.2.2.2.2.2)) <|
     And.intro YangMillsRoute1TransportSpineStatement
       YangMillsCoreSectionOwnershipStatement
 
