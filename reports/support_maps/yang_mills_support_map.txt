@@ -36,6 +36,7 @@ Primary Lean modules:
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ReadingOrder.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/ConstructiveWitnessRegister.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/EndpointWitnessRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/WitnessRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/VacuumGapWitnessRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/Summary.lean`
@@ -54,6 +55,7 @@ Wrapper entry points:
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsReadingOrder.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsSourceCrosswalk.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsConstructiveWitnessCrosswalk.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsEndpointWitnessCrosswalk.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsWitnessCrosswalk.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapWitnessCrosswalk.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsPaperSurfaceSummary.lean`
@@ -72,6 +74,7 @@ Audit artifacts:
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsReadingOrderAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsSourceCrosswalkAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsConstructiveWitnessCrosswalkAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsEndpointWitnessCrosswalkAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsWitnessCrosswalkAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapWitnessCrosswalkAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsPaperSurfaceSummaryAxiomCheck.lean`
@@ -183,7 +186,18 @@ Stage IX: enriched Part C witness anchoring
   `MaleyLean.YangMillsConstructiveWitnessSourceLabelStatement`
   `MaleyLean.YangMillsConstructiveWitnessCrosswalkExamplesStatement`
 
-Stage X: enriched Part D witness anchoring
+Stage X: enriched endpoint witness anchoring
+
+- manuscript surface:
+  additive witness crosswalk for reconstruction and exact-endpoint exports from
+  the richer endpoint package
+- Lean witnesses:
+  `MaleyLean.YangMillsEndpointWitnessPacketStatement`
+  `MaleyLean.YangMillsEndpointWitnessOwnerStatement`
+  `MaleyLean.YangMillsEndpointWitnessSourceLabelStatement`
+  `MaleyLean.YangMillsEndpointWitnessCrosswalkExamplesStatement`
+
+Stage XI: enriched Part D witness anchoring
 
 - manuscript surface:
   additive witness crosswalk for OS transport and transport-origin exports from
