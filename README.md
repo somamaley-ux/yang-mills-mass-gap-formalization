@@ -136,6 +136,7 @@ Instead, it encodes:
 - the source-label crosswalk back to the canonical manuscript
 - a load-bearing proof spine with dedicated Part C, Part D, and endpoint cores
 - a named-output witness layer collecting constructive, gap, and endpoint exports
+- an additive Part C witness crosswalk for finite-cap and sharp-local exports
 - a witness-to-packet/source crosswalk for those named abstract exports
 - an additive Part D witness crosswalk for OS transport and transport-origin exports
 
@@ -154,6 +155,7 @@ The main Yang--Mills entry points are:
 - `MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly`
 - `MaleyLean.Papers.YangMills.Kernel.SeamRegister`
 - `MaleyLean.Papers.YangMills.SourceCrosswalk.Register`
+- `MaleyLean.Papers.YangMills.SourceCrosswalk.ConstructiveWitnessRegister`
 - `MaleyLean.Papers.YangMills.SourceCrosswalk.WitnessRegister`
 - `MaleyLean.Papers.YangMills.SourceCrosswalk.VacuumGapWitnessRegister`
 - `MaleyLean.Papers.YangMills.Surface.Summary`
@@ -177,6 +179,7 @@ The current Yang--Mills scaffold has dedicated axiom checks under
 - `Checks/Axiom/YangMillsEndpointCoreAxiomCheck.lean`
 - `Checks/Axiom/YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `Checks/Axiom/YangMillsSourceCrosswalkAxiomCheck.lean`
+- `Checks/Axiom/YangMillsConstructiveWitnessCrosswalkAxiomCheck.lean`
 - `Checks/Axiom/YangMillsWitnessCrosswalkAxiomCheck.lean`
 - `Checks/Axiom/YangMillsVacuumGapWitnessCrosswalkAxiomCheck.lean`
 - `Checks/Axiom/YangMillsPaperSurfaceSummaryAxiomCheck.lean`

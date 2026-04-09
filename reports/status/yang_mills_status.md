@@ -18,6 +18,7 @@ What is finished:
 - the load-bearing proof spine is encoded
 - dedicated Part C, Part D, and endpoint cores are encoded
 - named abstract witness outputs are exposed across all three theorem hearts
+- the stronger Part C finite-cap and sharp-local witnesses are crosswalked separately too
 - those named witnesses are crosswalked back to packet ownership and source labels
 - the stronger Part D transport-side witnesses are crosswalked separately too
 - the top-level manuscript-facing summary is axiom-free
@@ -47,6 +48,7 @@ The current Yang--Mills surface is centered on:
 - `MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
 - `MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
 - `MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/ConstructiveWitnessRegister.lean`
 - `MaleyLean/Papers/YangMills/SourceCrosswalk/WitnessRegister.lean`
 - `MaleyLean/Papers/YangMills/SourceCrosswalk/VacuumGapWitnessRegister.lean`
 - `MaleyLean/Papers/YangMills/Surface/Summary.lean`
@@ -68,6 +70,9 @@ The current Lean development supports the following reading.
 - Those dedicated cores now expose named abstract witnesses such as finite-cap
   bridge readiness, bounded-base extension, positive gap, Minkowski-gap
   readiness, Wightman fields, and the exact endpoint object.
+- The richer Part C package is now also tracked at the witness level via
+  explicit finite-cap window, bridge, compatibility, and bounded-base
+  extension crosswalk entries.
 - Those witnesses are now explicitly assigned to primary packets, companion
   owners, and canonical source labels.
 - The richer Part D package is now also tracked at the witness level via
@@ -102,6 +107,7 @@ The most relevant axiom checks are:
 - `YangMillsEndpointCoreAxiomCheck.lean`
 - `YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `YangMillsSourceCrosswalkAxiomCheck.lean`
+- `YangMillsConstructiveWitnessCrosswalkAxiomCheck.lean`
 - `YangMillsWitnessCrosswalkAxiomCheck.lean`
 - `YangMillsVacuumGapWitnessCrosswalkAxiomCheck.lean`
 - `YangMillsPaperSurfaceSummaryAxiomCheck.lean`

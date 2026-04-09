@@ -60,6 +60,7 @@ import MaleyLean.Papers.YangMills.Kernel.TheoremPartAlignment
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapCore
 import MaleyLean.Papers.YangMills.SourceCrosswalk.Register
 import MaleyLean.Papers.YangMills.SourceCrosswalk.CompanionTables
+import MaleyLean.Papers.YangMills.SourceCrosswalk.ConstructiveWitnessRegister
 import MaleyLean.Papers.YangMills.SourceCrosswalk.WitnessRegister
 import MaleyLean.Papers.YangMills.SourceCrosswalk.VacuumGapWitnessRegister
 import MaleyLean.Papers.YangMills.Verbatim.TheoremRegister
