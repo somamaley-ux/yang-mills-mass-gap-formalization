@@ -13,6 +13,9 @@ structure YMEndpointSemanticBundle (R : YMEndpointCore) where
   reconstructed_hilbert : Type
   field_family : Type
   vacuum_vector : Type
+  test_function_space : Type
+  smeared_field_operator : Type
+  vacuum_correlation_family : Type
   reconstruction_source_dossier : YMEndpointDossier
   reconstruction_ready : R.reconstruction_ready
   wightman_fields_present : R.reconstruction_package.wightman_fields_present
@@ -34,9 +37,20 @@ theorem YangMillsEndpointReconstructionMetadataStatement
       R.reconstruction_package.field_family /\
   R.reconstruction_package.vacuum_vector =
       R.reconstruction_package.vacuum_vector /\
+  R.reconstruction_package.test_function_space =
+      R.reconstruction_package.test_function_space /\
+  R.reconstruction_package.smeared_field_operator =
+      R.reconstruction_package.smeared_field_operator /\
+  R.reconstruction_package.vacuum_correlation_family =
+      R.reconstruction_package.vacuum_correlation_family /\
   R.reconstruction_package.from_dossier =
       R.reconstruction_package.from_dossier := by
-  exact And.intro rfl <| And.intro rfl <| And.intro rfl rfl
+  exact And.intro rfl <|
+    And.intro rfl <|
+      And.intro rfl <|
+        And.intro rfl <|
+          And.intro rfl <|
+            And.intro rfl rfl
 
 def YangMillsEndpointSemanticBundleData
   (R : YMEndpointCore)
@@ -52,6 +66,9 @@ def YangMillsEndpointSemanticBundleData
       reconstructed_hilbert := R.reconstruction_package.reconstructed_hilbert
       field_family := R.reconstruction_package.field_family
       vacuum_vector := R.reconstruction_package.vacuum_vector
+      test_function_space := R.reconstruction_package.test_function_space
+      smeared_field_operator := R.reconstruction_package.smeared_field_operator
+      vacuum_correlation_family := R.reconstruction_package.vacuum_correlation_family
       reconstruction_source_dossier := R.reconstruction_package.from_dossier
       reconstruction_ready := hnamed.1
       wightman_fields_present := hnamed.2.1

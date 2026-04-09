@@ -17,6 +17,9 @@ structure YMEndpointReconstructionPackage where
   reconstructed_hilbert : Type
   field_family : Type
   vacuum_vector : Type
+  test_function_space : Type
+  smeared_field_operator : Type
+  vacuum_correlation_family : Type
   vacuum_vector_present : Prop
   wightman_fields_present : Prop
   from_dossier : YMEndpointDossier
