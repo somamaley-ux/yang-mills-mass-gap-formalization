@@ -58,6 +58,7 @@ import MaleyLean.Papers.YangMills.Kernel.LoadBearingSpine
 import MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly
 import MaleyLean.Papers.YangMills.Kernel.ReadingOrder
 import MaleyLean.Papers.YangMills.Kernel.SemanticAssembly
+import MaleyLean.Papers.YangMills.Kernel.SemanticCompatibility
 import MaleyLean.Papers.YangMills.Kernel.SeamRegister
 import MaleyLean.Papers.YangMills.Kernel.TheoremPartAlignment
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapCore
@@ -71,6 +72,7 @@ import MaleyLean.Papers.YangMills.SourceCrosswalk.WitnessRegister
 import MaleyLean.Papers.YangMills.SourceCrosswalk.VacuumGapWitnessRegister
 import MaleyLean.Papers.YangMills.Verbatim.TheoremRegister
 import MaleyLean.Papers.YangMills.Verbatim.DependencySpineSimple
+import MaleyLean.Papers.YangMills.Surface.SemanticCompatibilitySummary
 import MaleyLean.Papers.YangMills.Surface.SemanticAssemblySummary
 import MaleyLean.Papers.YangMills.Surface.Summary
 import MaleyLean.Papers.YangMills.Surface.SummaryWitnessed
