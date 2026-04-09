@@ -12,9 +12,13 @@ structure YMConstructiveSemanticBundle (R : YMConstructiveRoute) where
   finite_cap_window : Type
   finite_cap_extension_data : Type
   positive_bridge_map : Type
+  extend_finite_cap :
+    finite_cap_window -> positive_bridge_map -> finite_cap_extension_data
   bounded_base_carrier : Type
   bounded_state_data : Type
   inductive_union_data : Type
+  assemble_sharp_local_state :
+    bounded_base_carrier -> bounded_state_data -> inductive_union_data -> YMSharpLocalState
   truncation_window_ready : R.finite_cap_package.truncation_window_ready
   finite_cap_extension_ready : R.finite_cap_package.finite_cap_extension_ready
   positive_bridge_ready : R.finite_cap_package.positive_bridge_ready
@@ -31,20 +35,26 @@ theorem YangMillsConstructivePackageMetadataStatement
       R.finite_cap_package.finite_cap_extension_data /\
   R.finite_cap_package.positive_bridge_map =
       R.finite_cap_package.positive_bridge_map /\
+  R.finite_cap_package.extend_finite_cap =
+      R.finite_cap_package.extend_finite_cap /\
   R.sharp_local_package = R.sharp_local_package /\
   R.sharp_local_package.bounded_base_carrier =
       R.sharp_local_package.bounded_base_carrier /\
   R.sharp_local_package.bounded_state_data =
       R.sharp_local_package.bounded_state_data /\
   R.sharp_local_package.inductive_union_data =
-      R.sharp_local_package.inductive_union_data := by
+      R.sharp_local_package.inductive_union_data /\
+  R.sharp_local_package.assemble_sharp_local_state =
+      R.sharp_local_package.assemble_sharp_local_state := by
   exact And.intro rfl <|
     And.intro rfl <|
       And.intro rfl <|
         And.intro rfl <|
           And.intro rfl <|
             And.intro rfl <|
-              And.intro rfl rfl
+              And.intro rfl <|
+                And.intro rfl <|
+                  And.intro rfl rfl
 
 def YangMillsConstructiveSemanticBundleData
   (R : YMConstructiveRoute)
@@ -60,9 +70,11 @@ def YangMillsConstructiveSemanticBundleData
       finite_cap_window := R.finite_cap_package.finite_cap_window
       finite_cap_extension_data := R.finite_cap_package.finite_cap_extension_data
       positive_bridge_map := R.finite_cap_package.positive_bridge_map
+      extend_finite_cap := R.finite_cap_package.extend_finite_cap
       bounded_base_carrier := R.sharp_local_package.bounded_base_carrier
       bounded_state_data := R.sharp_local_package.bounded_state_data
       inductive_union_data := R.sharp_local_package.inductive_union_data
+      assemble_sharp_local_state := R.sharp_local_package.assemble_sharp_local_state
       truncation_window_ready := h.1
       finite_cap_extension_ready := h.2.1
       positive_bridge_ready := h.2.2.1

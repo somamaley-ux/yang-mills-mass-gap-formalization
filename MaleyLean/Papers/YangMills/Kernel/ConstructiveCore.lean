@@ -13,6 +13,8 @@ structure YMFiniteCapPackage where
   finite_cap_window : Type
   finite_cap_extension_data : Type
   positive_bridge_map : Type
+  extend_finite_cap :
+    finite_cap_window -> positive_bridge_map -> finite_cap_extension_data
   truncation_window_ready : Prop
   finite_cap_extension_ready : Prop
   positive_bridge_ready : Prop
@@ -22,6 +24,8 @@ structure YMSharpLocalPackage where
   bounded_base_carrier : Type
   bounded_state_data : Type
   inductive_union_data : Type
+  assemble_sharp_local_state :
+    bounded_base_carrier -> bounded_state_data -> inductive_union_data -> YMSharpLocalState
   bounded_state_compatibility_ready : Prop
   inductive_union_ready : Prop
 
