@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNativeConstructiveVacuumGapLaw
+
+namespace MaleyLean
+
+#print axioms YangMillsNativeConstructiveVacuumGapLawExportStatement
+
+end MaleyLean

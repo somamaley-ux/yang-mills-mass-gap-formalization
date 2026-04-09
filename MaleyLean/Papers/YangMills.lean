@@ -27,6 +27,7 @@ import MaleyLean.Papers.YangMills.Kernel.InterHeartCompatibility
 import MaleyLean.Papers.YangMills.Kernel.LoadBearingSpine
 import MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly
 import MaleyLean.Papers.YangMills.Kernel.NativeLawAssembly
+import MaleyLean.Papers.YangMills.Kernel.NativeConstructiveVacuumGapLaw
 import MaleyLean.Papers.YangMills.Kernel.NativeLawConsequences
 import MaleyLean.Papers.YangMills.Kernel.NativeInterHeartCompatibility
 import MaleyLean.Papers.YangMills.Kernel.ReadingOrder
@@ -56,6 +57,7 @@ import MaleyLean.Papers.YangMills.Verbatim.DependencySpineSimple
 import MaleyLean.Papers.YangMills.Surface.BoundedBaseTransportLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.AssemblyTopSummary
 import MaleyLean.Papers.YangMills.Surface.AssemblyTopNativeSummary
+import MaleyLean.Papers.YangMills.Surface.AssemblyTopNativeInterHeartSummary
 import MaleyLean.Papers.YangMills.Surface.BridgeLawAssemblySummary
 import MaleyLean.Papers.YangMills.Surface.BridgeLawConsequencesSummary
 import MaleyLean.Papers.YangMills.Surface.ConstructiveExtendAssembleLawPackageSummary

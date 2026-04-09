@@ -32,11 +32,20 @@ def YMNativeConstructiveToEndpointCompatibility
   RC.sharp_local_package.sharp_local_state.extends_bounded_base ->
   RE.endpoint_object.exact_local_net_endpoint
 
+/--
+Native state-level bridge from constructive sharp-local states to vacuum-gap
+readiness.
+-/
+def YMNativeConstructiveStateToVacuumGapReadiness
+  (RD : YMVacuumGapRoute) : Type 1 :=
+  YMSharpLocalState -> PLift RD.reconstruction_package.minkowski_gap_ready
+
 structure YMNativeInterHeartCompatibility
     (RC : YMConstructiveRoute)
     (RD : YMVacuumGapRoute)
     (RE : YMEndpointCore) where
   constructive_to_vacuum_gap : YMNativeConstructiveToVacuumGapCompatibility RC RD
+  constructive_state_to_vacuum_gap : YMNativeConstructiveStateToVacuumGapReadiness RD
   vacuum_gap_to_endpoint : YMNativeVacuumGapToEndpointCompatibility RD RE
   constructive_to_endpoint : YMNativeConstructiveToEndpointCompatibility RC RE
 
@@ -66,6 +75,14 @@ def YangMillsNativeConstructiveToEndpointCompatibilityData
   YMNativeConstructiveToEndpointCompatibility RC RE := by
   intro _
   exact A.endpoint.exact_endpoint_witness
+
+def YangMillsNativeConstructiveStateToVacuumGapReadinessData
+  (RC : YMConstructiveRoute)
+  (RD : YMVacuumGapRoute)
+  (RE : YMEndpointCore)
+  (A : YMNativeLawAssembly RC RD RE) :
+  YMNativeConstructiveStateToVacuumGapReadiness RD :=
+  fun _ => ⟨A.vacuum_gap.minkowski_gap_witness⟩
 
 def YangMillsNativeInterHeartCompatibilityData
   (RC : YMConstructiveRoute)
@@ -108,6 +125,8 @@ def YangMillsNativeInterHeartCompatibilityData
   refine
     { constructive_to_vacuum_gap :=
         YangMillsNativeConstructiveToVacuumGapCompatibilityData RC RD RE A
+      constructive_state_to_vacuum_gap :=
+        YangMillsNativeConstructiveStateToVacuumGapReadinessData RC RD RE A
       vacuum_gap_to_endpoint :=
         YangMillsNativeVacuumGapToEndpointCompatibilityData RC RD RE A
       constructive_to_endpoint :=
