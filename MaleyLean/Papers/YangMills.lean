@@ -61,6 +61,7 @@ import MaleyLean.Papers.YangMills.Kernel.TheoremAssemblyNativeInterHeartAlignmen
 import MaleyLean.Papers.YangMills.Kernel.TheoremAssemblyNativeCrossHeartLawAlignment
 import MaleyLean.Papers.YangMills.Kernel.TheoremAssemblyNativeCrossHeartImageAlignment
 import MaleyLean.Papers.YangMills.Kernel.TheoremAssemblyNativeCrossHeartImageTriangleAlignment
+import MaleyLean.Papers.YangMills.Kernel.TheoremAssemblyNativeCrossHeartFactorizationAlignment
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapCore
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapRelationalInterface
 import MaleyLean.Papers.YangMills.Kernel.VacuumGapSemanticBundle
