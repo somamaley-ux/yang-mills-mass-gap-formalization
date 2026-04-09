@@ -139,6 +139,43 @@ The preferred submission-facing theorem path now goes one step further:
 The older landing-map theorem path remains in the repo for compatibility, but
 it is no longer the preferred submission-facing theorem boundary.
 
+The current best submission-facing entry point is now:
+
+- `MaleyLean/Papers/YangMills/Kernel/FlatManuscriptTheoremSurface.lean`
+- `MaleyLean/Papers/YangMills/Surface/FlatManuscriptTheoremSurfaceSummary.lean`
+
+This is the first Yang-Mills surface in the repo that is simultaneously:
+
+- direct rather than landing-map based,
+- manuscript-granular rather than only three-heart compressed,
+- flattened into one direct theorem proposition rather than exported mainly as
+  bundle objects.
+
+The slightly older granular-bundle boundary remains useful as an intermediate
+construction:
+
+- `MaleyLean/Papers/YangMills/Kernel/ManuscriptGranularTheoremSurface.lean`
+- `MaleyLean/Papers/YangMills/Surface/ManuscriptGranularTheoremSurfaceSummary.lean`
+
+## Current Faithfulness Boundary
+
+The main remaining theorem-meaning limitation is no longer arbitrary theorem
+alignment or theorem-content bundling.
+
+Instead, the remaining boundary is that the current preferred top theorem is
+still parameterized by abstract route objects:
+
+- `S : YMLoadBearingSpine`
+- `RC : YMConstructiveRoute`
+- `RD : YMVacuumGapRoute`
+- `RE : YMEndpointCore`
+
+The repository currently does not expose one closed canonical manuscript
+instance of those objects. So the preferred theorem now reads as a direct,
+flattened manuscript-granular theorem over the manuscript route interfaces,
+rather than as one fully closed proposition over a single distinguished route
+instance.
+
 ## Kernel Coverage Highlights
 
 The constructive family is centered in:

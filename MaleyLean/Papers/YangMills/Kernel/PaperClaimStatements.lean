@@ -9,109 +9,82 @@ namespace MaleyLean
 Register-keyed Lane A claim family taken as the paper-facing Part C boundary.
 -/
 def ym_laneA_verbatim_claim_family : Prop :=
-  ym_verbatim_theorem_section .finiteCapSharpLocalExtension =
-      .laneASharpLocalConstruction /\
-    ym_verbatim_theorem_section .passageToFullSharpLocalInductiveUnion =
-      .laneASharpLocalConstruction /\
-    ym_verbatim_theorem_section
-        .boundedBaseCyclicityInReconstructedSharpLocalHilbertSpace =
-      .laneASharpLocalConstruction /\
-    ym_verbatim_theorem_owner .finiteCapSharpLocalExtension =
-      .laneASharpLocalConstruction /\
-    ym_verbatim_theorem_owner .passageToFullSharpLocalInductiveUnion =
-      .laneASharpLocalConstruction /\
-    ym_verbatim_theorem_owner
-        .boundedBaseCyclicityInReconstructedSharpLocalHilbertSpace =
-      .laneASharpLocalConstruction
+  ∀ t : YMVerbatimTheoremEntry,
+    ym_verbatim_theorem_section t = .laneASharpLocalConstruction ->
+      ym_verbatim_theorem_owner t = .laneASharpLocalConstruction
 
 /--
 Register-keyed Route 1 / QE3 claim family taken as the paper-facing Part D
 boundary.
 -/
 def ym_route1_verbatim_claim_family : Prop :=
-  ym_verbatim_theorem_section .continuumVacuumGapTransport = .qe3Transport /\
-    ym_verbatim_theorem_section .continuumSharpLocalVacuumGap = .qe3Transport /\
-    ym_verbatim_theorem_owner .continuumVacuumGapTransport =
-      .ultravioletGateAndRoute1 /\
-    ym_verbatim_theorem_owner .continuumSharpLocalVacuumGap =
-      .ultravioletGateAndRoute1
+  ∀ t : YMVerbatimTheoremEntry,
+    ym_verbatim_theorem_section t = .qe3Transport ->
+      ym_verbatim_theorem_owner t = .ultravioletGateAndRoute1
 
 /--
 Register-keyed endpoint claim family taken as the paper-facing endpoint
 boundary.
 -/
 def ym_endpoint_verbatim_claim_family : Prop :=
-  ym_verbatim_theorem_section .wightmanHaagKastlerReconstruction =
-      .endpointPacket /\
-    ym_verbatim_theorem_section .fieldCorrespondence = .endpointPacket /\
-    ym_verbatim_theorem_section .minkowskiHamiltonianInheritsGap =
-      .endpointPacket /\
-    ym_verbatim_theorem_section
-        .exactLocalNetEndpointAndExclusionOfExtendedSupportSectorData =
-      .endpointPacket /\
-    ym_verbatim_theorem_section .groupOnlyRestatementOfEndpointTheorem =
-      .endpointPacket /\
-    ym_verbatim_theorem_owner .wightmanHaagKastlerReconstruction =
-      .reconstructionAndUniversality /\
-    ym_verbatim_theorem_owner .fieldCorrespondence =
-      .reconstructionAndUniversality /\
-    ym_verbatim_theorem_owner .minkowskiHamiltonianInheritsGap =
-      .reconstructionAndUniversality /\
-    ym_verbatim_theorem_owner
-        .exactLocalNetEndpointAndExclusionOfExtendedSupportSectorData =
-      .reconstructionAndUniversality /\
-    ym_verbatim_theorem_owner .groupOnlyRestatementOfEndpointTheorem =
-      .reconstructionAndUniversality
+  ∀ t : YMVerbatimTheoremEntry,
+    ym_verbatim_theorem_section t = .endpointPacket ->
+      ym_verbatim_theorem_owner t = .reconstructionAndUniversality
 
 def ym_paper_partC_statement (RC : YMConstructiveRoute) : Prop :=
-  ym_laneA_verbatim_claim_family /\ ym_laneA_explicit_statement RC
+  RC.finite_cap_package.truncation_window_ready /\
+    RC.finite_cap_package.finite_cap_extension_ready /\
+    RC.finite_cap_package.positive_bridge_ready /\
+    RC.sharp_local_package.bounded_state_compatibility_ready /\
+    RC.sharp_local_package.inductive_union_ready /\
+    RC.sharp_local_package.sharp_local_state.extends_bounded_base
 
 def ym_paper_partD_statement (RD : YMVacuumGapRoute) : Prop :=
-  ym_route1_verbatim_claim_family /\ ym_route1_explicit_statement RD
+  RD.continuum_gap_transport_ready /\
+    RD.transport_package.os_transport_ready /\
+    RD.transport_package.positive_gap_exhibited /\
+    RD.transport_package.lattice_gap_input /\
+    RD.reconstruction_ready /\
+    RD.reconstruction_package.os_sector_ready /\
+    RD.reconstruction_package.minkowski_gap_ready /\
+    RD.reconstruction_package.obtained_from_transport
 
 def ym_paper_endpoint_statement (RE : YMEndpointCore) : Prop :=
-  ym_endpoint_verbatim_claim_family /\ ym_endpoint_explicit_statement RE
+  RE.reconstruction_ready /\
+    RE.reconstruction_package.wightman_fields_present /\
+    RE.reconstruction_package.vacuum_vector_present /\
+    RE.reconstruction_package.smearing_defined /\
+    RE.reconstruction_package.vacuum_correlations_defined /\
+    RE.endpoint_object.exact_local_net_endpoint
 
 theorem YangMillsLaneAVerbatimClaimFamilyStatement :
   ym_laneA_verbatim_claim_family := by
-  exact And.intro rfl <| And.intro rfl <| And.intro rfl <| And.intro rfl <|
-    And.intro rfl rfl
+  intro t h
+  cases t <;> cases h <;> rfl
 
 theorem YangMillsRoute1VerbatimClaimFamilyStatement :
   ym_route1_verbatim_claim_family := by
-  exact And.intro rfl <| And.intro rfl <| And.intro rfl rfl
+  intro t h
+  cases t <;> cases h <;> rfl
 
 theorem YangMillsEndpointVerbatimClaimFamilyStatement :
   ym_endpoint_verbatim_claim_family := by
-  exact And.intro rfl <| And.intro rfl <| And.intro rfl <| And.intro rfl <|
-    And.intro rfl <| And.intro rfl <| And.intro rfl <| And.intro rfl <|
-      And.intro rfl rfl
+  intro t h
+  cases t <;> cases h <;> rfl
 
 theorem YangMillsLaneAPaperClaimIffExplicitStatement
   (RC : YMConstructiveRoute) :
   ym_paper_partC_statement RC ↔ ym_laneA_explicit_statement RC := by
-  constructor
-  · intro h
-    exact h.2
-  · intro h
-    exact And.intro YangMillsLaneAVerbatimClaimFamilyStatement h
+  rfl
 
 theorem YangMillsRoute1PaperClaimIffExplicitStatement
   (RD : YMVacuumGapRoute) :
   ym_paper_partD_statement RD ↔ ym_route1_explicit_statement RD := by
-  constructor
-  · intro h
-    exact h.2
-  · intro h
-    exact And.intro YangMillsRoute1VerbatimClaimFamilyStatement h
+  rfl
 
 theorem YangMillsEndpointPaperClaimIffExplicitStatement
   (RE : YMEndpointCore) :
   ym_paper_endpoint_statement RE ↔ ym_endpoint_explicit_statement RE := by
-  constructor
-  · intro h
-    exact h.2
-  · intro h
-    exact And.intro YangMillsEndpointVerbatimClaimFamilyStatement h
+  rfl
 
 end MaleyLean

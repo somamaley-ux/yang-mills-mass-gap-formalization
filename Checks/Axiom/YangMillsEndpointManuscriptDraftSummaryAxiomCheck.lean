@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsEndpointManuscriptDraftSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointManuscriptDraftSummaryTopExportStatement
+
+end MaleyLean

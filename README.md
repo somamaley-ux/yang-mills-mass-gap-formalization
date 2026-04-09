@@ -202,6 +202,17 @@ theorem-register families, see:
 - `MaleyLean.Papers.YangMills.Kernel.FaithfulPaperTheoremAssembly`
 - `MaleyLean.Papers.YangMills.Surface.Summary`
 
+For the newer manuscript-granular submission-facing theorem surface, see:
+
+- `MaleyLean.Papers.YangMills.Kernel.ManuscriptGranularTheoremSurface`
+- `MaleyLean.Papers.YangMills.Surface.ManuscriptGranularTheoremSurfaceSummary`
+
+For the current preferred flat submission-facing theorem path, see:
+
+- `MaleyLean.Papers.YangMills.Kernel.FlatManuscriptTheoremSurface`
+- `MaleyLean.Papers.YangMills.Surface.FlatManuscriptTheoremSurfaceSummary`
+- `MaleyLean.YangMillsFlatManuscriptTheoremSurfaceSummary`
+
 ### Yang--Mills verification
 
 The current Yang--Mills scaffold has dedicated axiom checks under

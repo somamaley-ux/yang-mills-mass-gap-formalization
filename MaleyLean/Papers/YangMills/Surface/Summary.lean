@@ -121,7 +121,10 @@ theorem YangMillsPaperSurfaceSummaryStatement :
       RD.weak_window_certificate_ready ->
       RE.euclidean_dossier_ready ->
       RE.endpoint_packet_ready ->
-      Nonempty (YMFaithfulPaperTheoremAssembly S RC RD RE) /\
+      ym_laneA_verbatim_claim_family /\
+      ym_route1_verbatim_claim_family /\
+      ym_endpoint_verbatim_claim_family /\
+      S.theorem_parts.partA_public_scope /\
       ym_paper_partC_statement RC /\
       ym_paper_partD_statement RD /\
       ym_paper_endpoint_statement RE) := by
@@ -165,12 +168,8 @@ theorem YangMillsPaperSurfaceSummaryStatement :
               YangMillsEndpointVerbatimClaimFamilyStatement) <|
           by
             intro S RC RD RE hp1 hp2 hAroute htrunc hext hcompat hunion hww hE hP
-            let A :=
-              YangMillsFaithfulPaperTheoremAssemblyData
+            exact
+              YangMillsDirectPaperTheoremStatement
                 S RC RD RE hp1 hp2 hAroute htrunc hext hcompat hunion hww hE hP
-            exact And.intro ⟨A⟩ <|
-              And.intro A.partC_statement_witness <|
-                And.intro A.partD_statement_witness
-                  A.endpoint_statement_witness
 
 end MaleyLean

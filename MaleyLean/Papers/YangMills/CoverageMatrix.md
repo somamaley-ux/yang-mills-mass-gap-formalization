@@ -84,6 +84,21 @@ kernel formalization and theorem-facing export?"
 - `MaleyLean/Papers/YangMills/Kernel/FaithfulPaperTheoremAssembly.lean`
 - `MaleyLean/Papers/YangMills/Surface/Summary.lean`
 
+### Preferred granular theorem surface
+
+- `MaleyLean/Papers/YangMills/Kernel/ManuscriptGranularTheoremSurface.lean`
+- `MaleyLean/Papers/YangMills/Surface/ManuscriptGranularTheoremSurfaceSummary.lean`
+- `MaleyLean/Papers/YangMills/Kernel/NamedCoreTheoremReflection.lean`
+- `MaleyLean/Papers/YangMills/Kernel/NamedLaneATheoremContent.lean`
+- `MaleyLean/Papers/YangMills/Kernel/NamedRoute1TheoremContent.lean`
+- `MaleyLean/Papers/YangMills/Kernel/NamedEndpointTheoremContent.lean`
+
+### Preferred flat submission-facing theorem surface
+
+- `MaleyLean/Papers/YangMills/Kernel/FlatManuscriptTheoremSurface.lean`
+- `MaleyLean/Papers/YangMills/Surface/FlatManuscriptTheoremSurfaceSummary.lean`
+- `MaleyLean/YangMillsFlatManuscriptTheoremSurfaceSummary.lean`
+
 ### Deep native path
 
 - `MaleyLean/Papers/YangMills/Kernel/NativeLawAssembly.lean`
@@ -107,6 +122,15 @@ through abstract `*_part` placeholders.
 
 It now also contains a theorem-register-keyed paper-claim path, and the main
 surface summary includes that repaired theorem-facing boundary.
+
+It also now contains a flattened manuscript-granular submission-facing theorem
+surface built from named-theorem reflection and per-entry theorem-content
+statements, without the remaining `Nonempty` or theorem-content bundle layer.
+
+The remaining local theorem-shape caveat is narrower now: the preferred theorem
+is still parameterized by the manuscript route objects rather than closed over a
+single canonical manuscript instance, because no such distinguished concrete
+instance is currently exposed in the repo.
 
 No obvious local unfinished markers were found in `MaleyLean/Papers/YangMills`,
 and the current workflow-level Yang-Mills verification passes.

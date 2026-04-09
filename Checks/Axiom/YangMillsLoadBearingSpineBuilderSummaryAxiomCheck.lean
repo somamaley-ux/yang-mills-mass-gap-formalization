@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsLoadBearingSpineBuilderSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsLoadBearingSpineBuilderSummaryTopExportStatement
+
+end MaleyLean
