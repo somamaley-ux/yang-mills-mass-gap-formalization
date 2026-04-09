@@ -1,0 +1,9 @@
+import MaleyLean.YangMillsConstructiveManuscriptChoicesSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveManuscriptChoicesSummaryTopExportStatement
+#print axioms YangMillsConstructiveManuscriptChoicesBuilderSummaryTopExportStatement
+#print axioms YangMillsConstructiveChosenInhabitantsSummaryTopExportStatement
+
+end MaleyLean

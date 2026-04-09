@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveManuscriptWitnessDeclarationsSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveManuscriptWitnessDeclarationsSummaryTopExportStatement
+
+end MaleyLean

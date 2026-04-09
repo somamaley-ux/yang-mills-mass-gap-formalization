@@ -1,0 +1,9 @@
+import MaleyLean.YangMillsEndpointManuscriptChoicesSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointManuscriptChoicesSummaryTopExportStatement
+#print axioms YangMillsEndpointManuscriptChoicesBuilderSummaryTopExportStatement
+#print axioms YangMillsEndpointChosenInhabitantsSummaryTopExportStatement
+
+end MaleyLean

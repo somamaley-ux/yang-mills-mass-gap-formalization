@@ -112,6 +112,14 @@ Chosen constructive site:
 
 These are intended as canonical manuscript objects, not arbitrary selections.
 
+Constructive selection rule fixed from manuscript author input:
+
+- reuse an existing cap/index object if present; otherwise define `ym_manuscript_cap := 4`
+- reuse the existing promoted finite-cap bridge if present; otherwise define it from `RC.finite_cap_package`
+- reuse the identity in `A+` if present; otherwise define `ym_manuscript_base_carrier := 1`
+- reuse the existing tuned bounded positive-time base state if present; otherwise define it from the `4.94` base-state package
+- reuse the existing inductive-union sharp-local state if present; otherwise define it from the `5.76` glueing package
+
 ## C. Vacuum-Gap Route Object
 
 Lean field:
@@ -158,6 +166,15 @@ Chosen vacuum-gap site:
 - `gapf =` spectral-gap functional `λ ↦ λ` on `Spec(Hloc)`
 - `hgap =` proof from `F.5` that `Spec(Hloc) ⊂ {0} ∪ [m*, ∞)`
 
+Vacuum-gap selection rule fixed from manuscript author input:
+
+- reuse the existing `F.216` / QE3 transport object if present; otherwise define it from `RD.transport_package`
+- reuse the canonical bounded cylinder observable in the fixed-scale class if present; otherwise use the simplest admissible unit / one-block observable
+- reuse the existing reconstructed Hilbert-space carrier if present; otherwise define it as the carrier of `RE.reconstruction_package.reconstructed_hilbert`
+- reuse the existing positive-time OS correlation family if present; otherwise define it from `RE.reconstruction_package.vacuum_correlation_family`
+- reuse the existing reconstructed vacuum-gap functional if present; otherwise define it from the reconstructed Hamiltonian spectral package
+- reuse the theorem term for Corollary `M.5` if the field is reconstruction-level; otherwise reuse the theorem term for Corollary `F.5`
+
 ## D. Endpoint Core Object
 
 Lean field:
@@ -194,6 +211,36 @@ Chosen endpoint site:
 
 These are intended to be the same reconstructed packet objects used in the
 manuscript narrative.
+
+Endpoint inhabitant selection rule fixed from manuscript author input:
+
+- `Omega_loc =`
+  reuse the reconstructed vacuum vector `Omega_loc`
+  from the OS/Wightman reconstruction of the full sharp-local state
+  `(Appendix M, Theorem M.3 / reconstruction step)`
+- `phi_star =`
+  reuse the canonical witness test function `phi*,S`
+  from the non-triviality witness theorem
+- `E_ren =`
+  reuse the canonical centered CP-even dimension-4 scalar witness field `E_ren`
+  from the non-triviality theorem
+
+Endpoint packet data fixed from manuscript author input:
+
+- `dossier.euclidean_input = (A_loc, ω^(uren))`
+- `dossier.reflection_positive =` OS reflection positivity on `P+,sharp`
+- `dossier.os_data_complete =` Theorem `M.1`
+- `reconstruction_package.reconstructed_hilbert = H_loc`
+- `reconstruction_package.field_family =` reconstructed Wightman field family `Φ_[P]`
+- `reconstruction_package.vacuum_vector = Ω_loc : H_loc`
+- `reconstruction_package.test_function_space = Schwartz(MinkowskiSpace)`
+- `reconstruction_package.smeared_field_operator =` operator-on-domain over `H_loc`
+- `reconstruction_package.vacuum_correlation_family =` vacuum Wightman correlation family
+- `reconstruction_package.smear_field = (Φ_[P], f) ↦ Φ_[P](f)`
+- `reconstruction_package.evaluate_vacuum_correlation = (A, B) ↦ ⟨Ω_loc, A B Ω_loc⟩`
+- `endpoint_object.local_net =` bounded-region local gauge-invariant sharp-local net `A_loc(G)`
+- `endpoint_object.vacuum_sector =` reconstructed vacuum representation of `A_loc(G)` on `H_loc`
+- `endpoint_object.faithful_wilson_universality =` Theorem `O.3`
 
 ## E. Readiness Witnesses
 
