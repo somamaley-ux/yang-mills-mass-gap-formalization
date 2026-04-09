@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNativeConstructiveEndpointLaw
+
+namespace MaleyLean
+
+#print axioms YangMillsNativeConstructiveEndpointLawExportStatement
+
+end MaleyLean

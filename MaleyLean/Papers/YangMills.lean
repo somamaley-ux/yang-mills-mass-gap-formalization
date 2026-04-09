@@ -27,8 +27,10 @@ import MaleyLean.Papers.YangMills.Kernel.InterHeartCompatibility
 import MaleyLean.Papers.YangMills.Kernel.LoadBearingSpine
 import MaleyLean.Papers.YangMills.Kernel.NamedOutputsAssembly
 import MaleyLean.Papers.YangMills.Kernel.NativeLawAssembly
+import MaleyLean.Papers.YangMills.Kernel.NativeConstructiveEndpointLaw
 import MaleyLean.Papers.YangMills.Kernel.NativeConstructiveVacuumGapLaw
 import MaleyLean.Papers.YangMills.Kernel.NativeLawConsequences
+import MaleyLean.Papers.YangMills.Kernel.NativeVacuumGapEndpointLaw
 import MaleyLean.Papers.YangMills.Kernel.NativeInterHeartCompatibility
 import MaleyLean.Papers.YangMills.Kernel.ReadingOrder
 import MaleyLean.Papers.YangMills.Kernel.RelationalAssembly
