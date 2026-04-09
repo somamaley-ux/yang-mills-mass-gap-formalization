@@ -82,6 +82,8 @@ import MaleyLean.Papers.YangMills.Kernel.NativeCrossHeartLawObject
 import MaleyLean.Papers.YangMills.Kernel.NativeCrossHeartLawConsequences
 import MaleyLean.Papers.YangMills.Kernel.NativeCrossHeartImageAssembly
 import MaleyLean.Papers.YangMills.Kernel.NativeCrossHeartImageConsequences
+import MaleyLean.Papers.YangMills.Kernel.NativeCrossHeartImageCoherence
+import MaleyLean.YangMillsNativeCrossHeartImageCoherence
 import MaleyLean.YangMillsNativeCrossHeartImageConsequences
 import MaleyLean.YangMillsNativeCrossHeartImageAssembly
 import MaleyLean.Papers.YangMills.Kernel.NativeLawConsequences
@@ -121,6 +123,8 @@ import MaleyLean.Papers.YangMills.Surface.AssemblyTopSummary
 import MaleyLean.Papers.YangMills.Surface.AssemblyTopNativeSummary
 import MaleyLean.Papers.YangMills.Surface.AssemblyTopNativeInterHeartSummary
 import MaleyLean.Papers.YangMills.Surface.AssemblyTopNativeCrossHeartLawSummary
+import MaleyLean.Papers.YangMills.Surface.AssemblyTopNativeCrossHeartImageSummary
+import MaleyLean.YangMillsAssemblyTopNativeCrossHeartImageSummary
 import MaleyLean.YangMillsAssemblyTopNativeCrossHeartLawSummary
 import MaleyLean.Papers.YangMills.Surface.BridgeLawAssemblySummary
 import MaleyLean.Papers.YangMills.Surface.BridgeLawConsequencesSummary
