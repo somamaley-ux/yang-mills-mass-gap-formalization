@@ -18,6 +18,7 @@ What is finished:
 - the load-bearing proof spine is encoded
 - dedicated Part C, Part D, and endpoint cores are encoded
 - named abstract witness outputs are exposed across all three theorem hearts
+- those named witnesses are crosswalked back to packet ownership and source labels
 - the top-level manuscript-facing summary is axiom-free
 
 What is not finished:
@@ -45,6 +46,7 @@ The current Yang--Mills surface is centered on:
 - `MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
 - `MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
 - `MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/WitnessRegister.lean`
 - `MaleyLean/Papers/YangMills/Surface/Summary.lean`
 
 ## What the formalization says
@@ -64,6 +66,8 @@ The current Lean development supports the following reading.
 - Those dedicated cores now expose named abstract witnesses such as finite-cap
   bridge readiness, bounded-base extension, positive gap, Minkowski-gap
   readiness, Wightman fields, and the exact endpoint object.
+- Those witnesses are now explicitly assigned to primary packets, companion
+  owners, and canonical source labels.
 
 ## Why this matters
 
@@ -94,6 +98,7 @@ The most relevant axiom checks are:
 - `YangMillsEndpointCoreAxiomCheck.lean`
 - `YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `YangMillsSourceCrosswalkAxiomCheck.lean`
+- `YangMillsWitnessCrosswalkAxiomCheck.lean`
 - `YangMillsPaperSurfaceSummaryAxiomCheck.lean`
 
 These checks report the current manuscript-facing Yang--Mills surface as

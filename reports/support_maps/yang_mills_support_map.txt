@@ -35,6 +35,7 @@ Primary Lean modules:
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ReadingOrder.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/SourceCrosswalk/WitnessRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/Summary.lean`
 
 Wrapper entry points:
@@ -50,6 +51,7 @@ Wrapper entry points:
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsSeamRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsReadingOrder.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsSourceCrosswalk.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsWitnessCrosswalk.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsPaperSurfaceSummary.lean`
 
 Audit artifacts:
@@ -65,6 +67,7 @@ Audit artifacts:
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsReadingOrderAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsSourceCrosswalkAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsWitnessCrosswalkAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsPaperSurfaceSummaryAxiomCheck.lean`
 - `/d:/lean/MaleyLean/reports/audits/yang_mills_axiom_audit.txt`
 
@@ -151,6 +154,17 @@ Stage VII: load-bearing theorem hearts and witness exports
   `MaleyLean.YangMillsSpineFeedsAlignedMainTheoremPartsStatement`
   `MaleyLean.YangMillsSpineFeedsAllAlignedMainTheoremPartsStatement`
   `MaleyLean.YangMillsSpineFeedsAllNamedOutputsStatement`
+
+Stage VIII: witness ownership and source anchoring
+
+- manuscript surface:
+  named abstract witnesses assigned to primary packets, companion owners, and
+  canonical source labels
+- Lean witnesses:
+  `MaleyLean.YangMillsWitnessPacketOwnershipStatement`
+  `MaleyLean.YangMillsWitnessOwnerStatement`
+  `MaleyLean.YangMillsWitnessSourceLabelStatement`
+  `MaleyLean.YangMillsWitnessCrosswalkExamplesStatement`
 
 Top-level summary
 -----------------
