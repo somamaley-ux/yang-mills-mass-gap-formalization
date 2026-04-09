@@ -10,12 +10,16 @@ flowed state, finite truncation, finite-cap extension, cyclicity,
 finite-cap bridge, bounded-state compatibility, and inductive union.
 -/
 structure YMFiniteCapPackage where
+  finite_cap_window : Type
+  finite_cap_extension_data : Type
   truncation_window_ready : Prop
   finite_cap_extension_ready : Prop
   positive_bridge_ready : Prop
 
 structure YMSharpLocalPackage where
   sharp_local_state : YMSharpLocalState
+  bounded_state_data : Type
+  inductive_union_data : Type
   bounded_state_compatibility_ready : Prop
   inductive_union_ready : Prop
 

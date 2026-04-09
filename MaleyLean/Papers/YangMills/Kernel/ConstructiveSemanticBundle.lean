@@ -9,6 +9,10 @@ sharp-local data, and bounded-base extension together in one typed object.
 structure YMConstructiveSemanticBundle (R : YMConstructiveRoute) where
   finite_cap_package_shape : YMFiniteCapPackage
   sharp_local_package_shape : YMSharpLocalPackage
+  finite_cap_window : Type
+  finite_cap_extension_data : Type
+  bounded_state_data : Type
+  inductive_union_data : Type
   truncation_window_ready : R.finite_cap_package.truncation_window_ready
   finite_cap_extension_ready : R.finite_cap_package.finite_cap_extension_ready
   positive_bridge_ready : R.finite_cap_package.positive_bridge_ready
@@ -19,8 +23,20 @@ structure YMConstructiveSemanticBundle (R : YMConstructiveRoute) where
 theorem YangMillsConstructivePackageMetadataStatement
   (R : YMConstructiveRoute) :
   R.finite_cap_package = R.finite_cap_package /\
-  R.sharp_local_package = R.sharp_local_package := by
-  exact And.intro rfl rfl
+  R.finite_cap_package.finite_cap_window =
+      R.finite_cap_package.finite_cap_window /\
+  R.finite_cap_package.finite_cap_extension_data =
+      R.finite_cap_package.finite_cap_extension_data /\
+  R.sharp_local_package = R.sharp_local_package /\
+  R.sharp_local_package.bounded_state_data =
+      R.sharp_local_package.bounded_state_data /\
+  R.sharp_local_package.inductive_union_data =
+      R.sharp_local_package.inductive_union_data := by
+  exact And.intro rfl <|
+    And.intro rfl <|
+      And.intro rfl <|
+        And.intro rfl <|
+          And.intro rfl rfl
 
 def YangMillsConstructiveSemanticBundleData
   (R : YMConstructiveRoute)
@@ -33,6 +49,10 @@ def YangMillsConstructiveSemanticBundleData
   refine
     { finite_cap_package_shape := R.finite_cap_package
       sharp_local_package_shape := R.sharp_local_package
+      finite_cap_window := R.finite_cap_package.finite_cap_window
+      finite_cap_extension_data := R.finite_cap_package.finite_cap_extension_data
+      bounded_state_data := R.sharp_local_package.bounded_state_data
+      inductive_union_data := R.sharp_local_package.inductive_union_data
       truncation_window_ready := h.1
       finite_cap_extension_ready := h.2.1
       positive_bridge_ready := h.2.2.1

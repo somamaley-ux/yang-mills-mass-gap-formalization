@@ -11,6 +11,8 @@ structure YMEndpointSemanticBundle (R : YMEndpointCore) where
   reflection_positive : Prop
   os_data_complete : Prop
   reconstructed_hilbert : Type
+  field_family : Type
+  vacuum_vector : Type
   reconstruction_source_dossier : YMEndpointDossier
   reconstruction_ready : R.reconstruction_ready
   wightman_fields_present : R.reconstruction_package.wightman_fields_present
@@ -28,9 +30,13 @@ theorem YangMillsEndpointReconstructionMetadataStatement
   (R : YMEndpointCore) :
   R.reconstruction_package.reconstructed_hilbert =
       R.reconstruction_package.reconstructed_hilbert /\
+  R.reconstruction_package.field_family =
+      R.reconstruction_package.field_family /\
+  R.reconstruction_package.vacuum_vector =
+      R.reconstruction_package.vacuum_vector /\
   R.reconstruction_package.from_dossier =
       R.reconstruction_package.from_dossier := by
-  exact And.intro rfl rfl
+  exact And.intro rfl <| And.intro rfl <| And.intro rfl rfl
 
 def YangMillsEndpointSemanticBundleData
   (R : YMEndpointCore)
@@ -44,6 +50,8 @@ def YangMillsEndpointSemanticBundleData
       reflection_positive := R.dossier.reflection_positive
       os_data_complete := R.dossier.os_data_complete
       reconstructed_hilbert := R.reconstruction_package.reconstructed_hilbert
+      field_family := R.reconstruction_package.field_family
+      vacuum_vector := R.reconstruction_package.vacuum_vector
       reconstruction_source_dossier := R.reconstruction_package.from_dossier
       reconstruction_ready := hnamed.1
       wightman_fields_present := hnamed.2.1

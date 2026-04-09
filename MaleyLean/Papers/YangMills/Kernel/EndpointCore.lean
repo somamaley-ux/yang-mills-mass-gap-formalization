@@ -15,6 +15,8 @@ structure YMEndpointDossier where
 
 structure YMEndpointReconstructionPackage where
   reconstructed_hilbert : Type
+  field_family : Type
+  vacuum_vector : Type
   vacuum_vector_present : Prop
   wightman_fields_present : Prop
   from_dossier : YMEndpointDossier

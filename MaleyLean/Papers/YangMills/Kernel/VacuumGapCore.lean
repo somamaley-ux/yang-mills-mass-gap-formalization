@@ -10,12 +10,14 @@ UV/public-scope gate, entrance, fixed-lattice gap, weak-window certificate,
 QE3 transport, reconstruction, and endpoint packet.
 -/
 structure YMTransportPackage where
+  transport_state : Type
   lattice_gap_input : Prop
   os_transport_ready : Prop
   positive_gap_exhibited : Prop
 
 structure YMVacuumReconstructionPackage where
   reconstructed_sector : Type
+  os_sector : Type
   os_sector_ready : Prop
   minkowski_gap_ready : Prop
   obtained_from_transport : Prop

@@ -8,7 +8,9 @@ reconstruction data, and transport origin together in one typed object.
 -/
 structure YMVacuumGapSemanticBundle (R : YMVacuumGapRoute) where
   transport_package_shape : YMTransportPackage
+  transport_state : Type
   reconstructed_sector : Type
+  os_sector : Type
   reconstruction_package_shape : YMVacuumReconstructionPackage
   continuum_gap_transport_ready : R.continuum_gap_transport_ready
   os_transport_ready : R.transport_package.os_transport_ready
@@ -22,10 +24,14 @@ structure YMVacuumGapSemanticBundle (R : YMVacuumGapRoute) where
 theorem YangMillsVacuumGapPackageMetadataStatement
   (R : YMVacuumGapRoute) :
   R.transport_package = R.transport_package /\
+  R.transport_package.transport_state =
+      R.transport_package.transport_state /\
   R.reconstruction_package.reconstructed_sector =
       R.reconstruction_package.reconstructed_sector /\
+  R.reconstruction_package.os_sector =
+      R.reconstruction_package.os_sector /\
   R.reconstruction_package = R.reconstruction_package := by
-  exact And.intro rfl <| And.intro rfl rfl
+  exact And.intro rfl <| And.intro rfl <| And.intro rfl <| And.intro rfl rfl
 
 def YangMillsVacuumGapSemanticBundleData
   (R : YMVacuumGapRoute)
@@ -34,7 +40,9 @@ def YangMillsVacuumGapSemanticBundleData
   have h := YangMillsVacuumGapCoreExhibitsNamedOutputsStatement R hww
   refine
     { transport_package_shape := R.transport_package
+      transport_state := R.transport_package.transport_state
       reconstructed_sector := R.reconstruction_package.reconstructed_sector
+      os_sector := R.reconstruction_package.os_sector
       reconstruction_package_shape := R.reconstruction_package
       continuum_gap_transport_ready := h.1
       os_transport_ready := h.2.1
