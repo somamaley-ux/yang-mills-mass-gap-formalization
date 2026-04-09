@@ -52,6 +52,7 @@ import MaleyLean.Papers.YangMills.Kernel.CoreAssembly
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveCore
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveRelationalInterface
 import MaleyLean.Papers.YangMills.Kernel.ConstructiveSemanticBundle
+import MaleyLean.Papers.YangMills.Kernel.BoundedBaseTransportLawPackage
 import MaleyLean.Papers.YangMills.Kernel.EndpointAlignment
 import MaleyLean.Papers.YangMills.Kernel.EndpointCore
 import MaleyLean.Papers.YangMills.Kernel.EndpointRelationalInterface
@@ -79,6 +80,7 @@ import MaleyLean.Papers.YangMills.SourceCrosswalk.WitnessRegister
 import MaleyLean.Papers.YangMills.SourceCrosswalk.VacuumGapWitnessRegister
 import MaleyLean.Papers.YangMills.Verbatim.TheoremRegister
 import MaleyLean.Papers.YangMills.Verbatim.DependencySpineSimple
+import MaleyLean.Papers.YangMills.Surface.BoundedBaseTransportLawPackageSummary
 import MaleyLean.Papers.YangMills.Surface.ConstructiveRelationalSummary
 import MaleyLean.Papers.YangMills.Surface.CrossHeartLawObjectsSummary
 import MaleyLean.Papers.YangMills.Surface.CrossHeartLawsSummary
