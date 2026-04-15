@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsCanonicalCoreOutputAssembly
+
+namespace MaleyLean
+
+#print axioms YangMillsCanonicalCoreOutputAssemblyTopExportStatement
+
+end MaleyLean

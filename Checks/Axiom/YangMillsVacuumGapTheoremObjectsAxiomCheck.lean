@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapTheoremObjects
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapNativeTheoremObjectsExportStatement
+
+end MaleyLean

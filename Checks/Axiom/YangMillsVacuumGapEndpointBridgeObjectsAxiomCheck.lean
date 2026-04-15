@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapEndpointBridgeObjects
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapEndpointBridgeExportStatement
+
+end MaleyLean

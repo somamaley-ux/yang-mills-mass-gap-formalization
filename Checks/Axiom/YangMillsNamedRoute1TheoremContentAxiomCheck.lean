@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNamedRoute1TheoremContent
+
+namespace MaleyLean
+
+#print axioms YangMillsNamedRoute1TheoremContentTopExportStatement
+
+end MaleyLean

@@ -1,0 +1,3 @@
+import MaleyLean.YangMillsNativeCrossHeartFactorizationTriangleCoherence
+
+#print axioms MaleyLean.YangMillsNativeCrossHeartFactorizationTriangleCoherenceExportStatement

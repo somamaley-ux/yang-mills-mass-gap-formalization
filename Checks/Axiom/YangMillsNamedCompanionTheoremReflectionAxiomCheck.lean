@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNamedCompanionTheoremReflection
+
+namespace MaleyLean
+
+#print axioms YangMillsNamedCompanionTheoremReflectionTopExportStatement
+
+end MaleyLean

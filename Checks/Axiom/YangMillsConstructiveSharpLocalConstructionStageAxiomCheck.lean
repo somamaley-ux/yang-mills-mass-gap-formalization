@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveSharpLocalConstructionStage
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveSharpLocalConstructionStageExportStatement
+
+end MaleyLean

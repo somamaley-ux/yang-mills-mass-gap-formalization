@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveRelationalSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveRelationalSummaryExportStatement
+
+end MaleyLean

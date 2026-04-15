@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveExtendAssembleLawPackageSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveExtendAssembleLawPackageSummaryExportStatement
+
+end MaleyLean

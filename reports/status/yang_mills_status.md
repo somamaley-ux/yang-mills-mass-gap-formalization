@@ -1,55 +1,189 @@
 # Yang--Mills Lean Status
 
-## Current State
+## Current state
 
-The deeper native Yang--Mills boundary represented here is axiom-free.
+The Yang--Mills project in this repository is now in a strong
+manuscript-facing structural state.
 
-What is currently certified:
+What is finished:
 
-- the native constructive / vacuum-gap / endpoint bridge layers
-- the theorem/native alignment layer
-- the native law-consequence layer
-- the native cross-heart law layer
-- the canonical verified payload layer
-- the older manuscript-facing structural surface as a shallower boundary
+- the live proof surface is encoded in Lean
+- the core theorem titles are encoded
+- the companion ownership map is encoded
+- the live dependency spine is encoded
+- the proof-kernel extraction is encoded
+- the ten-packet reduction is encoded
+- the decisive seam nodes are encoded
+- the source-label crosswalk back to the canonical manuscript is encoded
+- the load-bearing proof spine is encoded
+- dedicated Part C, Part D, and endpoint cores are encoded
+- named abstract witness outputs are exposed across all three theorem hearts
+- the stronger Part C finite-cap and sharp-local witnesses are crosswalked separately too
+- the endpoint reconstruction and exact-endpoint witnesses are crosswalked separately too
+- those named witnesses are crosswalked back to packet ownership and source labels
+- the stronger Part D transport-side witnesses are crosswalked separately too
+- the three theorem-heart exports are also packaged as a structured witness bundle object
+- the three theorem-heart witness bundles are also summarized together in one additive Lean surface theorem
+- that witness bundle is now exported again at manuscript-facing surface level
+- the three theorem-heart semantic bundles are assembled into one unified semantic object and re-exported at surface level
+- the top-level manuscript-facing summary is axiom-free
+- a closed manuscript instantiation constant is present
+- the closed manuscript completion criterion is realized
+- the Lane A heart is packaged as native theorem objects
+- the Route 1 mass-gap heart is packaged as native theorem objects and chosen-site compatibility objects
+- the endpoint heart is packaged as native theorem objects
+- the `M.5 -> O.2 / O.3 / O.5` bridge is packaged as one native theorem object
+- the strongest current submission-facing boundary is one full native manuscript package
 
-What is still the honest limit:
+What is not finished:
 
-- the deepest exported theorems remain parameterized over route/core objects and
-  semantic-bundle data
-- this repo therefore does not yet expose one fully closed canonical native
-  proposition for the entire analytic Yang--Mills manuscript
+- a full end-to-end Lean formalization of the underlying Yang--Mills QFT/PDE
+  mathematics
+- discharge in Lean of the analytic arguments cited by the manuscript proof
+  homes
+- replacement of the companion/source proofs with native Lean proofs
 
-## Main Files
+## Final manuscript-facing layers
 
-- `paper/core.tex`
-- `paper/companion1.tex`
-- `paper/companion2.tex`
-- `paper/companion3.tex`
-- `paper/proofkernel.tex`
-- `paper/ym_manuscript_hardened_v2_source_anonymized.zip`
-- `paper/Companion_I__Ultraviolet_Gate_and_Route_1_Mass_Gap_Chain_Anon.pdf`
-- `paper/Companion II Lane A Sharp-Local Construction_Anon.pdf`
-- `paper/Companion_III__Reconstruction__Non_Triviality__and_Faithful_Wilson_Universality_Anon.pdf`
-- `paper/Vacuum_sector_mass_gap_for_the_local_gauge_invariant_sharp_local_Yang_Mills_net_Anon.pdf`
-- `paper/Vacuum_sector_mass_gap_for_the_local_gauge_invariant_sharp_local_Yang_Mills_net_Anon.zip`
-- `MaleyLean/Papers/YangMills/Surface/AssemblyTopNativeSummary.lean`
-- `MaleyLean/Papers/YangMills/Surface/AssemblyTopNativeCrossHeartLawSummary.lean`
-- `MaleyLean/Papers/YangMills/Kernel/CanonicalVerifiedPayload.lean`
-- `MaleyLean/YangMillsAssemblyTopNativeSummary.lean`
-- `MaleyLean/YangMillsAssemblyTopNativeCrossHeartLawSummary.lean`
-- `MaleyLean/YangMillsCanonicalVerifiedPayload.lean`
-- `Checks/Axiom/YangMillsDeepNativeBoundaryAxiomCheck.lean`
-- `reports/audits/yang_mills_axiom_audit.txt`
-- `reports/support_maps/yang_mills_support_map.txt`
+The current Yang--Mills surface is centered on:
 
-## Honest Boundary
+- `MaleyLean/Papers/YangMills/Verbatim/TheoremRegister.lean`
+- `MaleyLean/Papers/YangMills/Verbatim/DependencySpineSimple.lean`
+- `MaleyLean/Papers/YangMills/Obligations/Inventory.lean`
+- `MaleyLean/Papers/YangMills/Obligations/PaperLedger.lean`
+- `MaleyLean/Papers/YangMills/Obligations/ClaimLedger.lean`
+- `MaleyLean/Papers/YangMills/Kernel/Register.lean`
+- `MaleyLean/Papers/YangMills/Kernel/PacketRegister.lean`
+- `MaleyLean/Papers/YangMills/Kernel/ConstructiveCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/VacuumGapCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/EndpointCore.lean`
+- `MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
+- `MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/Register.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/ConstructiveWitnessRegister.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/EndpointWitnessRegister.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/WitnessRegister.lean`
+- `MaleyLean/Papers/YangMills/SourceCrosswalk/VacuumGapWitnessRegister.lean`
+- `MaleyLean/Papers/YangMills/Kernel/WitnessBundle.lean`
+- `MaleyLean/Papers/YangMills/Kernel/SemanticAssembly.lean`
+- `MaleyLean/Papers/YangMills/Surface/SemanticAssemblySummary.lean`
+- `MaleyLean/Papers/YangMills/Surface/WitnessBundleSummary.lean`
+- `MaleyLean/Papers/YangMills/Surface/WitnessHeartSummary.lean`
+- `MaleyLean/Papers/YangMills/Surface/Summary.lean`
 
-This standalone repo certifies a deeper native Yang--Mills package than the
-older paper-surface summary alone.
+The current strongest submission-facing package is:
 
-In particular, the exported top native summary, top native cross-heart law
-summary, and canonical verified payload are axiom-free. But the current native
-boundary is still parameterized rather than fully closed over one distinguished
-manuscript instance, so the safest public description is: deep native theorem
-boundary, not yet one fully closed end-to-end canonical proposition.
+- `MaleyLean/Papers/YangMills/Kernel/FullManuscriptNativePackage.lean`
+- `MaleyLean/Papers/YangMills/Surface/FullManuscriptNativePackageSummary.lean`
+
+## What the formalization says
+
+The current Lean development supports the following reading.
+
+- The hardened Yang--Mills archive has a four-root live proof surface.
+- `proofkernel.tex` is an expert-audit extraction, not a second source of new
+  mathematics.
+- The public theorem burden is organized by ten packets plus one auxiliary
+  weak-window certificate.
+- The decisive expert-attack seams are explicit rather than hidden in prose.
+- The cleaned public theorem nodes are crosswalked back to canonical source
+  labels such as `F.331`, `5.74`, `F.216`, `M.3`, and `O.5`.
+- The load-bearing theorem object is split into dedicated constructive,
+  vacuum-gap, and endpoint cores rather than treated as one opaque packet list.
+- Those dedicated cores now expose named abstract witnesses such as finite-cap
+  bridge readiness, bounded-base extension, positive gap, Minkowski-gap
+  readiness, Wightman fields, and the exact endpoint object.
+- The richer Part C package is now also tracked at the witness level via
+  explicit finite-cap window, bridge, compatibility, and bounded-base
+  extension crosswalk entries.
+- The endpoint package is now also tracked at the witness level via explicit
+  reconstruction-readiness, Wightman-field, vacuum-vector, and exact-endpoint
+  crosswalk entries.
+- Those witnesses are now explicitly assigned to primary packets, companion
+  owners, and canonical source labels.
+- The three theorem-heart witness bundles are now also collected in one
+  additive summary theorem, so the manuscript-facing surface can talk about
+  the constructive, vacuum-gap, and endpoint anchors together.
+- The same three-heart exports are now also exposed as a structured witness
+  bundle object and then re-exported at surface level, so later semantic
+  deepening can target one bundle interface instead of many parallel facts.
+- The three theorem hearts are now also assembled at the semantic-bundle level
+  into one unified typed object, and that object is re-exported at surface
+  level under explicit readiness hypotheses.
+- The richer Part D package is now also tracked at the witness level via
+  explicit OS-transport and transport-origin crosswalk entries.
+- The manuscript object package also now defines a concrete
+  `YMClosedInstantiatedManuscript` and proves
+  `ym_closed_manuscript_completion`.
+- The strongest current referee-facing theorem boundary is now
+  `YangMillsFullManuscriptNativePackageExportStatement`, which exposes public
+  scope, Part C, Part D, endpoint, key theorem labels, and key witness labels
+  together in one axiom-free theorem.
+
+## Why this matters
+
+This makes the Yang--Mills manuscript much easier to interrogate honestly.
+The Lean surface now says:
+
+- what counts as live proof burden,
+- what is only audit extraction,
+- what is only closure packaging,
+- what remains reserve support material,
+- and how the public theorem surface maps back to the source manuscript.
+
+That does not prove the Yang--Mills mathematics in Lean, but it does remove a
+large amount of ambiguity about manuscript structure, dependency order, and
+seam locality.
+
+## Main verification artifacts
+
+The most relevant axiom checks are:
+
+- `YangMillsVerbatimTheoremRegisterAxiomCheck.lean`
+- `YangMillsClaimLedgerAxiomCheck.lean`
+- `YangMillsKernelRegisterAxiomCheck.lean`
+- `YangMillsPacketRegisterAxiomCheck.lean`
+- `YangMillsSeamRegisterAxiomCheck.lean`
+- `YangMillsConstructiveCoreAxiomCheck.lean`
+- `YangMillsVacuumGapCoreAxiomCheck.lean`
+- `YangMillsEndpointCoreAxiomCheck.lean`
+- `YangMillsNamedOutputsAssemblyAxiomCheck.lean`
+- `YangMillsSourceCrosswalkAxiomCheck.lean`
+- `YangMillsConstructiveWitnessCrosswalkAxiomCheck.lean`
+- `YangMillsEndpointWitnessCrosswalkAxiomCheck.lean`
+- `YangMillsWitnessCrosswalkAxiomCheck.lean`
+- `YangMillsVacuumGapWitnessCrosswalkAxiomCheck.lean`
+- `YangMillsWitnessBundleAxiomCheck.lean`
+- `YangMillsSemanticAssemblyAxiomCheck.lean`
+- `YangMillsSemanticAssemblySummaryAxiomCheck.lean`
+- `YangMillsWitnessBundleSummaryAxiomCheck.lean`
+- `YangMillsWitnessHeartSummaryAxiomCheck.lean`
+- `YangMillsPaperSurfaceSummaryAxiomCheck.lean`
+- `YangMillsConstructiveTheoremObjectsAxiomCheck.lean`
+- `YangMillsVacuumGapTheoremObjectsAxiomCheck.lean`
+- `YangMillsVacuumGapMassGapChainAxiomCheck.lean`
+- `YangMillsVacuumGapMassGapCompatibilityAxiomCheck.lean`
+- `YangMillsVacuumGapChosenSiteBridgeObjectsAxiomCheck.lean`
+- `YangMillsEndpointTheoremObjectsAxiomCheck.lean`
+- `YangMillsVacuumGapEndpointBridgeObjectsAxiomCheck.lean`
+- `YangMillsRoute1EndpointNativePackageAxiomCheck.lean`
+- `YangMillsFullManuscriptNativePackageAxiomCheck.lean`
+
+These checks report the current manuscript-facing Yang--Mills surface as
+axiom-free.
+
+The strongest current theorem-level audit result is that
+`YangMillsFullManuscriptNativePackageExportStatement` is axiom-free.
+
+## Best next directions
+
+If this project is pushed further, the highest-value directions are:
+
+1. add a subsection and reading-order register mirroring the kernel attack
+   guidance
+2. extend the source crosswalk to more of the companion-local theorem tables
+3. write theorem-by-theorem support maps or audits parallel to the existing
+   Navier--Stokes reporting style
+4. keep deepening the dedicated theorem-heart cores so more of the manuscript's
+   mathematical exports live in structured witness packages instead of flat
+   route propositions

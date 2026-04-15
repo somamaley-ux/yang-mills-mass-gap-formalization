@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapChosenSiteLawAtoms
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapChosenSiteLawAtomsExportStatement
+
+end MaleyLean

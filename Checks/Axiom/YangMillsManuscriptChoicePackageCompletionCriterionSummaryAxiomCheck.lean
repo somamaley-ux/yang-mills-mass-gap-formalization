@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsManuscriptChoicePackageCompletionCriterionSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsManuscriptChoicePackageCompletionCriterionSummaryTopExportStatement
+
+end MaleyLean

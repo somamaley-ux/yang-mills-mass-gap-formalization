@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveFiniteCapConstructionStage
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveFiniteCapConstructionStageExportStatement
+
+end MaleyLean

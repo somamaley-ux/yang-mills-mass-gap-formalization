@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapTransportRealizeLawPackageSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapTransportRealizeLawPackageSummaryExportStatement
+
+end MaleyLean

@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNamedOutputsAssembly
+
+namespace MaleyLean
+
+#print axioms YangMillsSpineFeedsAllNamedOutputsStatement
+
+end MaleyLean

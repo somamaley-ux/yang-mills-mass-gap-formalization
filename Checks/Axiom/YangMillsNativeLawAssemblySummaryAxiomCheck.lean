@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNativeLawAssemblySummary
+
+namespace MaleyLean
+
+#print axioms YangMillsNativeLawAssemblySummaryExportStatement
+
+end MaleyLean

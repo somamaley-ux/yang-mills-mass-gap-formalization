@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNamedLaneATheoremContent
+
+namespace MaleyLean
+
+#print axioms YangMillsNamedLaneATheoremContentTopExportStatement
+
+end MaleyLean

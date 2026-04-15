@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsCoreAssembly
+
+namespace MaleyLean
+
+#print axioms YangMillsLoadBearingSpineFeedsBothCoresStatement
+
+end MaleyLean

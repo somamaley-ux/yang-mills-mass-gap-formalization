@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsBoundedBaseTransportLawPackageSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsBoundedBaseTransportLawPackageSummaryExportStatement
+
+end MaleyLean

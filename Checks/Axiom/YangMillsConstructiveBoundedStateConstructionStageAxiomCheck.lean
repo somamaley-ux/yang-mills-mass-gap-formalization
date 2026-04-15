@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveBoundedStateConstructionStage
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveBoundedStateConstructionStageExportStatement
+
+end MaleyLean

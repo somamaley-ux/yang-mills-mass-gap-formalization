@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNamedManuscriptTheoremFamilies
+
+namespace MaleyLean
+
+#print axioms YangMillsNamedManuscriptTheoremFamiliesTopExportStatement
+
+end MaleyLean

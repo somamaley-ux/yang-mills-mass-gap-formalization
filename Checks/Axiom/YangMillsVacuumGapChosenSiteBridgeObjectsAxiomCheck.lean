@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapChosenSiteBridgeObjects
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapChosenSiteBridgeExportStatement
+
+end MaleyLean

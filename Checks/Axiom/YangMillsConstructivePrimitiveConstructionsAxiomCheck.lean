@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructivePrimitiveConstructions
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructivePrimitiveConstructionsExportStatement
+
+end MaleyLean

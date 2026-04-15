@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsManuscriptInputNamedObjectsSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsManuscriptInputNamedObjectsSummaryTopExportStatement
+
+end MaleyLean
