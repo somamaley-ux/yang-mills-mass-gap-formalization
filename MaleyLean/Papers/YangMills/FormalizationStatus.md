@@ -1,6 +1,6 @@
 # Yang-Mills Formalization Status
 
-Last updated: 2026-04-15
+Last updated: 2026-04-19
 
 ## Purpose
 
@@ -17,7 +17,8 @@ It is intentionally written for readers who want to understand:
 ## Executive Summary
 
 Relative to the Yang-Mills paper inventory encoded in this repository, the
-formalization currently appears complete.
+formalization currently appears complete at the manuscript-facing and
+load-bearing seam levels.
 
 In particular:
 
@@ -27,6 +28,22 @@ In particular:
 - the native constructive / vacuum-gap / endpoint bridge layers are present,
 - the deeper cross-heart image / factorization / coherence layers are present,
 - and the workflow-level verification currently passes.
+
+More importantly for mathematical credibility, the highest-risk analytic seams
+are no longer represented only as broad theorem exports. The current extension
+stack now makes them explicit as reduced payloads, source-route recoveries, and
+theorem-level reconstructions:
+
+- the QE3 density / graph-core handoff is isolated and rebuilt from its own
+  reduced source ingredients,
+- the dyadic / OS continuous-time seam is isolated down to its single extra
+  ingredient and collapses, on the public theorem surface and on the two main
+  source routes, to plain OS transport readiness,
+- the continuum transport seam is reconstruction-explicit from its lower
+  transport / gap ingredients on both main upstream routes,
+- and the Section 8 endpoint / admissibility seam is reconstructed from the
+  endpoint proof-home and Route 1 endpoint-package ingredients all the way up
+  through the preferred theorem layer.
 
 The most recent verification sweep also strengthened the deepest kernel so that:
 
@@ -39,6 +56,11 @@ The current manuscript-facing Yang-Mills surface is also now axiom-free under
 the repo audit workflow, including the public status/audit/support-map layer
 that summarizes the theorem register, claim architecture, reading order,
 crosswalk surface, and top-level paper summary.
+
+For the local-net paper specifically, this means the main structural risk is no
+longer concentrated in vague bridge claims. The decisive seam transitions are
+now encoded as named theorem surfaces with matching source-level provenance and
+reconstruction equalities.
 
 ## What "Complete" Means Here
 
@@ -55,6 +77,13 @@ It does not automatically mean:
 
 - that an external newer draft of the paper contains nothing beyond this checkout,
 - or that the repository's own encoded inventory is impossible to extend.
+
+It also does not mean that every cited analytic proof home has been replaced by
+first-principles Lean PDE/QFT derivations. The present completeness claim is:
+
+- strong manuscript-facing mechanization of the load-bearing theorem surfaces,
+- strong source/provenance control behind the decisive seams,
+- and axiom-free closure of the current public theorem API.
 
 So the present status is best read as:
 
@@ -241,6 +270,24 @@ kernel-facing improvements to the mathematical story:
   more explicitly to the chosen smear / correlate route,
 - constructive bounded-base extraction was rebased onto the sharp-local core
   theorem and then tied more explicitly to the chosen sharp-local assembly path.
+
+The most recent extension-side improvements went further than theorem naming:
+
+- the public QE3 closure ladder is now reconstruction-explicit from the smaller
+  public spines it exposes,
+- the two main upstream QE3 source routes now agree by direct proof equality at
+  the isolated seam, bundled core, and critical-seam levels,
+- the isolated OS-side extra ingredient now collapses to plain
+  `os_transport_ready` both on public theorem surfaces and on the two main
+  upstream source routes,
+- and the endpoint proof-home route now matches the closed-manuscript Section 8
+  route all the way from exact endpoint / boundary ingredients up through the
+  preferred endpoint and combined Section 7+8 theorem surfaces.
+
+In other words: the mechanization no longer stops at "the same propositions are
+available." In the decisive places it now shows that the live recovered proofs
+agree directly with the reconstructions from the smaller ingredient packages
+that are supposed to generate them.
 
 ## Current Verification State
 

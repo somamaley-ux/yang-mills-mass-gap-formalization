@@ -3,7 +3,8 @@
 ## Current state
 
 The Yang--Mills project in this repository is now in a strong
-manuscript-facing structural state.
+manuscript-facing structural state, and the load-bearing analytic seams are now
+mechanized much more deeply than a bare theorem-register summary would suggest.
 
 What is finished:
 
@@ -34,6 +35,12 @@ What is finished:
 - the endpoint heart is packaged as native theorem objects
 - the `M.5 -> O.2 / O.3 / O.5` bridge is packaged as one native theorem object
 - the strongest current submission-facing boundary is one full native manuscript package
+- the highest-risk QE3 and endpoint seams are isolated at reduced-payload level
+- the main QE3 source routes now agree by direct proof equality across the seam ladder
+- the main endpoint source routes now agree by direct proof equality across the second-seam ladder
+- the public QE3 closure surfaces are reconstruction-explicit from their smaller public spines
+- the QE3 source routes are reconstruction-explicit from their own smaller source ingredients
+- the endpoint proof-home and Route 1 endpoint-package routes are reconstruction-explicit from their own ingredient packages
 
 What is not finished:
 
@@ -42,6 +49,12 @@ What is not finished:
 - discharge in Lean of the analytic arguments cited by the manuscript proof
   homes
 - replacement of the companion/source proofs with native Lean proofs
+
+The right human reading is therefore:
+
+- manuscript-facing formal completeness: strong
+- seam-level mechanization of the highest-risk transitions: strong
+- full first-principles analytic replacement of all cited proof homes: not yet claimed
 
 ## Final manuscript-facing layers
 
@@ -119,6 +132,21 @@ The current Lean development supports the following reading.
   `YangMillsFullManuscriptNativePackageExportStatement`, which exposes public
   scope, Part C, Part D, endpoint, key theorem labels, and key witness labels
   together in one axiom-free theorem.
+- The decisive QE3 seams are no longer only "available somewhere in the route
+  package": they are encoded as reduced payloads, bundled source recoveries,
+  and direct theorem-level reconstructions from those smaller payloads.
+- The two actual upstream QE3 source routes now agree by direct proof equality
+  not only at the public theorem surface, but also at isolated sub-seams,
+  bundled primary cores, the full three-sub-seam package, minimal payload, and
+  critical seam.
+- The isolated OS-side extra ingredient is now tracked all the way down to
+  plain `os_transport_ready` on the public theorem surfaces and on the two main
+  upstream source routes.
+- The endpoint local-net seam is no longer only packaged as a preferred theorem
+  consequence: the proof-home route and the Route 1 endpoint-package route are
+  now reconstruction-explicit from exact endpoint / exclusion / boundary /
+  transport-gap ingredients and agree by direct proof equality up through the
+  Section 8 bridge hierarchy.
 
 ## Why this matters
 
@@ -130,6 +158,18 @@ The Lean surface now says:
 - what is only closure packaging,
 - what remains reserve support material,
 - and how the public theorem surface maps back to the source manuscript.
+
+More sharply, it now says where the real formal risk used to live and why that
+risk is lower now:
+
+- the graph-core / density handoff,
+- the dyadic-to-continuous-time OS upgrade,
+- the continuum transport / sharp-gap bridge,
+- and the Section 8 endpoint / admissibility bridge
+
+are no longer vague route transitions. They are source-grounded, reduced,
+reconstructed, and synchronized across the manuscript-facing theorem surfaces
+that actually matter.
 
 That does not prove the Yang--Mills mathematics in Lean, but it does remove a
 large amount of ambiguity about manuscript structure, dependency order, and

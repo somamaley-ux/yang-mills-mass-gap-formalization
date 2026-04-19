@@ -1,6 +1,6 @@
 Yang--Mills Support Map
 
-Date: 2026-04-15
+Date: 2026-04-19
 
 Primary statement sources
 -------------------------
@@ -327,9 +327,44 @@ Coverage note
 This Lean layer certifies the hardened Yang--Mills manuscript architecture as a
 structured, axiom-free public surface.
 
+It now also certifies a stronger claim about analytic mechanization depth at the
+load-bearing seam layer:
+
+- the decisive QE3 seams are tracked as reduced payloads and bundled source
+  recoveries,
+- the two actual upstream QE3 source routes agree by direct proof equality
+  across the isolated sub-seams and the higher bundled closure ladder,
+- the public QE3 closure surfaces are reconstruction-explicit from the smaller
+  public spines they expose,
+- and the endpoint local-net seam is reconstruction-explicit from proof-home
+  and Route 1 endpoint-package ingredients all the way up through the preferred
+  theorem layer.
+
 It does not currently claim:
 
 - a full internal Lean proof of the QFT/PDE arguments cited in the manuscript
 - native Lean discharge of the companion/source analytic proof homes
 - theorem-by-theorem reconstruction of the canonical source appendices beyond
   the explicit crosswalk layer
+
+Stage XVII: extension-side seam hardening and source-route reconstruction
+
+- manuscript surface:
+  the decisive QE3 and endpoint transitions are no longer only theorem-surface
+  exports but reduced, source-grounded, and reconstruction-explicit proof
+  spines
+- Lean witnesses:
+  `MaleyLean.YangMillsVacuumGapChosenSiteBridgeObjectsExportStatement`
+  `MaleyLean.YangMillsRoute1EndpointNativePackageExportStatement`
+  `MaleyLean.YangMillsFullManuscriptNativePackageExportStatement`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3TwoSeamSynthesisIffCriticalSeam`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3ThreeSubSeamPackageIffPrimaryReducedAndRoute1OSTransport`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3CriticalSeamFromNativeProofHomesAndMassGapChain_eq_fromPrimaryReducedAndOSExtraIngredient`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3CriticalSeamFromChosenSiteBridgeAndRoute1EndpointPackage_eq_fromPrimaryReducedAndOSExtraIngredient`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3OSTimeUpgradeExtraIngredientFromRoute1TheoremContent_eq_fromRoute1OSTransport`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3OSExtraIngredientFromNativeProofHomesAndMassGapChain_eq_fromRoute1OSTransport`
+  `MaleyLean.Papers.YangMills.Extension.YangMillsConcreteQE3OSExtraIngredientFromChosenSiteBridgeAndRoute1EndpointPackage_eq_fromRoute1OSTransport`
+  `MaleyLean.Papers.YangMills.Extension.YMSection8_EndpointNativeProofHomesSecondSeamToEndpointFeed_iff_boundaryBridge`
+  `MaleyLean.Papers.YangMills.Extension.YMSection8_EndpointNativeProofHomesPaperSecondSeamToEndpointFeed_iff_boundaryBridge`
+  `MaleyLean.Papers.YangMills.Extension.YMSection8_PreferredClayEndpointViaEndpointNativeProofHomesCompatibilityOfBoundaryBridge_eq_closedManuscript`
+  `MaleyLean.Papers.YangMills.Extension.YMSection7And8_PreferredEndpointCorollaryViaEndpointNativeProofHomesPaperSecondSeamCompatibilityOfBoundaryBridge_eq_closedManuscript`

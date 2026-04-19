@@ -1,6 +1,6 @@
 # Yang-Mills Closed Manuscript Instantiation Checklist
 
-Last updated: 2026-04-15
+Last updated: 2026-04-19
 
 ## Purpose
 
@@ -124,3 +124,29 @@ recovers:
 - the formalized manuscript object,
 - the chosen manuscript objects,
 - and the flat manuscript-granular reflection theorem.
+
+## Analytical Mechanization Depth
+
+For a human reader, the important update is that the closed manuscript
+instantiation now sits on top of a substantially hardened extension layer.
+
+In particular, the highest-risk transitions are no longer only available as
+large theorem bundles:
+
+- the QE3 density / graph-core handoff is reduced to an explicit smaller source
+  payload and reconstructed from it on both the public and source layers,
+- the OS time-upgrade seam is reduced to a single extra ingredient that now
+  collapses to plain `os_transport_ready` on the public theorem surfaces and on
+  the two main upstream source routes,
+- the continuum transport seam is reconstruction-explicit from its lower
+  transport/gap ingredients on both main source routes,
+- and the Section 8 endpoint/local-net seam is reconstruction-explicit from
+  exact endpoint, exclusion, endpoint-boundary, and transport-gap ingredients
+  up through the preferred theorem layer.
+
+So the current closed-manuscript boundary should be read as resting on:
+
+- a closed object package,
+- a flat manuscript theorem surface,
+- and a source-grounded extension stack in which the decisive analytic seams
+  are already reduced, synchronized, and reconstruction-explicit.
