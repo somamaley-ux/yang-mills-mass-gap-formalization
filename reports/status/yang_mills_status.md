@@ -39,6 +39,9 @@ For the broader dossier-level statement of what now counts as deeply closed and
 what still remains presentation-only, see
 `reports/status/yang_mills_solution_dossier.md`.
 
+For the single front door to the current referee-facing packet, see
+`reports/submission/yang_mills_referee_packet_2026-04-19.md`.
+
 What is finished:
 
 - the live proof surface is encoded in Lean

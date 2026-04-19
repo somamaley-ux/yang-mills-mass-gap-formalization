@@ -81,6 +81,8 @@ If you want one file to inspect first, start with `Main.lean`.
   extension-paper-focused status note
 - `reports/status/yang_mills_status.md`
   human-readable status note
+- `reports/submission/yang_mills_referee_packet_2026-04-19.md`
+  single front door to the referee-facing review packet
 - `reports/submission/yang_mills_completion_memo_2026-04-19.md`
   editor/referee-facing closeout memo for the current submission boundary
 - `MaleyLean/Papers/YangMills/Extension/README.md`
