@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsHeartBridgeTheoremAlignment
+
+namespace MaleyLean
+
+#print axioms YangMillsHeartBridgeTheoremAlignmentExportStatement
+
+end MaleyLean

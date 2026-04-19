@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapManuscriptWitnessDeclarationsSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapManuscriptWitnessDeclarationsSummaryTopExportStatement
+
+end MaleyLean

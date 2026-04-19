@@ -1,1 +1,1 @@
-import Checks.Axiom.YangMillsDeepNativeBoundaryAxiomCheck
+import Checks.Axiom.YangMillsFullManuscriptNativePackageAxiomCheck

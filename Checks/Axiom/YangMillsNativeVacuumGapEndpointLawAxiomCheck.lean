@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNativeVacuumGapEndpointLaw
+
+namespace MaleyLean
+
+#print axioms YangMillsNativeVacuumGapEndpointLawExportStatement
+
+end MaleyLean

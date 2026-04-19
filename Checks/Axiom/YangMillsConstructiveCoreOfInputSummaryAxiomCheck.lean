@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveCoreOfInputSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveRouteOfInputSummaryTopExportStatement
+
+end MaleyLean

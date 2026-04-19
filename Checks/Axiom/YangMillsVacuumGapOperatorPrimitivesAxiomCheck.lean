@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapOperatorPrimitives
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapOperatorPrimitivesExportStatement
+
+end MaleyLean

@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsTheoremPartAlignment
+
+namespace MaleyLean
+
+#print axioms YangMillsSpineFeedsAlignedMainTheoremPartsStatement
+
+end MaleyLean

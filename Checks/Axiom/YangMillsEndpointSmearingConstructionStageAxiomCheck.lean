@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsEndpointSmearingConstructionStage
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointSmearingConstructionStageExportStatement
+
+end MaleyLean

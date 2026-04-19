@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsPaperSurfaceSummaryWitnessed
+
+namespace MaleyLean
+
+#print axioms YangMillsPaperSurfaceSummaryWitnessedStatement
+
+end MaleyLean

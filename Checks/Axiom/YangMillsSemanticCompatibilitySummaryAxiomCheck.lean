@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsSemanticCompatibilitySummary
+
+namespace MaleyLean
+
+#print axioms YangMillsSemanticCompatibilitySummaryExportStatement
+
+end MaleyLean

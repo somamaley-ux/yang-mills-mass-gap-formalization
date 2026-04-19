@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsManuscriptChoicePackageOfObjectsSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsManuscriptChoicePackageOfObjectsSummaryTopExportStatement
+
+end MaleyLean

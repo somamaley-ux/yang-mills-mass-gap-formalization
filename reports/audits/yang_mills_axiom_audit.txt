@@ -1,52 +1,49 @@
-Axiom audit for the current manuscript-facing Yang--Mills native package.
+Axiom audit for the manuscript-facing Yang--Mills scaffold.
 
-Date: 2026-04-15
+Date: 2026-04-09
 
 Scope
 -----
 
-This audit now centers on the current top Yang--Mills theorem boundary:
+This audit covers the current Yang--Mills public surface:
 
-- `MaleyLean.YangMillsFullManuscriptNativePackageExportStatement`
-
-Supporting theorem-package layers included in the current standalone export:
-
-- constructive theorem objects
-- vacuum-gap theorem objects
-- vacuum-gap mass-gap chain
-- vacuum-gap mass-gap compatibility
-- vacuum-gap chosen-site bridge objects
-- endpoint theorem objects
-- vacuum-gap to endpoint bridge objects
-- Route 1 to endpoint native package
-- full manuscript native package
+- theorem register
+- claim ledger
+- kernel register
+- packet register
+- seam register
+- reading-order register
+- source crosswalk
+- top-level paper surface summary
 
 Check results
 -------------
 
-`MaleyLean.YangMillsConstructiveNativeTheoremObjectsExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsVacuumGapNativeTheoremObjectsExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsVacuumGapMassGapChainExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsVacuumGapMassGapCompatibilityExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsVacuumGapChosenSiteBridgeExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsEndpointNativeTheoremObjectsExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsVacuumGapEndpointBridgeExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsRoute1EndpointNativePackageExportStatement` does not depend on any axioms
-`MaleyLean.YangMillsFullManuscriptNativePackageExportStatement` does not depend on any axioms
+`MaleyLean.YangMillsVerbatimTheoremOwnerMatchesSectionStatement` does not depend on any axioms
+`MaleyLean.YangMillsVerbatimRegisterAgreesWithClaimLedgerStatement` does not depend on any axioms
+`MaleyLean.YangMillsKernelLiveEntriesStayOnLiveClaimSideStatement` does not depend on any axioms
+`MaleyLean.YangMillsPacket8ContainsQE3SeamStatement` does not depend on any axioms
+`MaleyLean.YangMillsSeamLiveNodeExamplesStatement` does not depend on any axioms
+`MaleyLean.YangMillsKernelReadingOrderStatement` does not depend on any axioms
+`MaleyLean.YangMillsCrosswalkExamplesStatement` does not depend on any axioms
+`MaleyLean.YangMillsPaperSurfaceSummaryStatement` does not depend on any axioms
 
 Interpretation
 --------------
 
-The current standalone Yang--Mills Lean surface is axiom-free at the present
-submission-facing native package boundary.
+The current Yang--Mills Lean surface is axiom-free at the manuscript-facing
+structural level.
 
-This means the repository now certifies, without extra axioms at that audit
-boundary:
+This means the repository now certifies, without extra axioms:
 
-- the integrated manuscript-facing package for public scope, Part C, Part D,
-  and endpoint,
-- the current theorem-label and witness-label anchors exposed by that package,
-- and the deeper constructive, vacuum-gap, and endpoint package stack below it.
+- the live proof-surface decomposition,
+- the theorem-routing structure,
+- the claim/obligation architecture,
+- the proof-kernel extraction,
+- the ten-packet reduction,
+- the decisive seam nodes,
+- the source-number crosswalk,
+- and the kernel reading-order guidance.
 
-This audit does not claim native Lean discharge of all underlying analytic
-Yang--Mills mathematics.
+This audit does not claim native Lean discharge of the underlying analytic
+Yang--Mills mathematics cited by the manuscript proof homes.

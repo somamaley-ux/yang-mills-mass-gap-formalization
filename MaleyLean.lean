@@ -1,3 +1,2 @@
-import MaleyLean.YangMillsAssemblyTopNativeSummary
-import MaleyLean.YangMillsAssemblyTopNativeCrossHeartLawSummary
-import MaleyLean.YangMillsCanonicalVerifiedPayload
+import MaleyLean.YangMillsFullManuscriptNativePackage
+import MaleyLean.YangMillsFullManuscriptNativePackageSummary

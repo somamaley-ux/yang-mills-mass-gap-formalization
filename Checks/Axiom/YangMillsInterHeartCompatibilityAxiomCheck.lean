@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsInterHeartCompatibility
+
+namespace MaleyLean
+
+#print axioms YangMillsInterHeartCompatibilityExportStatement
+
+end MaleyLean

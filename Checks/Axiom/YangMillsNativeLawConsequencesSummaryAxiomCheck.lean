@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsNativeLawConsequencesSummary
+
+namespace MaleyLean
+
+#print axioms YangMillsNativeLawConsequencesSummaryExportStatement
+
+end MaleyLean
