@@ -4776,7 +4776,30 @@ theorem YMSection8_PreferredClayEndpointFromClosedManuscriptBoundaryBridgeViaRou
         (I := I) (S := S) (D := D) (C := C) (P := P)
         (YMSection8_Route1PaperSecondSeamBuildsStructuredBridgeTarget.impliesPatchedStatement
           (I := I) (S := S) (D := D) (C := C) (P := P)
-          (YMSection8_Route1PaperSecondSeamBuildsStructuredBridgeTarget_ofBoundaryBridge
+        (YMSection8_Route1PaperSecondSeamBuildsStructuredBridgeTarget_ofBoundaryBridge
+            (I := I) (S := S) (D := D) (C := C) (P := P) hBridge)) := by
+  exact Subsingleton.elim _ _
+
+/--
+The boundary-bridge route through the paper-faithful patched-assumption-bundle
+target also agrees with the canonical Section 8 theorem surface.
+-/
+theorem YMSection8_PreferredClayEndpointFromPatchedAssumptionBundleTargetOfBoundaryBridge_eq_canonical
+    {I : YMClosedInstantiatedManuscript}
+    {S : YMManuscriptTheoremScope}
+    {D : YMManuscriptDeformationData S}
+    {C : YMCompanionIIITaggedCompletionBridge I S D}
+    {P : YMCompanionIIITaggedClayEndpointPackage I S D C}
+    (hBridge :
+      YMSection8_ClosedManuscriptEndpointSatisfiesAdmissibilitySideConditions
+        I S D C P) :
+    YMSection8_PreferredClayEndpointFromPatchedAssumptionBundleTargetOfBoundaryBridge
+        (I := I) (S := S) (D := D) (C := C) (P := P) hBridge =
+      YMSection8_CanonicalPreferredClayEndpoint
+        (I := I) (S := S) (D := D) (C := C) (P := P)
+        (YMSection8_Route1PaperSecondSeamBuildsPatchedAssumptionBundleTarget.impliesPatchedStatement
+          (I := I) (S := S) (D := D) (C := C) (P := P)
+          (YMSection8_Route1PaperSecondSeamBuildsPatchedAssumptionBundleTarget_ofBoundaryBridge
             (I := I) (S := S) (D := D) (C := C) (P := P) hBridge)) := by
   exact Subsingleton.elim _ _
 
