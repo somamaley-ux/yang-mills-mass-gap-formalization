@@ -16,6 +16,14 @@ abbrev YMCompanionIIIPreferredTheoremScopeBridge
   YMCompanionIIIPaperFacingTheoremScopeBridge I S D
 
 /--
+Preferred concrete theorem-scope bridge packaged as one paper-facing object.
+-/
+abbrev YMCompanionIIIPreferredTheoremScopePackageBridge
+    (I : YMClosedInstantiatedManuscript)
+    (P : YMPaperTheoremScopePackage) :=
+  YMCompanionIIIPaperFacingTheoremScopePackageBridge I P
+
+/--
 Preferred concrete Section 7 corollary: same local shadow but different
 theorem-scope global-form data imply distinct sector assignments through the
 tagged Companion III realization.
@@ -58,6 +66,26 @@ theorem YMSection7_PreferredGlobalFormRecovery
       YMTheoremScopeSectorBridge.sectorAssignment
         (YMCompanionIIIPreferredTheoremScopeBridge I S D) eta := by
   exact YMCompanionIIIPreferredSectorDistinction I S D hShadow hGF
+
+/--
+Packaged manuscript-facing Section 7 alias for the preferred tagged route.
+-/
+theorem YMSection7_PreferredGlobalFormRecoveryOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (P : YMPaperTheoremScopePackage)
+    {xi eta : YMPaperTheoremScopePackage.Object P}
+    (hShadow :
+      YMExtendedSupportObject.localShadow xi =
+        YMExtendedSupportObject.localShadow eta)
+    (hGF :
+      Not
+        (YMExtendedSupportObject.globalFormDatum xi =
+          YMExtendedSupportObject.globalFormDatum eta)) :
+    YMTheoremScopeSectorBridge.sectorAssignment
+        (YMCompanionIIIPreferredTheoremScopePackageBridge I P) xi ≠
+      YMTheoremScopeSectorBridge.sectorAssignment
+        (YMCompanionIIIPreferredTheoremScopePackageBridge I P) eta := by
+  exact YMSection7_PreferredGlobalFormRecovery I P.scope P.deformation hShadow hGF
 
 /--
 Preferred concrete Section 8 corollary: every tagged realized theorem-scope

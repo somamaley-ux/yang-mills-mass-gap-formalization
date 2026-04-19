@@ -165,6 +165,15 @@ abbrev YMCompanionIIIGlobalFormRecoveryPackage
   YMGlobalFormRecoveryPackage (YMCompanionIIITheoremScopeBridge I S D)
 
 /--
+Companion III-facing recovery surface over the packaged preferred theorem-scope
+object.
+-/
+abbrev YMCompanionIIIGlobalFormRecoveryPackageOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (P : YMPaperTheoremScopePackage) :=
+  YMCompanionIIIGlobalFormRecoveryPackage I P.scope P.deformation
+
+/--
 Companion III-facing recovery package instantiated from the concrete theorem
 that same-shadow / different-global-form objects determine distinct sector
 classes.
@@ -179,5 +188,15 @@ def YMCompanionIIIGlobalFormRecoveryPackageFromDistinction
     exact
       YMCompanionIIISectorAssignmentNeOfSameShadowDifferentGlobalForm
         I S D hShadow hGF
+
+/--
+Companion III-facing recovery package over the packaged preferred theorem-scope
+object.
+-/
+def YMCompanionIIIGlobalFormRecoveryPackageFromDistinctionOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (P : YMPaperTheoremScopePackage) :
+    YMCompanionIIIGlobalFormRecoveryPackageOfPackage I P :=
+  YMCompanionIIIGlobalFormRecoveryPackageFromDistinction I P.scope P.deformation
 
 end MaleyLean
