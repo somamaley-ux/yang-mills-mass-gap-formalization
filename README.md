@@ -73,6 +73,8 @@ If you want one file to inspect first, start with `Main.lean`.
   referee-facing audit note for the current top package boundary
 - `reports/support_maps/yang_mills_support_map.txt`
   manuscript-to-Lean support map
+- `reports/status/yang_mills_extension_status.md`
+  extension-paper-focused status note
 - `reports/status/yang_mills_status.md`
   human-readable status note
 - `reports/submission/`
