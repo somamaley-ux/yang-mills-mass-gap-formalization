@@ -4715,6 +4715,9 @@ theorem YMSection7And8_CanonicalPreferredEndpointCorollary
 /--
 The direct patched-theorem endpoint route agrees with the canonical paper-flow
 endpoint theorem surface.
+
+This is the identity check showing that the preferred patched theorem is not a
+second competing endpoint, but the theorem content chosen as canonical.
 -/
 theorem YMSection8_PreferredClayEndpointFromRoute1EndpointSecondSeamForcesAdmissibility_eq_canonical
     {I : YMClosedInstantiatedManuscript}
@@ -4733,6 +4736,9 @@ theorem YMSection8_PreferredClayEndpointFromRoute1EndpointSecondSeamForcesAdmiss
 /--
 The structured-bridge access route likewise agrees with the canonical Section 8
 theorem surface once its target is supplied.
+
+So the structured-bridge route should be read as an access path into the
+canonical theorem, not as a parallel endpoint conclusion.
 -/
 theorem YMSection8_PreferredClayEndpointFromStructuredBridgeTarget_eq_canonical
     {I : YMClosedInstantiatedManuscript}
@@ -4754,6 +4760,9 @@ theorem YMSection8_PreferredClayEndpointFromStructuredBridgeTarget_eq_canonical
 /--
 The closed-manuscript boundary-bridge route through the smaller Route 1
 second-seam interface also agrees with the canonical Section 8 theorem surface.
+
+This makes the older boundary-bridge route explicitly subordinate to the
+canonical theorem surface rather than a separate endpoint destination.
 -/
 theorem YMSection8_PreferredClayEndpointFromClosedManuscriptBoundaryBridgeViaRoute1EndpointSecondSeam_eq_canonical
     {I : YMClosedInstantiatedManuscript}
@@ -4777,6 +4786,9 @@ theorem YMSection8_PreferredClayEndpointFromClosedManuscriptBoundaryBridgeViaRou
 /--
 The closed-manuscript boundary-bridge route through the sharper paper-shaped
 Route 1 second seam also agrees with the canonical Section 8 theorem surface.
+
+So even the sharper paper-shaped boundary-bridge presentation is an access
+route into the same canonical theorem content.
 -/
 theorem YMSection8_PreferredClayEndpointFromClosedManuscriptBoundaryBridgeViaRoute1EndpointPaperSecondSeam_eq_canonical
     {I : YMClosedInstantiatedManuscript}
@@ -4800,6 +4812,10 @@ theorem YMSection8_PreferredClayEndpointFromClosedManuscriptBoundaryBridgeViaRou
 /--
 The boundary-bridge route through the paper-faithful patched-assumption-bundle
 target also agrees with the canonical Section 8 theorem surface.
+
+This closes the loop on the bundle-target presentation as well: it is useful
+for manuscript-shaped packaging, but not mathematically independent of the
+canonical endpoint theorem.
 -/
 theorem YMSection8_PreferredClayEndpointFromPatchedAssumptionBundleTargetOfBoundaryBridge_eq_canonical
     {I : YMClosedInstantiatedManuscript}
