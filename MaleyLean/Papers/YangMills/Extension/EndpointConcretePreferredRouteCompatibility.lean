@@ -2346,7 +2346,9 @@ This mirrors the paper's presentation:
 In the current Lean surface, the middle two clauses are already automatic from
 the completion bridge `C`. So the only genuinely new mathematical field here is
 `route1SecondSeamForcesAdmissibility`; the rest are included to expose the
-paper's proof posture directly.
+paper's proof posture directly. Post-freeze, this bundle is best read as a
+paper-shaped support object around the canonical Section 8 theorem surface, not
+as a distinct endpoint claim.
 -/
 structure YMSection8PatchedAssumptionBundle
     (I : YMClosedInstantiatedManuscript)
@@ -2432,6 +2434,10 @@ theorem YMSection8PatchedAssumptionBundle.toPatchedStatement
 /--
 The manuscript-shaped assumption bundle also recovers the structured bridge
 object for the patched Section 8 theorem.
+
+This keeps the manuscript-facing bridge data available as a first-class object,
+but it should be read as support packaging around the canonical endpoint
+surface rather than as a separate endpoint layer.
 -/
 def YMSection8PatchedAssumptionBundle.toStructuredBridge
     {I : YMClosedInstantiatedManuscript}
@@ -2978,7 +2984,8 @@ Route 1 paper-second seam itself.
 
 This is a sharper formulation of the unresolved step than a bare endpoint feed,
 because it asks for the full manuscript-facing bridge object rather than only
-its final conclusion.
+its final conclusion. In the current post-freeze reading, that sharper object
+is still support packaging around the canonical Section 8 theorem surface.
 -/
 abbrev YMSection8_Route1PaperSecondSeamBuildsStructuredBridgeTarget
     (I : YMClosedInstantiatedManuscript)
@@ -4421,6 +4428,10 @@ theorem YMSection8_CanonicalPaperFlowRoute1SecondSeamForcesAdmissibility
 /--
 Preferred Section 8 endpoint route from a theorem that builds the structured
 patched-theorem bridge directly from the Route 1 paper-second seam.
+
+This route is retained because it exposes a manuscript-shaped access path into
+the canonical endpoint theorem. It should not be read as competing with the
+canonical Section 8 surface fixed later in this file.
 -/
 theorem YMSection8_PreferredClayEndpointFromStructuredBridgeTarget
     {I : YMClosedInstantiatedManuscript}
