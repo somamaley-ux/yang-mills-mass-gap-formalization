@@ -100,6 +100,16 @@ abbrev YMCompanionIIIClayEndpointPackage
   YMClayEndpointPackage C
 
 /--
+Packaged Companion III-facing abbreviation of the final endpoint package
+surface.
+-/
+abbrev YMCompanionIIIClayEndpointPackageOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (Pscope : YMPaperTheoremScopePackage)
+    (C : YMCompanionIIICompletionBridgeOfPackage I Pscope) :=
+  YMClayEndpointPackage C
+
+/--
 Tagged Companion III-facing abbreviation of the final endpoint package surface.
 -/
 abbrev YMCompanionIIITaggedClayEndpointPackage
@@ -107,6 +117,16 @@ abbrev YMCompanionIIITaggedClayEndpointPackage
     (S : YMManuscriptTheoremScope)
     (D : YMManuscriptDeformationData S)
     (C : YMCompanionIIITaggedCompletionBridge I S D) :=
+  YMClayEndpointPackage C
+
+/--
+Packaged tagged Companion III-facing abbreviation of the final endpoint
+package surface.
+-/
+abbrev YMCompanionIIITaggedClayEndpointPackageOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (Pscope : YMPaperTheoremScopePackage)
+    (C : YMCompanionIIITaggedCompletionBridgeOfPackage I Pscope) :=
   YMClayEndpointPackage C
 
 theorem YMCompanionIIIDistinctionAndClayEndpoint
@@ -160,5 +180,32 @@ theorem YMCompanionIIITaggedDistinctionAndClayEndpoint
       YMCompanionIIITaggedSectorAssignmentNeOfSameShadowDifferentGlobalForm
         I S D hShadow hGF
   · exact YMClayEndpointPackage.sectorRealization_inherits_clayEndpoint P xi r hPres
+
+/--
+Packaged tagged Companion III-facing endpoint theorem combining Section 7
+distinction with the Clay endpoint conclusion.
+-/
+theorem YMCompanionIIITaggedDistinctionAndClayEndpointOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (Pscope : YMPaperTheoremScopePackage)
+    (C : YMCompanionIIITaggedCompletionBridgeOfPackage I Pscope)
+    (P : YMCompanionIIITaggedClayEndpointPackageOfPackage I Pscope C)
+    {xi eta : YMPaperTheoremScopePackage.Object Pscope}
+    (hShadow :
+      YMExtendedSupportObject.localShadow xi =
+        YMExtendedSupportObject.localShadow eta)
+    (hGF :
+      YMExtendedSupportObject.globalFormDatum xi ≠
+        YMExtendedSupportObject.globalFormDatum eta)
+    (r : (YMCompanionIIITaggedTheoremScopeBridge I Pscope.scope Pscope.deformation).Rep xi)
+    (hPres : P.preservesFixedTheory (C.completionOf xi r)) :
+    YMTheoremScopeSectorBridge.sectorAssignment
+        (YMCompanionIIITaggedTheoremScopeBridge I Pscope.scope Pscope.deformation) xi ≠
+      YMTheoremScopeSectorBridge.sectorAssignment
+        (YMCompanionIIITaggedTheoremScopeBridge I Pscope.scope Pscope.deformation) eta /\
+      P.admissibilitySideConditionsSatisfied := by
+  exact
+    YMCompanionIIITaggedDistinctionAndClayEndpoint
+      I Pscope.scope Pscope.deformation C P hShadow hGF r hPres
 
 end MaleyLean

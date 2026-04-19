@@ -125,8 +125,8 @@ Packaged manuscript-facing Section 8 alias for the preferred tagged route.
 theorem YMSection8_PreferredClayEndpointOfPackage
     (I : YMClosedInstantiatedManuscript)
     (Pscope : YMPaperTheoremScopePackage)
-    (C : YMCompanionIIITaggedCompletionBridge I Pscope.scope Pscope.deformation)
-    (P : YMCompanionIIITaggedClayEndpointPackage I Pscope.scope Pscope.deformation C)
+    (C : YMCompanionIIITaggedCompletionBridgeOfPackage I Pscope)
+    (P : YMCompanionIIITaggedClayEndpointPackageOfPackage I Pscope C)
     (xi : YMPaperTheoremScopePackage.Object Pscope)
     (r : (YMCompanionIIIPreferredTheoremScopePackageBridge I Pscope).Rep xi)
     (hPres : P.preservesFixedTheory (C.completionOf xi r)) :
@@ -218,8 +218,8 @@ preferred tagged route.
 theorem YMSection7And8_PreferredEndpointCorollaryOfPackage
     (I : YMClosedInstantiatedManuscript)
     (Pscope : YMPaperTheoremScopePackage)
-    (C : YMCompanionIIITaggedCompletionBridge I Pscope.scope Pscope.deformation)
-    (P : YMCompanionIIITaggedClayEndpointPackage I Pscope.scope Pscope.deformation C)
+    (C : YMCompanionIIITaggedCompletionBridgeOfPackage I Pscope)
+    (P : YMCompanionIIITaggedClayEndpointPackageOfPackage I Pscope C)
     {xi eta : YMPaperTheoremScopePackage.Object Pscope}
     (hShadow :
       YMExtendedSupportObject.localShadow xi =

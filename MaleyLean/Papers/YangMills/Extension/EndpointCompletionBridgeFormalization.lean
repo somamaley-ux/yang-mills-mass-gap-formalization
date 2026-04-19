@@ -55,6 +55,14 @@ abbrev YMCompanionIIICompletionBridge
   YMTheoremScopeCompletionBridge (YMCompanionIIITheoremScopeBridge I S D)
 
 /--
+Packaged Companion III-facing abbreviation of the Section 8 bridge surface.
+-/
+abbrev YMCompanionIIICompletionBridgeOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (P : YMPaperTheoremScopePackage) :=
+  YMCompanionIIICompletionBridge I P.scope P.deformation
+
+/--
 Tagged Companion III-facing abbreviation of the Section 8 bridge surface.
 -/
 abbrev YMCompanionIIITaggedCompletionBridge
@@ -62,5 +70,14 @@ abbrev YMCompanionIIITaggedCompletionBridge
     (S : YMManuscriptTheoremScope)
     (D : YMManuscriptDeformationData S) :=
   YMTheoremScopeCompletionBridge (YMCompanionIIITaggedTheoremScopeBridge I S D)
+
+/--
+Packaged tagged Companion III-facing abbreviation of the Section 8 bridge
+surface.
+-/
+abbrev YMCompanionIIITaggedCompletionBridgeOfPackage
+    (I : YMClosedInstantiatedManuscript)
+    (P : YMPaperTheoremScopePackage) :=
+  YMCompanionIIITaggedCompletionBridge I P.scope P.deformation
 
 end MaleyLean
