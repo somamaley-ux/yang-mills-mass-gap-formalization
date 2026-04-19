@@ -93,3 +93,6 @@ The honest claim is:
 
 For the shorter near-finish summary, see
 `reports/status/yang_mills_extension_almost_finished.md`.
+
+For the stronger completion-in-substance summary, see
+`reports/status/yang_mills_extension_completion_note.md`.
