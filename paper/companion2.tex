@@ -11,10 +11,17 @@
 \SuiteMakeFrontMatter{Companion II: Lane~A Sharp-Local Construction}
 
 \begin{abstract}
-This companion is the source-backed proof home for the Lane~A sharp-local construction cited by the core paper. It is assembled directly from the canonical March~16,~2026 LaTeX source tree and houses the flowed continuum state, the exact-dimension quotient machinery, the one-shell transport and finite-truncation inverse package, the finite-cap mixed-correlator bridge, the finite-cap sharp-local extension, the inductive-union passage, bounded-base cyclicity in the reconstructed sharp-local Hilbert space, and a theorem-level state-construction ledger for the functional backbone. Appendices~A--E carry native REV\TeX{} transcriptions of the source-manuscript Section~4 file, the principal Lane~A construction file, the support analytic files, the finite-truncation interface / mixed-channel closure file, and the normalization / packet-interface file. The companion is uniform throughout in native REV\TeX{} form.
+This companion is the source-backed proof home for the Lane~A sharp-local construction cited by the core paper. It is assembled directly from the canonical March~16,~2026 LaTeX source tree and houses the flowed continuum state, the exact-dimension quotient machinery, the one-shell transport and finite-truncation inverse package, the finite-cap mixed-correlator bridge, the finite-cap sharp-local extension, the inductive-union passage, bounded-base cyclicity in the reconstructed sharp-local Hilbert space, and a theorem-level state-construction ledger for the functional backbone. Appendices~A--E carry native REV\TeX{} transcriptions of the source-manuscript Section~4 file, the principal Lane~A construction file, the support analytic files, the finite-truncation interface / mixed-channel closure file, and the normalization / packet-interface file. The companion is uniform throughout in native REV\TeX{} form. The accompanying Lean repository supplies a checkable manuscript-facing route map for this constructive heart within the full proof architecture.
 \end{abstract}
 
 \maketitle
+\section*{Lean verification note}
+Within the accompanying Lean repository, the Lane~A side of the current
+formalization is packaged through constructive theorem objects, proof-home
+layers, and the full manuscript-facing native package boundary
+\texttt{YangMillsFullManuscriptNativePackageExportStatement}. The Lean layer is
+meant to help a referee inspect theorem flow, source-label anchoring, and the
+placement of the present companion inside a bounded proof architecture.
 
 \section*{Guide to proof homes}
 This source-backed companion is organized to support theorem-level verification while preserving direct access to the March~16,~2026 canonical source tree. The body names the exact core-paper theorems housed here and fixes their proof homes. Appendices~A--E provide native REV\TeX{} transcriptions of the source-manuscript blocks used for the flowed-state opening, the main Lane~A construction file, the support analytic files, the finite-truncation / mixed-channel closure file, and the normalization / packet-interface file.
