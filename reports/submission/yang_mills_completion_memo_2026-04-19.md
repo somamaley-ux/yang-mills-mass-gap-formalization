@@ -103,3 +103,6 @@ The corresponding next-phase boundary note is
 
 For the current hostile-referee objection map, see
 `reports/status/yang_mills_hostile_referee_audit.md`.
+
+For the shortest objection-driven verification route, see
+`reports/submission/yang_mills_referee_checklist_2026-04-19.md`.
