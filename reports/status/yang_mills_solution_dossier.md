@@ -94,3 +94,6 @@ seams."
 
 For the extension-focused version of that claim, see
 `reports/status/yang_mills_extension_completion_note.md`.
+
+For the boundary between this frozen state and any future work, see
+`reports/status/yang_mills_post_freeze_roadmap.md`.

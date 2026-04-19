@@ -97,3 +97,6 @@ formal companion archive.
 For practical purposes, the current extension-paper package can now be treated
 as frozen unless new mathematical work or stricter manuscript-faithfulness
 requirements justify reopening it.
+
+The corresponding next-phase boundary note is
+`reports/status/yang_mills_post_freeze_roadmap.md`.
