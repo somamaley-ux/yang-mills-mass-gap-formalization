@@ -50,6 +50,8 @@ theorem object.
   ingredients through the preferred theorem layer.
 - The canonical paper-facing theorem-scope package now reaches the completion
   bridge, Clay-endpoint package, and packaged Section 7/8 corollary surfaces.
+- The Section 4 theorem-scope layer now also has explicit canonical package and
+  bridge names in code, not only “preferred paper-facing” aliases.
 - The compatibility layer now explicitly names a canonical manuscript-facing
   Section 8 theorem surface and a canonical combined Section 7 plus Section 8
   corollary.
@@ -61,7 +63,8 @@ theorem object.
 The remaining abstraction is narrower than before.
 
 - The most paper-faithful concrete instantiation of the theorem-scope
-  extended-support class is still isolated as a strengthening target.
+  extended-support class is now canonically named in code, but still wants its
+  most paper-faithful final manuscript presentation.
 - The final Section 8 residual is now more specific: the canonical packaged
   endpoint surfaces exist, and the canonical theorem surface is named, but the
   compatibility layer still foregrounds several equivalent patched theorem /
@@ -72,7 +75,8 @@ So the honest current reading is:
 
 - the four critical seams are mechanized strongly enough to be the main visible
   result,
-- the remaining gap is mainly theorem-scope and theorem-packaging refinement,
+- the remaining gap is mainly theorem-scope presentation refinement and final
+  theorem-packaging cleanup,
 - and the export still does not claim a full first-principles Lean derivation
   of all cited Yang--Mills analytic proof homes.
 

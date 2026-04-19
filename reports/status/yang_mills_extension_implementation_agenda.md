@@ -53,10 +53,12 @@ Progress:
 - the canonical theorem-scope package now reaches the Section 7 recovery,
   Section 8 completion bridge, Clay-endpoint package, and packaged manuscript
   corollary surfaces
+- the Section 4 theorem-scope layer now also has explicit canonical package and
+  bridge names in code
 - the compatibility layer now names a canonical Section 8 theorem surface and a
   canonical combined Section 7 plus Section 8 corollary
 - the remaining Workstream A burden is now the final paper-faithful closure of
-  that class specification rather than the absence of a canonical route
+  that class specification rather than the absence of a canonical object or route
 
 Done condition:
 

@@ -24,12 +24,15 @@ The stack is organized in manuscript-facing terms:
 
 - `EndpointTheoremScopeObjects.lean` fixes the theorem-scope support/label
   object layer and now names the preferred paper-facing theorem-scope class.
+  It also names a canonical Section 4 theorem-scope package for the current
+  extension stack.
 - `EndpointConcreteTheoremScopeBridge.lean` realizes that layer in the existing
   reconstructed-sector carrier at the baseline infrastructure level.
 - `EndpointGlobalFormRecoveryFormalization.lean` packages the Section 7
   same-local-shadow / different-global-form recovery surface.
 - `EndpointTaggedTheoremScopeRealization.lean` upgrades that bridge to the
-  canonical current paper-facing tagged realization route.
+  canonical current paper-facing tagged realization route and now names the
+  canonical Section 4 bridge surfaces explicitly.
 - `EndpointCompletionBridgeFormalization.lean`,
   `EndpointClayConclusionFormalization.lean`, and
   `EndpointConcretePreferredRouteCompatibility.lean` carry the Section 8
@@ -95,7 +98,8 @@ For the human-facing summary outside the code tree, see:
 The remaining abstraction is now relatively narrow:
 
 - the most paper-faithful concrete instantiation of the theorem-scope
-  extended-support class is still a strengthening target
+  extended-support class is now canonically named in code, but still wants its
+  most paper-faithful final manuscript wording
 - the final Section 8 residual is now narrower than before: the canonical
   packaged endpoint surfaces exist, and the canonical manuscript-facing Section
   8 theorem is now named, but the compatibility layer still presents several

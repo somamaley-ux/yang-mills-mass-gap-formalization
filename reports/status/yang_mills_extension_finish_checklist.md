@@ -34,6 +34,8 @@ Current state:
   the final paper-facing classification layer.
 - `MaleyLean/Papers/YangMills/Extension/EndpointTaggedTheoremScopeRealization.lean`
   now provides the canonical current paper-facing theorem-scope bridge naming.
+- `EndpointTheoremScopeObjects.lean` and `EndpointTaggedTheoremScopeRealization.lean`
+  now also name canonical Section 4 theorem-scope package and bridge surfaces.
 
 To call this closed, we want:
 
@@ -43,7 +45,7 @@ To call this closed, we want:
 - one clearly preferred realization statement explaining how that class lands in
   the reconstructed-sector carrier
 - the corresponding docs updated so they no longer describe this point as an
-  open strengthening target
+  open object-selection target
 
 Primary target files:
 
@@ -100,7 +102,7 @@ I would call the extension paper finished when all of the following are true:
 3. `EndpointFormalizationOverview.lean` reads as a closed dependency overview
    rather than an overview with named residual targets
 4. the human-facing docs stop describing theorem-scope instantiation and Section
-   8 packaging as open strengthening targets
+   8 packaging as open object-selection or endpoint-selection targets
 
 ## Best Next Work
 

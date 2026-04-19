@@ -25,6 +25,17 @@ It is "several access routes and exactness wrappers around one endpoint theorem.
 
 ## What Is Canonical Now
 
+The preferred Section 4 theorem-scope package and bridge are now also named in:
+
+- `MaleyLean/Papers/YangMills/Extension/EndpointTheoremScopeObjects.lean`
+- `MaleyLean/Papers/YangMills/Extension/EndpointTaggedTheoremScopeRealization.lean`
+
+The canonical Section 4 names are:
+
+- `YMSection4CanonicalTheoremScopePackage`
+- `YMSection4CanonicalTheoremScopeBridge`
+- `YMSection4CanonicalTheoremScopePackageBridge`
+
 The preferred Section 8 theorem surface is the patched Route 1 second-seam
 theorem named in:
 
@@ -59,8 +70,8 @@ indecision.
 
 Two residuals remain, but they are now narrower than before:
 
-- the theorem-scope class still wants its most paper-faithful final concrete
-  presentation
+- the theorem-scope class is now fixed in code, but still wants its most
+  paper-faithful final manuscript presentation
 - some Section 8 access routes still read a little too much like standalone
   theorem endpoints instead of obviously subordinate support lemmas
 
