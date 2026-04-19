@@ -82,6 +82,11 @@ So the honest current reading is:
 - and the export still does not claim a full first-principles Lean derivation
   of all cited Yang--Mills analytic proof homes.
 
+For practical project management, this extension stack can now be treated as
+closed for the moment. It should be reopened only for genuine manuscript-
+faithfulness refinement, referee-facing precision work, or new mathematical
+content.
+
 ## Best Reading Order
 
 For the extension paper itself, the shortest human-readable route is:

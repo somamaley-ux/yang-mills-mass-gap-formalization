@@ -93,3 +93,7 @@ This memo should be read together with:
 That set gives the cleanest current human-facing statement of why the Yang--Mills
 package is now close to a fully finished submission dossier rather than merely a
 formal companion archive.
+
+For practical purposes, the current extension-paper package can now be treated
+as frozen unless new mathematical work or stricter manuscript-faithfulness
+requirements justify reopening it.
