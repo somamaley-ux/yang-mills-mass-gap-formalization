@@ -102,3 +102,6 @@ If we want the highest-value next pass, it is:
 3. collapse the remaining alternatives into lemmas/corollaries
 4. update the extension overview and status notes to mark the extension paper as
    finished
+
+For the implementation-level version of this closure plan, see
+`reports/status/yang_mills_extension_implementation_agenda.md`.
