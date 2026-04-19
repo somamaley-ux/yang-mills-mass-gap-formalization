@@ -57,6 +57,8 @@ The main entry points are:
 - `BundleMain.lean`
   optional broader bundle that loads the full native package and its summary
   surface together
+- `MaleyLean/Papers/YangMills/Extension/README.md`
+  the quickest in-tree orientation note for the extension-paper seam stack
 
 If you want one file to inspect first, start with `Main.lean`.
 
@@ -77,6 +79,8 @@ If you want one file to inspect first, start with `Main.lean`.
   extension-paper-focused status note
 - `reports/status/yang_mills_status.md`
   human-readable status note
+- `MaleyLean/Papers/YangMills/Extension/README.md`
+  in-folder guide to the extension-paper files and reading order
 - `reports/submission/`
   editor/referee-facing submission support notes
 
