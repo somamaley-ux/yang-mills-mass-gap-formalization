@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveChosenSiteLawAtoms
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveChosenSiteLawAtomsExportStatement
+
+end MaleyLean

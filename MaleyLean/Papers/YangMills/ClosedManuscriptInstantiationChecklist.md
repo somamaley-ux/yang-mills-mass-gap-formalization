@@ -1,12 +1,11 @@
 # Yang-Mills Closed Manuscript Instantiation Checklist
 
-Last updated: 2026-04-09
+Last updated: 2026-04-15
 
 ## Purpose
 
-This note records the exact remaining boundary between the current
-manuscript-faithful Yang-Mills theorem development and a genuinely closed
-manuscript constant.
+This note records the closed manuscript-instantiation boundary for the current
+Yang-Mills theorem development.
 
 The repository now contains:
 
@@ -16,15 +15,17 @@ The repository now contains:
 - and a `YMClosedManuscriptBlueprint` layer proving that any one closed
   blueprint yields the full current reflection theorem.
 
-What it does **not** yet contain is one actual closed constant:
+What used to be missing has now been supplied at the instantiated-manuscript
+level:
 
-- `B : YMClosedManuscriptBlueprint`
+- `noncomputable def I : YMClosedInstantiatedManuscript`
+  in `MaleyLean/Papers/YangMills/Kernel/ManuscriptObjectPackageDeclarations.lean`
 
-This file records what such a constant must provide.
+This file now records what that closed object packages structurally.
 
-That remaining step should not be confused with residual axiom support: the
+That closure step should not be confused with residual axiom support: the
 current manuscript-facing Yang-Mills surface reported by the repo audits is
-already axiom-free. What is still missing is one closed distinguished
+already axiom-free, and the repo now also contains a closed distinguished
 manuscript instance of the already-formalized route objects.
 
 For a fillable author-facing version keyed to the paper/source labels, see:
@@ -46,13 +47,9 @@ These establish:
   that manuscript object,
 - and the exact blueprint shape for a future closed constant.
 
-## Remaining Closed Constant
+## Closed Constant Structure
 
-To close the final gap, the repo still needs one constant:
-
-- `B : YMClosedManuscriptBlueprint`
-
-That breaks into two parts.
+The instantiated manuscript object is assembled from two parts.
 
 ### 1. Concrete manuscript objects
 
@@ -120,11 +117,9 @@ What remains is no longer theorem packaging or theorem meaning.
 
 It is also no longer witness-bundle axiom elimination.
 
-What remains is one object-level instantiation step:
-
-- supply one closed `YMClosedManuscriptBlueprint`
-
-Once that exists, the current Lean development already knows how to recover:
+That object-level instantiation step is now realized through the manuscript
+object package declarations. As a result, the current Lean development already
+recovers:
 
 - the formalized manuscript object,
 - the chosen manuscript objects,

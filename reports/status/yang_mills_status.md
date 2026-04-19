@@ -27,6 +27,13 @@ What is finished:
 - that witness bundle is now exported again at manuscript-facing surface level
 - the three theorem-heart semantic bundles are assembled into one unified semantic object and re-exported at surface level
 - the top-level manuscript-facing summary is axiom-free
+- a closed manuscript instantiation constant is present
+- the closed manuscript completion criterion is realized
+- the Lane A heart is packaged as native theorem objects
+- the Route 1 mass-gap heart is packaged as native theorem objects and chosen-site compatibility objects
+- the endpoint heart is packaged as native theorem objects
+- the `M.5 -> O.2 / O.3 / O.5` bridge is packaged as one native theorem object
+- the strongest current submission-facing boundary is one full native manuscript package
 
 What is not finished:
 
@@ -64,6 +71,11 @@ The current Yang--Mills surface is centered on:
 - `MaleyLean/Papers/YangMills/Surface/WitnessHeartSummary.lean`
 - `MaleyLean/Papers/YangMills/Surface/Summary.lean`
 
+The current strongest submission-facing package is:
+
+- `MaleyLean/Papers/YangMills/Kernel/FullManuscriptNativePackage.lean`
+- `MaleyLean/Papers/YangMills/Surface/FullManuscriptNativePackageSummary.lean`
+
 ## What the formalization says
 
 The current Lean development supports the following reading.
@@ -100,6 +112,13 @@ The current Lean development supports the following reading.
   level under explicit readiness hypotheses.
 - The richer Part D package is now also tracked at the witness level via
   explicit OS-transport and transport-origin crosswalk entries.
+- The manuscript object package also now defines a concrete
+  `YMClosedInstantiatedManuscript` and proves
+  `ym_closed_manuscript_completion`.
+- The strongest current referee-facing theorem boundary is now
+  `YangMillsFullManuscriptNativePackageExportStatement`, which exposes public
+  scope, Part C, Part D, endpoint, key theorem labels, and key witness labels
+  together in one axiom-free theorem.
 
 ## Why this matters
 
@@ -140,9 +159,21 @@ The most relevant axiom checks are:
 - `YangMillsWitnessBundleSummaryAxiomCheck.lean`
 - `YangMillsWitnessHeartSummaryAxiomCheck.lean`
 - `YangMillsPaperSurfaceSummaryAxiomCheck.lean`
+- `YangMillsConstructiveTheoremObjectsAxiomCheck.lean`
+- `YangMillsVacuumGapTheoremObjectsAxiomCheck.lean`
+- `YangMillsVacuumGapMassGapChainAxiomCheck.lean`
+- `YangMillsVacuumGapMassGapCompatibilityAxiomCheck.lean`
+- `YangMillsVacuumGapChosenSiteBridgeObjectsAxiomCheck.lean`
+- `YangMillsEndpointTheoremObjectsAxiomCheck.lean`
+- `YangMillsVacuumGapEndpointBridgeObjectsAxiomCheck.lean`
+- `YangMillsRoute1EndpointNativePackageAxiomCheck.lean`
+- `YangMillsFullManuscriptNativePackageAxiomCheck.lean`
 
 These checks report the current manuscript-facing Yang--Mills surface as
 axiom-free.
+
+The strongest current theorem-level audit result is that
+`YangMillsFullManuscriptNativePackageExportStatement` is axiom-free.
 
 ## Best next directions
 

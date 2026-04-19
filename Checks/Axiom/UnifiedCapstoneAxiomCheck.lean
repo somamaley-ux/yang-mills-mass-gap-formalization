@@ -1,0 +1,42 @@
+import MaleyLean.UnifiedCapstonePaperStatements
+
+namespace MaleyLean
+
+#print axioms PaperMinimalAssessabilityBoundaryStatement
+#print axioms PaperKernelForcingStatement
+#print axioms PaperDerivationPresupposesKernelStatement
+#print axioms PaperFaithfulMechanizationBoundaryStatement
+#print axioms PaperCanonicalStateTransitionRepresentationStatement
+#print axioms PaperIdentityPersistenceStatement
+#print axioms PaperIrreversibleCommitmentStatement
+#print axioms PaperStandingGateUniquenessStatement
+#print axioms PaperUniqueAdmissibleInteriorStatement
+#print axioms PaperMathematicsClosureStatement
+#print axioms PaperPhysicsClosureStatement
+#print axioms PaperMetaClosureStatement
+#print axioms PaperFixationDichotomyStatement
+#print axioms PaperClosureParityStatement
+#print axioms PaperMirrorClassificationStatement
+#print axioms PaperNoGroundingAsymmetryStatement
+#print axioms PaperNoCrossDomainRescueStatement
+#print axioms PaperNoMetaReescalationStatement
+#print axioms PaperDescriptiveClosureStatement
+#print axioms PaperNoDownstreamBackflowStatement
+#print axioms PaperNavierStokesRoadmapPlacementStatement
+#print axioms PaperYangMillsRoadmapPlacementStatement
+#print axioms PaperMeasurementProfilePlacementStatement
+#print axioms PaperStandardModelProfilePlacementStatement
+#print axioms PaperNoOverclaimFormalizationStatement
+#print axioms PaperAxiomNecessityLayerStatement
+#print axioms PaperFinalDependencyRegisterStatement
+#print axioms PaperFormalClosedSystemSealStatement
+#print axioms capstoneProtocolSystem_constructive
+#print axioms capstoneProtocolSystem_closedSystemSeal
+#print axioms capstoneProtocolSystem_dependencyRegister
+#print axioms capstoneProtocolSystem_downstreamPlacement
+#print axioms concreteCapstoneProtocolSystem_constructive
+#print axioms concreteImportedSupportLedger
+#print axioms concreteSupportBackedCapstone_constructive
+#print axioms PaperCapstoneProtocolStatement
+
+end MaleyLean

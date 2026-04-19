@@ -1,6 +1,6 @@
 Yang--Mills Support Map
 
-Date: 2026-04-09
+Date: 2026-04-15
 
 Primary statement sources
 -------------------------
@@ -29,8 +29,17 @@ Primary Lean modules:
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/Register.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/PacketRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ConstructiveCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ConstructiveTheoremObjects.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapTheoremObjects.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapMassGapChain.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapMassGapCompatibility.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapChosenSiteBridgeObjects.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/EndpointCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/EndpointTheoremObjects.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/VacuumGapEndpointBridgeObjects.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/Route1EndpointNativePackage.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/FullManuscriptNativePackage.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/NamedOutputsAssembly.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/SeamRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ReadingOrder.lean`
@@ -42,6 +51,14 @@ Primary Lean modules:
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/WitnessBundle.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/SemanticAssembly.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/SemanticAssemblySummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/ConstructiveTheoremObjectsSummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/VacuumGapMassGapChainSummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/VacuumGapMassGapCompatibilitySummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/VacuumGapChosenSiteBridgeObjectsSummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/EndpointTheoremObjectsSummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/VacuumGapEndpointBridgeObjectsSummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/Route1EndpointNativePackageSummary.lean`
+- `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/FullManuscriptNativePackageSummary.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/WitnessBundleSummary.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/WitnessHeartSummary.lean`
 - `/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Surface/Summary.lean`
@@ -53,8 +70,17 @@ Wrapper entry points:
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsKernelRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsPacketRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsConstructiveCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsConstructiveTheoremObjects.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapTheoremObjects.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapMassGapChain.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapMassGapCompatibility.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapChosenSiteBridgeObjects.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsVacuumGapEndpointBridgeObjects.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsEndpointCore.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsEndpointTheoremObjects.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsRoute1EndpointNativePackage.lean`
+- `/d:/lean/MaleyLean/MaleyLean/YangMillsFullManuscriptNativePackage.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsNamedOutputsAssembly.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsSeamRegister.lean`
 - `/d:/lean/MaleyLean/MaleyLean/YangMillsReadingOrder.lean`
@@ -78,8 +104,17 @@ Audit artifacts:
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsPacketRegisterAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsSeamRegisterAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsConstructiveCoreAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsConstructiveTheoremObjectsAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapCoreAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapTheoremObjectsAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapMassGapChainAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapMassGapCompatibilityAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapChosenSiteBridgeObjectsAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsEndpointCoreAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsEndpointTheoremObjectsAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsVacuumGapEndpointBridgeObjectsAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsRoute1EndpointNativePackageAxiomCheck.lean`
+- `/d:/lean/MaleyLean/Checks/Axiom/YangMillsFullManuscriptNativePackageAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsNamedOutputsAssemblyAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsReadingOrderAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsSourceCrosswalkAxiomCheck.lean`
@@ -94,6 +129,8 @@ Audit artifacts:
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsWitnessHeartSummaryAxiomCheck.lean`
 - `/d:/lean/MaleyLean/Checks/Axiom/YangMillsPaperSurfaceSummaryAxiomCheck.lean`
 - `/d:/lean/MaleyLean/reports/audits/yang_mills_axiom_audit.txt`
+- `/d:/lean/MaleyLean/reports/audits/yang_mills_theorem_by_theorem_audit_2026-04-15.md`
+- `/d:/lean/MaleyLean/reports/audits/yang_mills_submission_layer_audit_2026-04-15.md`
 
 Support correspondence
 ----------------------
@@ -251,11 +288,38 @@ Stage XIV: unified semantic assembly surface
   `MaleyLean.YangMillsSpineFeedsSemanticAssemblyStatement`
   `MaleyLean.YangMillsSemanticAssemblySummaryStatement`
 
+Stage XV: native theorem-object deepening
+
+- manuscript surface:
+  Lane A constructive chain, Route 1 mass-gap chain, endpoint reconstruction
+  and exact-endpoint chain, and the `M.5 -> O.2 / O.3 / O.5` bridge all
+  exposed through native theorem-object packages rather than only route-level
+  readiness exports
+- Lean witnesses:
+  `MaleyLean.YangMillsConstructiveNativeTheoremObjectsExportStatement`
+  `MaleyLean.YangMillsVacuumGapNativeTheoremObjectsExportStatement`
+  `MaleyLean.YangMillsVacuumGapMassGapChainExportStatement`
+  `MaleyLean.YangMillsVacuumGapMassGapCompatibilityExportStatement`
+  `MaleyLean.YangMillsVacuumGapChosenSiteBridgeExportStatement`
+  `MaleyLean.YangMillsEndpointNativeTheoremObjectsExportStatement`
+  `MaleyLean.YangMillsVacuumGapEndpointBridgeExportStatement`
+
+Stage XVI: submission-facing native package boundary
+
+- manuscript surface:
+  one top native theorem package spanning public scope, Part C, Part D,
+  endpoint, and key theorem/witness labels
+- Lean witnesses:
+  `MaleyLean.YangMillsRoute1EndpointNativePackageExportStatement`
+  `MaleyLean.YangMillsFullManuscriptNativePackageExportStatement`
+
 Top-level summary
 -----------------
 
 - Lean witness:
   `MaleyLean.YangMillsPaperSurfaceSummaryStatement`
+- strongest current submission-facing witness:
+  `MaleyLean.YangMillsFullManuscriptNativePackageExportStatement`
 
 Coverage note
 -------------

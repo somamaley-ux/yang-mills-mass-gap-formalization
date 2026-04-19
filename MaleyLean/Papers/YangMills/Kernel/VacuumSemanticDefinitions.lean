@@ -105,6 +105,11 @@ theorem ym_vacuum_os_transport_ready_holds
     YMVacuumOSTransportReady B := by
   exact ym_vacuum_lattice_gap_input_ready_holds B
 
+theorem ym_vacuum_os_transport_ready_iff_lattice_gap_input_ready
+    (B : YMVacuumGapManuscriptCarrierBase) :
+    YMVacuumOSTransportReady B ↔ YMVacuumLatticeGapInputReady B := by
+  rfl
+
 theorem ym_vacuum_positive_gap_exhibited_holds
     (B : YMVacuumGapManuscriptCarrierBase) :
     YMVacuumPositiveGapExhibited B := by

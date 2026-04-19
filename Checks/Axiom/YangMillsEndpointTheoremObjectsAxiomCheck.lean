@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsEndpointTheoremObjects
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointNativeTheoremObjectsExportStatement
+
+end MaleyLean

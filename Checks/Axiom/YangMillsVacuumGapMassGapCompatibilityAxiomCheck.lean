@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsVacuumGapMassGapCompatibility
+
+namespace MaleyLean
+
+#print axioms YangMillsVacuumGapMassGapCompatibilityExportStatement
+
+end MaleyLean

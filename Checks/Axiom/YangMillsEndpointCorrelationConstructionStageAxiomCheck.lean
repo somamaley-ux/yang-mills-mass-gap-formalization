@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsEndpointCorrelationConstructionStage
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointCorrelationConstructionStageExportStatement
+
+end MaleyLean

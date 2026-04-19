@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsConstructiveInductiveUnionConstructionStage
+
+namespace MaleyLean
+
+#print axioms YangMillsConstructiveInductiveUnionConstructionStageExportStatement
+
+end MaleyLean

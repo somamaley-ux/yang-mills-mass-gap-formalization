@@ -1,11 +1,11 @@
 # Yang-Mills Closed Manuscript Symbol Resolution
 
-Last updated: 2026-04-09
+Last updated: 2026-04-15
 
 ## Purpose
 
-This note records the repo-symbol resolution status for the final missing
-closed manuscript input:
+This note records the repo-symbol resolution status for the now-realized closed
+manuscript input:
 
 - `manuscript_input : YMClosedInstantiatedManuscriptInput`
 
@@ -32,7 +32,14 @@ The repo does **not** currently contain:
 - or standalone closed constants for the corresponding manuscript route
   objects.
 
-So the remaining gap is **not** symbol discovery anymore. It is authoring.
+Those standalone constants are no longer needed in order to obtain a closed
+manuscript instantiation, because the repo now contains:
+
+- `manuscript_input : YMClosedInstantiatedManuscriptInput`
+- `I : YMClosedInstantiatedManuscript`
+- `ym_closed_manuscript_completion_realized`
+
+in `MaleyLean/Papers/YangMills/Kernel/ManuscriptObjectPackageDeclarations.lean`.
 
 ## Constructive Resolution
 
@@ -130,22 +137,9 @@ projection from manuscript input or manuscript instantiation.
 
 ## What This Means
 
-The final missing inhabitant
-
-- `manuscript_input : YMClosedInstantiatedManuscriptInput`
-
-cannot be completed by discovering hidden repo constants, because the repo does
-not contain such constants.
-
-Instead, the remaining work is to author manuscript-specific definitions that
-choose actual terms for:
-
-- the constructive chosen-site fields,
-- the vacuum-gap chosen-site fields,
-- and, if needed, the concrete route objects they depend on,
-
-using the already existing abstract route/core packages and builder
-infrastructure.
+The manuscript input inhabitant is now present at repo level, so the old
+symbol-resolution question has been answered constructively by the existing
+manuscript object package declarations.
 
 ## Honest Boundary
 
@@ -154,11 +148,5 @@ At the current repo boundary:
 - theorem reflection is formalized,
 - object recovery from manuscript input is formalized,
 - manuscript-facing names on the input object are formalized,
-- but the input inhabitant itself still has to be authored.
-
-So the last missing step is not “find the right existing Lean constant.”
-It is:
-
-- define the manuscript constants that instantiate the remaining abstract field
-  types, then
-- package them into `manuscript_input`.
+- and the input inhabitant has been authored and packaged into both
+  `manuscript_input` and `I`.

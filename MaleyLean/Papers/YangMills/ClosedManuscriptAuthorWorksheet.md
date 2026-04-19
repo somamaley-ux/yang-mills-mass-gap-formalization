@@ -1,6 +1,6 @@
 # Yang-Mills Closed Manuscript Author Worksheet
 
-Last updated: 2026-04-09
+Last updated: 2026-04-15
 
 ## Purpose
 
@@ -9,8 +9,8 @@ This worksheet is the practical companion to:
 - [ClosedManuscriptInstantiationChecklist.md](/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/ClosedManuscriptInstantiationChecklist.md)
 - [ClosedManuscriptCompletionCriterion.lean](/d:/lean/MaleyLean/MaleyLean/Papers/YangMills/Kernel/ClosedManuscriptCompletionCriterion.lean)
 
-Its purpose is to let us fill the final missing closed constant against the
-paper itself, field by field, with explicit source anchors.
+Its purpose is to audit and trace the realized closed manuscript constant
+against the paper itself, field by field, with explicit source anchors.
 
 The exact Lean completion target is:
 
@@ -20,7 +20,7 @@ from [ClosedInstantiatedManuscript.lean](/d:/lean/MaleyLean/MaleyLean/Papers/Yan
 
 ## Final Lean Target
 
-To complete the manuscript instance honestly, we must provide:
+The realized manuscript instance packages:
 
 1. `blueprint : YMClosedManuscriptBlueprint`
 2. `chosen_sites : YMChosenSiteBlueprint blueprint`

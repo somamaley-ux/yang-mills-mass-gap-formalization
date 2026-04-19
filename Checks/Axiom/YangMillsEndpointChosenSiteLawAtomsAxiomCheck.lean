@@ -1,0 +1,7 @@
+import MaleyLean.YangMillsEndpointChosenSiteLawAtoms
+
+namespace MaleyLean
+
+#print axioms YangMillsEndpointChosenSiteLawAtomsExportStatement
+
+end MaleyLean

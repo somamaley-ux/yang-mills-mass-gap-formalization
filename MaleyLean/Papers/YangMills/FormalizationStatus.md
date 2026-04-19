@@ -1,6 +1,6 @@
 # Yang-Mills Formalization Status
 
-Last updated: 2026-04-09
+Last updated: 2026-04-15
 
 ## Purpose
 
@@ -164,22 +164,19 @@ construction:
 
 ## Current Faithfulness Boundary
 
-The main remaining theorem-meaning limitation is no longer arbitrary theorem
-alignment or theorem-content bundling.
+The former manuscript-instantiation gap has now been closed inside the repo.
 
-The current preferred top theorem is still parameterized by abstract route
-objects:
+In addition to the parameterized theorem surfaces, the repository now exposes a
+closed manuscript constant and its realized completion witness:
 
-- `S : YMLoadBearingSpine`
-- `RC : YMConstructiveRoute`
-- `RD : YMVacuumGapRoute`
-- `RE : YMEndpointCore`
+- `MaleyLean/Papers/YangMills/Kernel/ManuscriptObjectPackageDeclarations.lean`
+- `noncomputable def I : YMClosedInstantiatedManuscript`
+- `theorem ym_closed_manuscript_completion_realized :
+  ym_closed_manuscript_completion`
 
-The repository currently does not expose one closed canonical manuscript
-instance of those objects. So the preferred theorem now reads as a direct,
-flattened manuscript-granular theorem over the manuscript route interfaces,
-rather than as one fully closed proposition over a single distinguished route
-instance.
+So the current preferred theorem surfaces may still be useful to read in their
+parameterized form, but the repository no longer stops short of a closed
+manuscript instance.
 
 That parameterization should not be confused with residual support axioms: the
 remaining Yang-Mills axioms are only the imported standard QFT background
