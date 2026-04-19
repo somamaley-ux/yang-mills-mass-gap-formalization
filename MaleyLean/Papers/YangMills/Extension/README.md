@@ -42,6 +42,12 @@ The stack is organized in manuscript-facing terms:
   names one canonical manuscript-facing Section 8 theorem surface and one
   canonical combined Section 7 plus Section 8 corollary.
 
+The current post-freeze manuscript-faithfulness pass has also made the
+Section 4, Section 7, and Section 8 code comments more uniform about this
+status: these are now the fixed manuscript-facing routes carried by the
+current extension stack, while nearby alternative packages and access paths are
+read as support infrastructure around them.
+
 On the QE3 side, the main seam files are:
 
 - `VacuumGapConcreteCriticalSeam.lean`

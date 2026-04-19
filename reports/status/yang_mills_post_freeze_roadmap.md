@@ -48,6 +48,13 @@ If work resumes soon, the highest-value next phase is probably:
 - a selective manuscript-faithfulness pass on Section 4 and the remaining
   Section 8 support-route wording
 
+That pass is now underway. The current post-freeze refinements have already
+tightened:
+
+- the Section 4 canonical theorem-scope package and bridge wording
+- the Section 7 recovery package and preferred corollary wording
+- the Section 8 support-route and canonical-collapse wording
+
 If the goal is deeper than manuscript-facing closure, the strongest ambitious
 next phase is:
 
@@ -61,3 +68,7 @@ Until one of those next-phase goals is chosen explicitly, the right default is:
 - keep the extension stack frozen at `ym-paper-v1.2.1`
 - treat the current dossier as the stable reference boundary
 - avoid reopening settled seams without a clearly stronger mathematical target
+
+The current manuscript-faithfulness edits should be read as boundary-polish on
+top of that frozen theorem content, not as a reopening of the underlying seam
+mechanization.

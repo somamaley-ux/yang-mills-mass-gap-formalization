@@ -50,6 +50,9 @@ theorem object.
   ingredients through the preferred theorem layer.
 - The canonical paper-facing theorem-scope package now reaches the completion
   bridge, Clay-endpoint package, and packaged Section 7/8 corollary surfaces.
+- The Section 4, Section 7, and Section 8 in-code docstrings now describe
+  those layers more uniformly as the fixed post-freeze manuscript-facing route,
+  not as merely one preferred option among several equal surfaces.
 - The Section 4 theorem-scope layer now also has explicit canonical package and
   bridge names in code, not only “preferred paper-facing” aliases.
 - The compatibility layer now explicitly names a canonical manuscript-facing
