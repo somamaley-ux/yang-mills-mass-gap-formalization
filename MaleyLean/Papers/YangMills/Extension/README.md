@@ -39,6 +39,30 @@ On the QE3 side, the main seam files are:
 - `VacuumGapConcreteOSTimeUpgradeProjection.lean`
 - `VacuumGapConcreteContinuumTransportProjection.lean`
 
+## Section map
+
+If you are reading the extension manuscript by section number, the quickest file
+map is:
+
+- Section 4: `EndpointTheoremScopeObjects.lean` and
+  `EndpointConcreteTheoremScopeBridge.lean`
+- Section 7: `EndpointGlobalFormRecoveryFormalization.lean` and
+  `EndpointTaggedManuscriptCorollaries.lean`
+- Section 8: `EndpointCompletionBridgeFormalization.lean`,
+  `EndpointClayConclusionFormalization.lean`, and
+  `EndpointConcretePreferredRouteCompatibility.lean`
+
+The four seam files cut across that section structure:
+
+- QE3 density / graph-core handoff:
+  `VacuumGapConcreteCriticalSeam.lean`
+- dyadic-to-continuous-time OS upgrade:
+  `VacuumGapConcreteOSTimeUpgradeProjection.lean`
+- continuum transport / sharp-gap bridge:
+  `VacuumGapConcreteContinuumTransportProjection.lean`
+- Section 8 endpoint / admissibility bridge:
+  `EndpointConcretePreferredRouteCompatibility.lean`
+
 ## Suggested reading order
 
 If you want the shortest route through the extension story, read:
