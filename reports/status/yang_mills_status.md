@@ -32,6 +32,9 @@ So the present status is not just "there is a lot of Yang--Mills Lean code."
 The main analytical burden of the extension paper has been pushed into named
 theorem surfaces with source-level provenance and reconstruction equality.
 
+For the extension-paper-focused summary and reading order, see
+`reports/status/yang_mills_extension_status.md`.
+
 What is finished:
 
 - the live proof surface is encoded in Lean

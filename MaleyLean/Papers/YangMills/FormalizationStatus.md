@@ -79,6 +79,9 @@ documents two residual manuscript-facing strengthening targets:
 Those are residual presentation and classification targets, not evidence that
 the four critical seams themselves remain unmechanized.
 
+For a shorter extension-paper-focused status note and reading order, see
+`reports/status/yang_mills_extension_status.md`.
+
 The most recent verification sweep also strengthened the deepest kernel so that:
 
 - the constructive side points explicitly to the sharp-local assembly path,
